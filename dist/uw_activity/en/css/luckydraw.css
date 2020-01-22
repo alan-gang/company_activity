@@ -1,0 +1,249 @@
+.wrapper{
+	 padding-bottom: .48rem;
+	background-color: #080d15;
+}
+.banner{
+	min-width: 12rem;
+	height: 10rem;
+	position: relative;
+	background: url('../img/luckydraw/img1.jpg') 0 0 no-repeat;
+	background-size: 100% 5rem;
+	overflow: hidden;
+}
+.banner2{
+	min-width: 12rem;
+	height: 5rem;
+	position: absolute;
+	left: 0;
+	bottom: 0.01rem;
+	z-index: 1;
+}
+.banner3{
+	width: 9.94rem;
+	height: 5.84rem;
+	position: absolute;
+	left: 50%;
+	top: .94rem;
+	margin-left: -4.97rem;
+	z-index: 2;
+}
+.banner4{
+	width: 1.9rem;
+	height: 1.4rem;
+	position: absolute;
+	right: 6.37rem;
+	top: 2.5rem;
+	z-index: 3;
+}
+.banner5{
+	width: 9.6rem;
+	height: 3.22rem;
+	position: absolute;
+	left: 50%;
+	top: 4.64rem;
+	margin-left: -4.8rem;
+	z-index: 3;
+}
+
+.content{
+	position: relative;
+	top: -2rem;
+	z-index: 3;
+}
+.mainCon{
+	height: 7.07rem;
+	padding-top: 0.9rem;
+}
+.leftCon{
+	width: 5.28rem;
+	height: 6.24rem;
+}
+.leftList{
+	height: 5.34rem;
+	margin-bottom: 0.2rem;
+}
+.leftList li{
+	width: 1.17rem;
+	height: 1.62rem;
+	margin-right: 0.2rem;
+	margin-bottom: 0.17rem;
+}
+.leftList li:nth-child(4),.leftList li:nth-child(8),.leftList li:nth-child(12){
+	margin-right: 0;
+}
+.leftList li img{
+	width: 1.17rem;
+	height: 1.62rem;
+	vertical-align: top;
+}
+.hover-change-img{
+	display: inline-block;
+}
+.drawNow{
+	width: 5.28rem;
+	height: .69rem;
+}
+.drawNow a{
+	display: inline-block;
+	width: 5.28rem;
+	height: .69rem;
+	line-height: .69rem;
+	background-image: linear-gradient(0deg,
+		#ffc317 0%,
+		#ffdc60 100%),
+	linear-gradient(
+		#111a2b,
+		#111a2b);
+	background-blend-mode: normal,
+		normal;
+	border-radius: .1rem;
+	color:#080d16;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	vertical-align: top;
+}
+.times{
+	font-style: normal;
+}
+.rightCon{
+	width: 5.82rem;
+	height: 5.79rem;
+	padding: .44rem .22rem 0;
+	background: url('../img/luckydraw/b01.png') 0 0 no-repeat;
+	background-size: 6.26rem 6.23rem;
+	margin-left: 0.45rem;
+}
+.rightTitle{
+	width: 2.73rem;
+	height: .31rem;
+	line-height: .24rem;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	font-size: .24rem;
+	color: #dfb254;
+	background: url('../img/luckydraw/n1.png') 0 .14rem no-repeat;
+	background-size: 2.73rem .17rem;
+	margin-bottom: .36rem;
+}
+#text{
+	display:block;
+	line-height:1;
+	position:relative;
+	overflow:hidden;
+	width: 5.8rem;
+	height: 5.03rem;
+}
+#text li{
+	width: 5.32rem;
+	height: .92rem;
+	padding-left: .48rem;
+	line-height: .86rem;
+	background: rgba(121, 121, 121, 0.1);
+	border-radius: .1rem;
+	display:block;
+	white-space:nowrap;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	color: #5b6fb3;
+	margin-bottom: .15rem;
+}
+.playerImg{
+	width: .55rem;
+	height: .65rem;
+	margin-top: .1rem;
+	margin-right: .24rem;
+}
+.luckyPlayer,.luckyPrize{
+	display: inline-block;
+	width: 4rem;
+	height: .46rem;
+	line-height: .6rem;
+	vertical-align: top;
+}
+.luckyPrize{
+	line-height: .3rem;
+	text-indent: 1rem;
+}
+
+.playerName,.prize{
+	max-width: .3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-style: normal;
+	color: #f3c258;
+}
+
+
+.actTerm{
+
+}
+.termTitle{
+	width: 6.62rem;
+	height: .66rem;
+	line-height: .41rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	font-size: .48rem;
+	color: #fff;
+	background: url('../img/luckydraw/n1.png') 0 .25rem no-repeat;
+	background-size: 6.62rem .41rem;
+	margin-bottom: .7rem;
+}
+.termList{
+	width: 11rem;
+	height: 3.74rem;
+	padding: .46rem .5rem 0;
+	background: url('../img/luckydraw/b02.png') 0 0 no-repeat;
+	background-size: 12rem 4.2rem;
+	margin-bottom: .68rem;
+}
+.termList li{
+	height: .5rem;
+	line-height: .5rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+}
+.termList li:first-child{
+	height: .8rem;
+	line-height: .4rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .35rem;
+	height: .4rem;
+	line-height: .4rem;
+	text-align: center;
+	background: url('../img/luckydraw/h2.png') 0 0 no-repeat;
+	background-size: .35rem .4rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #101a2c;
+	margin-right: .2rem;
+}
+.prizeList{
+	width: 10.9rem;
+	height: 4.64rem;
+	padding: .4rem .55rem 0;
+	background: url('../img/luckydraw/b03.png') 0 0 no-repeat;
+	background-size: 12rem 5.04rem;
+}
+.prizeList li{
+	width: 2.01rem;
+	height: 2.01rem;
+	margin-right: 0.2rem;
+	margin-bottom: 0.15rem;
+}
+.prizeList li:nth-child(5),.prizeList li:last-child{
+	margin-right: 0;
+}
+.prizeList li img{
+	width: 2.01rem;
+	height: 2.01rem;
+	vertical-align: top;
+}

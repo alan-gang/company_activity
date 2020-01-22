@@ -1,0 +1,95 @@
+.s9 {
+  background-color: #07192d;
+  background-image: url('../img/s9/BG.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.wrap {
+  padding-top: 11rem;
+  width: 12rem;
+  margin: 0 auto;
+}
+.s9 .title {
+  width: 2.69rem;
+  height: .51rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.conInfo {
+  margin-bottom: .5rem;
+}
+.conInfo .title {
+  background-image: url('../img/s9/conText.png');
+  margin-bottom: .12rem;
+}
+.ruleList .title {
+  background-image: url('../img/s9/ruleText.png');
+  margin-bottom: .32rem;
+}
+.conInfo .container {
+  height: 6.74rem;
+  box-sizing: border-box;
+  background: url('../img/s9/bg1.png') no-repeat;
+  background-size: contain;
+  padding: 1rem .32rem 0;
+}
+.conInfo table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: .24rem;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #050912;
+}
+.conInfo table tr {
+  color: #fff;
+  line-height: .7rem;
+}
+.conInfo table tr:nth-child(odd) {
+  background-color: #193e6a;
+  color: #fff;
+}
+.conInfo table tr:nth-child(even) {
+  background-color: #132f54;
+}
+.s9 .conInfo table thead tr {
+  background-color: #132f54;
+  color: #727369;
+}
+.ruleList .container {
+  height: 4.87rem;
+  background-color: #131f3a;
+  box-sizing: border-box;
+  border-left: .12rem solid #162c4c;
+  border-right: .12rem solid #162c4c;
+  padding: 0 .56rem;
+}
+.ruleList {
+  padding-bottom: 1.08rem;
+}
+.ruleList p {
+  padding-top: .4rem;
+  padding-left: .6rem;
+  line-height: .42rem;
+  font-size: .2rem;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: .41rem .41rem;
+}
+.ruleList p:nth-child(1) {
+  background-image: url('../img/s9/1.png')
+}
+.ruleList p:nth-child(2) {
+  background-image: url('../img/s9/2.png')
+}
+.ruleList p:nth-child(3) {
+  background-image: url('../img/s9/3.png')
+}
+.ruleList p:nth-child(4) {
+  background-image: url('../img/s9/4.png')
+}
+.ruleList p:nth-child(5) {
+  background-image: url('../img/s9/5.png')
+}

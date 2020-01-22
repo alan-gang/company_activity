@@ -1,0 +1,119 @@
+
+.wrapper{
+	height: 10.94rem;
+	min-height: 100vh;
+	background: #000 url('../../img/agentspread/bg.jpg') 0 0 no-repeat;
+	background-size: 100% 10.94rem;
+	/* padding-bottom: .5rem; */
+}
+/* 效果CSS开始 */
+.pc-slide {
+	width: 8.66rem;
+	padding-top: .99rem;
+	margin: 0 auto;
+}
+
+.view .swiper-container,.swiper-slide img{
+	width: 4.7rem;
+	height: 4.1rem;
+}
+
+
+
+.banner,.banner img{
+	width: 10.4rem;
+	height: 1.98rem;
+}
+.banner{
+	position: relative;
+	top: -0.37rem;
+}
+.regist{
+	width: 8rem;
+	height: .85rem;
+	line-height: .85rem;
+	position: relative;
+	top: -0.6rem;
+}
+.regist a{
+	display: inline-block;
+	vertical-align: middle;
+	transition: all .2s;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.iosDownL{
+	width: 2.32rem;
+	height: .53rem;
+	background-image: url('../../img/agentspread/btn02.png');
+	background-size: 2.32rem .53rem;
+}
+.iosDownL:hover{
+	background-image: url('../../img/agentspread/btn02_.png');
+}
+.goRegist{
+	width: 2.74rem;
+	height: .85rem;
+	background-image: url('../../img/agentspread/btn03.png');
+	background-size: 2.74rem .85rem;
+}
+.goRegist:hover{
+	background-image: url('../../img/agentspread/btn03_.png');
+}
+.andDownL{
+	width: 2.32rem;
+	height: .53rem;
+	background-image: url('../../img/agentspread/btn01.png');
+	background-size: 2.32rem .53rem;
+}
+.andDownL:hover{
+	background-image: url('../../img/agentspread/btn01_.png');
+}
+.iosHover,.andHover{
+	width: 1.84rem;
+	height: 0;
+	position: absolute;
+	top: -1.8rem;
+	z-index: 999;
+	transition: all .3s;
+}
+.iosHover{
+	left: .26rem;
+}
+.andHover{
+	right: .3rem;
+}
+
+
+.promo{
+	width: 10rem;
+	padding-left: .43rem;
+	position: relative;
+}
+.promo img{
+	vertical-align: top;
+}
+.qr{
+	width: 1.83rem;
+	height: 1.83rem;
+	margin-right: .4rem;
+	background: url('../../img/agentspread/qr.png') 0 0 no-repeat;
+	background-size: 1.83rem 1.83rem;
+}
+.qr img{
+	width: 1.61rem;
+	height: 1.61rem;
+	margin: .11rem auto;
+}
+.games,.games img{
+	width: 7.48rem;
+	height: 1.99rem;
+}
+.qrmid{
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	left: 1.1rem;
+	top: .7rem;
+	z-index: 999;
+}

@@ -1,0 +1,193 @@
+.wrapper{
+	font-size: .32rem;
+	background-color: #12171d;
+	padding-bottom: 1rem;
+	max-width: 12rem;
+	margin: 0 auto;
+}
+.banner{
+	max-width: 12rem;
+	height: 4.63rem;
+	background: url('../img/sportsmeal/topBanner@2x.png') 0 0 no-repeat;
+	background-size: 100% 4.63rem;
+	position: relative;
+}
+
+.actTerm{
+	height: auto;
+}
+.titTitle{
+	background-image: url('../img/sportsmeal/title1@2x.png');
+}
+.actTitle{
+	background-image: url('../img/sportsmeal/title2@2x.png');
+}
+.ruleTitle{
+	background-image: url('../img/sportsmeal/title3@2x.png');
+}
+.title{
+	width: 6.18rem;
+	height: .59rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% .59rem;
+	margin: .65rem auto .35rem;
+}
+.actInfo{
+	width: 90%;
+	color: #a4a4a4;
+	text-align: justify;
+	margin-bottom: .3rem;
+}
+.sp{
+	color: #0299E7;
+}
+
+.swiper-container {
+	width: 90%;
+	padding: 0 .4rem;
+	height: 100%;
+	margin: .5rem auto .2rem;
+}
+/*.swiper-slide {*/
+/*text-align: center;*/
+/*!* Center slide text vertically *!*/
+/*display: -webkit-box;*/
+/*display: -ms-flexbox;*/
+/*display: -webkit-flex;*/
+/*display: flex;*/
+/*-webkit-box-pack: center;*/
+/*-ms-flex-pack: center;*/
+/*-webkit-justify-content: center;*/
+/*justify-content: center;*/
+/*-webkit-box-align: center;*/
+/*-ms-flex-align: center;*/
+/*-webkit-align-items: center;*/
+/*align-items: center;*/
+/*}*/
+/*.swiper-slide img{*/
+/*width: 3.52rem;*/
+/*height: 2.49rem;*/
+/*}*/
+.dates{
+	width: 3.52rem;
+	height: .63rem;
+	line-height: .63rem;
+	color: #fff;
+	font-size: .24rem;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.wrapper .swiper-button-prev, .wrapper .swiper-container-rtl .swiper-button-next{
+	left: 0;
+	background-image: url('../img/sportsmeal/left@2x.png');
+}
+.wrapper .swiper-button-next,.wrapper .swiper-container-rtl .swiper-button-prev{
+	right: 0;
+	background-image: url('../img/sportsmeal/right@2x.png');
+}
+.wrapper .swiper-button-next, .wrapper .swiper-button-prev{
+	width: 34px;
+	height: 34px;
+	background-size: 34px 34px;
+}
+.actTerm table{
+	width: 95%;
+	margin: 0 auto;
+	font-size: .32rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #222628;
+	margin-bottom: .5rem;
+}
+.actTerm table th{
+	width: 50%;
+	border: 0;
+	color: #fff;
+	background: #036BC2;
+	background-size: 100% 100%;
+}
+.actTerm table td{
+	color: #a4a4a4;
+}
+.actTerm table th,.actTerm table td{
+	width: 50%;
+	font-weight: normal;
+	padding: .2rem .1rem;
+	border: 1px solid #12171d;
+}
+
+.termList{
+	width: 90%;
+	/* height: 1.5rem; */
+	padding-left: .1rem;
+	margin-bottom: .44rem;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .38rem;
+	font-family: MicrosoftYaHei;
+	font-size: .32rem;
+	letter-spacing: 0px;
+	color: #a4a4a4;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	background-color: #1b1d44;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #a4a4a4;
+	margin-top: .03rem;
+	margin-right: .05rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+	width: 90%;
+	text-align: justify;
+}
+.slide{
+	width: 3.52rem;
+	height: 2.49rem;
+	background: url('../img/sportsmeal/slideBg.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	color: #E8E8E8;
+}
+.slide .wrap{
+	overflow: hidden;
+	padding: 0 0.15rem;
+}
+.slide .slide-title{
+	font-size: 15px;
+	margin: 0.05rem 0;
+}
+.slide .wrap .img-wrap{
+	width: 1rem;
+	display: block;
+	float: left;
+	font-size: 12px;
+}
+.slide .wrap .img-wrap:last-child{
+	float: right;
+}
+.slide .img-wrap img{
+	height: 0.7rem;
+}
+.slide .wrap .time{
+	display: inline-block;
+	position: relative;
+	top: 0.5rem;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #9C9C9C;
+}

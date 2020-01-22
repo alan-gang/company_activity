@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>幸运翻牌</title>
+  <link rel="stylesheet" href="css/reset.css?v=0.21">
+  <link rel="stylesheet" href="css/lucky.css?v=0.4">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body>
+  <script src="js/common.js"></script>
+  <div style="padding-bottom: 1.5rem;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2"></div>
+      <i class="openMask"></i>
+    </header>
+    <section>
+      <ul class="pai">
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone"></li>
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone"></li>
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone mg"></li>
+        <li class="undone"></li>
+      </ul>
+      <div class="chance">你还有<span class="count">0</span>次翻牌机会</div>
+    </section>
+    <div class="mask">
+      <span class="closeMask fr">X</span>
+      <ul>
+        <li>1.用户每日累计充值金额/100=您的每日翻牌次数，每日翻牌次数上限为20次（例：玩家累计充值1888元，既可获得翻牌次数1888/100=18.88，系统默认为次数为18次翻牌机会）。</li>
+        <li>2.用户实物中奖后需在24小时内联系平台客服领取实物礼品，过时则视为自动放弃领奖。</li>
+        <li>3.用户领取现金奖励后，需达到一倍流水后可进行提款。</li>
+        <li>4.活动统计时间为当日00：00AM 至 次日00：00AM。</li>
+        <li>5.同一账户、同一银行卡、同一IP凡是使用作弊手段，发现恶意刷取活动套利者，将扣除红利及所得盈利平台有权取消活动资格。</li>
+        <li>6.凡是参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+      var hasLogin=false;
+      var remaining = 0;
+      //h5登录
+      if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+          hasLogin = true;
+          queryTimes ();
+        }else{
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goLogin'})
+          } else {
+            if ( location.search != '?goLogin') {
+              location.search = 'goLogin'
+            }
+          }
+        }
+      }
+      window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+          }
+          if(hasLogin){
+              queryTimes ();
+          }
+      }
+      function isLogin(b) {
+          hasLogin = b
+          if(hasLogin){
+              queryTimes ();
+          }
+      }
+      function back() {
+          if (!hasLogin) {
+              // 还没登录则先登录
+              if (location.href.indexOf('type=h5') != -1) {
+                if ( parent && parent.closeIFrame ) {
+                  parent.closeIFrame({action: 'goLogin'})
+                } else {
+                  if ( location.search != '?goLogin') {
+                    location.search = 'goLogin'
+                  }
+                }
+              } else {
+                if (isiOS()) {
+                    //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                    goAppLogin();
+                } else if (window.android){
+                    android.goAppLogin();
+                }
+              }
+              return;
+          }
+          doDraw();
+      }
+      function isiOS() {
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      }
+
+      function queryTimes (){
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "1","a": "query" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  // console.log(req)
+                  if ( req.state ) {
+                      remaining = req.data.remaining;
+                      $('.count').html(remaining);
+                  }
+              }
+          });
+      }
+      // 用户翻牌操作
+      function doDraw () {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "1","a": "draw" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  queryTimes ();
+                  if ( req.state ) {
+                      if ( req.data == -1 ) {
+                        var popup = new Popup({
+                            'type': 'submit',
+                            'title': '提示信息',
+                            'text': '感谢参与，请再接再厉!',
+                            'submitCallBack': function(){
+                              clickable();
+                            },
+                            'closeCallBack': function(){
+                              clickable();
+                            }
+                        })
+                      } else {
+                        var popup = new Popup({
+                            'type': 'submit',
+                            'title': '提示信息',
+                            'text': '您抽中的了' + req.title +'!',
+                            'submitCallBack': function(){
+                              clickable();
+                            },
+                            'closeCallBack': function(){
+                              clickable();
+                            }
+                        })
+                      }
+                  }else{
+                      if ( req.data == -1 ) {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': '剩余次数已经用完!',
+                              'submitCallBack': function(){
+                                clickable();
+                              },
+                              'closeCallBack': function(){
+                                clickable();
+                              }
+                          })
+                      } else if ( req.data == -3 ) {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': '系统错误!',
+                              'submitCallBack': function(){
+                                clickable();
+                              },
+                              'closeCallBack': function(){
+                                clickable();
+                              }
+                          })
+                      } else if ( req.data == 'ip' ) {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': '同一账户、同一IP无法重复领取!',
+                              'submitCallBack': function(){
+                                clickable();
+                              },
+                              'closeCallBack': function(){
+                                clickable();
+                              }
+                          })
+                      } else if ( req.message == 'login' ) {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': '请先登录!',
+                              'submitCallBack': function(){
+                                clickable();
+                              },
+                              'closeCallBack': function(){
+                                clickable();
+                              }
+                          })
+                      }  else {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': req.message,
+                              'submitCallBack': function(){
+                                clickable();
+                              },
+                              'closeCallBack': function(){
+                                clickable();
+                              }
+                          })
+                      }
+                  }
+              }
+          });
+      }
+      function clickable(){
+        $('.undone,.chance').css("pointer-events","visible");
+      }
+
+    $(function() {
+      FastClick.attach(document.body);
+      $('.openMask').on('click',function(){
+          $('.mask').css('display','block');
+      });
+      $('.closeMask').on('click',function(){
+          $('.mask').css('display','none');
+      });
+
+
+      $('.undone,.chance').on('click',function(){
+        $('.undone,.chance').css("pointer-events","none");
+        back();
+      });
+    });
+  </script>
+</body>
+</html>

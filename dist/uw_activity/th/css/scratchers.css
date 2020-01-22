@@ -1,0 +1,141 @@
+.wrapper{
+	font-size: .24rem;
+	color: #f3d981;
+	background: url('../img/scratchers/bg01.jpg') center 0 no-repeat;
+	background-size: 100% 100%;
+	padding-bottom: 1rem;
+}
+.banner{
+	min-width: 12rem;
+	height: 8rem;
+	position: relative;
+}
+
+.actTerm{
+	width: 11.1rem;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	background-color: rgba(104,18,21, 0.5);
+}
+.actCon{
+	padding: .4rem .72rem .4rem 1.4rem;
+	background: url('../img/scratchers/info.png')  .72rem .45rem no-repeat;
+	background-size: .49rem .49rem;
+}
+.sp{
+	color: #fff;
+}
+.actTitle{
+	height: .92rem;
+	background-image: url('../img/scratchers/title01.png');
+}
+.ruleTitle{
+	height: 1.02rem;
+	background-image: url('../img/scratchers/title02.png');
+}
+.title{
+	width: 3.1rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto;
+}
+.bar,.bar img{
+	width: 11.82rem;
+	height: .47rem;
+	margin: 0 auto;
+}
+.actTerm .bar{
+	position: relative;
+	left: -.36rem;
+}
+.allInfo{
+	width: 6.9rem;
+	margin-left: .72rem;
+	margin-bottom: .35rem;
+}
+.actTerm table{
+	width: 6.9rem;
+	margin: auto;
+	font-size: 24px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #fdedc5;
+}
+.actTerm table th{
+	width: 2.51rem;
+	border: 0;
+	color:  #6c0212;
+	background-color: #f6cf82;
+}
+.actTerm table td{
+	color: #6c0212;
+}
+.actTerm table th,.actTerm table td{
+	width: 3.34rem;
+	font-weight: normal;
+	padding: .2rem .1rem;
+	border: 2px solid #83171b;
+}
+.actTerm table th{
+	font-weight: 600;
+}
+.actTerm table td.spTd{
+	background-color: #f6cf82;
+}
+
+.sBar{
+	position: relative;
+}
+.sBar .decorate{
+	width: 3.13rem;
+	height: 3.68rem;
+	position: absolute;
+	bottom: 0.12rem;
+	right: 0.36rem;
+}
+
+.termList{
+	width: 10rem;
+	padding: .5rem .5rem .8rem;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .33rem;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	color: #cf2a2a;
+	background-color: #ffdd7a;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .2rem;
+	letter-spacing: 0px;
+	margin-top: .03rem;
+	margin-right: .15rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 92%;
+    text-align: justify;
+}
+.back{
+	width: 7.34rem;
+	height: .94rem;
+	margin: 1rem auto 0;
+	cursor: pointer;
+	background: url('../img/scratchers/back.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}

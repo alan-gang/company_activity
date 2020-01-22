@@ -1,0 +1,78 @@
+
+.wrapper{
+	height: 17.04rem;
+	background-color: #000;
+	/* background-size: 100% 10.23rem; */
+	/* padding-bottom: .5rem; */
+}
+.banner{
+	min-width: 12rem;
+	height: 10.4rem;
+	background: url('../img/esport/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 5.2rem;
+	position: relative;
+}
+.banner img{
+	vertical-align: top;
+}
+.banner2{
+	height: 5.2rem;
+	position: absolute;
+	left: 0;
+	top: 5.19rem;
+	z-index: 1;
+}
+.banner3{
+	width: 9.12rem;
+	height: 4.62rem;
+	position: absolute;
+	left: 50%;
+	top: 4.5rem;
+	margin-left: -4.56rem;
+	z-index: 3;
+}
+.banner4{
+	height: 10.03rem;
+	position: absolute;
+	left: 0;
+	top: -0.9rem;
+	z-index: 2;
+}
+
+.actTerm{
+	width: 10.5rem;
+	position: relative;
+	top: -0.2rem;
+	z-index: 3;
+}
+.termTitle{
+	width: 10.49rem;
+	height: .38rem;
+	background: url('../img/esport/t1.png') 0 0 no-repeat;
+	background-size: 10.49rem .38rem;
+	margin-bottom: 1rem;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+	margin-bottom: 0.2rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #077b28;
+	margin-right: .2rem;
+	border: 2px solid #077b28;
+	border-radius: .5rem;
+}

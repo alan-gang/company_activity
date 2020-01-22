@@ -1,0 +1,118 @@
+.wrapper{
+	font-family: MicrosoftYaHei;
+	font-size: .3rem;
+	padding-bottom: 3rem;
+	background-color: #000;
+}
+.banner{
+	height: 6rem;
+	position: relative;
+	background: url('../img/aglucky/bg01.png') 0 0 no-repeat;
+	background-size: 100% 2.01rem;
+	overflow: hidden;
+}
+.banner2{
+	height: 2rem;
+	position: absolute;
+	left: 0;
+	top: 2rem;
+}
+.banner3{
+	height: 2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.content{
+	width: 100%;
+	height: 15rem;
+	background-color: #000;
+	position: relative;
+	top: -0.5rem;
+}
+
+.actInfo{
+	margin-bottom: 1.24rem;
+}
+.listwrap{
+	width: 90%;
+	margin: 0 auto;
+}
+.toplist li{
+	width: 33%;
+	height: .81rem;
+	line-height: .81rem;
+	text-align: center;
+	/* font-size: .32rem; */
+	letter-spacing: 1px;
+	color: #0f0b07;
+	background-color: #b88051;
+	margin-right: 0.01rem;
+	margin-bottom: 0.01rem;
+}
+.list{
+	width: 100%;
+	margin: 0 auto;
+}
+.list li{
+	width: 33%;
+	height: .81rem;
+	line-height: .81rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	/* font-size: .32rem; */
+	letter-spacing: 0px;
+	color: #b88051;
+	background-color: #1e150e;
+	margin-right: 0.01rem;
+	margin-bottom: 0.01rem;
+}
+
+.toplist li,.list li:nth-child(3),.list li:last-child{
+	margin-right: 0;
+}
+
+.actTerm .titleWrap{
+	margin-bottom: 0.35rem;
+}
+.termTitle{
+	width: 6.12rem;
+	height: .35rem;
+	text-align: center;
+	line-height: .1rem;
+	font-size: .34rem;
+	font-weight: 600;
+	color: #b88051;
+	background: url('../img/aglucky/b0.png') 0rem 0 no-repeat;
+	background-size: 6.12rem .14rem;
+}
+.termList{
+	width: 100%;
+	height: 3.5rem;
+}
+.termList li{
+	margin: 0 auto;
+	width: 90%;
+	/* height: .6rem; */
+	line-height: .6rem;
+	/* font-size: .34rem; */
+	font-family: MicrosoftYaHei;
+	letter-spacing: 0px;
+	color: #b88051;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	line-height: .36rem;
+	text-align: center;
+	background-color: #b88051;
+	border-radius: .5rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .3rem;
+	letter-spacing: 0px;
+	color: #0f0b07;
+	margin-right: .2rem;
+}

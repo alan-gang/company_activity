@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>新手任务</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/newbietask.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2" src="img/newbietask/bg02.png" alt="">
+			<img class="banner3" src="img/newbietask/bg03.png" alt="">
+		</div>
+		<div class="content w1">
+			<div class="actTitle w1"></div>
+			<div class="listTitle w12 mat tac fz36 cf">任务一览表</div>
+			<ul class="list">
+				<li class="fl" id="1">
+					<div class="taskIcon w1 tac">
+						<img src="img/newbietask/icon01.png" alt="">
+					</div>
+					<div class="taskInfo w1 tac fz16 cf">注册</div>
+					<div class="taskAward w1 tac fz16">+ 188 U币 </div>
+					<div class="goGet w1 tac">
+						<button class="fz16 tac cf" href="javascript:" title="">
+							未达标
+						</button>
+					</div>
+				</li>
+				<li class="fl" id="2">
+					<div class="taskIcon w1 tac">
+						<img src="img/newbietask/icon01.png" alt="">
+					</div>
+					<div class="taskInfo w1 tac fz16 cf">设置昵称</div>
+					<div class="taskAward w1 tac fz16">+ 58 U币 </div>
+					<div class="goGet w1 tac">
+						<button class="fz16 tac cf" href="javascript:" title="">
+							未达标
+						</button>
+					</div>
+				</li>
+				<li class="fl" id="3">
+					<div class="taskIcon w1 tac">
+						<img src="img/newbietask/icon01.png" alt="">
+					</div>
+					<div class="taskInfo w1 tac fz16 cf">设置头像</div>
+					<div class="taskAward w1 tac fz16">+ 68 U币 </div>
+					<div class="goGet w1 tac">
+						<button class="fz16 tac cf" href="javascript:" title="">
+							未达标
+						</button>
+					</div>
+				</li>
+				<li class="fl" id="5">
+					<div class="taskIcon w1 tac">
+						<img src="img/newbietask/icon01.png" alt="">
+					</div>
+					<div class="taskInfo w1 tac fz16 cf">绑定银行卡</div>
+					<div class="taskAward w1 tac fz16">+ 100 U币 </div>
+					<div class="goGet w1 tac">
+						<button class="fz16 tac cf" href="javascript:" title="">
+							未达标
+						</button>
+					</div>
+				</li>
+				<li class="fl" id="8">
+					<div class="taskIcon w1 tac">
+						<img src="img/newbietask/icon01.png" alt="">
+					</div>
+					<div class="taskInfo w1 tac fz16 cf">设置交易密码</div>
+					<div class="taskAward w1 tac fz16">+ 100 U币 </div>
+					<div class="goGet w1 tac">
+						<button class="fz16 tac cf" href="javascript:" title="">
+ 							未达标
+						</button>
+					</div>
+				</li>
+			</ul>
+			<div class="termTitle w1"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			if (location.href.indexOf('login=true') != -1) {
+				queryNewbie();
+			}else{
+				if ( parent && parent.closeIFrame ) {
+		          parent.closeIFrame({action: 'goLogin'})
+		        } else {
+		        	if ( location.search != '?goLogin') {
+		        		location.search = 'goLogin'
+		        	}
+		        }
+			}
+			// $.ajax({
+	  //           url: "/uwin/Index/Login",
+	  //           jsonp: "callback",
+	  //           // dataType: "jsonp",
+	  //           async: true,
+	  //           data: { "UserName": "test002","PassWord": "123qwe","Main_Login": "u" },    //参数值
+	  //           type: "POST",   //请求方式
+	  //           beforeSend: function() {
+	  //               //请求前的处理
+	  //           },
+	  //           success: function(req) {
+	  //             queryNewbie();
+	  //           }
+	  //       });
+			function queryNewbie () {
+				$.ajax({
+					    url: "/Promos/Detail",
+					    jsonp: "callback",
+					    // dataType: "jsonp",
+					    async: true,
+					    data: { "id": "4","a": "query" },    //参数值
+					    type: "GET",   //请求方式
+					    beforeSend: function() {
+					        //请求前的处理
+					    },
+					    success: function(req) {
+					    	console.log(req)
+					    	if ( req.data[1] == 0 ) {
+					    		$("ul li:eq(0) .goGet button").html("未达标");
+					    	}else if ( req.data[1] == 1 ) {
+					    		$("ul li:eq(0) .goGet button").html("立即领取").addClass('canSign');;
+					    	}else if ( req.data[1] == 2 ) {
+					    		$("ul li:eq(0) .goGet button").html("已领取").removeClass('canSign');
+					    	}
+
+					    	if ( req.data[2] == 0 ) {
+					    		$("ul li:eq(1) .goGet button").html("未达标");
+					    	}else if ( req.data[2] == 1 ) {
+					    		$("ul li:eq(1) .goGet button").html("立即领取").addClass('canSign');;
+					    	}else if ( req.data[2] == 2 ) {
+					    		$("ul li:eq(1) .goGet button").html("已领取").removeClass('canSign');
+					    	}
+
+					    	if ( req.data[3] == 0 ) {
+					    		$("ul li:eq(2) .goGet button").html("未达标");
+					    	}else if ( req.data[3] == 1 ) {
+					    		$("ul li:eq(2) .goGet button").html("立即领取").addClass('canSign');;
+					    	}else if ( req.data[3] == 2 ) {
+					    		$("ul li:eq(2) .goGet button").html("已领取").removeClass('canSign');
+					    	}
+
+					    	if ( req.data[5] == 0 ) {
+					    		$("ul li:eq(3) .goGet button").html("未达标");
+					    	}else if ( req.data[5] == 1 ) {
+					    		$("ul li:eq(3) .goGet button").html("立即领取").addClass('canSign');;
+					    	}else if ( req.data[5] == 2 ) {
+					    		$("ul li:eq(3) .goGet button").html("已领取").removeClass('canSign');
+					    	}
+
+					    	if ( req.data[8] == 0 ) {
+					    		$("ul li:eq(4) .goGet button").html("未达标");
+					    	}else if ( req.data[8] == 1 ) {
+					    		$("ul li:eq(4) .goGet button").html("立即领取").addClass('canSign');;
+					    	}else if ( req.data[8] == 2 ) {
+					    		$("ul li:eq(4) .goGet button").html("已领取").removeClass('canSign');
+					    	}
+					    	$(document).on('click', '.canSign', function(){
+					    		var $this = this;
+					    		var index = parseInt($($this).parent().parent('.list li').attr("id"));
+							      drawNewbie ($this,index);
+							});
+
+					    }
+					});
+			}
+
+			function drawNewbie ($this,index) {
+				// var $this = this
+				$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "4","a": "draw","t": index },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	console.log(req.state)
+				    	if ( req.state ) {
+						    var popup = new Popup({
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.data,
+						        'submitCallBack': function(){
+						           $($this).html('已领取').removeClass('canSign');
+						        }
+						    })
+				    	} else {
+						    var popup = new Popup({
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.message
+						    })
+				    	}
+
+					}
+				});
+			}
+
+
+	    });
+	</script>
+</body>
+</html>

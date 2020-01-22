@@ -1,0 +1,168 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+:root {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #ffffff;
+    font-size: .32rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+.content-container {
+    width: 100%;
+    background-image: url('../img/newyearSpecial/content_bg.png');
+    background-size: 100% auto;
+    margin-top: -4px;
+    padding-top: 1px;
+    padding-bottom: 8vw;
+    box-sizing: border-box;
+}
+
+.activity-content-img,
+.rule-content-img {
+    width: 59.6vw;
+    display: block;
+    margin: 0vw auto 3.8667vw;
+}
+
+.activity-content {
+    width: 95.4667vw;
+    display: block;
+    height: auto;
+    margin: 0 auto 6.1458vw;
+}
+
+.rule-content-wp {
+    width: 91.4667vw;
+    height: 59.8667vw;
+    margin: 3.8021vw auto 0;
+    background-image: url('../img/newyearSpecial/rule_bg.png');
+    background-size: 100% auto;
+    padding: 8.1333vw 6.8vw 0 3.4667vw;
+    box-sizing: border-box;
+    font-size: 2.4vw;
+    line-height: 3.4667vw;
+    letter-spacing: 1px;
+    color: #dbdbdb;
+}
+
+.rule-content-wp>ul>li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.9333vw;
+}
+
+.rule-content-wp>ul>li>span.serial-number {
+    width: 5.0667vw;
+    height: 5.2vw;
+    margin-right: 1.8667vw;
+    background-color: #3b467c;
+    line-height: 5.2vw;
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+
+/* .rule-content-wp>ul>li:nth-child(4)>span:nth-child(2) {
+    align-self: flex-end;
+} */

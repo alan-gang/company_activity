@@ -1,0 +1,83 @@
+body{
+  height: 100%;
+  overflow-y: scroll;
+  background: #000;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header .img1{
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/invite/img_01@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2{
+  position: relative;
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/invite/img_02@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2 i{
+  position: absolute;
+  bottom: .3rem;
+  display: block;
+  width: 100%;
+  height: .25rem;
+  background: url('../img/invite/img_03@2x.png') no-repeat;
+  background-size: cover
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section h1{
+  font-size: .3rem;
+  text-align: center;
+  color: #FFE8B7;
+  margin-top: 10px;
+  background: url('../img/invite/img_04@2x.png') no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+section .rule{
+  width: 6.5rem;
+  /* height: 5rem; */
+  margin: 10px 0;
+  padding: 10px .25rem;
+  background: rgba(255, 255, 255, .05);
+}
+section .rule p{
+  position: relative;
+  font-size: .28rem;
+  line-height: .5rem;
+  color: #FFE8B7;
+  padding-left: .4rem;
+  text-align: justify;
+}
+section .rule p i{
+  font-style: normal;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: .3rem;
+  height: .3rem;
+  line-height: .3rem;
+  font-size: .2rem;
+  text-align: center;
+  border: 1px solid #FFE8B7;
+  border-radius: .3rem;
+}
+section .to-page{
+  width: 100%;
+  height: 1.38rem;
+  margin-bottom: 20px;
+  background: url('../img/invite/img_05@2x.png') no-repeat;
+  background-position: center;
+  background-size: 50%;
+}

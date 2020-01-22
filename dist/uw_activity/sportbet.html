@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>天天体育投注 周周有惊喜</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/sportbet.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2 w1" src="img/sportbet/bg02.jpg" alt="">
+			<img class="banner3 w1" src="img/sportbet/bg03.jpg" alt="">
+			<img class="banner4" src="img/sportbet/bg04.png" alt="">
+			<img class="banner5" src="img/sportbet/bg05.png" alt="">
+		</div>
+		<div class="actTerm w1">
+			<div class="termTitle"></div>
+			<div class="actInfo mat fz18 cf tac">
+				每周凡在体育赛事中投注金额≥5000元，即可参加每周百份礼品抽奖活动；
+			</div>
+			<div class="actInfo mat fz18 cf tac">
+				奖品：现金红包，游戏饰品，实物奖品，成长积分、U币等奖品
+			</div>
+			<div class="getNow tac">
+				<a href="javascript:" title="">
+					<img src="img/sportbet/butt1.png" alt="">
+				</a>
+			</div>
+			<div class="weekTitle"></div>
+			<!-- <div class="nowNum mat fz24 cf">
+				当前参与人数：<i class="pnumber fz24 cf">0</i>
+			</div> -->
+			<div class="lotto mat clearfix">
+				<img class="ticket" src="img/sportbet/ticket.png" alt="">
+				<div class="slot fl">
+					<p class="countdown"><span id="day"></span>天<span id="hour"></span>时<span id="mini"></span>分<span id="sec"></span>秒</p>
+					<img class="roller" src="img/sportbet/static.png" alt="">
+					<video class="rollerV" muted autoplay loop>
+					  <source src="img/sportbet/animated1.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="winners fl">
+					<div class="winTitle mat fz20 cf tac">
+						中奖名单
+					</div>
+					<div id="text">
+						<div class="scroll-area">
+						   	<!-- <li class="clearfix">
+						    	<i class="playerName">敬请期待</i>
+						    </li> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="ruleTitle"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1</i>体育赛事投注统计时间以每一个自然周为准，投注金额≥5000元即可参加；
+				</li>
+				<li>
+					<i class="termIndex">2</i>每周在符合活动标准玩家中随机抽取100名幸运玩家，活动抽奖时间为每周一20:00分开始；
+				</li>
+				<li>
+					<i class="termIndex">3</i>符合活动标准玩家需在活动页面点击【马上参加】即为报名成功，每周报名只限一次，如无报名将视为自动弃权；
+				</li>
+				<li>
+					<i class="termIndex">4</i>所有领取到现金红包玩家需完成一倍流水即可提款；
+				</li>
+				<li>
+					<i class="termIndex">5</i>所有平局，无效投注，双边投注，以及赔率低于，香港盘0.5以下，欧洲盘1.5以下，马来盘0.5以下，印尼盘-2.0以下，美国盘-200以注单将不被计算为有效流水；
+				</li>
+				<li>
+					<i class="termIndex">6</i>每位玩家、每一组电话号码、每一IP、相同支付方式（含相同借记卡，信用卡，银行帐号）只能申请一次；
+				</li>
+				<li>
+					<i class="termIndex">7</i>如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+				</li>
+				<li>
+					<i class="termIndex">8</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<!-- <script type="text/javascript" src="js/fsrPMD.js"></script> -->
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		// 中奖信息
+		// $("#text").fsrPMD({
+  //          Event: 'mouseover',       //事件
+  //          Id: 'text',               //容器ID
+  //          Bq: 'div',               //复制html标签
+  //          Fx: "down",            //方向
+  //          Time: 50             //时间
+  //       })
+
+		if (location.href.indexOf('login=true') != -1) {
+			$(document).on('click', '.getNow', function(){
+		        apply ();
+			});
+		}else{
+			if ( parent && parent.closeIFrame ) {
+	          parent.closeIFrame({action: 'goLogin'})
+	        } else {
+	        	if ( location.search != '?goLogin') {
+	        		location.search = 'goLogin'
+	        	}
+	        }
+		}
+
+        var fnTimeCountDown = function(d, o){
+			var f = {
+				zero: function(n){
+					var n = parseInt(n, 10);
+					if(n > 0){
+						if(n <= 9){
+							n = "0" + n;
+						}
+						return String(n);
+					}else{
+						return "00";
+					}
+				},
+				dv: function(){
+					d = d || Date.UTC(2050, 0, 1); //如果未定义时间，则我们设定倒计时日期是2050年1月1日
+					var future = new Date(d), now = new Date();
+					//现在将来秒差值
+					var dur = Math.round((future.getTime() - now.getTime()) / 1000) + future.getTimezoneOffset() * 60, pms = {
+						sec: "00",
+						mini: "00",
+						hour: "00",
+						day: "00",
+						month: "00",
+						year: "0"
+					};
+					if(dur > 0){
+						pms.sec = f.zero(dur % 60);
+						pms.mini = Math.floor((dur / 60)) > 0? f.zero(Math.floor((dur / 60)) % 60) : "00";
+						pms.hour = Math.floor((dur / 3600)) > 0? f.zero(Math.floor((dur / 3600)) % 24) : "00";
+						pms.day = Math.floor((dur / 86400)) > 0? f.zero(Math.floor((dur / 86400)) % 30) : "00";
+						//月份，以实际平均每月秒数计算
+						pms.month = Math.floor((dur / 2629744)) > 0? f.zero(Math.floor((dur / 2629744)) % 12) : "00";
+						//年份，按按回归年365天5时48分46秒算
+						pms.year = Math.floor((dur / 31556926)) > 0? Math.floor((dur / 31556926)) : "0";
+					}
+					return pms;
+				},
+				ui: function(){
+					for (var i in o) {
+						o[i].innerHTML = f.dv()[i];
+					}
+					setTimeout(f.ui, 1000);
+				}
+			};
+			f.ui();
+		};
+  		var d = Date.UTC(2019, 6, 22, 20, 0);
+		var obj = {
+		     sec: document.getElementById("sec"),
+		     mini: document.getElementById("mini"),
+		     hour: document.getElementById("hour"),
+		     day: document.getElementById("day")
+		}
+		fnTimeCountDown(d, obj);
+		// console.log( $('#sec').html()==0 )
+		$('.roller').css( 'display','inline-block');
+		$('.rollerV').css( 'display','none');
+		if( $('#sec').html() == 0 & $('#mini').html() == 0 & $('#hour').html() == 0 & $('#day').html() == 0){
+			$('.roller').css( 'display','none');
+			$('.rollerV').css( 'display','inline-block');
+		}
+
+		// $.ajax({
+  //           url: "/uwin/Index/Login",
+  //           jsonp: "callback",
+  //           // dataType: "jsonp",
+  //           async: true,
+  //           data: { "UserName": "test002","PassWord": "a123456","Main_Login": "u" },    //参数值
+  //           type: "POST",   //请求方式
+  //           beforeSend: function() {
+  //               //请求前的处理
+  //           },
+  //           success: function(req) {
+  //           	$(document).on('click', '.getNow', function(){
+		// 	        apply ();
+		// 		});
+  //           }
+  //       });
+
+		queryWinner();
+        function apply () {
+			$.ajax({
+			    url: "/uwin/Promos/Detail",
+			    jsonp: "callback",
+			    // dataType: "jsonp",
+			    async: true,
+			    data: { "id": "24","a": "Participate" },    //参数值
+			    type: "POST",   //请求方式
+			    beforeSend: function() {
+			        //请求前的处理
+			    },
+			    success: function(req) {
+			    	// console.log(req.state)
+			    	if ( req.state ) {
+			    		$('.ticket').addClass('pullTicket');
+					    setTimeout( function(){
+					    	var popup = new Popup({
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.data
+						    })
+					    },2000)
+			    	}else{
+			    		var popup = new Popup({
+					        'type': 'submit',
+					        'title': '提示信息',
+					        'text': req.message
+					    })
+			    	}
+
+			    }
+			});
+		}
+
+		function queryWinner () {
+			$.ajax({
+			    url: "/uwin/Promos/Detail",
+			    jsonp: "callback",
+			    // dataType: "jsonp",
+			    async: true,
+			    data: { "id": "24","a": "LuckyUsersList" },    //参数值
+			    type: "POST",   //请求方式
+			    beforeSend: function() {
+			        //请求前的处理
+			    },
+			    success: function(req) {
+			    	// console.log(req)
+			    	if( req.state ){
+			    		var data = req.data;
+			    		for(var i in data){
+						   	var html = '<li class="clearfix"><i class="playerName">'+ data[i].UserName +'</i></li>'
+						   	$('#text div').append(html)
+						   	// setTimeout( function(){
+					   		// 	$('#text div').append(html)
+						   	// }, i*1000 )
+						}
+			    	}
+			    }
+			});
+		}
+
+	})
+	</script>
+</body>
+</html>

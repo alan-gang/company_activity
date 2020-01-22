@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电子游戏 高额返水</title>
+    <link rel="stylesheet" href="css/reset.css?v=0.2">
+	<link rel="stylesheet" type="text/css" href="css/egames.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+	<script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2 w1" src="img/egames/bg02@2x.png" alt="">
+		</div>
+		<div class="actTerm w1">
+			<div class="termTitle mat"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1</i>活动无需申请，最低返水金额为1元；
+				</li>
+				<li>
+					<i class="termIndex">2</i>返水每日发放时间为每天下午17:00分自动派发，返现金额需一倍流水即可提款；
+				</li>
+				<li>
+					<i class="termIndex">3</i>每位有效玩家、手机号码、电子邮箱、银行卡、IP地址、每台设备只能享受一次优惠，对违规的用户，
+U赢电竞保留无限期审核，如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+				</li>
+				<li>
+					<i class="termIndex">4</i>本活动U赢电竞保留最终解释权。
+				</li>
+			</ul>
+			<div class="giftTitle mat"></div>
+			<ul class="giftList mat clearfix">
+				<!-- <li class="fl">
+					<img src="img/egames/sw_fbb.png" alt="">
+				</li> -->
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		FastClick.attach(document.body);
+
+		var hasLogin = false;
+		//h5登录
+		if (location.href.indexOf('type=h5') != -1) {
+	      if (location.href.indexOf('hasLogin=true') != -1) {
+	        hasLogin = true;
+	        query ();
+	      }else{
+	        if ( parent && parent.closeIFrame ) {
+	          parent.closeIFrame({action: 'goLogin'})
+	        } else {
+	          if ( location.search != '?goLogin') {
+	            location.search = 'goLogin'
+	          }
+	        }
+	      }
+	    }
+        window.onload = function() {
+            if (window.android) {
+                hasLogin = android.isLogin();
+            }
+            if(hasLogin){
+                query ();
+            }
+        }
+        function isLogin(b) {
+            hasLogin = b
+            if(hasLogin){
+                query ();
+            }
+        }
+
+        function isiOS() {
+            var u = navigator.userAgent;
+            return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        }
+
+        function back(code,title) {
+	        if (!hasLogin) {
+	            // 还没登录则先登录
+	            if (location.href.indexOf('type=h5') != -1) {
+		        	if ( parent && parent.closeIFrame ) {
+			          parent.closeIFrame({action: 'goLogin'})
+			        } else {
+			          if ( location.search != '?goLogin') {
+			            location.search = 'goLogin'
+			          }
+			        }
+		      	} else {
+		            if (isiOS()) {
+		                //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+		                goAppLogin();
+		            } else if (window.android) {
+		                android.goAppLogin();
+		            }
+	            }
+	            return;
+	        }
+
+	        if (location.href.indexOf('type=h5') != -1) {
+	        	if ( parent && parent.closeIFrame ) {
+		          parent.closeIFrame({action: 'goEgame'})
+		        }
+	      	} else {
+		        if (isiOS()) {
+		            go('goEgame',code,title);
+		        } else if (window.android) {
+		            android.go('goEgame',code,title);
+		        }
+		    }
+	        return;
+	    }
+
+        function query() {
+            $.ajax({
+               	url: "/Game/List",
+			    jsonp: "callback",
+			    // dataType: "jsonp",
+			    async: true,
+			    data: { "id": "3","page": "1","pagesize": "8" },    //参数值
+			    type: "POST",   //请求方式
+			    beforeSend: function() {
+			        //请求前的处理
+			    },
+			    success: function(req) {
+			    	// console.log(req)
+			    	if( req.state ){
+			    		var json  = req.data.records;
+			    		var htmlLi = '';
+			    		$.each(json, function (index, obj) {
+		                // htmlLi = '<li class="fl" onclick="back({action:' + '\'goEgame\',args: \''+ obj.code +'\'})"><img src="'+ obj.pic_url +'" title="点击进入游戏"></li>';
+			                htmlLi = '<li class="fl" onclick="back(\''+ obj.code +'\',\''+ obj.title +'\')"><img src="'+ obj.pic_url +'" title="点击进入游戏"></li>';
+			                $('.giftList').append(htmlLi);
+			            });
+			    	}else{
+			    		// var popup = new Popup({
+					    //     'type': 'submit',
+					    //     'title': '提示信息',
+					    //     'text': req.message
+					    // })
+			    	}
+			    }
+            });
+        }
+
+	</script>
+</body>

@@ -1,0 +1,149 @@
+.wrapper{
+	font-family: MicrosoftYaHei-Bold;
+	font-size: .32rem;
+	color: #3f2908;
+	background-color: #13181e;
+	padding-bottom: 1.5rem;
+}
+.banner{
+	max-width: 12rem;
+	height: 6.58rem;
+	background: url('../img/anniversary/top@2x.png') 0 0 no-repeat;
+	background-size: 100% 6.58rem;
+	position: relative;
+}
+.actTerm{
+	height: auto;
+	padding-top: .3rem;
+}
+.actTitle{
+	width: 2.21rem;
+	background-image: url('../img/anniversary/title01@2x.png');
+}
+.ruleTitle{
+	width: 2.77rem;
+	background-image: url('../img/anniversary/title02@2x.png');
+	position: relative;
+}
+
+.title{
+	height: .75rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% .75rem;
+	margin: 0 auto .6rem;
+}
+.actInfo{
+	width: 4.9rem;
+	padding: .4rem .3rem .4rem 1.45rem;
+	background-image: linear-gradient(90deg,
+		#d6b274 4%,
+		#dcc47d 50%,
+		#dbbe7a 100%),
+	linear-gradient(
+		#010101,
+		#010101);
+	background-blend-mode: normal,
+		normal;
+	color: #3f2908;
+	font-weight: 600;
+	margin-bottom: .5rem;
+	position: relative;
+	text-align: justify;
+}
+.img1{
+	width: 2.5rem;
+	height: 1.82rem;
+	position: absolute;
+	left: -.5rem;
+	bottom: -.2rem;
+	z-index: 2;
+}
+.img2{
+	width: 2.5rem;
+	height: 3.13rem;
+	position: absolute;
+	right: -2.5rem;
+	bottom: -1.93rem;
+	z-index: 2;
+}
+.thks{
+	width: 90%;
+	text-align: center;
+	line-height: .4rem;
+	color: #dbbf7b;
+}
+
+.actTerm table{
+	width: 90%;
+	margin: auto;
+	font-size: .32rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #222628;
+	margin: .47rem auto .5rem;
+}
+.actTerm table th{
+	border: 0;
+	background-image: linear-gradient(
+		#dbbf7a,
+		#dbbf7a),
+	linear-gradient(
+		#0c0e0f,
+		#0c0e0f);
+	background-blend-mode: normal,
+		normal;
+}
+.actTerm table td{
+	color: #a4a4a4;
+}
+.actTerm table th,.actTerm table td{
+	padding: .2rem .1rem;
+	border: 2px solid #12171d;
+}
+
+.termList{
+	width: 80.5%;
+	/* height: 1.5rem; */
+	padding: .8rem .3rem .4rem;
+	background-image: linear-gradient(90deg,
+		#d6b274 4%,
+		#dcc47d 50%,
+		#dbbe7a 100%),
+	linear-gradient(
+		#010101,
+		#010101);
+	background-blend-mode: normal,
+		normal;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .35rem;
+	font-size: .32rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	background-color: #1b1d44;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	color: #a4a4a4;
+	margin-top: .03rem;
+	margin-right: .2rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 85%;
+    text-align: justify;
+    color: #3f2908;
+}

@@ -1,0 +1,59 @@
+body,
+.wrapper {
+  height: 100%;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.jump-view {
+  background: url('../img/jumpToChat/bg.jpg') no-repeat top center;
+  align-items: center;
+  font-size: 0.14rem;
+  height: 100%;
+}
+.avator-wp {
+  width: 2.50rem;
+  height: 2.56rem;
+  background: url('../img/jumpToChat/icon.png') no-repeat center;
+  background-size: 100%;
+  margin-top: 1.5rem;
+}
+.btn-open-chat {
+  width: 2.86rem;
+  height: 0.6rem;
+  line-height: 0.7rem;
+  background: url('../img/jumpToChat/btn.png') no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  color: #000000;
+  margin-top: 0.4rem;
+  font-size: 0.18rem;
+}
+.remaing-time {
+  margin-top: 0.1rem;
+}
+.remaing-time span {
+  padding: 0 0.1rem;
+  color: #f3c258;
+}
+.chat-info{
+  width: 2.86rem;
+  line-height: 0.6rem;
+  font-size: .14rem;
+  color: #a1a1a1;
+  text-align: center;
+  margin-top: .1rem;
+}
+.chat-info-bot{
+  width: 2.84rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  font-size: .18rem;
+  color: #a1a1a1;
+  text-align: center;
+  /* border: 2px solid #dfaa39; */
+  cursor: pointer;
+}
+

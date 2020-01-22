@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>体育霸王餐</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+	<link rel="stylesheet" type="text/css" href="css/sportsmeal.css?v=0.3">
+</head>
+
+<body>
+<div class="wrapper w1">
+	<div class="banner w1"></div>
+	<div class="actTerm w1">
+		<div class="titTitle title"></div>
+		<div class="actInfo mat">
+			U赢体育每天精选一场体育赛事，参加投注该赛事且参加保险，若最后结果为输，
+			则可获得100%输额返还。根据会员等级，<span class="sp">最低保险58元，最高保险可达1988元！</span>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+
+				<!--<div class="swiper-slide">
+                    <p class="dates">6月06日</p>
+                    <img src="img/sportsmeal/123.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <p class="dates">6月08日</p>
+                    <img src="img/sportsmeal/125.png" alt="">
+                </div> -->
+
+
+			</div>
+			<!-- Add Arrows -->
+			<!--  <div class="swiper-button-next"></div>
+             <div class="swiper-button-prev"></div> -->
+		</div>
+		<div class="actTitle title"></div>
+		<table border="1" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>会员级别</th>
+				<th>最高返奖</th>
+			</tr>
+			<tr>
+				<td>LV2 以下</td>
+				<td>58人民币</td>
+			</tr>
+			<tr>
+				<td>LV3 - LV4</td>
+				<td>68人民币</td>
+			</tr>
+			<tr>
+				<td>LV5</td>
+				<td>98人民币</td>
+			</tr>
+			<tr>
+				<td>LV6</td>
+				<td>128人民币</td>
+			</tr>
+			<tr>
+				<td>LV7</td>
+				<td>188人民币</td>
+			</tr>
+			<tr>
+				<td>LV8</td>
+				<td>288人民币</td>
+			</tr>
+			<tr>
+				<td>LV9</td>
+				<td>388人民币</td>
+			</tr>
+			<tr>
+				<td>LV10以上</td>
+				<td>1,988人民币</td>
+			</tr>
+		</table>
+		<div class="ruleTitle title"></div>
+		<ul class="termList mat">
+			<li>
+				<i class="termIndex">1</i>
+				<p>
+					会员单笔存款500元即可参与当天活动，每次存款只可申请一次保险投注活动；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">2</i>
+				<p>
+					会员必须投注于独赢盘，让球盘，大小，单双四个盘口，允许投注于篮球单节，半场
+					或全场及滚球。（加时赛不计算在内；总盈利额计算包含特殊盘口投注与连串过关投
+					注在内）；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">3</i>
+				<p>
+					任何注单取消或本金返还，且任何赔率低于香港盘0.5、欧洲盘1.5水位及同一局游
+					戏中对赌行为，将不计算为有效的投注额之内。
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">4</i>
+				<p>
+					本优惠不可与任何存送优惠同时申请，存送优惠需完成流水后才可参与本优惠，否则
+					取消优惠参加资格；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">5</i>
+				<p>
+					如赛事取消或改期或其他原因导致赛事不能正常进行，那么会导致当期的保险投注优
+					惠也无法正常进行，即当期的保险投注优惠会取消；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">6</i>
+				<p>
+					凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        checkList();
+        function checkList () {
+            $.ajax({
+                url: "/Promos/Detail",
+                jsonp: "callback",
+                // dataType: "jsonp",
+                async: true,
+                data: { "id": "42","a": "list","m": "0" },    //参数值
+                type: "GET",   //请求方式
+                beforeSend: function() {
+                    //请求前的处理
+                },
+                success: function(req) {
+                    // console.log(req.data)
+                    if ( req.state ) {
+                        var piclist = req.data;
+                        $.map( piclist, function(v){
+                            var html ='<div class="swiper-slide slide"><p class="dates">' + daytrans(v.matchDate) + '</p><div class="slide-title">'+v.name+'</div><div class="wrap"><div class="img-wrap"><img src="'+v.homeTeamPicUrl+'" alt="" class="img1"><div>'+v.homeTeamName+'</div></div><div class="time">' + timetrans(v.matchDate) + '</div><div class="img-wrap"><img src="'+v.awayTeamPicUrl+'" alt="" class="img2"><div>'+v.awayTeamName+'</div></div></div></div>';
+                            $('.swiper-wrapper').append(html);
+                        });
+                        var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 1.8,
+                            spaceBetween: 30,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                        });
+                    } else {
+                        var popup = new Popup({
+                            'type': 'submit',
+                            'title': '信息',
+                            'text': req.message
+                        })
+                    }
+
+                }
+            });
+        }
+        function daytrans(date){
+            var date = new Date(date*1000);//如果date为13位不需要乘1000
+            var Y = date.getFullYear();
+            var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1);
+            var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return M +'月'+ D +'日';
+        }
+        function timetrans(date){
+            var date = new Date(date*1000);
+            var H = date.getHours();
+            var M = date.getMinutes()
+            return (H<10 ? '0'+H : H)+':'+ (M < 10 ? '0' + M : M)
+        }
+    })
+
+</script>
+</body>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>幸运刮刮乐</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/scratchers.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1"></div>
+		<div class="actTitle title"></div>
+		<div class="bar">
+			<img src="img/scratchers/e1.png" alt="">
+		</div>
+		<div class="actTerm w1">
+			<div class="actCon">
+				即日起在U赢电竞投注100元即可领取一张刮刮卡，<br>刮开即有机会获取<span class="sp">88888元</span>，每日无限发放。
+			</div>
+			<div class="allInfo">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th>投注要求</th>
+						<th>刮刮卡</th>
+					</tr>
+					<tr>
+						<td>100元</td>
+						<td>1张</td>
+					</tr>
+					<tr>
+						<td>1,000元</td>
+						<td>10张</td>
+					</tr>
+					<tr>
+						<td>10,000元</td>
+						<td>100张</td>
+					</tr>
+					<tr>
+						<td>100,000元</td>
+						<td>1,000张</td>
+					</tr>
+					<tr>
+						<td class="spTd" colspan="2">无上限</td>
+					</tr>
+				</table>
+			</div>
+			<div class="bar sBar">
+				<img src="img/scratchers/e1.png" alt="">
+				<img class="decorate" src="img/scratchers/c1.png" alt="">
+			</div>
+			<div class="ruleTitle title"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1</i>
+					<p>
+						只要投注满100元会自动发放到您的账户，投注额有效时间可持续7天，只要7天内累计达到100元就会自动发放。
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">2</i>
+					<p>
+						举例：客户在9月20号投注累计10元，只要在9月27号结束之前再投注90元，即可领取一张刮刮卡，刮开即有机会获取88888元奖金。
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">3</i>
+					<p>
+						刮刮卡有效时间为30天，超过30天未刮奖则刮刮卡过期，不再有效。
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">4</i>
+					<p>
+						刮出的奖金没有任何流水要求，可以直接投注或提款；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">5</i>
+					<p>
+						每位玩家同一住址、电话号码﹑电子邮箱地址、IP（例如网吧，其他公共用计算机）﹑支付方式(相同借记卡/银行帐户姓名及号码) 仅适用一次活动优惠，若玩家有重复申请（如关联账号）之行为，U赢将保留或取消玩家优惠彩金的权利；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">6</i>
+					<p>
+						平台保有修改活动以及解释活动之权利。
+					</p>
+				</li>
+
+			</ul>
+			<div class="bar">
+				<img src="img/scratchers/e1.png" alt="">
+			</div>
+		</div>
+		<div class="back" onclick="back({action: 'goToList'})"></div>
+	</div>
+	<script type="text/javascript">
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+	</script>
+</body>

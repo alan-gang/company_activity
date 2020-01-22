@@ -1,0 +1,449 @@
+body{
+    background-color: #12171d;
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+.wrapper{
+    /* padding-bottom: .87rem; */
+    min-width: 14rem;
+    min-height: 12rem;
+    background-color: #12171d;
+}
+.header{
+    min-width: 14rem;
+    height: 3.93rem;
+    background: url('../img/aboutus/top2.jpg') 0 0 no-repeat;
+    background-size: 100% 3.93rem;
+    overflow: hidden;
+}
+.topTab{
+    /* width: 12rem; */
+    margin: 0 auto;
+    position: relative;
+    /* top: -0.51rem; */
+    background: url('../img/aboutus/aboutus_nav_bg.png') 0 0 no-repeat;
+    background-size: 100% .55rem;
+}
+.tabs .tab1,.tabs .tab2,.tabs .tab3,.tabs .tab4,.tabs .tab5{
+    display: none;
+    clear: both;
+    min-height: 500px;
+}
+.tabs .horizontal{
+    width: 10.7rem;
+    min-width: 8rem;
+    height: 0.51rem;
+    margin: 0 auto;
+    padding: 0px;
+    overflow: hidden;
+}
+.tabs .horizontal li{
+    float: left;
+    list-style: none;
+    height: 0.51rem;
+    line-height: 0.46rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: .16rem;
+    color: #fff;
+}
+.m-t-6 {
+    margin-top: .68rem;
+}
+.title.m-b-6 {
+    margin-bottom: .68rem;
+}
+.tabs .horizontal li:not(:first-child){
+    margin-left: .8rem;
+}
+.tabs .horizontal li.selectActive{
+    color: #f3c258;
+}
+/* tab1 */
+.tab1{
+    width: 10.52rem;
+    height: 5.12rem;
+    margin: 0.9rem auto;
+}
+.t1L{
+    width: 3.52rem;
+    height: 5.02rem;
+    padding-top: 0.1rem;
+}
+.t1L img{
+    width: 3.52rem;
+    height: 5.02rem;
+}
+.t1R{
+    width: 7rem;
+    /* height: 4.1rem; */
+    /* padding-top: 1.02rem; */
+    /* background: url('../img/aboutus/tab1/tab1_1.png') 0 0 no-repeat; */
+    /* background-size: 100% .87rem; */
+}
+.m-b-3 {
+    margin-bottom: .3rem;
+}
+h3.title {
+    font-size: .2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: .1rem;
+    height: auto;
+    background: none;
+}
+.t1Info{
+    width: 5.51rem;
+    font-size: .15rem;
+    line-height: .45rem;
+    color: #fff;
+    text-align: justify;
+    margin: 0 auto 0.3rem;
+}
+/* tab2 */
+#mytabs>ul>li img{
+    width: 3.78rem;
+    height: 2.01rem;
+}
+.team{
+    width: 11.78rem;
+    height: 5.92rem;
+}
+.player{
+    width: 11.84rem;
+    height: 5.84rem;
+}
+.coach{
+    width: 11.93rem;
+    height: 4.95rem;
+}
+.t2t{
+    width: 7.43rem;
+    height:.59rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 7.43rem .59rem;
+    margin: .68rem auto 0.5rem;
+}
+.t2-1{
+    height: 0.83rem;
+    background-size: 7.88rem 0.83rem;
+    background-image: url('../img/aboutus/tab2/tab2_1.png');
+}
+.t2-2{
+    background-image: url('../img/aboutus/tab2/tab2_2.png');
+}
+.t2-3{
+    background-image: url('../img/aboutus/tab2/tab2_3.png');
+}
+.t2-4{
+    background-image: url('../img/aboutus/tab2/tab2_4.png');
+}
+#mytabs ul li{
+    margin-right: .3rem;
+}
+#mytabs ul li:last-child{
+    margin-right: 0;
+}
+.zz-list {
+    font-size: .18rem;
+    color: #fff;
+    width: 10.7rem;
+    margin: 0 auto;
+}
+.zz-list li{
+    overflow: hidden;
+    padding-bottom: .38rem;
+    border-bottom: 1px dotted #3a3c3f;
+    margin-top: .5rem;
+}
+.zz-list li:last-child{
+    border: none;
+}
+.zz-list li:first-child{
+    margin-top: 0;
+}
+.zz-list .left {
+    width: 3rem;
+    height: 1.58rem;
+    background: #1a1e23;
+    border: 1px solid #292926;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.zz-list li:first-child .left{
+    background-image: url('../img/aboutus/tab2/new/a1.png')
+}
+.zz-list li:nth-child(2) .left{
+    background-image: url('../img/aboutus/tab2/new/a2.png')
+}
+.zz-list li:nth-child(3) .left{
+    background-image: url('../img/aboutus/tab2/new/a3.png')
+}
+.zz-list li:nth-child(4) .left{
+    background-image: url('../img/aboutus/tab2/new/a4.png')
+}
+.zz-list li:nth-child(5) .left{
+    background-image: url('../img/aboutus/tab2/new/a5.png')
+}
+.zz-list .right{
+    width: 7.15rem;
+}
+.zz-list .right .title{
+    line-height: .36rem;
+}
+.zz-list .right span{
+    display: inline-block;
+    padding: 0 .18rem;
+    background: #777777;
+    margin-right: .16rem;
+    margin-bottom: .1rem;
+}
+.zz-list .right p{
+    margin-bottom: .4rem;
+    line-height: .26rem;
+}
+.zz-list .imgs{
+    overflow: hidden;
+}
+.zz-list .imgs .item {
+    display: inline-block;
+    margin-right: .14rem;
+    width: 2.24rem;
+    height: 1.5rem;
+    float: left;
+}
+.zz-list .imgs .item{
+    background-size: cover;
+}
+.zz-list li:first-child .imgs .item:nth-child(1) {
+    background-image: url('../img/aboutus/tab2/new/b1.png');
+}
+.zz-list li:first-child .imgs .item:nth-child(2) {
+    background-image: url('../img/aboutus/tab2/new/b2.png');
+}
+.zz-list li:first-child .imgs .item:nth-child(3) {
+    background-image: url('../img/aboutus/tab2/new/b3.png');
+}
+.zz-list li:nth-child(2) .imgs .item:nth-child(1) {
+    background-image: url('../img/aboutus/tab2/new/c1.png');
+}
+.zz-list li:nth-child(2) .imgs .item:nth-child(2) {
+    background-image: url('../img/aboutus/tab2/new/c2.png');
+}
+.zz-list li:nth-child(2) .imgs .item:nth-child(3) {
+    background-image: url('../img/aboutus/tab2/new/c3.png');
+}
+/* tab3 */
+.tab3,.tab4,.tab5{
+    width: 10.7rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+.t31b{
+    /* width: 7.43rem; */
+    /* height:.83rem; */
+    /* background: url('../img/aboutus/tab3/tab3_1.png') 0 0 no-repeat; */
+    /* background-size: 100% .83rem; */
+    margin-top: .68rem;
+}
+.tab3 p,.tab3 i,.tab3 ul li,.tab3 ol li,.tab4 p,.tab4 i,.tab4 ol li,.tab5 p,.tab5 i,.tab5 ul li{
+    font-size: .16rem;
+    line-height: .3rem;
+    color: #b1b1b1;
+    text-align: justify;
+}
+.disc li{
+    position: relative;
+    padding-left: .16rem
+}
+.disc li:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .11rem;
+    width: .08rem;
+    height: .08rem;
+    background: #b1b1b1;
+    border-radius: 50%;
+}
+.tab3 ol,.tab4 ol{
+    padding-left: .3rem;
+}
+.tab3 ol li,.tab4 ol li{
+    list-style: decimal;
+    line-height: .35rem;
+}
+.tab3 i,.tab4 i,.tab5 i,.tab2 i,.tab1 i{
+    font-style: normal;
+    color: #c59d49;
+}
+.tab3 i.num{
+    display: inline-block;
+    width: .25rem;
+    height: .25rem;
+    line-height: .25rem;
+    text-align: center;
+    color: #000;
+    background-color: #efbe56;
+    border-radius: .5rem;
+    margin: 0 .18rem 0 .2rem;
+}
+.t3t,.t4t{
+    width: 7.87rem;
+    height:.57rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 7.87rem .57rem;
+    margin: .68rem auto 0.1rem;
+}
+/* .t32b{
+    background-image: url('../img/aboutus/tab3/tab3_2.png');
+}
+.t33b{
+    background-image: url('../img/aboutus/tab3/tab3_3.png');
+}
+.t34b{
+    background-image: url('../img/aboutus/tab3/tab3_4.png');
+}
+.t35b{
+    background-image: url('../img/aboutus/tab3/tab3_5.png');
+}
+.t36b{
+    background-image: url('../img/aboutus/tab3/tab3_6.png');
+} */
+.t37b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab3/tab3_7.png');
+}
+.t38b{
+    background-image: url('../img/aboutus/tab3/tab3_8.png');
+}
+.t39b{
+    background-image: url('../img/aboutus/tab3/tab3_9.png');
+}
+.t310b{
+    background-image: url('../img/aboutus/tab3/tab3_10.png');
+}
+.t311b{
+    background-image: url('../img/aboutus/tab3/tab3_11.png');
+}
+.t312b{
+    background-image: url('../img/aboutus/tab3/tab3_12.png');
+}
+.t313b{
+    background-image: url('../img/aboutus/tab3/tab3_13.png');
+}
+.t314b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab3/tab3_14.png');
+}
+.t315b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab3/tab3_15.png');
+}
+.t316b{
+    background-image: url('../img/aboutus/tab3/tab3_16.png');
+}
+.t317b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab3/tab3_17.png');
+}
+.t318b{
+    background-image: url('../img/aboutus/tab3/tab3_18.png');
+}
+.t319b{
+    background-image: url('../img/aboutus/tab3/tab3_19.png');
+}
+.t320b{
+    background-image: url('../img/aboutus/tab3/tab3_20.png');
+}
+.t321b{
+    background-image: url('../img/aboutus/tab3/tab3_21.png');
+}
+.t322b{
+    background-image: url('../img/aboutus/tab3/tab3_22.png');
+}
+.t323b{
+    background-image: url('../img/aboutus/tab3/tab3_23.png');
+}
+.t324b{
+    background-image: url('../img/aboutus/tab3/tab3_24.png');
+}
+/* tab4 */
+.t41b{
+    width: 7.43rem;
+    height:.83rem;
+    background: url('../img/aboutus/tab4/tab4_1.png') 0 0 no-repeat;
+    background-size: 100% .83rem;
+    margin-top: .68rem;
+}
+.t42b{
+    background-image: url('../img/aboutus/tab4/tab4_2.png');
+}
+.t43b{
+    background-image: url('../img/aboutus/tab4/tab4_3.png');
+}
+.t44b{
+    background-image: url('../img/aboutus/tab4/tab4_4.png');
+}
+.t45b{
+    background-image: url('../img/aboutus/tab4/tab4_5.png');
+}
+.t46b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab4/tab4_6.png');
+}
+.t47b{
+    background-image: url('../img/aboutus/tab4/tab4_7.png');
+}
+.t48b{
+    width: 7.88rem;
+    height: 1.03rem;
+    background-size: 7.88rem 1.03rem;
+    background-image: url('../img/aboutus/tab4/tab4_8.png');
+}
+.t49b{
+    background-image: url('../img/aboutus/tab4/tab4_9.png');
+}
+.t410b{
+    background-image: url('../img/aboutus/tab4/tab4_10.png');
+}
+.t411b{
+    background-image: url('../img/aboutus/tab4/tab4_11.png');
+}
+.t412b{
+    background-image: url('../img/aboutus/tab4/tab4_12.png');
+}
+/* tab5 */
+.t51b{
+    width: 7.43rem;
+    height:.83rem;
+    background: url('../img/aboutus/tab5/tab5_1.png') 0 0 no-repeat;
+    background-size: 100% .83rem;
+    margin-top: .68rem;
+}
+.tab5 ul li{
+    line-height: .3rem;
+    margin-bottom: .2rem;
+}
+.tab5 p{
+    line-height: .3rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+.tab5 table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    empty-cells: show;
+}

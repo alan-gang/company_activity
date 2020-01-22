@@ -1,0 +1,109 @@
+body{
+  height: 100%;
+  overflow-y: scroll;
+  background: #000;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("../img/dailyTask/top@2x.png") no-repeat center;
+  height: 5rem;
+  background-size: cover
+}
+section{
+  position: relative;
+  width: 100%;
+}
+section h1{
+  width: 100%;
+  height: .4rem;
+  font-size: .3rem;
+  color: #fff;
+  text-align: center;
+  background: url('../img/dailyTask/img_05@2x.png') no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+section ul.task{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 7rem;
+  margin: 10px auto 20px;
+  background: url('../img/dailyTask/img_04@2x.png');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .8)
+}
+section ul.task li{
+  display: flex;
+  width: 2.2rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+section ul.task li img{
+  width: 1.2rem;
+  margin: 10px 0;
+}
+section ul.task li span.txt, section ul.task li span.num{
+  font-size: .28rem;
+  color: #E5AC0C;
+}
+section ul.task li p.task-name{
+  box-sizing: border-box;
+  width: 2.2rem;
+  height: 1rem;
+  text-align: center;
+  font-size: .28rem;
+  color: #fff;
+}
+section ul.task li span.btn{
+  font-size: .24rem;
+  margin-top: .2rem;
+  padding: 3px 10px;
+  color: #0D0D0F;
+  background: #606060;
+  border-radius: 3px;
+  pointer-events: none;
+}
+section ul.task li span.canSign{
+  background-color: #e5ac0c;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+section div.rule{
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  margin: 10px auto 20px;
+  background: url('../img/dailyTask/img_04@2x.png');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .8)
+}
+section div.rule p{
+  position: relative;
+  font-size: .28rem;
+  line-height: .4rem;
+  margin: 10px 0;
+  padding: 0 .2rem 0 .6rem;
+  color: #fff;
+  text-align: justify;
+}
+section div.rule p i{
+  font-style: normal;
+  position: absolute;
+  top: -.08rem;
+  left: 0;
+  display: block;
+  width: .5rem;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: #0C0D0F;
+  background: url('../img/dailyTask/img_06@2x.png');
+  background-position: center;
+  background-size: contain;
+}

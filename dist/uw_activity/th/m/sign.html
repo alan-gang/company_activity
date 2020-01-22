@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.21">
+  <link rel="stylesheet" href="css/dailyTask.css?v=0.22">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+  <title>ภารกิจประจำวัน</title>
+</head>
+
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+    </header>
+    <section>
+      <h1>รายการภารกิจ</h1>
+      <ul class="task">
+        <li id="1">
+          <span class="txt">ภารกิจ1</span>
+          <img src="img/dailyTask/icon_01@2x.png" alt="">
+          <p class="task-name">เดิมพัน <br/>≥<span class="num numT">10</span> ครั้งต่อวัน</p>
+          <span class="num">+ 1 ฿</span>
+          <span class="btn canSign actBtn" data-id="1">รับเลย</span>
+        </li>
+        <li id="2">
+          <span class="txt">ภารกิจ2</span>
+          <img src="img/dailyTask/icon_03@2x.png" alt="">
+          <p class="task-name">เดิมพัน <br/>≥<span class="num numT">20</span> ครั้งต่อวัน</p>
+          <span class="num">+ 1 ฿</span>
+          <span class="btn canSign actBtn" data-id="2">เดิมพันตอนนี้</span>
+        </li>
+        <li id="3">
+          <span class="txt">ภารกิจ3</span>
+          <img src="img/dailyTask/icon_03@2x.png" alt="">
+          <p class="task-name">ยอดเทิร์นโอเวอร์สะสมรายวัน <br/>≥<span class="num numT">1888</span> บาท</p>
+          <span class="num">+ 2 ฿</span>
+          <span class="btn canSign actBtn" data-id="3">เดิมพันตอนนี้</span>
+        </li>
+        <li id="4">
+          <span class="txt">ภารกิจ4</span>
+          <img src="img/dailyTask/icon_04@2x.png" alt="">
+          <p class="task-name">ยอดฝากเงินสะสมรายวัน <br/>≥<span class="num numT">2888</span> บาท</p>
+          <span class="num">+ 5 ฿</span>
+          <span class="btn canSign actBtn" data-id="4">ฝากเงินตอนนี้</span>
+        </li>
+        <li id="5">
+          <span class="txt">ภารกิจ5</span>
+          <img src="img/dailyTask/icon_04@2x.png" alt="">
+          <p class="task-name">ยอดฝากเงินสะสมรายวัน <br/>≥<span class="num numT">5888</span> บาท</p>
+          <span class="num">+ 8 ฿</span>
+          <span class="btn canSign actBtn" data-id="5">ฝากเงินตอนนี้</span>
+        </li>
+        <li id="6">
+          <span class="txt">ภารกิจ6</span>
+          <img src="img/dailyTask/icon_06@2x.png" alt="">
+          <p class="task-name">ภารกิจประจำวันทั้งหมด สำเร็จแล้ว</p>
+          <span class="num">+ 16 ฿</span>
+          <span class="btn canSign actBtn" data-id="6">รับรางวัล</span>
+        </li>
+      </ul>
+      <h1>ข้อตกลงและเงื่อนไข</h1>
+      <div class="rule">
+        <p>
+          <i>1</i>
+          ในแต่ละวันผู้เล่นสามารถพิชิต 5 ภารกิจประจำวันเพื่อรับรางวัล
+        </p>
+        <p>
+          <i>2</i>
+          ภารกิจที่เกี่ยวข้องกับการเดิมพันต้องเป็นการเดิมพันด้วยเงินสดเท่านั้น ผู้ใช้ต้องคลิกเพื่อรับรางวัลเมื่อภารกิจสำเร็จ
+        </p>
+        <p>
+          <i>3</i>
+          การรับรางวัล: รางวัลจะถูกรีเซ็ตทุกวันเวลาเที่ยงคืน หากผู้เล่นไม่กดรับ จะถือว่าสละสิทธิ์โดยอัตโนมัติ
+        </p>
+        <p>
+          <i>4</i>
+          หากพบนักล่าโบนัสซึ่งใช้ IP เดียวกันในการเล่น รางวัลที่ได้รับจะถือเป็นโมฆะ
+        </p>
+        <p>
+          <i>5</i>
+          หากพบผู้เล่นที่เป็นมืออาชีพหรือนักล่าโบนัส UWIN ขอสงวนสิทธิ์ในการเพิกถอนโบนัสและผลกำไรทั้งหมด
+        </p>
+        <p>
+          <i>6</i>
+          UWIN ขอสงวนสิทธิ์ในการแก้ไข ยกเลิก เรียกคืนหรือปฏิเสธโปรโมชั่นใดๆ จากเงื่อนไขเดิม
+        </p>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+
+      var hasLogin = false;
+       //h5登录
+      if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+          hasLogin = true;
+          queryDaily ();
+        }else{
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goLogin'})
+          } else {
+            if ( location.search != '?goLogin') {
+              location.search = 'goLogin'
+            }
+          }
+        }
+      }
+      window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+          }
+          if(hasLogin){
+              queryDaily ();
+          }
+      }
+      function isLogin(b) {
+          hasLogin = b;
+          if(hasLogin){
+              queryDaily ();
+          }
+      }
+      function isiOS() {
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      }
+      $(function () {
+          FastClick.attach(document.body);
+          $('.actBtn').click(function () {
+              if (!hasLogin) {
+                  // 还没登录则先登录
+                  if (location.href.indexOf('type=h5') != -1) {
+                    if ( parent && parent.closeIFrame ) {
+                      parent.closeIFrame({action: 'goLogin'})
+                    } else {
+                      if ( location.search != '?goLogin') {
+                        location.search = 'goLogin'
+                      }
+                    }
+                  } else {
+                    if (isiOS()) {
+                        //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                        goAppLogin();
+                    } else if (window.android){
+                        android.goAppLogin();
+                    }
+                  }
+                  return;
+              }
+              if(!$(this).hasClass('canSign')){
+                  return;
+              }
+              var that = $(this);
+              var t = $(this).attr('data-id');
+              $.ajax({
+                  url: "/Promos/Detail",
+                  jsonp: "callback",
+                  // dataType: "jsonp",
+                  async: true,
+                  data: { "id": "2","a": "draw","t":t  },    //参数值
+                  type: "GET",   //请求方式
+                  beforeSend: function() {
+                      //请求前的处理
+                  },
+                  success: function(req) {
+                      // console.log(req.state)
+                      if ( req.state ) {
+                          that.html('ได้รับแล้ว').removeClass('canSign');
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': 'หมายเหตุ',
+                              'text': req.data,
+                              'submitCallBack': function(){}
+                          })
+                      } else {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': 'หมายเหตุ',
+                              'text': req.message
+                          })
+                      }
+
+                  }
+              });
+          });
+      });
+      function queryDaily () {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "2","a": "query" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  var list = req.data;
+                  $.map( list, function(v,i){
+                    $('.task li:nth-child(' + (i+1) +')').find('.numT').html( v.conditions );
+                    if ( v.isCan == 0 ) {
+                      $("ul li:eq(" + i + ") .btn").html("กำลังดำเนินการ").removeClass('canSign');;
+                    }else if ( v.isCan == 1 ) {
+                      $("ul li:eq(" + i + ") .btn").html("รับเลย").addClass('canSign');;
+                    }else if ( v.isCan == 2 ) {
+                      $("ul li:eq(" + i + ") .btn").html("ได้รับแล้ว").removeClass('canSign');
+                    }
+                  });
+              }
+          });
+      }
+
+  </script>
+</body>
+
+</html>

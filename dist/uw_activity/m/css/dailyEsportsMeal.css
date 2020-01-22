@@ -1,0 +1,207 @@
+.wrapper{
+	font-size: .32rem;
+	color: #fff;
+	background-color: #030712;
+	padding-bottom: 1rem;
+}
+.banner{
+	max-width: 12rem;
+	height: 8.24rem;
+	background: url('../img/dailyEsportsMeal/bg01@3x.png') 0 0 no-repeat;
+	background-size: 100% 8.24rem;
+	position: relative;
+}
+
+.actTerm, .prize, .rule{
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	background-color: #2c2b34;
+	/*box-shadow: inset 0 0.02rem 0.2rem 0.06rem*/
+	rgba(78, 32, 80, 0.64);
+	padding: 0.4rem 0;
+}
+.prize{
+	margin: -1.5rem auto 0.4rem;
+}
+.actTitle{
+	width: 3.75rem;
+	height: .76rem;
+	background: url('../img/dailyEsportsMeal/title01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .2rem auto 0;
+}
+.rule{
+	margin-top: 0.4rem;
+}
+.ruleTitle{
+	width: 3.75rem;
+	height: .76rem;
+	background: url('../img/dailyEsportsMeal/title02.png') right 0 no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto .4rem;
+}
+
+.actTerm table{
+	width: 95%;
+	margin: 0.2rem auto;
+	font-size: 16px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #222628;
+}
+.actTerm table td{
+	color: #38373a;
+}
+.actTerm td span{
+	color: #e8a12e;
+}
+.actTerm table th,.actTerm table td{
+	width: 2.24rem;
+	font-weight: normal;
+	padding: .1rem .1rem;
+	border: 1px solid #030712;
+}
+.actTerm table th{
+	background-image: linear-gradient(#695637, #695637);
+	color: #fff;
+}
+.actTerm table td{
+	background: #ffffff;
+}
+.termList{
+	width: 85%;
+	padding: 0 .4em;
+	margin-bottom: .44rem;
+	position: relative;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .38rem;
+	font-family: MicrosoftYaHei;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+	color: #fff;
+}
+.termIndex{
+	display: inline-block;
+	text-align: center;
+	font-style: normal;
+	letter-spacing: 0px;
+	margin-top: .03rem;
+	margin-right: .1rem;
+	vertical-align: top;
+	color: #2f2a37;
+	width: 0.31rem;
+	height: 0.31rem;
+	line-height: 0.31rem;
+	border-radius: 0.31rem;
+	background: #aa8d5e;
+	font-size: 12px;
+}
+.termList li p{
+	display: inline-block;
+	width: 89%;
+	text-align: justify;
+}
+.subTitle{
+	text-align: center;
+}
+.subTitle >div:nth-child(1) span{
+	color: #f5cf02;
+}
+.subTitle a{
+	display: inline-block;
+	width: 4.80rem;
+	height: 0.76rem;
+	line-height: 0.76rem;
+	background-image: linear-gradient(0deg, #5731a2 0%, #6d36ca 100%);
+	text-align: center;
+	color: #fff;
+	margin-top: 0.3rem;
+	border-top: 1px solid #7e6aa5;
+}
+.subTitle a:visited, .subTitle a:hover, .subTitle a:active{
+	background-color: #652168;
+}
+.des{
+	background: url("../img/dailyEsportsMeal/i1.png") no-repeat center/100% 100%;
+	width: 97%;
+	height: 3.03rem;
+	position: relative;
+	font-size: 12px;
+}
+.des>div{
+	position: absolute;
+	top: 0.9rem;
+	right: 0.1rem;
+	width: 2.6rem;
+}
+.des h2{
+	color: #e8a12e;
+	font-weight: normal;
+	margin-bottom: 0.1rem;
+}
+
+
+.box{
+	padding: 0.15rem 0.2rem;
+	font-size: 14px;
+	width: 88%;
+	margin: 0 auto 0.1rem;
+	background: #222;
+}
+.box .qa{
+	border-left: .06rem solid #e7be40;
+	padding-left: .05rem;
+}
+.box .t_c{
+	text-align: center;
+}
+.box .mt05{
+	margin-top: 0.5rem;
+}
+.box .f_l{
+	float: left;
+}
+.box .f_r{
+	float: right;
+}
+.box .pl20 {
+	padding-left: .2rem;
+}
+.box .pr20 {
+	padding-right: .2rem;
+}
+.box .qd {
+	font-weight: bolder;
+	position: relative;
+	top: 0.55rem;
+	color: #707070;
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+}
+.box .qb{
+	padding-bottom: 0.2rem;
+}
+.box .qb img {
+	width: 1.2rem;
+	vertical-align: middle;
+	margin-bottom: 0.2rem;
+}
+.box .qb .f_l, .box .qb .f_r{
+	width: 2.2rem;
+}
+.box .qc {
+	padding: .08rem .1rem .08rem .4rem;
+	background: #14181e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAACmElEQVQ4jXWUP2seRxDGfzO776vOhTGBBCyBLNskZYo0ihAkGBwbG2OBQcafwP4WgUAgaVLlEySkDCRBTSrjuA0pVDgujAxuXLgwCKS7233M7J3eVxHxcsPszs0+8++5s8N/vwabYT5rGp9hlsFSE7N0FewP0I5U/kEFVEEDUg+1R7UD9Tjx2IkkDD8NBKRvsHQptE32hX/ztcXe2+H0WpxD2ypmO21vdhNsY7T/z7JIQwLEqCuLcxO+XQK39d1k57/3xrMvDWq90BLwPGh38pywdAf04dKvLu6Fzi0bKlLBsA9QWQNfR/4oLli8j54EQARR/RWVH1B5gcpLqbw6wciq3fdmZR0rV2Rlw9CKLEAEJuQR2acWDDG9z6T+J2oXUyxoOEDDM6kcZJXDe5AujhMaqYGvtFE3ymg+9UwTFbqRCvUY1T6hfh3VdVFe5747XgP+dLcvkhtqnJsjn4+6cc6X3GpAHVLXOFaqqFVPge18dDREJ76UtGdm15P35HxEzk5KjWeYRdFRbqGUwjBUSqkMJbLVYzPbjtxz14exBvpXgp8Ndt2NJmYjJ20ccEhVy6SJ4HeDW+GbkpH7YQRrkYZ6X3ABuHZCn/ctM/4KoJS8Ac2UyKU2EPpJhqG+ieglSogMTqG2TKesk9vbaEWuYk7CvZLjUmTW9YXjrvVjawJtPRnLUXCwgeQoJzuz7Ju5+Hw+S130tL0L574PsErXldXjrnwU+3qmzgCsLTBYX1iZpXMr83QZ2A8WRBAPVrevcpzOJ5HVGaAnwENgbwEsWvB+qB9HgPAPm49TW/wtPj+F8zcQ3+YW8CNwA7gNBKfG0oMS09RjCD5Ow8deJEs523PgAfAp8MuZYf4GbAJ3c/L9nKyc9NDdeAekdqFttthkvwAAAABJRU5ErkJggg==) no-repeat left .1rem center/.2rem;
+}
+.clearfix:after, .clearfix:before {
+	display: table;
+	content: "";
+}

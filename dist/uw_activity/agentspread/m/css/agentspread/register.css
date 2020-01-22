@@ -1,0 +1,70 @@
+
+.wrapper{
+	height: 13.32rem;
+	max-width: 10rem;
+	min-height: 100vh;
+	margin: 0 auto;
+	background: #000 url('../../img/agentspread/bg@2x.png') 0 0 no-repeat;
+	background-size: 100% 13.32rem;
+	padding-bottom: .5rem;
+}
+/* 效果CSS开始 */
+.pc-slide {
+	width: 90%;
+	padding-top: .2rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.pc-slide img{
+	width: 50%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.banner,.banner img{
+	width: 7.16rem;
+	height: 2.8rem;
+}
+.banner{
+	position: relative;
+	top: -0.25rem;
+}
+
+.goReg{
+	width: 3.15rem;
+	height: .99rem;
+	margin-top: .33rem;
+	margin-bottom: .3rem;
+}
+.code{
+	overflow: hidden;
+	padding: 0 .8rem;
+}
+.code img{
+	width: 2.6rem;
+}
+.qr img {
+	display: block;
+	width: 56%;
+	margin-top: .2rem;
+	margin: 0 auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.goRegist{
+	display: inline-block;
+	width: 3.15rem;
+	height: .99rem;
+	background-image: url('../../img/agentspread/btn3@2x.png');
+	background-size: 3.15rem .99rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+

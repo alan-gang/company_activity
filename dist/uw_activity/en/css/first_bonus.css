@@ -1,0 +1,169 @@
+*,
+*:before,
+*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+section {
+	width: 100%;
+}
+.banner{
+	width: 100%;
+	height: 9rem;
+	background: url('../img/first_bonus/bg01.jpg') 0 0 no-repeat;
+    background-size: 100% 4.5rem;
+	position: relative;
+}
+.banner2{
+	width: 100%;
+	height: 4.5rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.banner3{
+	width: 7.53rem;
+	height: 5.24rem;
+	position: absolute;
+	left: 50%;
+	top: 1.9rem;
+	margin-left: -3.8rem;
+}
+.event_footer {
+	width: 100%;
+    height: 14.28rem;
+    background: url('../img/first_bonus/bg03.jpg') no-repeat;
+    background-size: 100% 14.28rem;
+}
+.event_content {
+	width: 12rem;
+	/* height: 600px; */
+	margin: 0px auto;
+}
+.event_bonus {
+	width: 100%;
+	/* height: 200px; */
+}
+.event_terms {
+	width: 100%;
+}
+.event_content_title {
+	width: 10.72rem;
+	height: 1.21rem;
+	margin: 0 auto;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 10.72rem 1.21rem;
+}
+.event_title_1 {
+	background-image: url('../img/first_bonus/t01.png');
+}
+.event_title_2 {
+	background-image: url('../img/first_bonus/t02.png');
+}
+.event_content_box {
+	width: 100%;
+	height: 2.33rem;
+	margin: .2rem auto 1.2rem;
+	/* background-color: rgba(15,102,159,.1); */
+	/* border-radius: 5px; */
+	/* padding: 8px; */
+}
+.event_content_box table {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	font: .2rem "微软雅黑";
+	text-align: center;
+}
+.event_content_box table tr td {
+	background-color: rgba(15,102,159,.1);
+	width: 1.3rem;
+	color: #fff;
+}
+.event_content_box table tr td.event_content_box_cell_1 {
+	background-color: #0f669f !important;
+	color: #6cc5ff;
+}
+.event_content_box_cell_bottom {
+	/* color: #08CCE6; */
+}
+.event_terms_box {
+	width: 86%;
+	margin: 20px auto;
+}
+.event_terms_per {
+	clear: both;
+	margin-top: 6px;
+	height: 36px;
+}
+.event_terms_order {
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+	color: #141510;
+	background-color: #08CCE6;
+	float: left;
+}
+.event_terms_content {
+	height: 36px;
+	float: left;
+	line-height: 36px;
+	margin-left: 12px;
+}
+.event_terms_empty_order {
+	width: 36px;
+	height: 36px;
+	float: left;
+}
+.claim_button {
+    width: 1rem;
+    background-color: #ff0;
+    color: black;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 12px;
+    cursor: pointer;
+}
+.event_content_box .canSign{
+	padding: .1rem;
+	background-color: #ff0;
+    color: black;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 12px;
+    cursor: pointer;
+}
+.termList{
+	width:12rem;
+	margin:.2rem auto;
+    /* padding: 0 30px; */
+}
+.termList li{
+    /* height: .6rem; */
+    line-height: .36rem;
+    font-size: .22rem;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: .16rem;
+}
+.termIndex{
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    background-color: #0f669f;
+    border-radius: 2px;
+    font-family: "Microsoft-YaHei";
+    font-style: normal;
+    font-size: .2rem;
+    letter-spacing: 0px;
+    color: #6cc5ff;
+    margin-right: .2rem;
+}

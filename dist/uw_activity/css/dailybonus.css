@@ -1,0 +1,118 @@
+.wrapper{
+	font-size: .24rem;
+	color: #a1a1a1;
+	background-color: #1d0503;
+	padding-bottom: 1rem;
+}
+.banner{
+	min-width: 12rem;
+	height: 10.74rem;
+	background: url('../img/dailybonus/bg.png') 0 0 no-repeat;
+	background-size: 100% 10.74rem;
+	position: relative;
+}
+
+.actTerm{
+	height: auto;
+	margin-top: -1rem;
+	position: relative;
+}
+.actTitle{
+	width: 8.57rem;
+	height: .56rem;
+	background-image: url('../img/dailybonus/title1.png');
+}
+.ruleTitle{
+	width: 8.99rem;
+	height: .56rem;
+	background-image: url('../img/dailybonus/title2.png');
+}
+.title{
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: .5rem auto .4rem;
+}
+.allInfo{
+	width: 11rem;
+	margin-bottom: .35rem;
+}
+
+.actTerm table{
+	width: 11rem;
+	margin: auto;
+	font-size: 24px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #222628;
+}
+.actTerm table th{
+	width: 2.51rem;
+	border: 0;
+	color:  #fbf1e7;
+	background-color: #4e1011;
+}
+.actTerm table td{
+	color: #a4a4a4;
+}
+.actTerm table th,.actTerm table td{
+	width: 2.51rem;
+	font-weight: normal;
+	padding: .2rem .1rem;
+	border: 2px solid #1d0503;
+}
+.actTerm table th{
+	font-weight: 600;
+}
+
+.termList{
+	width: 10rem;
+	padding: .5rem;
+	margin-bottom: .44rem;
+	background-color: #222628;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .33rem;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	background-image: linear-gradient(0deg,
+		#29303b 0%,
+		#2e3845 100%),
+	linear-gradient(
+		#1b1d44,
+		#1b1d44);
+	background-blend-mode: normal,
+		normal;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .2rem;
+	letter-spacing: 0px;
+	margin-top: .03rem;
+	margin-right: .15rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 92%;
+    text-align: justify;
+}
+.back{
+	width: 7.34rem;
+	height: .94rem;
+	margin: 1rem auto .5rem;
+	cursor: pointer;
+	background: url('../img/dailybonus/back.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.21">
+  <link rel="stylesheet" href="css/dailyTask.css?v=0.23">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+  <title>每日任务</title>
+</head>
+
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+    </header>
+    <section>
+      <h1>任务一览表</h1>
+      <ul class="task">
+        <li id="1">
+          <span class="txt">任务1</span>
+          <img src="img/dailyTask/icon_01@2x.png" alt="">
+          <p class="task-name">每日签到</p>
+          <span class="num">+&nbsp;38&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="1">立即领取</span>
+        </li>
+        <li id="2">
+          <span class="txt">任务2</span>
+          <img src="img/dailyTask/icon_03@2x.png" alt="">
+          <p class="task-name">每日竞猜投注
+            <br>累计<span class="num numT">20</span>次</p>
+          <span class="num">+&nbsp;58&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="2">去投注</span>
+        </li>
+        <li id="3">
+          <span class="txt">任务3</span>
+          <img src="img/dailyTask/icon_03@2x.png" alt="">
+          <p class="task-name">每日竞猜投注
+            <br>金额累计<span class="num numT">1888</span>元</p>
+          <span class="num">+&nbsp;88&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="3">去投注</span>
+        </li>
+        <li id="4">
+          <span class="txt">任务4</span>
+          <img src="img/dailyTask/icon_04@2x.png" alt="">
+          <p class="task-name">每日充值金额
+            <br>累计≥<span class="num numT">2888</span>元</p>
+          <span class="num">+&nbsp;688&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="4">去充值</span>
+        </li>
+        <li id="5">
+          <span class="txt">任务5</span>
+          <img src="img/dailyTask/icon_04@2x.png" alt="">
+          <p class="task-name">每日充值金额
+            <br>累计≥<span class="num numT">5888</span>元</p>
+          <span class="num">+&nbsp;1888&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="5">去充值</span>
+        </li>
+        <li id="6">
+          <span class="txt">通关奖励</span>
+          <img src="img/dailyTask/icon_06@2x.png" alt="">
+          <p class="task-name">完成当日所有任务</p>
+          <span class="num">+&nbsp;888&nbsp;U币</span>
+          <span class="btn canSign actBtn" data-id="6">立即领取</span>
+        </li>
+      </ul>
+      <h1>规则条款</h1>
+      <div class="rule">
+        <p>
+          <i>1</i>
+          用户每天可完成5次系统任务，完成任务可领取对应奖励；
+        </p>
+        <p>
+          <i>2</i>
+          竞猜投注只限现金投注，任务完成后用户需在活动页面自行领取活动奖励；
+        </p>
+        <p>
+          <i>3</i>
+          活动每天00：00AM重置，未领取奖励用户视为自动放弃领取；
+        </p>
+        <p>
+          <i>4</i>
+          每一名用户同一IP段、同一代理下多批套利者，发现后会批量冻结相关账号；如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+        </p>
+        <p>
+          <i>5</i>
+          凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。"
+        </p>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+
+      var hasLogin = false;
+       //h5登录
+      if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+          hasLogin = true;
+          queryDaily ();
+        }else{
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goLogin'})
+          } else {
+            if ( location.search != '?goLogin') {
+              location.search = 'goLogin'
+            }
+          }
+        }
+      }
+      window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+          }
+          if(hasLogin){
+              queryDaily ();
+          }
+      }
+      function isLogin(b) {
+          hasLogin = b;
+          if(hasLogin){
+              queryDaily ();
+          }
+      }
+      function isiOS() {
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      }
+      $(function () {
+          FastClick.attach(document.body);
+          $('.actBtn').click(function () {
+              if (!hasLogin) {
+                  // 还没登录则先登录
+                  if (location.href.indexOf('type=h5') != -1) {
+                    if ( parent && parent.closeIFrame ) {
+                      parent.closeIFrame({action: 'goLogin'})
+                    } else {
+                      if ( location.search != '?goLogin') {
+                        location.search = 'goLogin'
+                      }
+                    }
+                  } else {
+                    if (isiOS()) {
+                        //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                        goAppLogin();
+                    } else if (window.android){
+                        android.goAppLogin();
+                    }
+                  }
+                  return;
+              }
+              if(!$(this).hasClass('canSign')){
+                  return;
+              }
+              var that = $(this);
+              var t = $(this).attr('data-id');
+              $.ajax({
+                  url: "/Promos/Detail",
+                  jsonp: "callback",
+                  // dataType: "jsonp",
+                  async: true,
+                  data: { "id": "2","a": "draw","t":t  },    //参数值
+                  type: "GET",   //请求方式
+                  beforeSend: function() {
+                      //请求前的处理
+                  },
+                  success: function(req) {
+                      // console.log(req.state)
+                      if ( req.state ) {
+                          that.html('已领取').removeClass('canSign');
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '信息',
+                              'text': req.data,
+                              'submitCallBack': function(){}
+                          })
+                      } else {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '信息',
+                              'text': req.message
+                          })
+                      }
+
+                  }
+              });
+          });
+      });
+      function queryDaily () {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "2","a": "query" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  var list = req.data;
+                  $.map( list, function(v,i){
+                    $('.task li:nth-child(' + (i+1) +')').find('.numT').html( v.conditions );
+                    if ( v.isCan == 0 ) {
+                      $("ul li:eq(" + i + ") .btn").html("未达标").removeClass('canSign');;
+                    }else if ( v.isCan == 1 ) {
+                      $("ul li:eq(" + i + ") .btn").html("立即领取").addClass('canSign');;
+                    }else if ( v.isCan == 2 ) {
+                      $("ul li:eq(" + i + ") .btn").html("已领取").removeClass('canSign');
+                    }
+                  });
+                  // if ( req.data[1] == 1 ) {
+                  //     $("ul li:eq(0) .btn").html("立即领取").addClass('canSign');
+                  // }else if ( req.data[1] == 2 ) {
+                  //     $("ul li:eq(0) .btn").html("已领取").removeClass('canSign');
+                  // }
+
+                  // if ( req.data[2] == 0 ) {
+                  //     $("ul li:eq(1) .btn").html("未达标").removeClass('canSign');
+                  // }else if ( req.data[2] == 1 ) {
+                  //     $("ul li:eq(1) .btn").html("立即领取").addClass('canSign');;
+                  // }else if ( req.data[2] == 2 ) {
+                  //     $("ul li:eq(1) .btn").html("已领取").removeClass('canSign');
+                  // }
+
+                  // if ( req.data[3] == 0 ) {
+                  //     $("ul li:eq(2) .btn").html("未达标").removeClass('canSign');
+                  // }else if ( req.data[3] == 1 ) {
+                  //     $("ul li:eq(2) .btn").html("立即领取").addClass('canSign');;
+                  // }else if ( req.data[3] == 2 ) {
+                  //     $("ul li:eq(2) .btn").html("已领取").removeClass('canSign');
+                  // }
+
+                  // if ( req.data[4] == 0 ) {
+                  //     $("ul li:eq(3) .btn").html("未达标").removeClass('canSign');
+                  // }else if ( req.data[4] == 1 ) {
+                  //     $("ul li:eq(3) .btn").html("立即领取").addClass('canSign');;
+                  // }else if ( req.data[4] == 2 ) {
+                  //     $("ul li:eq(3) .btn").html("已领取").removeClass('canSign');
+                  // }
+
+                  // if ( req.data[5] == 0 ) {
+                  //     $("ul li:eq(4) .btn").html("未达标").removeClass('canSign');
+                  // }else if ( req.data[5] == 1 ) {
+                  //     $("ul li:eq(4) .btn").html("立即领取").addClass('canSign');;
+                  // }else if ( req.data[5] == 2 ) {
+                  //     $("ul li:eq(4) .btn").html("已领取").removeClass('canSign');
+                  // }
+
+                  // if ( req.data[6] == 0 ) {
+                  //     $("ul li:eq(5) .btn").html("未达标").removeClass('canSign');
+                  // }else if ( req.data[6] == 1 ) {
+                  //     $("ul li:eq(5) .btn").html("立即领取").addClass('canSign');
+                  // }else if ( req.data[6] == 2 ) {
+                  //     $("ul li:eq(5) .btn").html("已领取").removeClass('canSign');
+                  // }
+              }
+          });
+      }
+
+  </script>
+</body>
+
+</html>

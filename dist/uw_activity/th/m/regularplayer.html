@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.22">
+  <link rel="stylesheet" href="css/firstPay.css?v=0.22">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.3">
+  <title>每月首充送23%</title>
+</head>
+
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+    </header>
+    <section>
+      <h1 class="apply"></h1>
+      <p class="condition">注册时间30天以上会员；每月首充金额不低于<span class="minM"></span>元</p>
+      <h1 class="ratio"></h1>
+      <div class="condition">
+        <p class="vip">
+          <span>VIP1</span>
+          <span>VIP2</span>
+          <span>VIP3</span>
+          <span>VIP4</span>
+          <span>VIP5</span>
+          <span>VIP6</span>
+          <span>VIP7</span>
+          <span>VIP8</span>
+          <span>VIP9</span>
+          <span>VIP10</span>
+        </p>
+        <p class="rit">
+          <span>5%</span>
+          <span>8%</span>
+          <span>10%</span>
+          <span>12%</span>
+          <span>15%</span>
+          <span>18%</span>
+          <span>20%</span>
+          <span>21%</span>
+          <span>22%</span>
+          <span>23%</span>
+        </p>
+      </div>
+      <div class="btn"></div>
+      <h1 class="rule"></h1>
+      <p class="rule">
+        <i>1</i>
+        玩家每月初1日-30日期间第一笔充值可领取首充奖励一次；
+      </p>
+      <p class="rule">
+        <i>2</i>
+        领取奖金比例根据玩家VIP等级发放，最高奖金为<span class="maxM"></span>元；
+      </p>
+      <p class="rule">
+        <i>3</i>
+        领取奖金需要四倍流水后进行提款，此活动流水不可与其它活动叠加；<br>
+        流水计算公式举例：（本金2000元 +奖金200元）*4倍流水 =8800元<br>
+        注：以下赔率投注不计算流水中，电竞盘1.5以下，香港盘0.5以下，欧洲盘1.5以下，马来盘0.5以下，印尼盘-2.0以下，美国盘-200以下；
+      </p>
+      <p class="rule">
+        <i>4</i>
+        每位玩家、每一组电话号码、每一IP、相同支付方式（含相同借记卡，信用卡，银行帐号）只能申请一次；如发现恶意刷取活动套利者，将扣除红利及所得盈利；
+      </p>
+      <p class="rule">
+        <i>5</i>
+        凡参加活动用户，即表示接受且自愿遵守平台规定，U赢平台保留最终解释权。
+      </p>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+      var hasLogin = false;
+      //h5登录
+      if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+          hasLogin = true;
+        }else{
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goLogin'})
+          } else {
+            if ( location.search != '?goLogin') {
+              location.search = 'goLogin'
+            }
+          }
+        }
+      }
+      window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+          }
+      }
+      function isLogin(b) {
+          hasLogin = b
+      }
+      function back() {
+          if (!hasLogin) {
+              // 还没登录则先登录
+              if (location.href.indexOf('type=h5') != -1) {
+                if ( parent && parent.closeIFrame ) {
+                  parent.closeIFrame({action: 'goLogin'})
+                } else {
+                  if ( location.search != '?goLogin') {
+                    location.search = 'goLogin'
+                  }
+                }
+              } else {
+                if (isiOS()) {
+                    //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                    goAppLogin();
+                } else if (window.android){
+                    android.goAppLogin();
+                }
+              }
+              return;
+          }
+          drawFirst ();
+      }
+      function isiOS() {
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      }
+
+      $('.btn').on('click', function(){
+          back();
+      });
+      checkBonus();
+      function checkBonus () {
+          $.ajax({
+            url: "/Promos/Detail",
+            jsonp: "callback",
+            // dataType: "jsonp",
+            async: true,
+            data: { "id": "21","a": "Check" },    //参数值
+            type: "GET",   //请求方式
+            beforeSend: function() {
+                //请求前的处理
+            },
+            success: function(req) {
+              $('.minM').html( req.data.depositMinimumAmount );
+              $('.maxM').html( req.data.maximumBonus );
+            }
+        });
+      }
+      function drawFirst () {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "21","a": "Claim" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  if (req.state) {
+                      var popup = new Popup({
+                          'type': 'submit',
+                          'title': '提示信息',
+                          'text': req.data
+                      })
+                  }else{
+                      var popup = new Popup({
+                          'type': 'submit',
+                          'title': '提示信息',
+                          'text': req.message
+                      })
+                  }
+              }
+          });
+      }
+
+  </script>
+</body>
+
+</html>

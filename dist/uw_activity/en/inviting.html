@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>邀请好友送送送</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/invitefriends.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2" src="img/invitefriends/bg02.jpg" alt="">
+		</div>
+		<div class="actTerm w1">
+			<div class="termTitle"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1</i>用户（会员等级LV2及以上会员）可使用个人中心专属推广链接邀请您的好友参加竞猜；
+				</li>
+				<li>
+					<i class="termIndex">2</i>每个通过您推广链接注册并首次充值用户，您将获得50元奖励，此用户充值累计超过1500元，您将再次获得100元奖励；
+				</li>
+				<li>
+					<i class="termIndex">3</i>活动奖金将在您邀请的用户绑定银行卡并成功充值后系统自动派发到您的账户中；
+				</li>
+				<li>
+					<i class="termIndex">4</i>活动彩金需一倍流水后即可提款；
+				</li>
+				<li>
+					<i class="termIndex">5</i>邀请用户必须为不同身份的真实用户，银行卡、手机号码、IP地址相同都视为同一用户；
+				</li>
+				<li>
+					<i class="termIndex">6</i>凡是使用作弊手段，恶意套取奖金者，平台将扣回红利及所产生的利润权利，严重者将冻结所有关联账号。
+				</li>
+			</ul>
+			<div class="getNow w1 tac">
+				<a href="javascript:" title="" onclick="back({action: 'goPromo'})">
+					<img src="img/invitefriends/button01.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		function back(args) {
+		  	if ( parent && parent.closeIFrame ) {
+		    	parent.closeIFrame(args)
+		  	} else {
+		    	location.search = args.action
+		  	}
+		}
+	</script>
+</body>
+</html>

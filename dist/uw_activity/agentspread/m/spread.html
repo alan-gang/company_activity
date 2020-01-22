@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+	<meta name="format-detection" content="telephone=no">
+    <title>注册页面</title>
+    <script>!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",o=function(){var n=t.clientWidth;n&&(n>=750?t.style.fontSize="50px":t.style.fontSize=100*(n/750)+"px")};n.addEventListener&&(e.addEventListener(i,o,!1),n.addEventListener("DOMContentLoaded",o,!1))}(document,window)</script>
+    <link rel="stylesheet" type="text/css" href="css/agentspread/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/agentspread/register.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="pc-slide">
+			<img src="img/agentspread/g1.png" alt="">
+		</div>
+		<div class="banner mat">
+			<img src="img/agentspread/mainTxt@2x.png" alt="">
+		</div>
+		<div class="code">
+			<a href="{{appDownloadUrl}}"><img src="img/agentspread/ios@2x.png" alt="" class="ios fl"></a>
+			<a href="{{appDownloadUrl}}"><img src="img/agentspread/android@2x.png" alt="" class="android fr"></a>
+		</div>
+		<div class="goReg mat">
+			<a class="goRegist" href="javascript:;" onclick="goIndex()" title="立即注册" target="_blank"></a>
+		</div>
+		<div class="qr">
+			<img src="img/agentspread/qr2.png" alt="">
+		</div>
+	</div>
+
+	<script>
+		var uri = document.location.protocol + '//' + document.location.host + '/Index/A?r={{r}}&m=1&act=reg'
+		function goIndex() {
+			document.location.href = uri;
+		}
+	</script>
+</body>

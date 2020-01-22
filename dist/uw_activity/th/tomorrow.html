@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>明日礼包</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/tomorrow.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2 w1" src="img/tomorrow/bg02.png" alt="">
+			<img class="banner3" src="img/tomorrow/treasure.png" alt="">
+			<img class="banner4" src="img/tomorrow/t1.png" alt="">
+			<!-- <div class="mask w1">
+				<div class="gift">
+					<img id="imgSrc" src="img/tomorrow/p02_.png" alt="">
+				</div>
+				<div class="btmP">
+					<p class="giftName">
+						<i class="brackets">【</i>
+						<i class="name">愤恨血脉</i>
+						<i class="brackets">】</i>
+					</p>
+					<div class="draw">
+						<a href="javascript:" title="" >
+							<img src="img/tomorrow/btn4.png" alt="">
+						</a>
+					</div>
+				</div>
+				<img class="sunshine" src="img/tomorrow/sunshine.png" alt="">
+			</div> -->
+			<div class="mask w1">
+				<div class="maskBody">
+					<a class="maskClose">X</a>
+					<div class="maskTitle mat">明日礼包</div>
+					<div class="maskContent mat">
+						<img class="sunshine" src="img/tomorrow/sunshine.png" alt="">
+						<img class="libao" src="img/tomorrow/libao.png" alt="">
+					</div>
+					<div class="maskBot mat">礼包已发放到背包啦，明天可以打开！</div>
+				</div>
+			</div>
+		</div>
+		<div class="actTerm mat">
+			<div class="termTitle mat"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1</i>每日玩家充值满100元即可获得礼包一个；
+				</li>
+				<li>
+					<i class="termIndex">2</i>礼包奖品:U币、饰品、现金等，奖品价格、数量随机发放；
+				</li>
+			</ul>
+			<div class="giftTitle mat"></div>
+			<ul class="giftList mat clearfix">
+				<li class="fl">
+					<img src="img/tomorrow/p01.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p02.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p03.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p04.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p05.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p06.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p07.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p08.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p09.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p10.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p11.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p12.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p13.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p14.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p15.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p16.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p17.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p18.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p19.png" alt="">
+				</li>
+				<li class="fl">
+					<img src="img/tomorrow/p20.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		// $('.mask').css('display','none');
+		$('.maskClose').on('click', function () {
+			$('.mask').fadeOut();
+		})
+		if (location.href.indexOf('login=true') != -1) {
+			drawTomo();
+		}else{
+			if ( parent && parent.closeIFrame ) {
+	          parent.closeIFrame({action: 'goLogin'})
+	        } else {
+	        	if ( location.search != '?goLogin') {
+	        		location.search = 'goLogin'
+	        	}
+	        }
+		}
+
+		// $.ajax({
+  //           url: "/uwin/Index/Login",
+  //           jsonp: "callback",
+  //           // dataType: "jsonp",
+  //           async: true,
+  //           data: { "UserName": "test002","PassWord": "a123456","Main_Login": "u" },    //参数值
+  //           type: "POST",   //请求方式
+  //           beforeSend: function() {
+  //               //请求前的处理
+  //           },
+  //           success: function(req) {
+  //             drawTomo();
+  //           }
+  //       });
+
+		function drawTomo () {
+			$.ajax({
+			    url: "/uwin/Promos/Detail",
+			    jsonp: "callback",
+			    // dataType: "jsonp",
+			    async: true,
+			    data: { "id": "26","a": "Claim" },    //参数值
+			    type: "POST",   //请求方式
+			    beforeSend: function() {
+			        //请求前的处理
+			    },
+			    success: function(req) {
+			    	// console.log(req)
+			    	if( req.state ){
+			    		$('.mask').css('display','block');
+			    		// var imgsrc = req.data.url;
+				    	// $('#imgSrc').attr('src', imgsrc);
+				    	// $('.name').html(req.data.desc);
+			    	}else{
+			    		// $('.mask').css('display','none');
+			    		console.log(req.message)
+			    		// var popup = new Popup({
+					    //     'type': 'submit',
+					    //     'title': '提示信息',
+					    //     'text': req.message
+					    // })
+			    	}
+			    }
+			});
+		}
+	</script>
+</body>

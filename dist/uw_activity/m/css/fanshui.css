@@ -1,0 +1,89 @@
+body{
+  height: 100%;
+  overflow-y: scroll;
+  background: #000;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header .img1{
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/fanshui/img_01@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2{
+  position: relative;
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/fanshui/img_02@2x.png') no-repeat;
+  background-size: cover
+}
+section{
+  position: relative;
+  top: -54px;
+  width: 100%;
+  min-height: 5rem;
+  background: url('../img/fanshui/img_05@2x.png') no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+section i.line{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  background: url('../img/fanshui/img_04@2x.png') no-repeat;
+  background-size: contain;
+}
+section h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .5rem;
+  text-align: center;
+  margin-top: 54px;
+  color: #EAA117;
+}
+section h1 span{
+  margin: 0 .1rem;
+}
+section h1 i{
+  display: block;
+  height: .49rem;
+  width: .79rem;
+  background: url('../img/fanshui/img_07@2x.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+section h1 i.last{
+  background-image: url('../img/fanshui/img_06@2x.png');
+}
+section .btn{
+  width: 4.52rem;
+  height: .79rem;
+  margin: 20px auto;
+  background: url('../img/fanshui/img_09@2x.png') no-repeat;
+  background-size: cover;
+}
+section p{
+  position: relative;
+  font-size: .28rem;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 10px .6rem 0 1rem;
+  text-align: justify;
+}
+section p i{
+  position: absolute;
+  display: block;
+  top: .25rem;
+  left: .55rem;
+  width: .26rem;
+  height: .26rem;
+  background: url('../img/fanshui/img_08@2x.png') no-repeat;
+  background-size: contain;
+}

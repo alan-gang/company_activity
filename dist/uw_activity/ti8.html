@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+  <title>ti8胜率王者挑战赛</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/ti8.css?v=0.3">
+	<style>
+		[v-cloak] {
+	    display: none;
+	  }
+  </style>
+  <script>
+		window.SOCKET_DOMAIN = 'wss://ws.uwinweb.com'
+    window.ti8_videos =[
+        {
+            pic: 'img/ti8/v5.png',
+            url: 'https://player.youku.com/embed/XMzc3NzczODExMg=='
+            // title: ' 2018DOTA2国际邀请赛寻真——Secret'
+        },
+        {
+            pic: 'img/ti8/v6.png',
+            url: 'https://player.youku.com/embed/XMzc3NDMxMDg5Ng=='
+            // title: '2018DOTA2国际邀请赛寻真——VGJ.Thunder'
+        },
+        {
+            pic: 'img/ti8/v3.png',
+            url: 'https://player.youku.com/embed/XMzc4Mzk3OTQwOA=='
+            // title: '2018DOTA2国际邀请赛寻真——day1'
+        },
+        {
+            pic: 'img/ti8/v4.png',
+            url: 'https://player.youku.com/embed/XMzc4NTM4MTIyOA=='
+            // title: '2018DOTA2国际邀请赛寻真——day2'
+        },
+        {
+            pic: 'img/ti8/v7.png',
+            url: 'https://player.youku.com/embed/XMzc4NjgyODM0OA=='
+            // title: '2018DOTA2国际邀请赛寻真——day3'
+        },
+        {
+            pic: 'img/ti8/v8.png',
+            url: 'https://player.youku.com/embed/XMzc4ODE2MTY1Mg=='
+            // title: '2018DOTA2国际邀请赛寻真——day4'
+        },
+        {
+            pic: 'img/ti8/v9.png',
+            url: 'https://player.youku.com/embed/XMzc5MTUyNDM3Ng=='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        },
+        {
+            pic: 'img/ti8/v10.png',
+            url: 'https://player.youku.com/embed/XMzc5Mjc4MTgxNg=='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        },
+        {
+            pic: 'img/ti8/v11.png',
+            url: 'https://player.youku.com/embed/XMzc5NDI4MTkxNg=='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        },
+        {
+            pic: 'img/ti8/v12.png',
+            url: 'http://player.youku.com/embed/XMzc5NTYwOTE5Ng=='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        },
+        {
+            pic: 'img/ti8/v13.png',
+            url: 'http://player.youku.com/embed/XMzc5NzIzNTQ2NA='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        },
+        {
+            pic: 'img/ti8/v14.png',
+            url: 'http://player.youku.com/embed/XMzc5ODg1MjAzMg=='
+            // title: '2018DOTA2国际邀请赛寻真——day5'
+        }
+  ]
+
+  </script>
+</head>
+<body style="background: #121718">
+	<div id="ti8">
+		<div class="banner w1">
+			<img class="banner2" src="img/ti8/img001.jpg" style="">
+			<!-- <img class="banner3" src="img/ti8/img04.png" alt=""> -->
+		</div>
+		<div class="conWrap w1">
+			<div class="conTop w1"></div>
+			<div id="app" class="tab w12 mat clearfix" v-cloak style="border: none">
+
+		        <!-- <div class="hd" >
+		            <ul class="clearfix">
+		                <li v-for="(d, i) of D7" :class="{active: di == i}" @click=" di = i "> {{ d._toMonthDayStringCN() }}</li>
+		            </ul>
+		        </div> -->
+
+		        <div class="game-content fl" style="display: none">
+		        	<!-- <div class="history absolute">历史记录</div> -->
+        			<p class="no-info absolute">无记录！</p>
+
+							<div class="box mtb5 z1 relative" :key="i" v-for=" (r, i) in records " :class=" {active: i === ii} " @click=" ii === i ? (ii = -1) && (matches[r].playing = false) : (ii = i) " v-if=" matches[r].Visible && matches[r].TournamentId === '18636' && ((matches[r].Type === type && matches[r].Status) || type === 1)">
+						    <div class="g ft12 pointer">
+						        <p class="c_f g-si" :class=" 'g-' +  matches[r].Cid "><img :src=" matches[r].CategoryPic " style="width: 16px;vertical-align: middle;">{{ matches[r].LeagueName }}<span class="f_r c11">{{ matches[r].StartTime }}</span></p>
+						        <div class="h hlh5 t_c"><span class="i f_l active" v-if=" matches[r].StreamURL && matches[r].Status " @click.stop=" (matches[r].playing = !matches[r].playing) && (ii = i) ">直播赛事</span><span class="i f_l" v-if=" !matches[r].StreamURL || !matches[r].Status ">暂无直播</span><img
+						                class="inline-block" :src=" matches[r].HomeTeamPic " /><span class="j t_r c_f inline-block text-ellipsis">{{  matches[r].HomeTeamName }}</span><span class="k ft14 c1">{{ matches[r].Score !== '0:0' ? matches[r].Score : 'VS' }}</span><span class="l t_l c_f inline-block text-ellipsis">{{  matches[r].AwayTeamName }}</span><img
+						                class="inline-block" :src=" matches[r].AwayTeamPic " /><span class="f_r"><span class="m c1" v-if=" matches[r].Status ">进行中</span><span class="m c11" v-if=" !matches[r].Status ">未开始</span><i class="n ivu-icon ivu-icon-ios-arrow-down ft16"></i></span>
+						        </div>
+						    </div>
+						    <div class="video" v-if=" matches[r].playing && ii === i"><iframe :src="matches[r].StreamURL" border="0" width="100%" height="500"></iframe></div>
+						    <div class="o relative" :ref=" 'o' + r " @click.stop="" v-if=" i === ii ">
+						        <p class="c11 ptb10 absolute no-matches"> <span class="plr20">无盘口信息！</span></p>
+						        <Tabs class="relative z1" value="主盘口" :class=" 'tab-' + mrecords.length ">
+						            <tab-pane :label=" m.label " :name="m.label" :key=" 'm' + i" v-for=" (m, i) in mrecords " v-if="  m.data.filter(oa => markets[oa].odds.all ? markets[oa].odds.all.filter(x => odd_lists[x].Visible)[0] : markets[oa].odds.left.concat(markets[oa].odds.right).filter(x => odd_lists[x].Visible)[0] )[0]  ">
+						                <Row class="oa" :gutter="20" :key=" oa + i" v-for=" (oa, j) in m.data  " :class=" {hlh45: !markets[oa].odds.all && (!markets[oa].odds.left[1] || !markets[oa].odds.right[1])} " v-show=" markets[oa].odds.all ? markets[oa].odds.all.filter(x => odd_lists[x].Visible && Number(odd_lists[x].Value) > 1 && odd_lists[x].Status >= 0)[0] : markets[oa].odds.left.concat(markets[oa].odds.right).filter(x => odd_lists[x].Visible && Number(odd_lists[x].Value) > 1 && odd_lists[x].Status >= 0)[0] "
+						                    v-if=" markets[oa].odds.all || markets[oa].odds.left[0] && ( (markets[oa].IsLive) || type === 1) ">
+						                    <i-col class="t_r" :span=" 8 " v-if=" !markets[oa].odds.all "><span class="ob hlh3 plr20 pointer" :key=" 'ob' + i " v-for=" (ob, i) in markets[oa].odds.left " :class="{up: odd_lists[ob].up === 1, down: odd_lists[ob].up === 0, Suspended:  odd_lists[ob].Suspended, active: odd_lists[ob].inOrder }"
+						                        @click=" addOrder(odd_lists[ob]) " v-if="  odd_lists[ob].Visible && Number(odd_lists[ob].Value) > 1 && odd_lists[ob].Status >= 0 "><span class="f_l c1 text-ellipsis">{{ odd_lists[ob] && odd_lists[ob].Title }}</span><span class="f_r">{{ odd_lists[ob] && odd_lists[ob].Value }}</span></span>
+						                    </i-col>
+						                    <i-col class="t_c oc" :span=" markets[oa].odds.all ? 24 : 8 ">
+						                    <p>{{ markets[oa].Name }}</p>
+						                    <div class="od t_l" v-if=" markets[oa].odds.all ">
+						                        <div class="ob_box t_c inline-block Suspended" :key=" 'oc' + i" v-for=" (oc, i) in markets[oa].odds.all " v-show="odd_lists[oc].Visible && Number(odd_lists[oc].Value) > 1 && odd_lists[oc].Status >= 0"><span class="ob hlh3 plr20 pointer" :class="{up: odd_lists[oc].up === 1, down: odd_lists[oc].up === 0, Suspended:  odd_lists[oc].Suspended, active: odd_lists[oc].inOrder }" @click=" addOrder(odd_lists[oc]) "><span class="f_l c1 text-ellipsis"> {{ odd_lists[oc].Title }} </span>
+						                            <span
+						                                class="f_r"> {{ odd_lists[oc].Value }}</span>
+						                                </span>
+						                        </div>
+						                    </div>
+						                    </i-col>
+						                    <i-col class="t_l" :span=" 8 " v-if=" !markets[oa].odds.all "><span class="ob hlh3 plr20 pointer" :key=" 'ob' + i " v-for=" (ob, i) in markets[oa].odds.right " :class="{up: odd_lists[ob].up === 1, down: odd_lists[ob].up === 0, Suspended:  odd_lists[ob].Suspended, active: odd_lists[ob].inOrder }"
+						                        @click=" addOrder(odd_lists[ob]) " v-if=" odd_lists[ob].Visible && Number(odd_lists[ob].Value) > 1 && odd_lists[ob].Status >= 0 "><span class="f_l c1 text-ellipsis">{{ odd_lists[ob] && odd_lists[ob].Title }}</span><span class="f_r">{{ odd_lists[ob] && odd_lists[ob].Value }}</span></span>
+						                    </i-col>
+						                </Row>
+						            </tab-pane>
+						        </Tabs>
+						    </div>
+							</div>
+
+		        </div>
+
+
+		        <div class="rank fr">
+		        	<div class="game-content x">
+								<div class="pc t_c ft12 c1" v-if=" ordered[0] ">
+							    <div class="pd mtb15 relative" :key=" 'pd' + i " v-for=" (pd, i) in ordered " :class=" {Suspended: pd.state === '61', success: pd.state === '62'} "><i class="close inline-block pointer absolute" @click=" ordered.splice(i, 0) " v-if=" pd.state ===  '61' "></i><i class="loading inline-block absolute" v-if=" pd.state ===  '64' "></i>
+							        <p class="c_f">{{ pd.team }}</p>
+							        <p class="c011">{{ pd.title }}</p>
+							        <p class="t_r"><span class="f_l">{{ pd.content }}</span><span>@ {{ pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally }}</span></p>
+							        <p class="t_l pe plr15 relative"><span>投注额</span><span class="f_r c_f"> {{ pd.amount }}</span></p>
+							        <p class="t_l"><span class="c_f">中奖金额：</span><span>{{ (pd.amount * (pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally)).toFixed(2) }}</span></p>
+							    </div>
+							  </div>
+						    <div class="pc t_c ft12 c1" ref="pc" v-if=" orders[0] ">
+						        <div class="pd mtb15 relative" :key=" 'pd' + i " v-for=" (pd, i) in orders " :class=" {Suspended: pd.Suspended || !pd.money } "><i class="close inline-block pointer absolute" @click=" addOrder(pd) "></i>
+						            <p class="c_f">{{ pd.LeagueName }}</p>
+						            <p class="c011">{{ pd.Name }}</p>
+						            <p class="t_r"><span class="f_l">{{ pd.Title }}</span><span>@ {{ pd.Value }}</span></p>
+						            <p class="t_l pe plr15 relative hlh4"><span>投注额</span>
+						                <input-number class="absolute" type="text" number="number" v-model=" pd.money " :disabled=" pd.Suspended" :placeholder=" '投注范围: ' + (cash ? pd.Min : 5) + '-' + (cash ? pd.Max : 100) " :min="cash ? pd.Min : 5" :max=" cash ? pd.Max : 100"></input-number>
+						            </p>
+						            <p class="t_l"><span class="c_f">中奖金额：</span><span>{{ (pd.money * pd.Value).toFixed(2) }}</span></p>
+						        </div>
+						        <div class="pf t_r mt15"><span class="f_l c_f">总投注金额：</span><span>{{ Amt.m }}</span></div>
+						        <div class="pf t_r"><span class="f_l c_f">可中奖金额：</span><span>{{ Amt.am.toFixed(2) }}</span></div>
+						        <!-- <div class="pa c11 t_c hlh4 ft15 bold pointer mtb15" @click="cash = !cash"><span class="pb pg inline-block" :class="{ active: cash }">现金投注</span><span class="pb pg inline-block" :class="{ active: !cash }">U币投注</span></div> -->
+						        <!-- <div class="ph c011 pl20 t_l pointer" @click="checked = !checked"><i class="inline-block pha mr10" :class="{ checked: checked }"></i>赔率状态变化是否接受任意赔率</div> -->
+						        <div class="pi c11 t_l hlh4 mtb15 pointer">
+						        	<!-- <i class="inline-block pia" @click=" clear() "></i> -->
+						        	<span class="pib f_r t_c ft18" @click="orderObjectString.b0 && book()" :class="{disabled: !orderObjectString.b0}">确认投注</span>
+						        </div>
+						    </div>
+						   <!--  <div class="pc t_c ft12 c1">
+						        <div class="pd mtb15 relative empty c011" v-if=" !orders[0] && !ordered[0] ">- 暂无投注 -</div>
+						    </div> -->
+							</div>
+							<div class="tab-tit">
+			            <!-- <a href="javascript:;" @click="j = 0" :class="{'cur':j === 0}">日榜</a> -->
+			            <a href="javascript:;" @click="j = 1" :class="{'cur':j === 1}">总榜</a>
+			        </div>
+			        <div class="tab-con">
+			        	<div class="rankTitle clearfix">
+			        		<i class="t1 fl">排名</i>
+			        		<i class="t2 fl">昵称</i>
+			        		<i class="t3 fl">奖金</i>
+			        	</div>
+			          <ul class="rankList" v-show="j === 0">
+			             <li v-for="(item, index) of daily">
+			              <div class="rankTop w1 clearfix">
+				              <i class="r1 fl">{{index+1}}</i>
+				              <i class="r2 fl">{{item.user_name}}</i>
+				              <i class="r3 fl">({{item.alias}})</i>
+				              <img class="arrow fr" src="img/ti8/a2.png" alt="">
+				              <i class="r4 fl">{{item.bonus}}元</i>
+				            </div>
+				            <div class="rankBot">
+											<i class="b1">
+												投注:<i class="cf">{{item.total_orders}}</i>
+											</i>
+											<i class="b2">
+												中奖:<i class="cf">{{item.total_win_orders}}</i>
+											</i>
+											<i class="b3">
+												中奖率:<i class="cf">{{item.rate}}%</i>
+											</i>
+		                </div>
+				          </li>
+			          </ul>
+			          <ul class="rankList" v-show="j === 1">
+			                <li v-for="(item, index) of totally">
+				                <div class="rankTop w1 clearfix">
+				                	<i class="r1 fl">{{index+1}}</i>
+				                	<i class="r2 fl">{{item.user_name}}</i>
+				                	<i class="r3 fl">({{item.alias}})</i>
+				                	<img class="arrow fr" src="img/ti8/a2.png" alt="">
+				                	<i class="r4 fl">{{item.bonus}}元</i>
+				                </div>
+				                <div class="rankBot">
+									<i class="b1">
+										投注:<i class="cf">{{item.total_orders}}</i>
+									</i>
+									<i class="b2">
+										中奖:<i class="cf">{{item.total_win_orders}}</i>
+									</i>
+									<i class="b3">
+										中奖率:<i class="cf">{{item.rate}}</i>
+									</i>
+				                </div>
+				            </li>
+			          </ul>
+			       	</div>
+		    		</div>
+		        <div class="actTerm fl">
+							<div class="termTitle mat"></div>
+							<ul class="termList mat">
+									<li>
+										<i class="termIndex">1</i><i class="green">Team Secret或Team VGJ.T</i>夺得TI8冠军，活动期间投注两支队伍所有<i class="green">负盈利全部返还</i>；
+									</li>
+									<li>
+										<i class="termIndex">2</i>每日竞猜<i class="green">次数≥5次</i>，单笔竞猜金额<i class="green">≥200元</i>即可参与；
+									</li>
+									<li>
+										<i class="termIndex">3</i>日排行榜按<i class="green">所有注单相加</i>并且<i class="green">胜率最高玩家</i>，按照参与投注2018TI8<i class="green">所有场次的注单获胜率总量计算</i>进入总排行榜单；
+									</li>
+									<li>
+										<i class="termIndex">4</i>必须投注于<i class="green">独赢盘，让分盘，大小，单双</i>四个盘口，允许投注滚球；
+									</li>
+									<li>
+										<i class="termIndex">5</i>如出现胜率相同的玩家，即按照<i class="green">当日投注额排名</i>，投注金额大的玩家排在前面；
+									</li>
+									<li>
+										<i class="termIndex">6</i>玩家领取彩金需完成<i class="green">二倍流水</i>后可进行提款；
+									</li>
+									<li>
+										<i class="termIndex">7</i>此活动不可与任何存送优惠同时申请，<i class="green">存送优惠需完成流水</i>后才可参与此活动，否则取消活动参加资格；
+									</li>
+									<li>
+										<i class="termIndex">8</i>每一名用户同一IP段、同一代理下多批套利者，发现后会批量冻结相关账号；
+									</li>
+									<li>
+										<i class="termIndex">9</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+									</li>
+							</ul>
+							<style>
+
+							</style>
+							<div class="videoList" style="position: relative">
+								<Carousel autoplay="autoplay" :autoplay-speed="5000">
+							    <carousel-item :key="i" v-for="(img, i) in imgs" :class="img.class" >
+							    	<p class="absolute" style="color: #ccc;padding-top: .1rem"> &nbsp;&nbsp;&nbsp;&nbsp;{{ img.title }}	</p>
+							    	<a @click=" vurl=img.url  "><img class="full-width pointer" :src=" img.pic " style="width: 100%" /></a>
+							    </carousel-item>
+								</Carousel>
+								<div  v-if="vurl" style="position: absolute;top:0; left:0;right:0;bottom:0;background-color: rgba(0,0,0,.5); z-index: 9999;">
+									<div style="position: absolute; top: 50%; left: 50%; transform: translate3D(-50%, -50%, 0)">
+										<i class="vclose" @click="vurl=''"></i>
+										<iframe :src=" vurl	" frameborder="0" style="width: 510px; height: 498px; background-color: #fff"></iframe>
+
+									</div>
+								</div>
+							</div>
+
+
+
+						</div>
+		    </div>
+
+
+		</div>
+	</div>
+	<script src="js/lib/vue.2.5.17.min.js"></script>
+	<script src="js/lib/axios.0.18.0.min.js"></script>
+	<script src="js/lib/qs.6.5.2.js"></script>
+	<script src="js/lib/iview.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/iview/dist/styles/iview.css">
+	<link rel="stylesheet" type="text/css" href="css/ti8.gamecontent.css">
+	<script>
+		window.Number.prototype._padStart = window.String.prototype._padStart = function (l, w) {
+		  let s = this + ''
+		  w = w + ''
+
+		  while (s.length < l) {
+		    s = w + s
+		  }
+		  if (s.length > l) s = s.slice(s.length - l)
+		  return s
+		}
+		window.Date.prototype._bf = function (d) {
+		  return this._setD(this.getDate() + d)
+		}
+		window.Date.prototype._setD = function (d) {
+		  return new window.Date(new window.Date(this).setDate(d))
+		}
+		window.Date.prototype._setH = function (h) {
+		  return new window.Date(this.setHours(h))
+		}
+		window.Date.prototype._setM = function (m) {
+		  return new window.Date(this.setMinutes(m))
+		}
+		window.Date.prototype._setS = function (s) {
+		  return new window.Date(this.setSeconds(s))
+		}
+		window.Date.prototype._toString = function () {
+		  return this.getFullYear() + '-' + (this.getMonth() + 1)._padStart(2, 0) + '-' + this.getDate()._padStart(2, 0) + ' ' + this.getHours()._padStart(2, 0) + ':' + this.getMinutes()._padStart(2, 0) + ':' + this.getSeconds()._padStart(2, 0)
+		}
+		window.Date.prototype._toMonthString = function () {
+		  return this.getFullYear() + '-' + (this.getMonth() + 1)._padStart(2, 0)
+		}
+		window.Date.prototype._toDayString = function () {
+		  return this.getFullYear() + (this.getMonth() + 1)._padStart(2, 0) + this.getDate()._padStart(2, 0)
+		}
+		window.Date.prototype._toAllString = function () {
+		  return this.getFullYear() + (this.getMonth() + 1)._padStart(2, 0) + this.getDate()._padStart(2, 0) + this.getHours()._padStart(2, 0) + this.getMinutes()._padStart(2, 0) + this.getSeconds()._padStart(2, 0)
+		}
+		window.Date.prototype._toMonthDayStringCN = function () {
+    	return (this.getMonth() + 1) + '月' + this.getDate() + '日'
+		}
+	</script>
+	<script>
+		var Socket = {
+		  // url: 'wss://ws.uwinweb.com/ws?r=FrontNotify,GlobalNotify',
+		  url: window.SOCKET_DOMAIN ? (window.SOCKET_DOMAIN + '/ws') : 'ws://ws.uyingbet.com/ws',
+		  data: {},
+		  notify: {},
+		  time: 1000,
+		  sockets: {},
+		  closeType: {},
+		  get (msg) {
+		    return this.socket.send(JSON.stringify(msg))
+		  },
+		  close (name) {
+		    Object.entries(this.sockets).forEach(([k, v]) => {
+		      if (name === 'all' || name === k) v && v.close && (this.closeType[k] = true) && v.close(1000, 'close<-' + k)
+		    })
+		  },
+		  connect (args, name) {
+		    let socket = new WebSocket(this.url + args)
+		    if (socket) {
+		      socket.binaryType = 'arraybuffer'
+		      socket.onopen = (evt) => {
+		      }
+		      socket.onmessage = (evt) => {
+		        this.notify.message && this.notify.message(JSON.parse(evt.data))
+		      }
+		      socket.onerror = (evt) => {
+		      }
+		      socket.onclose = (evt) => {
+		        this.sockets[name] = null
+		        if (!this.closeType) this.connect(args, name)
+		      }
+		      this.sockets[name] = socket
+		    } else {
+		      setTimeout(() => {
+		        this.connect(args, name)
+		      }, this.time)
+		    }
+		  }
+		}
+	</script>
+	<script type="text/javascript">
+
+		Vue.config.devtools = true
+		axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
+		axios.interceptors.request.use((config) => {
+		  // Do something before request is sent
+		  if (config.method === 'post') config.data = Qs.stringify(config.data)
+		  return config
+		}, function (error) {
+		  // Do something with request error
+		  return Promise.reject(error)
+		})
+		Vue.prototype.$ = axios
+		var app = new Vue({
+			components: {
+			},
+			el: '#app',
+			data: {
+				vurl: '',
+				imgs: window.ti8_videos || [],
+				r: '',
+				login: window.location.href.indexOf('login=true') !== -1,
+				api: {
+  				login: '/Index/Login',
+  				acctSecureInfo: '/User/Info',
+					// 获取比赛列表
+				  gameList: '/Bookapp/List?v=2',
+				  // 获取比赛盘口数据
+				  MarketList: '/Bookapp/MarketList?v=3',
+				  Limits: '/Bookapp/Limits',
+				  book: '/Order/Bet',
+  				bookStates: '/Order/List?state=64',
+  				GetRank: '/Promos/Detail?id=20&a=detail&act=GetRank',
+				},
+	      now: new Date(2018, 7, 15, 0, 0, 0),
+        di: Math.min(10, (Math.max(0, (new Date()).getDate() - 15))),
+	      type: 1,
+				matches: {},
+      	records: {},
+				ii: -1,
+      	mrecords: {},
+      	markets: {},
+      	odd_lists: {},
+				j: 1,
+				orders: [
+	      ],
+	      ordered: [],
+	      // 1表示接受赔率变化，0表示不接受
+	      checked: true,
+	      // 1表示U币，0表示现金
+	      cash: true,
+	      results: [],
+	      daily: [],
+	      totally: []
+			},
+			computed: {
+				D7 () {
+		      return [this.now._bf(0), this.now._bf(1), this.now._bf(2), this.now._bf(3), this.now._bf(4), this.now._bf(5), this.now._bf(6), this.now._bf(7), this.now._bf(8), this.now._bf(9), this.now._bf(10), this.now._bf(11)]
+		    },
+		    Amt () {
+		      return this.orders.filter(x => !x.Suspended).reduce((p, o) => {
+		        p.m += o.money
+		        p.am += o.money * o.Value
+		        return p
+		      }, {m: 0, am: 0})
+		    },
+		    orderObjectString () {
+		      return this.orders.filter(x => !x.Suspended && x.money).reduce((p, o, i) => {
+		        p['b' + i] = 'a=' + o.money + '&i=' + o.Id + '&t=' + (new Date().getTime() + i)
+		        return p
+		      }, {})
+		    }
+			},
+			watch: {
+				now () {
+		      setTimeout(() => {
+		        this.now = new Date()
+		      }, this.now._bf(1)._setH(0)._setM(0)._setS(0).getTime() - this.now.getTime())
+		    },
+		    di () {
+		    	this.ii = -1
+		      this.gameList()
+		    },
+		    ii (n, o) {
+		      if (n !== -1) {
+		        setTimeout(() => {
+		          this.MarketList(this.records[n])
+		        }, 0)
+		      }
+		    }
+			},
+			mounted () {
+    		this.gameList()
+    		this.GetRank()
+    		Socket.connect('?r=FrontNotify,GlobalNotify', 'main')
+    		this.__acctSecureInfo()
+		    Socket.notify.message = this.message
+	    },
+			methods: {
+        gameList: function () {
+		      this.results = []
+		      this.$.get(this.api.gameList, {
+		      	params: {
+		        	d: parseInt(this.D7[this.di].getTime() / 1000),
+		        	cid: 3296
+		      	}
+		      }).then(({data}) => {
+		        Object.values(data.data.matches).forEach(m => (m.playing = false))
+		        this.matches = data.data.matches
+		        this.records = data.data.records
+		        // if (!data.data.records[0]) {
+		        // 	if (this.di < (this.D7.length - 1)) this.di++
+		        // }
+		      })
+		    },
+		    MarketList (id) {
+		      this.odd_lists = {}
+		      this.markets = {}
+		      this.mrecords = {}
+		      // console.log(id, this.$refs['o' + id], this.$refs)
+		      this.$.get(this.api.MarketList, {params: {
+		        id: id
+		      }}).then(({data}) => {
+		        this.mrecords = data.data.records
+		        this.markets = data.data.markets
+		        this.odd_lists = data.data.odd_lists
+		        this.orders.forEach(n => {
+		          (this.odd_lists[n.Id] || {}).inOrder = true
+		        })
+		      })
+		    },
+		    message (msg) {
+		      if (!msg || !msg.data) return
+		      switch (msg.ty) {
+		        case 'match':
+		          this.upDateMatch(msg.data)
+		          break
+		        case 'market':
+		          this.upDateMarket(msg.data)
+		          break
+		        case 'odd':
+		          this.upDateOdd(msg.data)
+		          break
+		        case 'bet':
+		          this.upDateOrderStates(msg.data)
+		          break
+		      }
+		    },
+		    upDateMatch (ms) {
+		      ms.forEach(m => {
+		        Object.assign(this.matches[m.Id] || {}, m)
+		      })
+		    },
+		    upDateMarket () {
+		    },
+		    upDateOdd (odds) {
+		      odds.forEach(od => {
+		        let updown = {}
+		        if (this.odd_lists[od.Id] && od.Value && od.Value !== this.odd_lists[od.Id].Value) {
+		          updown = {up: Number(od.Value > this.odd_lists[od.Id].Value)}
+		        }
+		        Object.assign(this.odd_lists[od.Id] || {}, od, updown)
+		      })
+		    },
+		    addOrder (odd) {
+		      // 暂停并且没有选中
+		      if (odd.Suspended && !odd.inOrder) return
+		      odd.inOrder = !odd.inOrder
+		      if (odd.inOrder) {
+		        this.Limits(odd)
+		      } else {
+		        this.orders.splice(this.orders.findIndex(n => n.Id === odd.Id), 1)
+		      }
+		    },
+		    Limits (odd) {
+		      odd.LeagueName = this.matches[odd.MatchId].LeagueName
+		      odd.Name = this.markets[odd.MarketId].Name
+		      this.$set(odd, 'money', null)
+		      this.$set(odd, 'Max', 0)
+		      this.$set(odd, 'Min', 0)
+		      this.orders = [odd, ...this.orders]
+		      this.$.get(this.api.Limits, {params: {id: odd.Id}}).then(({data: {data: {max, min, maxLoss}}}) => {
+		        odd.Max = Math.min(maxLoss / odd.Value, max, (maxLoss / odd.Value) < min ? 0 : max)
+		        odd.Min = Math.min(min, (maxLoss / odd.Value) < min ? 0 : min)
+		        odd.Max = parseInt(odd.Max)
+		        odd.Min = parseInt(odd.Min)
+		      })
+		    },
+		    clear () {
+		      this.orders.forEach(n => {
+		        (this.odd_lists[n.Id] || {}).inOrder = false
+		      })
+		      this.orders = []
+		    },
+		    book () {
+		      this.$.post(this.api.book, Object.assign({
+		        auto: Number(this.checked),
+		        flags: Number(!this.cash),
+		        len: this.orders.filter(x => !x.Suspended && x.money).length
+		      }, this.orderObjectString)).then(({data}) => {
+		      	if (data.message === 'login') {
+		      		window.parent && window.parent.closeIFrame && window.parent.closeIFrame({action: 'goLogin'})
+		      		// this.__login()
+		      		return false
+		      	}
+		      	if (!data.state && data.message) return widnow.alert(data.message)
+		        this.bookStates()
+		        this.orders.filter(x => !x.Suspended && x.money).forEach(n => {
+		          (this.odd_lists[n.Id] || {}).inOrder = false
+		          this.orders.splice(this.orders.findIndex(x => x.Id === n.Id), 1)
+		        })
+		      })
+		    },
+		    __login (user) {
+		      // test
+		      // user.channelTypeb = 'web_joey'
+		      return this.$.post(this.api.login, {UserName: 'hr0001', PassWord:'123456c'}).then(({data}) => {
+		      	this.login = true
+		      	this.__acctSecureInfo()
+		      })
+		    },
+		    __acctSecureInfo () {
+		      this.$.get(this.api.acctSecureInfo).then(({data}) => {
+		      	if (data.state) {
+		      		this.login = true
+		      		this.r = data.data.Uid
+		      		Socket.connect('?r=' + this.r, 'user')
+		      	}
+		      })
+		    },
+		    GetRank () {
+		    	this.$.get(this.api.GetRank).then(({data}) => {
+		    		if (data.state) {
+		    			this.daily = data.data.daily
+		    			this.totally = data.data.totally
+		    		}
+		    	})
+		    },
+		    bookStates () {
+		      this.$.post(this.api.bookStates).then(({data: {data: {records}}}) => {
+		        this.ordered = records
+		      })
+		    },
+		    upDateOrderStates (order) {
+		      this.ordered.forEach((o, i) => {
+		        if (o.Id === order.Id) {
+		          o = Object.assign(o, order)
+		        }
+		      })
+		      setTimeout(() => {
+		        if (this.ordered.findIndex(x => x.state === '64') === -1) {
+		          this.ordered = this.ordered.filter(x => x.state === '61')
+		        }
+		      }, 2000)
+		    }
+			}
+		})
+	</script>
+</body>
+</html>

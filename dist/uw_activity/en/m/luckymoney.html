@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>周周转好运，竞猜转运金</title>
+  <link rel="stylesheet" href="css/reset.css?v=0.2">
+  <link rel="stylesheet" href="css/zhuanyun.css?v=0.2">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2"></div>
+    </header>
+    <section>
+      <div class="condition">
+        <p class="list-top">
+          <span class="title">负盈利</span>
+          <!-- <span>2000元</span>
+          <span>5000元</span>
+          <span>2万元</span>
+          <span>5万元</span>
+          <span>10万元</span>
+          <span>20万元</span> -->
+        </p>
+        <p class="list-bot">
+            <span class="title">转运金</span>
+            <!-- <span>58元</span>
+            <span>88元</span>
+            <span>388元</span>
+            <span>588元</span>
+            <span>2888元</span>
+            <span>5888元</span> -->
+        </p>
+        <div class="goGet w1 tac">
+          <button class="w1 fz16 tac" href="javascript:" title="">
+            立即领取
+          </button>
+        </div>
+      </div>
+      <h1><i></i><span>规则条款</span><i class="last"></i></h1>
+      <div class="content">
+        <p><i>1</i>竞猜转运金只限电竞赛事、体育赛事；</p>
+        <p><i>2</i>一周内可领取一次转运金，本周内无负盈利将无法领取；</p>
+        <p><i>3</i>负盈利结算时间：每周一00:00:00分--周日23:59:59分，领取时间为每周二--周四，指定时间未领取视为弃权；</p>
+        <p><i>4</i>领取转运金后需一倍流水可进行提款，所有平局、对赌、对冲、无效或被取消之投注，均不计算在此活动有效流水内。</p>
+        <p><i>5</i>每一名用户同一IP段、同一代理下多批套利者，发现后会批量冻结相关账号；如发现恶意刷取活动套利者，将扣除红利及所得盈利</p>
+        <p><i>6</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；</p>
+        <i></i>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+          FastClick.attach(document.body);
+          var hasLogin = false;
+          //h5登录
+          if (location.href.indexOf('type=h5') != -1) {
+            if (location.href.indexOf('hasLogin=true') != -1) {
+              hasLogin = true;
+              checkGood ();
+            }else{
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            }
+          }
+          window.onload = function() {
+              if (window.android) {
+                  hasLogin = android.isLogin();
+              }
+              if(hasLogin){
+                  // checkGood ();
+              }
+          }
+          function isLogin(b) {
+              hasLogin = b;
+              if(hasLogin){
+                  // checkGood ();
+              }
+          }
+          function isiOS() {
+              var u = navigator.userAgent;
+              return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+          }
+
+          checkGood ();
+          $('.goGet button').on('click', function(){
+              if (!hasLogin) {
+                  // 还没登录则先登录
+                  if (location.href.indexOf('type=h5') != -1) {
+                    if ( parent && parent.closeIFrame ) {
+                      parent.closeIFrame({action: 'goLogin'})
+                    } else {
+                      if ( location.search != '?goLogin') {
+                        location.search = 'goLogin'
+                      }
+                    }
+                  } else {
+                    if (isiOS()) {
+                        //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                        goAppLogin();
+                    } else if (window.android){
+                        android.goAppLogin();
+                    }
+                  }
+                  return;
+              }
+              if(!$(this).hasClass('canSign')){
+                  return;
+              }
+              var $this = this
+              $.ajax({
+                  url: "/Promos/Detail",
+                  jsonp: "callback",
+                  // dataType: "jsonp",
+                  async: true,
+                  data: { "id": "13","a": "Claim" },    //参数值
+                  type: "GET",   //请求方式
+                  beforeSend: function() {
+                      //请求前的处理
+                  },
+                  success: function(req) {
+                      // console.log(req.data)
+                      if ( req.state ) {
+                          $($this).html("已领取").removeClass('canSign');
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '信息',
+                              'text': req.data,
+                              'submitCallBack': function(){}
+                          })
+                      } else {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '信息',
+                              'text': req.message
+                          })
+                      }
+
+                  }
+              });
+          });
+          function checkGood () {
+              $.ajax({
+                  url: "/Promos/Detail",
+                  jsonp: "callback",
+                  // dataType: "jsonp",
+                  async: true,
+                  data: { "id": "13","a": "Check" },    //参数值
+                  type: "GET",   //请求方式
+                  beforeSend: function() {
+                      //请求前的处理
+                  },
+                  success: function(req) {
+                      // console.log(req.data)
+                      var list = req.data;
+                        $.map( list, function(v){
+                          $('.list-top').append('<span>'+ v.minAmount +'元</span>');
+                          $('.list-bot').append('<span>'+ v.bonus +'元</span>');
+                          if ( v.iswin ) {
+                            $('.goGet button').html("可领取"+ v.bonus +"元").addClass('canSign');
+                          }
+                      });
+                      if ( !req.state ) {
+                         $('.goGet button').html("未达标").removeClass('canSign');
+                      }
+                  }
+              });
+          }
+  </script>
+</body>
+</html>

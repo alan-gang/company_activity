@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>明日礼包</title>
+    <link rel="stylesheet" href="css/reset.css?v=0.2">
+	<link rel="stylesheet" type="text/css" href="css/tomorrow.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+	<script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2 w1" src="img/tomorrow/img_02@2x.png" alt="">
+			<!-- <div class="mask w1">
+				<div class="gift">
+					<img id="imgSrc" src="../img/tomorrow/p02_.png" alt="">
+				</div>
+				<div class="btmP">
+					<p class="giftName">
+						<i class="brackets">【</i>
+						<i class="name">愤恨血脉</i>
+						<i class="brackets">】</i>
+					</p>
+					<div class="draw">
+						<a href="javascript:" title="">
+							<img src="img/tomorrow/btn4.png" alt="">
+						</a>
+					</div>
+				</div>
+				<img class="sunshine" src="img/tomorrow/sunshine.png" alt="">
+			</div> -->
+			<div class="mask w1">
+				<div class="maskBody">
+					<a class="maskClose">X</a>
+					<div class="maskTitle mat">明日礼包</div>
+					<div class="maskContent mat">
+						<img class="sunshine" src="img/tomorrow/sunshine.png" alt="">
+						<img class="libao" src="img/tomorrow/libao.png" alt="">
+					</div>
+					<div class="maskBot mat">礼包已发放到背包啦，明天可以打开！</div>
+				</div>
+			</div>
+		</div>
+		<div class="actTerm w1">
+			<div class="termTitle w1"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1.</i>每日玩家充值满100元即可获得礼包一个；
+				</li>
+				<li>
+					<i class="termIndex">2.</i>礼包奖品:U币、饰品、现金等，奖品价格、数量随机发放；
+				</li>
+			</ul>
+			<div class="giftTitle w1"></div>
+			<div class="giftList mat">
+				<img class="w1" src="img/tomorrow/prize_01@2x.png" alt="">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+	    FastClick.attach(document.body);
+	    // $('.mask').css('display','none');
+		$('.maskClose').on('click', function () {
+			$('.mask').fadeOut();
+		})
+
+	    var hasLogin = false;
+	    //h5登录
+	    if (location.href.indexOf('type=h5') != -1) {
+	      if (location.href.indexOf('hasLogin=true') != -1) {
+	        hasLogin = true;
+	        draw ();
+	      }else{
+	        if ( parent && parent.closeIFrame ) {
+	          parent.closeIFrame({action: 'goLogin'})
+	        } else {
+	          if ( location.search != '?goLogin') {
+	            location.search = 'goLogin'
+	          }
+	        }
+	      }
+	    }
+        window.onload = function() {
+            if (window.android) {
+                hasLogin = android.isLogin();
+            }
+            if(hasLogin){
+                draw ();
+            }
+        }
+        function isLogin(b) {
+            hasLogin = b
+            if(hasLogin){
+                draw ();
+            }
+        }
+
+        function isiOS() {
+            var u = navigator.userAgent;
+            return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        }
+        function draw() {
+
+            if(!hasLogin){
+            	if (location.href.indexOf('type=h5') != -1) {
+		        	if ( parent && parent.closeIFrame ) {
+			          parent.closeIFrame({action: 'goLogin'})
+			        } else {
+			          if ( location.search != '?goLogin') {
+			            location.search = 'goLogin'
+			          }
+			        }
+		      	} else {
+	                if (isiOS()) {
+	                    //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+	                    goAppLogin();
+	                } else if (window.android){
+	                    android.goAppLogin();
+	                }
+	            }
+                return;
+            }
+
+            $.ajax({
+                url: "/Promos/Detail",
+			    jsonp: "callback",
+			    // dataType: "jsonp",
+			    async: true,
+			    data: { "id": "26","a": "Claim" },    //参数值
+			    type: "POST",   //请求方式
+			    beforeSend: function() {
+			        //请求前的处理
+			    },
+			    success: function(req) {
+			    	// console.log(req)
+			    	if( req.state ){
+			    		$('.mask').css('display','block');
+			    		// var imgsrc = req.data.url;
+				    	// $('#imgSrc').attr('src', imgsrc);
+				    	// $('.name').html(req.data.desc);
+			    	}else{
+			    		// var popup = new Popup({
+					    //     'type': 'submit',
+					    //     'title': '提示信息',
+					    //     'text': req.message
+					    // })
+			    	}
+			    }
+            });
+        }
+	</script>
+</body>

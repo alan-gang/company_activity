@@ -1,0 +1,163 @@
+.wrapper{
+	font-size: .24rem;
+	color: #881b24;
+	background-color: #f0f0f0;
+}
+.banner{
+	min-width: 12rem;
+	height: 11.51rem;
+	background: url('../img/dailyEsportsMeal/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 11.51rem;
+	position: relative;
+}
+
+.actTerm{
+	position: relative;
+	background: url('../img/dailyEsportsMeal/bg02.jpg') no-repeat;
+	background-size: 100% 11.05rem;
+	height: 11.05rem;
+}
+
+.actTitle{
+	background-image: url('../img/dailyEsportsMeal/title01.png');
+	position: absolute;
+	top: 0.8rem;
+	left: 0;
+	right: 0;
+}
+.ruleTitle{
+	background-image: url('../img/dailyEsportsMeal/title02.png');
+	position: relative;
+	top: 0.5rem;
+}
+.title{
+	width: 5.47rem;
+	height: 1.14rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto .3rem;
+}
+.allInfo{
+	width: 11.56rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 1.5rem;
+}
+.actTerm table{
+	width: 11.56rem;
+	margin: auto;
+	font-size: 18px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+	background-color: #222628;
+}
+.actTerm table th{
+	border: 0;
+	color:  #f0f0f0;
+	background-image: linear-gradient(#695637, #695637)
+}
+.actTerm table td{
+	color: #a4a4a4;
+}
+.actTerm td span {
+	color: #ffd800;
+}
+.actTerm table th,.actTerm table td{
+	/* width: 2.51rem; */
+	font-weight: normal;
+	padding: .2rem .1rem;
+	border: 2px solid #000204;
+}
+.actTerm table th{
+	font-weight: 600;
+}
+.sp{
+	color: #fff;
+}
+
+.termList{
+	width: 11.56rem;
+	padding: 0.3rem 0.2rem;
+	margin-bottom: .44rem;
+	margin-top: 1rem;
+	background: #695637;
+	border-top: 0.1rem solid #222628;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .33rem;
+	font-family: MicrosoftYaHei;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #f0f0f0;
+	margin-bottom: 0.3rem;
+	text-align: justify;
+}
+.termList li:last-child{
+	margin-bottom: 0;
+}
+.termIndex{
+	display: inline-block;
+	width: .4rem;
+	height: .4rem;
+	line-height: .4rem;
+	text-align: center;
+	font-style: normal;
+	font-size: .26rem;
+	color: #fff;
+	letter-spacing: 0;
+	/* margin-top: -0.01rem; */
+	margin-right: .15rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+	width: 90%;
+	/* height: .6rem; */
+	line-height: .3rem;
+	text-align: justify;
+}
+.back{
+	width: 7.34rem;
+	height: .94rem;
+	margin: 1rem auto 0;
+	cursor: pointer;
+	background: url('../img/dailyEsportsMeal/back.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.rule{
+	height: auto;
+	position: relative;
+	background: url('../img/dailyEsportsMeal/bg03.jpg') 0 bottom no-repeat;
+	background-size: 100% 11.05rem;
+	padding-bottom: 0.5rem;
+}
+.gameDetail{
+	text-align: center;
+	font-size: 28px;
+	color: #ffffff;
+}
+.gameDetail span{
+	color: #f5cf02;
+}
+.gameDetail a{
+	display: inline-block;
+	width: 4.78rem;
+	height: .72rem;
+	line-height: .72rem;
+	background-image: linear-gradient(0deg, #5731a2 0%, #6d36ca 100%), linear-gradient(#121217, #121217);background-blend-mode: normal, normal;
+	border-radius: 5px;
+	margin: 0.4rem 0 0.4rem;
+	color: #fff;
+}
+.gameDetail a:visited, .gameDetail a:hover, .gameDetail a:active{
+	background-image: linear-gradient(0deg, #5a2eb1 0%, #7436de 100%), linear-gradient(#121217, #121217)
+}
+.divider{
+	background: url("../img/dailyEsportsMeal/divider.png") no-repeat center/100% 0.01rem;
+	height: 0.01rem;
+	width: 100%;
+}

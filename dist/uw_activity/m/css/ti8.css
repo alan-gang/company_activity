@@ -1,0 +1,418 @@
+body{
+  height: 100%;
+  overflow-y: scroll;
+  background: #000;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header .img1{
+  width: 100%;
+  height: 2.98rem;
+  background: url('../img/ti8/img_01@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2{
+  position: relative;
+  width: 100%;
+  height: 2.98rem;
+  background: url('../img/ti8/img_02@2x.png') no-repeat;
+  background-size: cover
+}
+section{
+  display: flex;
+  flex-direction: column;
+}
+div.time{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 7.1rem;
+  height: 1rem;
+  font-size: .24rem;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  color: rgb(179,179,179);
+  background: linear-gradient(0deg, rgba(24,29,31,0.39), rgba(57,71,69,0.39));
+}
+div.time i{
+  display: inline-block;
+  width: .4rem;
+  height: .4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+}
+div.time i.pre{
+  background-image: url('../img/ti8/icon_01@2x.png');
+}
+div.time i.next{
+  background-image: url('../img/ti8/icon_02@2x.png');
+}
+div.time span.timepicker{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 4.92rem;
+  height: .97rem;
+  margin: 0 1rem;
+  color: #fff;
+  background: url('../img/ti8/n_02@3x.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+div.time span.timepicker i{
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.time span.timepicker i.icon{
+  width: .43rem;
+  height: .44rem;
+  background-image: url('../img/ti8/icon_03@3x.png');
+}
+div.time span.timepicker i.arrow{
+  width: .43rem;
+  height: .44rem;
+  background-image: url('../img/ti8/icon_04@3x.png');
+  background-size: 50%;
+}
+section ul{
+  display: flex;
+  flex-direction: column;
+  width: 7.1rem;
+  margin: 0 auto;
+}
+ul.bis{
+  flex-direction: column;
+}
+ul.bis li{
+  display: flex;
+  flex-direction: column;
+  padding: .1rem 0 .1rem 0;
+  margin-bottom: 5px;
+  background: url('../img/ti8/nav@2x.png') no-repeat;
+  background-size: cover
+}
+ul.bis li > *:not(.markets):not(.orders) {
+  padding: 0 .1rem;
+}
+ul.bis li div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .24rem;
+}
+ul.bis li .tab-content div{
+  display: block;
+}
+ul.bis li div.cont{
+  margin-top: 15px;
+}
+ul.bis li div p{
+  display: flex;
+  align-items: center;
+}
+ul.bis li .tab-content p{
+  display: block;
+}
+ul.bis li div i{
+  display: block;
+  background-size: contain;
+}
+ul.bis li div i.game-icon{
+  width: .5rem;
+  height: .5rem;
+  margin-right: 10px;
+  /*background: #ccc;*/
+}
+ul.bis li div i.more{
+  width: .35rem;
+  height: .35rem;
+  background-image: url('../img/ti8/icon_05@2x.png')
+}
+ul.bis li div span{
+  /*color: #F0F0F0;*/
+}
+span.game-name{
+  font-size: .28rem;
+}
+span.more{
+  font-size: .2rem;
+  margin-right: .1rem;
+}
+ul.bis li div.cont p.mid{
+  flex-direction: column;
+}
+ul.bis li div.cont p.mid span.bifeng{
+  text-align: center;
+  line-height: 1;
+  padding: 5px 18px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #FF4A4A, #FFA34A)
+}
+i.team-icon{
+  width: .84rem;
+  height: .84rem;
+  /*background-image: url('../img/ti8/l_02@2x.png');*/
+}
+i.team-icon img {
+  width: .5rem;
+}
+
+.team1 + .team-name {
+  padding-left: .5rem !important;
+}
+i.team1{
+  left: 0;
+  right: auto;
+  margin-right: 10px;
+}
+i.team2{
+  order: 2;
+  margin-left: 10px;
+  /*background-image: url('../img/ti8/l_03@2x.png');*/
+}
+ul.rank{
+  flex-direction: row;
+  font-size: .24rem;
+  color: #fff;
+}
+ul.rank li{
+  flex: 1;
+  width: 3.27rem;
+  height: .55rem;
+  line-height: .55rem;
+  text-align: center;
+  color: #868686;
+  background: url('../img/ti8/n_04@2x.png') no-repeat;
+  background-size: cover;
+}
+ul.rank li.active{
+  color: #fff;
+  background-image: url('../img/ti8/n_03@2x.png');
+}
+div.page{
+  width: 7.1rem;
+  height: .8rem;
+  margin: 0 auto;
+  font-size: .28rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+div.page span{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 1rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #868686;
+  border-bottom: 2px solid rgba(60, 183, 109, .1);
+}
+div.page span.active{
+  color: #fff;
+  border-color: rgba(60, 183, 109, 1);
+}
+p.t-head{
+  display: flex;
+  align-items: center;
+  width: 7.1rem;
+  height: .8rem;
+  font-size: .24rem;
+  color: #3CB76D;
+  margin: 0 auto;
+}
+.pm{
+  width: 1rem;
+  text-align: center;
+}
+.nc{
+  flex: 1;
+}
+.jj{
+  width: 2rem;
+}
+ul.data li{
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 7.1rem;
+  height: 1rem;
+  font-size: .24rem;
+}
+ul.data li.detail{
+  height: .8rem;
+  padding: 0 1rem;
+  justify-content: space-around;
+}
+ul.data li.detail span.txt{
+  color: #F3C258;
+}
+li.even{
+  background: linear-gradient(90deg, rgba(21,39,35,0.5), rgba(22,66,43,0.5))
+}
+li.odd{
+  background: linear-gradient(90deg, rgb(15,28,25), rgb(18,41,35))
+}
+li span:not(.c1) {
+  color: #fff;
+}
+li span.wang{
+  color: rgba(60,183,109,0.3);
+  margin-left: 10px;
+}
+li span.pm i{
+  display: inline-block;
+  width: .52rem;
+  height: .78rem;
+  line-height: .78rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f3c258;
+  font-style: normal;
+}
+li span.pm i.l1{
+  color: transparent;
+  background-image: url('../img/ti8/icon_07@2x.png')
+}
+li span.pm i.l2{
+  color: transparent;
+  background-image: url('../img/ti8/icon_08@2x.png')
+}
+li span.pm i.l3{
+  color: transparent;
+  background-image: url('../img/ti8/icon_09@2x.png')
+}
+li b{
+  display: inline-block;
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  right: .3rem;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url('../img/ti8/icon_10@2x.png') */
+  transition: all .2s;
+}
+li b.up{
+  background-image: url('../img/ti8/icon_06@2x.png')
+}
+li b.down{
+  transform: rotateZ(180deg);
+  background-image: url('../img/ti8/icon_06@2x.png')
+}
+h1.video{
+  width: 4.18rem;
+  height: .77rem;
+  margin: 20px auto 10px;
+  background: url('../img/ti8/n_05@2x.png') no-repeat;
+  background-size: contain;
+}
+div.video-con{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 6.5rem;
+  font-size: .3rem;
+  margin: auto;
+}
+div.video-con i{
+  color: #3CB76D;
+}
+div.con{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  margin: 0 10px;
+  color: #fff;
+  border: 1px solid #3CB76D;
+  border-bottom: none;
+}
+div.con div.btn{
+  width: 1.22rem;
+  height: 1.22rem;
+  margin-bottom: 10px;
+  background: url('../img/ti8/icon_10@2x.png') no-repeat;
+  background-size: contain;
+}
+div.bet-con{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .7);
+  z-index: 9999;
+}
+div.bet-con div.cont{
+  position: relative;
+  width: 7.1rem;
+  font-size: .2rem;
+  background: rgb(13,15,20);
+}
+div.cont h1{
+  text-align: center;
+  line-height: .8rem;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(24,29,31,0.39), rgba(57,71,69,0.39));
+}
+div.cont i{
+  position: absolute;
+  display: block;
+  right: .1rem;
+  top: .2rem;
+  width: .6rem;
+  height: .6rem;
+  text-align: center;
+  line-height: 0.6rem;
+  font-size: .6rem;
+  color: rgb(249,70,40);
+  /*background: rgb(12,13,15);*/
+}
+h2.jushu{
+  line-height: 1rem;
+  text-align: center;
+  color: #fff;
+}
+div.cont p{
+  position: relative;
+  width: 5.5rem;
+  line-height: 1rem;
+  font-size: .28rem;
+  margin: 0 auto;
+  color: rgb(243,194,88);
+  padding: 0 .1rem;
+  overflow: hidden;
+}
+div.cont span.odds{
+  float: right;
+}
+div.cont p input{
+  flex: 1;
+  padding-left: .5rem;
+  color: #fff;
+  background: #000;
+}
+div.cont div.btn{
+  width: 5.5rem;
+  height: .8rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: .8rem;
+  color: #fff;
+  background: rgb(60,183,109);
+  border-radius: 6px;
+}

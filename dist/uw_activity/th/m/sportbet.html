@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>จับรางวัลรายสัปดาห์กับ Sportbook</title>
+  <link rel="stylesheet" href="css/reset.css?v=0.2">
+  <link rel="stylesheet" href="css/sportbet.css?v=0.2">
+  <link rel="stylesheet" type="text/css" href="css/popup.css">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+  <script src="js/common.js"></script>
+</head>
+<body>
+  <div class="wrapper w1">
+    <div class="banner w1">
+      <img class="banner1 w1" src="img/sportbet/bg01@2x.png" alt="">
+      <img class="banner2 w1" src="img/sportbet/bg02@2x.png" alt="">
+      <img class="banner3 w1" src="img/sportbet/bg03@2x.png" alt="">
+    </div>
+    <div class="actTerm w1">
+      <div class="termTitle">รายละเอียดโปรโมชั่น</div>
+      <div class="actInfo mat fz28 cf tac">
+          เมื่อผู้เล่นมียอดเทิร์นโอเวอร์ ≥18888 บาท ผู้เล่นจะได้รับสิทธิ์ในการจับรางวัล รางวัลรวม รางวัลเงินสด สกินในเกม พอยท์ VIP เป็นต้น
+      </div>
+      <div class="getNow tac">
+        <a href="javascript:" title="">
+          <img src="img/sportbet/but01.png" alt="">
+        </a>
+      </div>
+      <div class="weekTitle">จับรางวัลรายสัปดาห์</div>
+      <!-- <div class="nowNum mat fz24 cf">
+        当前参与人数：<i class="pnumber fz24 cf">0</i>
+      </div> -->
+      <div class="lotto mat">
+        <img class="ticket" src="img/sportbet/ticket.png" alt="">
+        <div class="slot mat">
+          <p class="countdown"><span id="day"></span>D<span id="hour"></span>H<span id="mini"></span>M<span id="sec"></span>S</p>
+          <img class="roller" src="img/sportbet/static.png" alt="">
+          <video class="rollerV" muted autoplay loop>
+            <source src="img/sportbet/animated1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="winners">
+          <div class="winTitle mat fz20 cf tac">
+            รายชื่อผู้ชนะ
+          </div>
+          <div id="text">
+            <div class="winInfo">
+              <!-- <li class="clearfix">
+                <i class="playerName">敬请期待</i>
+              </li> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="ruleTitle">ข้อตกลงและเงื่อนไข</div>
+      <ul class="termList mat">
+        <li>
+          <i class="termIndex">1</i>เงื่อนไขการรับรางวัล: รางวัลจะรีเซ็ตทุกสัปดาห์ ผู้ใช้ต้องมียอดเทิร์นโอเวอร์  ≥18888 บาทใน Sportbook เพื่อมีสิทธิ์ในการร่วมโปรโมชั่น
+        </li>
+        <li>
+          <i class="termIndex">2</i>Uwin จะเลือกผู้โชคดี 100 คน ต่อสัปดาห์ ซึ่งจะได้รับสิทธิ์ในการจับรางวัลทุกวันจันทร์ เริ่มเวลา 20:00 นาฬิกา
+        </li>
+        <li>
+          <i class="termIndex">3</i>สมาชิกต้องมีส่วนร่วมในการคลิก (ส่งทันที) ในหน้าโปรโมชั่นเพื่อสิทธิประโยชน์ในการรับโปรโมชั่น และสามารถทำได้ 1 ครั้งต่ออาทิตย์
+        </li>
+        <li>
+          <i class="termIndex">4</i>การถอนเงินจากรางวัลโบนัส ผู้เล่นต้องมียอดเทิร์นโอเวอร์ 1X เพื่อทำการถอนเงิน
+        </li>
+        <li>
+          <i class="termIndex">5</i>จำนวนการเดิมพันที่ร่วมโปรโมชั่นจะนับจากการชนะและแพ้เท่านั้น ส่วนการเดิมพันที่มีผลเสมอ, ถูกยกเลิก, เดิมพันสองฝั่ง, ไลฟ์แมชต์ หรืออัตราต่อรองต่ำกว่า  DEC 1.50, HK 0.50, MY 0.50, ID -2.0, US -200 ไม่นับรวมในโปรโมชั่น
+        </li>
+        <li>
+          <i class="termIndex">6</i>หากพบผู้เล่นที่เป็นมืออาชีพหรือนักล่าโบนัส UWIN ขอสงวนสิทธิ์ในการเพิกถอนโบนัสและผลกำไรทั้งหมด
+        </li>
+        <li>
+          <i class="termIndex">7</i>หากพบผู้เล่นที่เป็นมืออาชีพหรือนักล่าโบนัส 
+          UWIN ขอสงวนสิทธิ์ในการเพิกถอนโบนัสและผลกำไรทั้งหมด
+        </li>
+        <li>
+          <i class="termIndex">8</i>UWIN ขอสงวนสิทธิ์ในการแก้ไข ยกเลิก เรียกคืนหรือปฏิเสธโปรโมชั่นใด ๆ จากเงื่อนไขเดิม
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/fsrPMD.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      FastClick.attach(document.body);
+
+    // 中奖信息
+    //   $("#text").fsrPMD({
+    //      Event: 'mouseover',       //事件
+    //      Id: 'text',               //容器ID
+    //      Bq: 'div',               //复制html标签
+    //      Fx: "down",            //方向
+    //      Time: 50             //时间
+    //   })
+    })
+    // 倒计时
+    var fnTimeCountDown = function(d, o){
+      var f = {
+        zero: function(n){
+          var n = parseInt(n, 10);
+          if(n > 0){
+            if(n <= 9){
+              n = "0" + n;
+            }
+            return String(n);
+          }else{
+            return "00";
+          }
+        },
+        dv: function(){
+          d = d || Date.UTC(2050, 0, 1); //如果未定义时间，则我们设定倒计时日期是2050年1月1日
+          var future = new Date(d), now = new Date();
+          //现在将来秒差值
+          var dur = Math.round((future.getTime() - now.getTime()) / 1000) + future.getTimezoneOffset() * 60, pms = {
+            sec: "00",
+            mini: "00",
+            hour: "00",
+            day: "00",
+            month: "00",
+            year: "0"
+          };
+          if(dur > 0){
+            pms.sec = f.zero(dur % 60);
+            pms.mini = Math.floor((dur / 60)) > 0? f.zero(Math.floor((dur / 60)) % 60) : "00";
+            pms.hour = Math.floor((dur / 3600)) > 0? f.zero(Math.floor((dur / 3600)) % 24) : "00";
+            pms.day = Math.floor((dur / 86400)) > 0? f.zero(Math.floor((dur / 86400)) % 30) : "00";
+            //月份，以实际平均每月秒数计算
+            pms.month = Math.floor((dur / 2629744)) > 0? f.zero(Math.floor((dur / 2629744)) % 12) : "00";
+            //年份，按按回归年365天5时48分46秒算
+            pms.year = Math.floor((dur / 31556926)) > 0? Math.floor((dur / 31556926)) : "0";
+          }
+          return pms;
+        },
+        ui: function(){
+          for (var i in o) {
+            o[i].innerHTML = f.dv()[i];
+          }
+          setTimeout(f.ui, 1000);
+        }
+      };
+      f.ui();
+    };
+    var d = Date.UTC(2019, 5, 24, 20, 0);
+    var obj = {
+         sec: document.getElementById("sec"),
+         mini: document.getElementById("mini"),
+         hour: document.getElementById("hour"),
+         day: document.getElementById("day")
+    }
+    fnTimeCountDown(d, obj);
+
+    $('.roller').css( 'display','inline-block');
+    $('.rollerV').css( 'display','none');
+    if( $('#sec').html() == 0 & $('#mini').html() == 0 & $('#hour').html() == 0 & $('#day').html() == 0){
+      $('.roller').css( 'display','none');
+      $('.rollerV').css( 'display','inline-block');
+    }
+    var hasLogin = false;
+     //h5登录
+    if (location.href.indexOf('type=h5') != -1) {
+      if (location.href.indexOf('hasLogin=true') != -1) {
+        hasLogin = true;
+        queryWinner();
+      }else{
+        if ( parent && parent.closeIFrame ) {
+          parent.closeIFrame({action: 'goLogin'})
+        } else {
+          if ( location.search != '?goLogin') {
+            location.search = 'goLogin'
+          }
+        }
+      }
+    }
+    window.onload = function() {
+        if (window.android) {
+            hasLogin = android.isLogin();
+        }
+        // if(hasLogin){
+        //   queryWinner();
+        // }
+    }
+    function isLogin(b) {
+        hasLogin = b
+        // if(hasLogin){
+        //   queryWinner();
+        // }
+    }
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+
+    // $.ajax({
+    //     url: "/uwin/Index/Login",
+    //     jsonp: "callback",
+    //     // dataType: "jsonp",
+    //     async: true,
+    //     data: { "UserName": "test002","PassWord": "a123456","Main_Login": "u" },    //参数值
+    //     type: "POST",   //请求方式
+    //     beforeSend: function() {
+    //         //请求前的处理
+    //     },
+    //     success: function(req) {
+
+    //     }
+    // });
+    queryWinner();
+    $('.getNow').click(function () {
+        if(!hasLogin){
+          if (location.href.indexOf('type=h5') != -1) {
+            if ( parent && parent.closeIFrame ) {
+              parent.closeIFrame({action: 'goLogin'})
+            } else {
+              if ( location.search != '?goLogin') {
+                location.search = 'goLogin'
+              }
+            }
+          } else {
+            if (isiOS()) {
+                goAppLogin();
+            } else if (window.android){
+                android.goAppLogin();
+            }
+          }
+          return;
+        }
+        $.ajax({
+            url: "/Promos/Detail",
+            jsonp: "callback",
+            // dataType: "jsonp",
+            async: true,
+            data: { "id": "24","a": "Participate" },    //参数值
+            type: "POST",   //请求方式
+            beforeSend: function() {
+                //请求前的处理
+            },
+            success: function(req) {
+              // console.log(req)
+              if ( req.state ) {
+                $('.ticket').addClass('pullTicket');
+                setTimeout( function(){
+                  var popup = new Popup({
+                      'type': 'submit',
+                      'title': '提示信息',
+                      'text': req.data
+                  })
+                },2000)
+              }else{
+                var popup = new Popup({
+                    'type': 'submit',
+                    'title': '提示信息',
+                    'text': req.message
+                })
+              }
+            }
+        });
+    });
+
+    function queryWinner () {
+      $.ajax({
+          url: "/Promos/Detail",
+          jsonp: "callback",
+          // dataType: "jsonp",
+          async: true,
+          data: { "id": "24","a": "LuckyUsersList" },    //参数值
+          type: "POST",   //请求方式
+          beforeSend: function() {
+              //请求前的处理
+          },
+          success: function(req) {
+            // console.log(req)
+            if( req.state ){
+              var data = req.data;
+              for(var i in data){
+                var html = '<li class="clearfix"><i class="playerName">'+ data[i].UserName +'</i></li>'
+                $('#text div').append(html);
+                // setTimeout( function(){
+                //   $('#text div').append(html)
+                // }, i*1000 )
+              }
+            }
+          }
+      });
+    }
+  </script>
+</body>
+</html>

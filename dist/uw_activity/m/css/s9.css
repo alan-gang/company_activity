@@ -1,0 +1,96 @@
+.s9 {
+  background-color: #07192d;
+  background-image: url('../img/s9/BG@2x.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.wrap {
+  padding-top: 5.16rem;
+  width: 6.83rem;
+  margin: 0 auto;
+}
+.s9 .title {
+  width: 2.29rem;
+  height: .39rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: .25rem;
+}
+.conInfo {
+  margin-bottom: .4rem;
+}
+.conInfo .title {
+  background-image: url('../img/s9/conText.png');
+}
+.ruleList .title {
+  background-image: url('../img/s9/ruleText.png');
+  width: 2.64rem;
+  height: .42rem;
+}
+.conInfo .container {
+  height: 5.78rem;
+  box-sizing: border-box;
+  background: url('../img/s9/bg1@2x.png') no-repeat;
+  background-size: contain;
+  padding: 1.12rem .2rem 0;
+}
+.conInfo table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: .24rem;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #050912;
+}
+.conInfo table tr {
+  color: #fff;
+  line-height: .6rem;
+}
+.conInfo table tr:nth-child(odd) {
+  background-color: #193e6a;
+  color: #fff;
+}
+.conInfo table tr:nth-child(even) {
+  background-color: #132f54;
+}
+.s9 .conInfo table thead tr {
+  background-color: #132f54;
+  color: #727369;
+}
+.ruleList {
+  padding-bottom: 1.1rem;
+}
+.ruleList .container {
+  height: 4.88rem;
+  background-color: #131f3a;
+  box-sizing: border-box;
+  border-left: .07rem solid #162c4c;
+  border-right: .07rem solid #162c4c;
+  padding: .25rem .12rem 0;
+}
+.ruleList p {
+  margin-bottom: .2rem;
+  padding-left: .6rem;
+  font-size: .22rem;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: .41rem .41rem;
+  line-height: .35rem;
+}
+.ruleList p:nth-child(1) {
+  background-image: url('../img/s9/1@2x.png')
+}
+.ruleList p:nth-child(2) {
+  background-image: url('../img/s9/2@2x.png')
+}
+.ruleList p:nth-child(3) {
+  background-image: url('../img/s9/3@2x.png')
+}
+.ruleList p:nth-child(4) {
+  background-image: url('../img/s9/4@2x.png')
+}
+.ruleList p:nth-child(5) {
+  background-image: url('../img/s9/5@2x.png')
+}

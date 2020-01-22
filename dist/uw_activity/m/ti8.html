@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.2">
+  <link rel="stylesheet" href="css/ti8.css?v=0.22">
+  <link rel="stylesheet" href="css/ti8.gamecontent.css">
+  <title>ti8胜率王者挑战赛</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+  <script>
+    window.SOCKET_DOMAIN = 'wss://ws.uwinweb.com'
+    // window.ti8_videos =[
+    //   {
+    //         pic: 'img/ti8/v1.png',
+    //         url: 'https://player.youku.com/embed/XMzc3NzczODExMg=='
+    //         // title: ' 2018DOTA2国际邀请赛寻真——Secret'
+    //     },
+    //     {
+    //         pic: 'img/ti8/v2.png',
+    //         url: 'https://player.youku.com/embed/XMzc3NDMxMDg5Ng=='
+    //         // title: '2018DOTA2国际邀请赛寻真——VGJ.Thunder'
+    //     },
+    //     {
+    //         pic: 'img/ti8/v3.png',
+    //         url: 'https://player.youku.com/embed/XMzc4Mzk3OTQwOA=='
+    //         // title: '2018DOTA2国际邀请赛寻真——day1'
+    //     },
+    //     {
+    //         pic: 'img/ti8/v4.png',
+    //         url: 'https://player.youku.com/embed/XMzc4NTM4MTIyOA=='
+    //         // title: '2018DOTA2国际邀请赛寻真——day2'
+    //     }
+    // ]
+  </script>
+</head>
+
+<body style="background: #121718">
+  <script src="js/common.js"></script>
+  <div id="app" v-cloak @click=" showDropDown = false " style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+  <header>
+    <div class="img1"></div>
+    <div class="img2"></div>
+  </header>
+  <section >
+    <div class="time" @click.stop="" style="display: none">
+      <i class="pre"></i>
+      <span  @click="di > 0 && di-- ">前一天</span>
+      <span class="timepicker"  @click=" showDropDown = !showDropDown ">
+
+        <i class="icon"></i>
+        <span class="date">{{ D7[di]._toMonthDayStringCN() }} ({{ ['天', '一', '二', '三', '四', '五', '六'][D7[di].getDay()] }})</span>
+        <i class="arrow"></i>
+        <span class="date-drop-down" v-if="showDropDown" style="z-index: 9988;">
+          <span v-for="(d, i) of D7" :class="{active: di == i}" @click=" di = i "> {{ d._toMonthDayStringCN() }}</span>
+        </span>
+
+      </span>
+      <span @click="  di < 10 && di++  ">后一天</span>
+      <i class="next"></i>
+    </div>
+    <ul class="bis" style="min-height: 2rem; display: none">
+      <!-- <li class="absolute" style="padding: .1rem; font-size: .14rem; background: none"> 无记录 </li> -->
+      <li :key="i" v-for=" (r, i) in records " :class=" {active: i === ii} " @click=" ii === i ? (ii = -1) && (matches[r].playing = false) : (ii = i) " v-if=" matches[r].Visible && matches[r].TournamentId === '18636' && ((matches[r].Type === type && matches[r].Status) || type === 1)" style="z-index: 1">
+        <div>
+
+          <p>
+            <i class="game-icon"><img :src=" matches[r].CategoryPic " style="width: .5rem;vertical-align: middle;"></i>
+            <span class="game-name">{{ matches[r].LeagueName }}</span>
+          </p>
+          <p>
+            <span class="more">更多玩法</span>
+            <i class="more"></i>
+          </p>
+
+        </div>
+        <div class="cont">
+          <p>
+            <i class="team-icon team1">
+              <img :src=" matches[r].HomeTeamPic ">
+            </i>
+            <span class="team-name text-ellipsis">{{  matches[r].HomeTeamName }}</span>
+          </p>
+          <p class="mid">
+            <span class="bifeng" v-if=" matches[r].Status ">
+              {{ matches[r].Score }}
+              <br>
+              {{ '进行中' }}
+            </span>
+            <span class="bifeng" v-if=" !matches[r].Status " style="background: none; color: grey;"> {{ '未开始' }} </span>
+          </p>
+          <p>
+            <span class="team-name text-ellipsis" style="width: 70%;
+    text-align: right;">{{ matches[r].AwayTeamName }}</span>
+            <i class="team-icon team2">
+              <img :src=" matches[r].AwayTeamPic ">
+            </i>
+
+
+          </p>
+        </div>
+         <!-- && (markets[oa].MarketGroupId === '87' || markets[oa].MarketGroupId === '91' || markets[oa].MarketGroupId === '101' ||markets[oa].MarketGroupId === '102') -->
+        <div class="markets" v-if=" ii === i " @click.stop="" style="min-height: 1rem; background: #12171c;">
+          <p class="no-matches" > 无盘口信息！</p>
+          <div class="tabs">
+            <span @click=" ti = i " :class=" {active: ti === i} " class="tab-item" :key=" 'm' + i" v-for=" (m, i) in mrecords " v-if="  m.data.filter(oa => markets[oa].odds.all ? markets[oa].odds.all.filter(x => odd_lists[x].Visible)[0] : markets[oa].odds.left.concat(markets[oa].odds.right).filter(x => odd_lists[x].Visible)[0] )[0]  "> {{ m.label }}  </span>
+          </div>
+
+          <div class="tab-content" v-if=" M ">
+            <Row class="oa" :gutter="20" :key=" oa + i" v-for=" (oa, j) in M.data  " :class=" {hlh45: !markets[oa].odds.all && (!markets[oa].odds.left[1] || !markets[oa].odds.right[1])} " v-show=" markets[oa].odds.all ? markets[oa].odds.all.filter(x => odd_lists[x].Visible && Number(odd_lists[x].Value) > 1 && odd_lists[x].Status >= 0)[0] : markets[oa].odds.left.concat(markets[oa].odds.right).filter(x => odd_lists[x].Visible && Number(odd_lists[x].Value) > 1 && odd_lists[x].Status >= 0)[0] "
+
+                                v-if=" markets[oa].odds.all || markets[oa].odds.left[0] && ( (markets[oa].IsLive) || type === 1) ">
+                  <i-col class="t_r" :span=" 8 " v-if=" !markets[oa].odds.all "><span class="ob hlh6 plr20 pointer" :key=" 'ob' + i " v-for=" (ob, i) in markets[oa].odds.left " :class="{up: odd_lists[ob].up === 1, down: odd_lists[ob].up === 0, Suspended:  odd_lists[ob].Suspended, active: odd_lists[ob].inOrder }"
+                      @click=" addOrder(odd_lists[ob]) " v-if="  odd_lists[ob].Visible && Number(odd_lists[ob].Value) > 1 && odd_lists[ob].Status >= 0 "><span class="f_l c1 text-ellipsis" style="width: 50%; display: inline-block;">{{ odd_lists[ob] && odd_lists[ob].Title }}</span><span class="f_r">{{ odd_lists[ob] && odd_lists[ob].Value }}</span></span>
+                  </i-col>
+                  <i-col class="t_c oc" :span=" markets[oa].odds.all ? 24 : 8 ">
+                  <p class="text-ellipsis" style="width: 60%; display: inline-block;">{{ markets[oa].Name }}</p>
+                  <div class="od t_l" v-if=" markets[oa].odds.all ">
+                      <div class="ob_box t_c inline-block" :key=" 'oc' + i" v-for=" (oc, i) in markets[oa].odds.all " v-show="odd_lists[oc].Visible && Number(odd_lists[oc].Value) > 1 && odd_lists[oc].Status >= 0"><span class="ob hlh6 plr20 pointer" :class="{up: odd_lists[oc].up === 1, down: odd_lists[oc].up === 0, Suspended:  odd_lists[oc].Suspended, active: odd_lists[oc].inOrder }" @click=" addOrder(odd_lists[oc]) "><span class="f_l c1 text-ellipsis" style="width: 50%; display: inline-block;"> {{ odd_lists[oc].Title }} </span>
+                          <span
+                              class="f_r"> {{ odd_lists[oc].Value }}</span>
+                              </span>
+                      </div>
+                  </div>
+                  </i-col>
+                  <i-col class="t_l" :span=" 8 " v-if=" !markets[oa].odds.all "><span class="ob hlh6 plr20 pointer" :key=" 'ob' + i " v-for=" (ob, i) in markets[oa].odds.right " :class="{up: odd_lists[ob].up === 1, down: odd_lists[ob].up === 0, Suspended:  odd_lists[ob].Suspended, active: odd_lists[ob].inOrder }"
+                      @click=" addOrder(odd_lists[ob]) " v-if=" odd_lists[ob].Visible && Number(odd_lists[ob].Value) > 1 && odd_lists[ob].Status >= 0 "><span class="f_l c1 text-ellipsis" style="width: 50%; display: inline-block;">{{ odd_lists[ob] && odd_lists[ob].Title }}</span><span class="f_r">{{ odd_lists[ob] && odd_lists[ob].Value }}</span></span>
+                  </i-col>
+              </Row>
+          </div>
+
+        </div>
+
+
+
+      <!--     <div class="orders" @click.stop="">
+            <div class="pc t_c ft12 c1" v-if=" ordered[0] ">
+              <div class="pd mtb15 relative" :key=" 'pd' + i " v-for=" (pd, i) in ordered " :class=" {Suspended: pd.state === '61', success: pd.state === '62'} "><i class="close inline-block pointer absolute" @click=" ordered.splice(i, 0) " v-if=" pd.state ===  '61' "></i><i class="loading inline-block absolute" v-if=" pd.state ===  '64' "></i>
+                  <p class="c_f hlh6">{{ pd.team }}</p>
+                  <p class="c011 hlh6">{{ pd.title }}</p>
+                  <p class="t_r hlh6"><span class="f_l">{{ pd.content }}</span><span>@ {{ pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally }}</span></p>
+                  <p class="hlh6 t_l pe plr15 relative"><span>投注额</span><span class="f_r c_f"> {{ pd.amount }}</span></p>
+                  <p class="hlh6 t_l"><span class="c_f">中奖金额：</span><span>{{ (pd.amount * (pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally)).toFixed(2) }}</span></p>
+              </div>
+            </div>
+            <div class="pc t_c ft12 c1" ref="pc" v-if=" orders[0] ">
+                <div class="pd mtb15 relative" :key=" 'pd' + i " v-for=" (pd, i) in orders " :class=" {Suspended: pd.Suspended || !pd.money } "><i class="close inline-block pointer absolute" @click=" addOrder(pd) "></i>
+                    <p class="c_f hlh6">{{ pd.LeagueName }}</p>
+                    <p class="c011 hlh6">{{ pd.Name }}</p>
+                    <p class="t_r hlh6"><span class="f_l c1">{{ pd.Title }}</span><span>@ {{ pd.Value }}</span></p>
+                    <p class="hlh6 t_l pe plr15 relative hlh6"><span class="c1">投注额</span>
+                        <input class="absolute" type="number" number="number" v-model=" pd.money " :disabled=" pd.Suspended" :placeholder=" '投注范围: ' + (cash ? pd.Min : 5) + '-' + (cash ? pd.Max : 100) " :min="cash ? pd.Min : 5" :max=" cash ? pd.Max : 100"></input>
+                    </p>
+                    <p class="t_l hlh6"><span class="c_f">中奖金额：</span><span class="c1">{{ (pd.money * pd.Value).toFixed(2) }}</span></p>
+                </div>
+                <div class="hlh6 pf t_r mt15"><span class="f_l c_f">总投注金额：</span><span class="c1">{{ Amt.m }}</span></div>
+                <div class="hlh6 pf t_r"><span class="f_l c_f">可中奖金额：</span><span class="c1">{{ Amt.am.toFixed(2) }}</span></div>
+                <div class="pi c11 t_l hlh6 mtb15 pointer hlh6">
+                  <span class="pib f_r t_c ft18" @click="orderObjectString.b0 && book()" :class="{disabled: !orderObjectString.b0}">确认投注</span>
+                </div>
+            </div>
+
+          </div> -->
+
+      </li>
+
+
+    </ul>
+    <ul class="rank">
+      <!-- <li  @click="j = 0" :class=" {active: j === 0} ">日榜</li> -->
+      <li @click="j = 1"  :class=" {active: j === 1} ">总榜</li>
+    </ul>
+    <!-- <div class="page">
+      <span class="active">1-10</span>
+      <span>11-20</span>
+      <span>21-30</span>
+      <span>31-40</span>
+      <span>41-50</span>
+      <span>51-60</span>
+      <span>61-70</span>
+      <span>71-80</span>
+      <span>81-90</span>
+      <span>91-100</span>
+    </div> -->
+    <p class="t-head">
+      <span class="pm">排名</span>
+      <span class="nc">昵称</span>
+      <span class="jj">奖金</span>
+    </p>
+    <ul class="data">
+      <template v-for="(item, index) of [daily, totally][j] ">
+        <li  :class=" {even: index % 2 === 0, odd: index % 2 !== 0} " @click=" k === index ? (k = -1) : (k = index) ">
+          <span class="pm">
+            <i :class=" 'l' + (index + 1) ">{{ index + 1 }}</i>
+          </span>
+          <span class="nc">{{ item.user_name }}<span class="wang"> {{ item.alias }} </span></span>
+          <span class="jj">{{ item.bonus }}</span>
+          <b :class=" {up: index === k, down: index !== k} "></b>
+        </li>
+        <li class="detail" v-if=" k === index ">
+          <span class="txt">投注:<span  class="bet">{{ item.total_orders }}</span></span>
+          <span class="txt">中奖:<span class="price">{{ item.total_win_orders }}</span></span>
+          <span class="txt">中奖率:<span class="rate">{{ item.rate }}%</span></span>
+        </li>
+      </template>
+
+
+    </ul>
+    <!-- <h1 class="video"  v-if=" imgs[0] "></h1> -->
+    <!-- <div class="video-con" v-if=" imgs[0] " style="padding-bottom: 10px;">
+      <i class="pre">&lt;&lt;</i>
+      <div class="con">
+        <div class="btn"></div>
+        <span class="date">8月25日</span>
+      </div>
+      <i class="next">&gt;&gt;</i>
+    </div> -->
+  </section>
+     <div v-if=" ordered[0] ">
+          <div class="bet-con" >
+            <div class="cont" :key=" 'pd' + i " v-for=" (pd, i) in ordered " :class=" {Suspended: pd.state === '61', success: pd.state === '62'} ">
+              <i @click=" ordered.splice(i, 0) ">&times;</i>
+              <i class="loading inline-block absolute" v-if=" pd.state ===  '64' "> </i>
+              <h1>{{ pd.team }}</h1>
+              <h2 class="jushu">{{ pd.title }}</h2>
+              <p>
+                <span class="team">{{ pd.content }}</span>
+                <span class="odds">@ {{ pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally }}</span>
+              </p>
+              <p style="background: #000; ">
+                <label>投注额</label>
+                <span class="f_r" style="float: right">  {{ pd.amount }}</span>
+              </p>
+              <p><span style="color: #fff">中奖金额：</span><span class="bet-prize">{{ (pd.amount * (pd.oddFinally === '0.00' ? pd.oddBet : pd.oddFinally)).toFixed(2) }}</span></p>
+            </div>
+
+          </div>
+
+
+    </div>
+
+
+
+    <div v-if=" orders[0] ">
+          <div class="bet-con" >
+            <div class="cont" :key=" 'pd' + i " v-for=" (pd, i) in orders " :class=" {Suspended: pd.Suspended || !pd.money } ">
+              <i @click=" addOrder(pd) ">&times;</i>
+              <h1>{{ pd.LeagueName }}</h1>
+              <h2 class="jushu">{{ pd.Name }}</h2>
+              <p>
+                <span class="team">{{ pd.Title }}</span>
+                <span class="odds">@ {{  pd.Value  }}</span>
+              </p>
+              <p style="background: #000; display: flex;">
+                <label>投注额</label>
+                <input type="number"  v-model=" pd.money " :disabled=" pd.Suspended" :placeholder=" '投注范围: ' + (cash ? pd.Min : 5) + '-' + (cash ? pd.Max : 100) " :min="cash ? pd.Min : 5" :max=" cash ? pd.Max : 100">
+              </p>
+              <p><span style="color: #fff">中奖金额：</span><span class="bet-prize">{{ (pd.money * pd.Value).toFixed(2) }}</span></p>
+              <div class="btn" @click="orderObjectString.b0 && book()" :class="{disabled: !orderObjectString.b0}">立即投注</div>
+            </div>
+
+          </div>
+
+
+    </div>
+
+
+  </div>
+
+<script>
+    // var hasLogin
+    // window.onload = function() {
+    //     if (window.android) {
+    //         hasLogin = android.isLogin();
+    //     }
+    // }
+    // function isLogin(b) {
+    //     hasLogin = b
+    // }
+    // function back() {
+    //     if (!hasLogin) {
+    //         // 还没登录则先登录
+    //         if (isiOS()) {
+    //             //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+    //             goAppLogin();
+    //         } else if (window.android) {
+    //             android.goAppLogin();
+    //         }
+    //         return;
+    //     }
+    //     // 还没登录则先登录
+    //     if (isiOS()) {
+    //         //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+    //         go('sport');
+    //     } else if (window.android) {
+    //         android.go('sport');
+    //     }
+    //     return;
+    // }
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+
+</script>
+
+  <script src="js/lib/vue.2.5.17.min.js"></script>
+  <script src="js/lib/axios.0.18.0.min.js"></script>
+  <script src="js/lib/qs.6.5.2.js"></script>
+
+  <script>
+    window.Number.prototype._padStart = window.String.prototype._padStart = function (l, w) {
+      let s = this + ''
+      w = w + ''
+
+      while (s.length < l) {
+        s = w + s
+      }
+      if (s.length > l) s = s.slice(s.length - l)
+      return s
+    }
+    window.Date.prototype._bf = function (d) {
+      return this._setD(this.getDate() + d)
+    }
+    window.Date.prototype._setD = function (d) {
+      return new window.Date(new window.Date(this).setDate(d))
+    }
+    window.Date.prototype._setH = function (h) {
+      return new window.Date(this.setHours(h))
+    }
+    window.Date.prototype._setM = function (m) {
+      return new window.Date(this.setMinutes(m))
+    }
+    window.Date.prototype._setS = function (s) {
+      return new window.Date(this.setSeconds(s))
+    }
+    window.Date.prototype._toString = function () {
+      return this.getFullYear() + '-' + (this.getMonth() + 1)._padStart(2, 0) + '-' + this.getDate()._padStart(2, 0) + ' ' + this.getHours()._padStart(2, 0) + ':' + this.getMinutes()._padStart(2, 0) + ':' + this.getSeconds()._padStart(2, 0)
+    }
+    window.Date.prototype._toMonthString = function () {
+      return this.getFullYear() + '-' + (this.getMonth() + 1)._padStart(2, 0)
+    }
+    window.Date.prototype._toDayString = function () {
+      return this.getFullYear() + (this.getMonth() + 1)._padStart(2, 0) + this.getDate()._padStart(2, 0)
+    }
+    window.Date.prototype._toAllString = function () {
+      return this.getFullYear() + (this.getMonth() + 1)._padStart(2, 0) + this.getDate()._padStart(2, 0) + this.getHours()._padStart(2, 0) + this.getMinutes()._padStart(2, 0) + this.getSeconds()._padStart(2, 0)
+    }
+    window.Date.prototype._toMonthDayStringCN = function () {
+      return (this.getMonth() + 1) + '月' + this.getDate() + '日'
+    }
+  </script>
+  <script>
+    var Socket = {
+      // url: 'wss://ws.uwinweb.com/ws?r=FrontNotify,GlobalNotify',
+      url: window.SOCKET_DOMAIN ? (window.SOCKET_DOMAIN + '/ws') : 'ws://ws.uyingbet.com/ws',
+      data: {},
+      notify: {},
+      time: 1000,
+      sockets: {},
+      closeType: {},
+      get (msg) {
+        return this.socket.send(JSON.stringify(msg))
+      },
+      close (name) {
+        Object.entries(this.sockets).forEach(([k, v]) => {
+          if (name === 'all' || name === k) v && v.close && (this.closeType[k] = true) && v.close(1000, 'close<-' + k)
+        })
+      },
+      connect (args, name) {
+        let socket = new WebSocket(this.url + args)
+        if (socket) {
+          socket.binaryType = 'arraybuffer'
+          socket.onopen = (evt) => {
+          }
+          socket.onmessage = (evt) => {
+            this.notify.message && this.notify.message(JSON.parse(evt.data))
+          }
+          socket.onerror = (evt) => {
+          }
+          socket.onclose = (evt) => {
+            this.sockets[name] = null
+            if (!this.closeType) this.connect(args, name)
+          }
+          this.sockets[name] = socket
+        } else {
+          setTimeout(() => {
+            this.connect(args, name)
+          }, this.time)
+        }
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    Vue.config.devtools = true
+    axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
+    axios.interceptors.request.use((config) => {
+      // Do something before request is sent
+      if (config.method === 'post') config.data = Qs.stringify(config.data)
+      return config
+    }, function (error) {
+      // Do something with request error
+      return Promise.reject(error)
+    })
+    Vue.prototype.$ = axios
+    var app = new Vue({
+      components: {
+      },
+      el: '#app',
+      data: {
+        k: 0,
+        imgs: window.ti8_videos || [],
+        showDropDown: false,
+        r: '',
+        login: window.location.href.indexOf('login=true') !== -1,
+        api: {
+          login: '/Index/Login',
+          acctSecureInfo: '/User/Info',
+          // 获取比赛列表
+          gameList: '/Bookapp/List?v=2',
+          // 获取比赛盘口数据
+          MarketList: '/Bookapp/MarketList?v=3',
+          Limits: '/Bookapp/Limits',
+          book: '/Order/Bet',
+          bookStates: '/Order/List?state=64',
+          GetRank: '/Promos/Detail?id=20&a=detail&act=GetRank',
+        },
+        now: new Date(2018, 7, 15, 0, 0, 0),
+        di: Math.min(10, (Math.max(0, (new Date()).getDate() - 15))),
+        type: 1,
+        matches: {},
+        records: {},
+        ii: -1,
+        ti: 0,
+        mrecords: {},
+        markets: {},
+        odd_lists: {},
+        j: 1,
+        orders: [
+        ],
+        ordered: [],
+        // 1表示接受赔率变化，0表示不接受
+        checked: true,
+        // 1表示U币，0表示现金
+        cash: true,
+        results: [],
+        daily: [],
+        totally: []
+      },
+      computed: {
+        M () {
+          return this.mrecords[this.ti]
+        },
+        D7 () {
+          return [this.now._bf(0), this.now._bf(1), this.now._bf(2), this.now._bf(3), this.now._bf(4), this.now._bf(5), this.now._bf(6), this.now._bf(7), this.now._bf(8), this.now._bf(9), this.now._bf(10), this.now._bf(11)]
+        },
+        Amt () {
+          return this.orders.filter(x => !x.Suspended).reduce((p, o) => {
+            p.m += o.money
+            p.am += o.money * o.Value
+            return p
+          }, {m: 0, am: 0})
+        },
+        orderObjectString () {
+          return this.orders.filter(x => !x.Suspended && x.money).reduce((p, o, i) => {
+            p['b' + i] = 'a=' + o.money + '&i=' + o.Id + '&t=' + (new Date().getTime() + i)
+            return p
+          }, {})
+        }
+      },
+      watch: {
+        now () {
+          setTimeout(() => {
+            this.now = new Date()
+          }, this.now._bf(1)._setH(0)._setM(0)._setS(0).getTime() - this.now.getTime())
+        },
+        di (n) {
+          this.ii = -1
+          this.gameList()
+        },
+        ii (n, o) {
+          if (n !== -1) {
+            setTimeout(() => {
+              this.MarketList(this.records[n])
+            }, 0)
+          }
+        }
+      },
+      mounted () {
+        this.gameList()
+        this.GetRank()
+        Socket.connect('?r=FrontNotify,GlobalNotify', 'main')
+        this.__acctSecureInfo()
+        Socket.notify.message = this.message
+      },
+      methods: {
+        gameList: function () {
+          this.results = []
+          this.$.get(this.api.gameList, {
+            params: {
+              d: parseInt(this.D7[this.di].getTime() / 1000),
+              // cid: 0
+              cid: 3296
+            }
+          }).then(({data}) => {
+            Object.values(data.data.matches).forEach(m => (m.playing = false))
+            this.matches = data.data.matches
+            this.records = data.data.records
+            // if (!data.data.records[0]) {
+            //   if (this.di < (this.D7.length - 1)) this.di++
+            // }
+          })
+        },
+        MarketList (id) {
+          this.odd_lists = {}
+          this.markets = {}
+          this.mrecords = {}
+          // console.log(id, this.$refs['o' + id], this.$refs)
+          this.$.get(this.api.MarketList, {params: {
+            id: id
+          }}).then(({data}) => {
+            this.mrecords = data.data.records
+            this.markets = data.data.markets
+            this.odd_lists = data.data.odd_lists
+            this.orders.forEach(n => {
+              (this.odd_lists[n.Id] || {}).inOrder = true
+            })
+          })
+        },
+        message (msg) {
+          if (!msg || !msg.data) return
+          switch (msg.ty) {
+            case 'match':
+              this.upDateMatch(msg.data)
+              break
+            case 'market':
+              this.upDateMarket(msg.data)
+              break
+            case 'odd':
+              this.upDateOdd(msg.data)
+              break
+            case 'bet':
+              this.upDateOrderStates(msg.data)
+              break
+          }
+        },
+        upDateMatch (ms) {
+          ms.forEach(m => {
+            Object.assign(this.matches[m.Id] || {}, m)
+          })
+        },
+        upDateMarket () {
+        },
+        upDateOdd (odds) {
+          odds.forEach(od => {
+            let updown = {}
+            if (this.odd_lists[od.Id] && od.Value && od.Value !== this.odd_lists[od.Id].Value) {
+              updown = {up: Number(od.Value > this.odd_lists[od.Id].Value)}
+            }
+            Object.assign(this.odd_lists[od.Id] || {}, od, updown)
+          })
+        },
+        addOrder (odd) {
+          // 暂停并且没有选中
+          if (odd.Suspended && !odd.inOrder) return
+          odd.inOrder = !odd.inOrder
+          if (odd.inOrder) {
+            this.Limits(odd)
+          } else {
+            this.orders.splice(this.orders.findIndex(n => n.Id === odd.Id), 1)
+          }
+        },
+        Limits (odd) {
+          odd.LeagueName = this.matches[odd.MatchId].LeagueName
+          odd.Name = this.markets[odd.MarketId].Name
+          this.$set(odd, 'money', null)
+          this.$set(odd, 'Max', 0)
+          this.$set(odd, 'Min', 0)
+          this.orders = [odd, ...this.orders]
+          this.$.get(this.api.Limits, {params: {id: odd.Id}}).then(({data: {data: {max, min, maxLoss}}}) => {
+            odd.Max = Math.min(maxLoss / odd.Value, max, (maxLoss / odd.Value) < min ? 0 : max)
+            odd.Min = Math.min(min, (maxLoss / odd.Value) < min ? 0 : min)
+            odd.Max = parseInt(odd.Max)
+            odd.Min = parseInt(odd.Min)
+          })
+        },
+        clear () {
+          this.orders.forEach(n => {
+            (this.odd_lists[n.Id] || {}).inOrder = false
+          })
+          this.orders = []
+        },
+        book () {
+          this.$.post(this.api.book, Object.assign({
+            auto: Number(this.checked),
+            flags: Number(!this.cash),
+            len: this.orders.filter(x => !x.Suspended && x.money).length
+          }, this.orderObjectString)).then(({data}) => {
+            if (data.message === 'login') {
+              // this.__login()
+              if (window.isiOS()) {
+                  window.goAppLogin();
+              } else if (window.android) {
+                  window.android.goAppLogin();
+              }
+              return false
+            }
+            if (!data.state && data.message) return widnow.alert(data.message)
+            this.bookStates()
+            this.orders.filter(x => !x.Suspended && x.money).forEach(n => {
+              (this.odd_lists[n.Id] || {}).inOrder = false
+              this.orders.splice(this.orders.findIndex(x => x.Id === n.Id), 1)
+            })
+          })
+        },
+        __login (user) {
+          // test
+          // user.channelTypeb = 'web_joey'
+          return this.$.post(this.api.login, {UserName: 'hr0001', PassWord:'123456c'}).then(({data}) => {
+            this.login = true
+            this.__acctSecureInfo()
+          })
+        },
+        __acctSecureInfo () {
+          this.$.get(this.api.acctSecureInfo).then(({data}) => {
+            if (data.state) {
+              this.login = true
+              this.r = data.data.Uid
+              Socket.connect('?r=' + this.r, 'user')
+            }
+          })
+        },
+        GetRank () {
+          this.$.get(this.api.GetRank).then(({data}) => {
+            if (data.state) {
+              this.daily = data.data.daily
+              this.totally = data.data.totally
+            }
+          })
+        },
+        bookStates () {
+          this.$.post(this.api.bookStates).then(({data: {data: {records}}}) => {
+            this.ordered = records
+          })
+        },
+        upDateOrderStates (order) {
+          this.ordered.forEach((o, i) => {
+            if (o.Id === order.Id) {
+              o = Object.assign(o, order)
+            }
+          })
+          setTimeout(() => {
+            if (this.ordered.findIndex(x => x.state === '64') === -1) {
+              this.ordered = this.ordered.filter(x => x.state === '61')
+            }
+          }, 0)
+        }
+      }
+    })
+  </script>
+
+</body>
+
+</html>

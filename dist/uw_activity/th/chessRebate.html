@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>棋牌特权活动 充值即返5‰无上限！</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/chessrebate.css?v=1911141802">
+	<link rel="stylesheet" type="text/css" href="css/popup.css?v=1">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1"></div>
+		<div class="actTerm w1">
+			<div class="bar bar1 w1"></div>
+			<div class="btnBar mat">
+				<div id="draw" class="openMask btn btn1">
+					立即领取<i class="bonus">0</i><i class="yuan">元</i>奖金
+				</div>
+				<div id="topUp" class="btn btn2" onclick="back({action: 'goToLoad'})">
+					立即充值
+				</div>
+			</div>
+			<div class="conTitle mat"></div>
+			<ul class="termList conList mat">
+				<li>
+					<i class="termIndex">1</i>玩家每次充值即可获得5‰奖金回馈，奖金可自行领取；
+				</li>
+				<li>
+					<i class="termIndex">2</i>在充值后领取彩金可以选择添加开元或乐游账户中;
+				</li>
+				<li>
+					<i class="termIndex">3</i>奖金回馈无充值次数限制、无金额上限；
+				</li>
+			</ul>
+			<div class="termTitle mat"></div>
+			<ul class="termList ruleList mat">
+				<li>
+					<i class="termIndex">1</i>奖金流水只限棋牌游戏，奖金需完成一倍流水可提现或转出；
+				</li>
+				<li>
+					<i class="termIndex">2</i>如未在棋牌游戏中完成流水要求，将奖金转让其它产品盈利将视为无效；
+				</li>
+				<li>
+					<i class="termIndex">3</i>充值成功后，奖金可自行领取；
+				</li>
+				<li>
+					<i class="termIndex">4</i>每位玩家、每一组电话号码、每一IP、相同支付方式（含相同借记卡，信用卡，银行帐号）只能申请一次；
+				</li>
+				<li>
+					<i class="termIndex">5</i>如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+				</li>
+				<li>
+					<i class="termIndex">6</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。
+				</li>
+				<!-- <li>
+					<i class="timeIndex">活动时间：</i>2018年12月30日23:59分-1月18日23:59分
+				</li> -->
+			</ul>
+			<div class="back" onclick="back({action: 'goToList'})"></div·>
+		</div>
+
+		<!-- 领取弹窗 -->
+		<div class="mask">
+			<div class="mCon">
+				<img class="closeMask" src="img/chessrebate/close@2x.png" alt="">
+				<div class="mTop">
+					请点击选择您喜爱的棋牌游戏，并转入彩金<i id="money" class="bonus">0</i>元
+				</div>
+				<div class="mBot">
+					<img id="4" class="cImg a1 draw" src="img/chessrebate/a1.png" alt="">
+					<img id="9" class="cImg a2 draw" src="img/chessrebate/a2.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+
+		$('.openMask').on('click',function(){
+           	$('.mask').css('display','block');
+      	});
+      	$('.closeMask').on('click',function(){
+          	$('.mask').css('display','none');
+      	});
+
+		$(function() {
+
+			if (location.href.indexOf('login=true') != -1) {
+				query ();
+			}else{
+				if ( parent && parent.closeIFrame ) {
+		          	parent.closeIFrame({action: 'goLogin'})
+		        } else {
+		          	if ( location.search != '?goLogin') {
+		        		location.search = 'goLogin'
+		        	}
+		        }
+			}
+
+			$(document).on('click', '.draw', function(){
+				var cid = $(this).attr("id");
+		        draw (cid);
+			});
+
+			function query () {
+		    	$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "36","a": "Check" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	var num = Number(req.data);
+				    	if (req.state) {
+				    		if( num <= 0){
+				    			$('#draw').css('display','none');
+				    			$('#topUp').css('display','block');
+				    		}else{
+				    			$('#topUp').css('display','none');
+				    			$('#draw').css('display','block');
+				    			$('.bonus').html(num);
+				    		}
+				    	}else{
+				    		if ( req.message == '暂无奖金可领取' ) {
+				    			$('#draw').css('display','none');
+				    			$('#topUp').css('display','block');
+				    		} else if ( req.message == 'login' ) {
+				    			if ( location.search != '?goLogin') {
+					        		location.search = 'goLogin'
+					        	}
+				    		} else{
+				    			var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': req.message
+							    })
+				    		}
+				    	}
+				    }
+				});
+			}
+
+			function draw (cid) {
+		    	$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "36","a": "Claim","platId": cid },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	$('.mask').css('display','none');
+				    	if (req.state) {
+				    		var popup = new Popup({
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.data,
+						        'submitCallBack': function(){
+						        	query();
+						        }
+						    })
+				    	}else{
+				    		if (req.message == 'login') {
+				    			var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': '请先登录'
+							    })
+				    		}else{
+					    		var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': req.message
+							    })
+					    	}
+				    	}
+				    }
+				});
+			}
+
+		})
+	</script>
+</body>

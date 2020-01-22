@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ti9首充双重助力</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/ti9Double.css?v=0.01">
+</head>
+
+<body>
+<div class="wrapper w1">
+	<div class="banner w1"></div>
+	<div class="prize w1">
+		<div class="subTitle">
+			<div>在TI9赛事期间，完成  <span>首充 & 次充</span> 领取丰富彩金！</div>
+			<div><a href="javascript:;" onclick="back()">立即充值</a></div>
+		</div>
+	</div>
+	<div class="actTerm w1">
+		<div class="actTitle title"></div>
+		<div class="allInfo mat">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<th>首充返现</th>
+					<th>次充返现</th>
+					<th>流水要求</th>
+				</tr>
+				<tr>
+					<td>30%</td>
+					<td>20%</td>
+					<td>8倍</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="rule">
+		<div class="ruleTitle title"></div>
+		<ul class="termList mat">
+			<li>
+				<i class="termIndex">1</i>
+				<p>
+					TI9活动期间注册用户充值即可申请双重充值返现活动；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">2</i>
+				<p>
+					领取彩金后，完成活动要求规定的相应流水即可提款；流水计算公式举例：（本金1000元 +奖金300元）*8倍流水 = 10400元；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">3</i>
+				<p>
+					首充活动流水不可与其它活动叠加；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">4</i>
+				<p>
+					每位玩家、手机号码、IP地址、相同支付方式（含相同借记卡，银行帐号）只能申请一次；如发现恶意刷取活动套利者，将扣除红利及所得盈利；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">5</i>
+				<p>
+					凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">6</i>
+				<p>
+					活动时间：2019-08-15 00:00:00 至 2019-08-25 23:59:59
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    var hasLogin = false;
+    //h5登录
+    if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+            hasLogin = true;
+            query ();
+        }else{
+            if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+            } else {
+                if ( location.search != '?goLogin') {
+                    location.search = 'goLogin'
+                }
+            }
+        }
+    }
+    window.onload = function() {
+        if (window.android) {
+            hasLogin = android.isLogin();
+        }
+        if(hasLogin){
+            query ();
+        }
+    }
+    function isLogin(b) {
+        hasLogin = b
+        if(hasLogin){
+            query ();
+        }
+    }
+
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+
+    function back() {
+        if (!hasLogin) {
+            // 还没登录则先登录
+            if (location.href.indexOf('type=h5') != -1) {
+                if ( parent && parent.closeIFrame ) {
+                    parent.closeIFrame({action: 'goLogin'})
+                } else {
+                    if ( location.search != '?goLogin') {
+                        location.search = 'goLogin'
+                    }
+                }
+            } else {
+                if (isiOS()) {
+                    //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                    goAppLogin();
+                } else if (window.android) {
+                    android.goAppLogin();
+                }
+            }
+            return;
+        }
+        if (location.href.indexOf('type=h5') != -1) {
+            if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goToLoad'})
+            }
+        } else {
+            if (isiOS()) {
+                go('load');
+            } else if (window.android) {
+                android.go('load');
+            }
+        }
+        return;
+    }
+</script>
+</body>

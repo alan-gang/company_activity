@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>体育返水 每周0.5%</title>
+  <link rel="stylesheet" href="css/reset.css?v=0.21">
+  <link rel="stylesheet" href="css/fanshui.css?v=0.21">
+</head>
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2"></div>
+    </header>
+    <section>
+      <i class="line"></i>
+      <h1><i></i><span>规则与条款</span><i class="last"></i></h1>
+      <p>
+        <i></i>
+        所有参与U赢体育投注的新老会员均可享受每周0.5%的U赢体育超高周返水，且返水无上限；
+      </p>
+      <p>
+        <i></i>
+        返现时间固定为每周二下午17:00后自动派发，无需申领，返现金额只需一倍流水即可提款，最低派发额度为1元，无上限。
+        (返现的计算周期为：上周一中午12:00至本周一中午11:59的投注报表。)
+      </p>
+      <p>
+        <i></i>
+        香港盘0.75以下，欧洲盘1.75以下，马来盘0.75以下，印尼盘-1.33以下，美国盘-133以下；走盘，注单取消，对冲等情况都不算有效流水。
+      </p>
+      <p>
+        <i></i>
+        每位有效玩家、手机号码、电子邮箱、银行卡、IP地址、每台设备只能享受一次优惠，对违规的用户，U赢电竞保留无限期审核，如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+      </p>
+      <p>
+        <i></i>
+        本活动U赢电竞保留最终解释权。
+      </p>
+      <div class="btn"  onclick="back()"></div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    var hasLogin
+    window.onload = function() {
+        if (window.android) {
+            hasLogin = android.isLogin();
+        }
+    }
+    function isLogin(b) {
+        hasLogin = b
+    }
+    function back() {
+        if (!hasLogin) {
+            // 还没登录则先登录
+            if (location.href.indexOf('type=h5') != -1) {
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            } else {
+              if (isiOS()) {
+                  //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                  goAppLogin();
+              } else if (window.android) {
+                  android.goAppLogin();
+              }
+            }
+            return;
+        }
+        if (location.href.indexOf('type=h5') != -1) {
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goSport'})
+          }
+        } else {
+          if (isiOS()) {
+              //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+              go('sport');
+          } else if (window.android) {
+              android.go('sport');
+          }
+        }
+        return;
+    }
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+  </script>
+</body>
+</html>

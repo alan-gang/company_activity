@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>每日包赔活动</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/dailyEsportsMeal.css?v=0.1">
+</head>
+
+<body>
+<div class="wrapper w1">
+	<div class="banner w1"></div>
+	<div class="prize w1">
+		<div class="subTitle">
+			<!--<div>当前还有 <span>58元</span> 彩金可领取!</div>-->
+			<!--<div><a href="javascript:;">立即领取</a></div>-->
+		</div>
+	</div>
+	<div class="actTerm w1">
+		<div class="actTitle title"></div>
+		<div id="box">
+			<!--ajax append-->
+		</div>
+		<div class="allInfo mat">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<th>每日首存</th>
+					<th>包赔彩金</th>
+					<!--<th>包赔单赢后所需流水</th>-->
+					<th>包赔单输后加上彩金所需流水</th>
+				</tr>
+				<tr>
+					<td>1,000元</td>
+					<td>200元</td>
+					<!--<td rowspan="4">本金<span>一倍流水</span>即可提现</td>-->
+					<td rowspan="4">彩金仅需<span>5倍流水</span>即可提现</td>
+				</tr>
+				<tr>
+					<td>3,000元</td>
+					<td>400元</td>
+				</tr>
+				<tr>
+					<td>5,000元</td>
+					<td>666元</td>
+				</tr>
+				<tr>
+					<td>10,000元</td>
+					<td>888元</td>
+				</tr>
+			</table>
+		</div>
+		<div class="des">
+			<div>
+				<h2>限制平台:</h2>
+				<div>彩金不可投注真人娱乐，其他游戏均可投注</div>
+			</div>
+		</div>
+	</div>
+	<div class="rule">
+		<div class="ruleTitle title"></div>
+		<ul class="termList mat">
+			<li>
+				<i class="termIndex">1</i>
+				<p>
+					该活动每位玩家每天仅能参加一次包赔活动！比赛结算之后24小时没有联系官网客服申请，则视为放弃；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">2</i>
+				<p>
+					仅限每天第一笔存款达到1千以上的玩家方可参加！且玩家投注该注单金额不能低于包赔金额；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">3</i>
+				<p>
+					玩家当天参与此活动之后，则当天不能参加其他存送或者霸王餐活动；
+
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">4</i>
+				<p>
+					每位会员（同姓名、同手机号、同IP等），仅限一个账号参加此活动；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">5</i>
+				<p>
+					如发现恶意刷取活动套利者，平台将会扣除红利以及所得盈利；
+				</p>
+			</li>
+			<li>
+				<i class="termIndex">6</i>
+				<p>
+					凡是参加此活动，即表示接收且自愿遵守平台规定，平台保留最终解释权.
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    // var hasLogin = false;
+    // //h5登录
+    // if (location.href.indexOf('type=h5') != -1) {
+    //     if (location.href.indexOf('hasLogin=true') != -1) {
+    //         hasLogin = true;
+    //         // query ();
+    //     }else{
+    //         if ( parent && parent.closeIFrame ) {
+    //             parent.closeIFrame({action: 'goLogin'})
+    //         } else {
+    //             if ( location.search != '?goLogin') {
+    //                 location.search = 'goLogin'
+    //             }
+    //         }
+    //     }
+    // }
+    // window.onload = function() {
+    //     if (window.android) {
+    //         hasLogin = android.isLogin();
+    //     }
+    //     if(hasLogin){
+    //         // query ();
+    //     }
+    // }
+    // function isLogin(b) {
+    //     hasLogin = b
+    //     if(hasLogin){
+    //         // query ();
+    //     }
+    // }
+	//
+    // function isiOS() {
+    //     var u = navigator.userAgent;
+    //     return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    // }
+    checkGood()
+    function daytrans(date){
+        var date = new Date(date*1000);//如果date为13位不需要乘1000
+        var Y = date.getFullYear();
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1);
+        var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+        return M +'月'+ D +'日';
+    }
+    function timetrans(date){
+        var date = new Date(date*1000);
+        var H = date.getHours();
+        var M = date.getMinutes()
+        return (H<10 ? '0'+H : H)+':'+ (M < 10 ? '0' + M : M)
+    }
+    function checkGood () {
+        $.ajax({
+            url: "/uwin/Bookapp/djbwc",
+            // dataType: "jsonp",
+            async: true,
+            type: "GET",   //请求方式
+            success: function(req) {
+				console.log(req.data)
+				var html = ''
+				req.data.map(function (item) {
+					html += '<div class="box">\n' +
+                        '\t\t\t\t<div class="qa">'+item.LeagueName+'</div>\n' +
+                        '\t\t\t\t<div class="t_c">'+daytrans(item.StartTime)+'</div>\n' +
+                        '\t\t\t\t<div class="qb clearfix t_c">\n' +
+                        '\t\t\t\t\t<div class="f_l pl20"><img src="'+item.HomeTeamPic+'"><div class="mb10">'+item.HomeTeamName+'</div></div>\n' +
+                        '\t\t\t\t\t<div class="t_c ft20 inline-block c11 qd">'+timetrans(item.StartTime)+'</div>\n' +
+                        '\t\t\t\t\t<div class="f_r pr20"><img src="'+item.AwayTeamPic+'"><div class="mb10">'+item.AwayTeamName+'</div></div>\n' +
+                        '\t\t\t\t</div>\n' +
+                        '\t\t\t\t<div class="qc clearfix">\n' +
+                        '\t\t\t\t\t<span class="f_l">'+item.MarketName+'</span>\n' +
+                        '\t\t\t\t\t<span class="f_r">'+item.OddName+'</span>\n' +
+                        '\t\t\t\t</div>\n' +
+                        '\t\t\t</div>'
+                })
+				$("#box").html(html)
+            }
+        });
+    }
+</script>
+</body>

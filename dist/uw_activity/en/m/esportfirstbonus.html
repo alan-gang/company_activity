@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>U赢电竞首充彩金</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css?0.21">
+    <link rel="stylesheet" type="text/css" href="css/first_bonus.css?1.0">
+    <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+	<div id="first_bonus">
+		<div class="m_event_top">
+            <img class="banner2" src="img/first_bonus/bg02@2x.png" alt="">
+        </div>
+		<div class="m_event_bottom">
+            <div class="event_content_title event_title_1"></div>
+			<div class="m_event_bottom_bonus">
+                <table class="tablist">
+                    <tr>
+                        <td class="m_event_bottom_bonus_cell_1">首充金额</td>
+                        <td class="m_event_bottom_bonus_cell_1">返现奖金</td>
+                        <td class="m_event_bottom_bonus_cell_1">流水要求</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>200元</td>
+                       <td id="50" class="">50元</td> -->
+                        <td>5倍</td>
+                    </tr>
+                    <tr>
+                       <!--  <td>1,000元</td>
+                        <td id="100" class="">100元</td> -->
+                        <td>5倍</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>2,000元</td>
+                        <td id="200" class="">200元</td> -->
+                        <td>6倍</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>5,000元</td>
+                        <td id="500" class="">500元</td> -->
+                        <td>6倍</td>
+                    </tr>
+                    <tr>
+                       <!--  <td>10,000元</td>
+                        <td id="888" class="">888元</td> -->
+                        <td>7倍</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>30,000元</td>
+                        <td id="2888" class="">2,888元</td> -->
+                        <td>7倍</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>50,000元</td>
+                        <td id="5888" class="">5,888元</td> -->
+                        <td>8倍</td>
+                    </tr>
+                    <tr>
+                       <!--  <td>100,000元</td>
+                        <td id="9888" class="">9,888元</td> -->
+                        <td>8倍</td>
+                    </tr>
+                </table>
+			</div>
+			<div class="m_event_bottom_terms">
+                <div class="event_content_title event_title_2"></div>
+                <ul class="termList">
+                    <li>
+                        <i class="termIndex">1</i>
+                        2018年7月18日起U赢电竞用户注册后首充且中途没有提款，即可正常领取礼金;首充后未立刻领取彩金且发起提款成功后则视为首充失效，不允许领取礼金；
+                    </li>
+                    <li>
+                        <i class="termIndex">2</i>
+                        领取彩金后，完成活动要求规定的相应流水即可提款；流水计算公式举例：（本金2000元 +奖金200元）*6倍流水 = 13200元
+                    </li>
+                    <li>
+                        <i class="termIndex">3</i>
+                        首充活动流水不可与其它活动叠加；
+                    </li>
+                    <li>
+                        <i class="termIndex">4</i>
+                        每位玩家、手机号码、IP地址、相同支付方式（含相同借记卡，银行帐号）只能申请一次；如发现恶意刷取活动套利者，将扣除红利及所得盈利
+                    </li>
+                    <li>
+                        <i class="termIndex">5</i>
+                        凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+                    </li>
+                </ul>
+			</div>
+		</div>
+	</div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+          FastClick.attach(document.body);
+          var hasLogin = false;
+          //h5登录
+          if (location.href.indexOf('type=h5') != -1) {
+            if (location.href.indexOf('hasLogin=true') != -1) {
+              hasLogin = true;
+              // checkBonus ();
+            }else{
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            }
+          }
+         //登录验证
+        window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+              if(hasLogin){
+                  // checkBonus ();
+              }
+          }
+        }
+        function isLogin(b) {
+          hasLogin = b
+          if(hasLogin){
+              // checkBonus ();
+          }
+        }
+        function isiOS() {
+           var u = navigator.userAgent;
+           return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        }
+        checkBonus ();
+        function checkBonus () {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "17","a": "Check" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                var list = req.data;
+                $.map( list, function(v,i){
+                  $('.tablist tr:nth-child(' + (i+2) + ')').prepend('<td>'+
+                    v.minAmount +'元</td><td id="s' + i + '">'+ v.bonus +'元</td>');
+                  if ( v.iswin ) {
+                    $("#s"+ i).html("可领取"+ v.bonus +"元").addClass('canSign');
+                  }
+                });
+                $('.canSign').on('click', function(){
+                    var $this = this
+                    drawBonus($this);
+                });
+                if ( !req.state ) {
+                  var popup = new Popup({
+                      'type': 'submit',
+                      'title': '信息',
+                      'text': req.message
+                  })
+                }
+              }
+          });
+        }
+        function drawBonus ($this) {
+            $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: { "id": "17","a": "Claim" },    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function() {
+                  //请求前的处理
+              },
+              success: function(req) {
+                  // console.log(req.data)
+                    if ( req.state ) {
+                        $($this).html("已领取").removeClass('canSign');
+                        var popup = new Popup({
+                          'type': 'submit',
+                          'title': '信息',
+                          'text': req.data
+                      })
+                    } else {
+                        var popup = new Popup({
+                          'type': 'submit',
+                          'title': '信息',
+                          'text': req.message
+                        })
+                    }
+
+              }
+            });
+        }
+    </script>
+</body>
+</html>
+

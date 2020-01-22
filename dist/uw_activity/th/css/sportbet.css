@@ -1,0 +1,275 @@
+.wrapper{
+	/* padding-bottom: .96rem; */
+	/* height: 17rem; */
+	background-color: #000;
+}
+.banner{
+	min-width: 12rem;
+	height: 12.9rem;
+	position: relative;
+	background: url('../img/sportbet/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 4.2rem;
+	overflow: hidden;
+}
+.banner2{
+	height: 4.2rem;
+	position: absolute;
+	left: 0;
+	top: 4.2rem;
+	z-index: 1;
+}
+.banner3{
+	height: 4.5rem;
+	position: absolute;
+	left: 0;
+	top: 8.4rem;
+	z-index: 1;
+}
+.banner4{
+	width: 7.37rem;
+	height: 2.62rem;
+	position: absolute;
+	left: 50%;
+	top: 1.65rem;
+	margin-left: -3.68rem;
+	z-index: 2;
+}
+.banner5{
+	width: 16.64rem;
+	height: 10.21rem;
+	position: absolute;
+	left: 50%;
+	top: 2.5rem;
+	margin-left: -9.5rem;
+	z-index: 3;
+}
+.actTerm{
+	/* height: 7.31rem; */
+	position: relative;
+	top: -1.2rem;
+	z-index: 5;
+}
+.actInfo{
+	width: 8rem;
+	height: .3rem;
+	line-height: .3rem;
+	font-family: MicrosoftYaHei;
+}
+.termTitle,.weekTitle,.ruleTitle{
+	width: 7.8rem;
+	height: 1.47rem;
+	background: url('../img/sportbet/nav01.png') 0 0 no-repeat;
+	background-size: 8.69rem 1.47rem;
+	margin: 0 auto .45rem;
+}
+.getNow{
+	width: 3.27rem;
+	height: 1.05rem;
+	margin: .3rem auto .33rem;
+}
+.getNow a,.getNow a img{
+	display: inline-block;
+	width: 3.27rem;
+	height: 1.05rem;
+}
+.getNow a img{
+	vertical-align: top;
+}
+.weekTitle{
+	background: url('../img/sportbet/nav02.png') 0 0 no-repeat;
+	background-size: 8.69rem 1.47rem;
+}
+.nowNum{
+	width: 3.95rem;
+	height: .5rem;
+	line-height: .5rem;
+	text-align: center;
+	background: url('../img/sportbet/num.png') 0 0 no-repeat;
+	background-size: 3.9rem .5rem;
+	margin-bottom: .5rem;
+}
+.pnumber{
+	font-style: normal;
+
+}
+.lotto{
+	width: 10.62rem;
+	height: 5.83rem;
+	padding: 0 .72rem;
+	background: url('../img/sportbet/lights01.png') 0 0 no-repeat;
+	background-size: 12.06rem 5.83rem;
+	margin-bottom: 1rem;
+	position: relative;
+}
+.ticket{
+	position: absolute;
+	width: 2rem;
+	height: 1.08rem;
+	top: -3rem;
+	left: 2.5rem;
+	z-index: 99;
+	display: none;
+	-webkit-transform:rotate(-40deg);
+	transform: rotate(-40deg);
+}
+.pullTicket{
+	display: block;
+	-webkit-animation:bounce 2s cubic-bezier(.1, .25, 1, .25) forwards;
+	animation: bounce 2s cubic-bezier(.1, .25, 1, .25) forwards;
+}
+@keyframes bounce {
+  60%,80%{
+     transform: translateY(500px);
+     animation-timing-function: ease;
+     opacity: 0.8;
+   }
+   100% {
+   	transform: translateY(500px);
+   	animation-timing-function: ease;
+   	opacity: 0;
+   }
+ }
+.slot{
+	width: 6.26rem;
+	height: 3.86rem;
+	background: url('../img/sportbet/slot.png') 0 0 no-repeat;
+	background-size: 6.26rem 3.86rem;
+	margin-top: .98rem;
+	position: relative;
+	text-align: center;
+}
+.countdown{
+	height: .4rem;
+	line-height: .4rem;
+	color: #fff;
+	font-family: Arial;
+	font-size: .2rem;
+	letter-spacing: 1px;
+	margin-bottom: .595rem;
+}
+.roller,.rollerV{
+	width: 4.49rem;
+	height: 1.41rem;
+	position: relative;
+	left: -0.02rem;
+}
+/* .hand{
+	width: .32rem;
+	height: 1.08rem;
+	position: absolute;
+	top: -0.6rem;
+	right: 0.66rem;
+} */
+.winners{
+	width: 3.79rem;
+	height: 3.87rem;
+	background: url('../img/sportbet/li01.png') 0 0 no-repeat;
+	background-size: 3.79rem 3.87rem;
+	margin-top: 1.05rem;
+	margin-left: .55rem;
+}
+.winTitle{
+	width: 1.86rem;
+	height: .49rem;
+	line-height: .49rem;
+	font-weight: 600;
+	background: url('../img/sportbet/butt02.png') 0 0 no-repeat;
+	background-size: 1.86rem .49rem;
+	position: relative;
+	top: -0.2rem;
+}
+#text{
+	display: block;
+	width: 3.39rem;
+	height: 3rem;
+	padding: 0 0.2rem;
+	position: relative;
+}
+#text .scroll-area{
+	height: 3rem;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.scroll-area::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+}
+.scroll-area::-webkit-scrollbar-thumb {/*滚动条方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px #5dc0ff;
+    background: #5dc0ff;
+}
+.scroll-area::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border: none;
+    background: #072751;
+}
+
+#text li,.playerName{
+	display: block;
+	width: 3.39rem;
+	height: .28rem;
+	line-height: .28rem;
+	font-size: .16rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	text-align: center;
+	color: #f3c258;
+	overflow: hidden;
+}
+/*.luckyPlayer,.luckyPrize{
+	display: inline-block;
+	height: .28rem;
+	line-height: .28rem;
+	vertical-align: top;
+}
+.luckyPrize{
+	line-height: .3rem;
+	color: #fff;
+}
+
+ .playerName,.prize{
+	max-width: .3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-style: normal;
+	color: #f3c258;
+}
+.prize{
+	color: #f3c258;
+} */
+
+.ruleTitle{
+	background: url('../img/sportbet/nav03.png') 0 0 no-repeat;
+	background-size: 8.69rem 1.47rem;
+}
+.termList{
+	width: 12rem;
+}
+.termList li{
+	height: .5rem;
+	line-height: .5rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+}
+.termList li:nth-child(5){
+	height: 0.8rem;
+	line-height: 0.4rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .26rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	background: url('../img/sportbet/i02.png') 0 0 no-repeat;
+	background-size: .26rem .30rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #020913;
+	margin-right: .3rem;
+}

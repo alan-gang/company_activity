@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>邀请好友送送送</title>
+  <link rel="stylesheet" href="css/reset.css?v=0.2">
+  <link rel="stylesheet" href="css/invite.css?v=0.2">
+</head>
+
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2">
+        <i></i>
+      </div>
+    </header>
+    <section>
+      <h1>规则与条款</h1>
+      <div class="rule">
+        <p><i>1</i>用户（会员等级LV2及以上会员）可使用个人中心专属推广链接邀请您的好友参加竞猜；</p>
+        <p><i>2</i>每个通过您推广链接注册并首次充值用户，您将获得50元奖励，此用户充值累计超过1500元，您将再次获得100元奖励；</p>
+        <p><i>3</i>活动奖金将在您邀请的用户绑定银行卡并成功充值后系统自动派发到您的账户中；</p>
+        <p><i>4</i>活动彩金需一倍流水后即可提款；</p>
+        <p><i>5</i>邀请用户必须为不同身份的真实用户，银行卡、手机号码、IP地址相同都视为同一用户；</p>
+        <p><i>6</i>凡是使用作弊手段，恶意刷取活动套利者，将扣除红利及所得盈利，严重者将冻结所有关联账号。</p>
+      </div>
+      <div class="to-page"  onclick="back()">
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    var hasLogin
+    //h5登录
+    if (location.href.indexOf('type=h5') != -1) {
+      if (location.href.indexOf('hasLogin=true') != -1) {
+        hasLogin = true;
+      }else{
+        if ( parent && parent.closeIFrame ) {
+          parent.closeIFrame({action: 'goLogin'})
+        } else {
+          if ( location.search != '?goLogin') {
+            location.search = 'goLogin'
+          }
+        }
+      }
+    }
+    window.onload = function() {
+        if (window.android) {
+            hasLogin = android.isLogin();
+        }
+    }
+    function isLogin(b) {
+        hasLogin = b
+    }
+    function back() {
+        if (!hasLogin) {
+            // 还没登录则先登录
+            if (location.href.indexOf('type=h5') != -1) {
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            } else {
+              if (isiOS()) {
+                  //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                  goAppLogin();
+              } else if (window.android) {
+                  android.goAppLogin();
+              }
+            }
+            return;
+        }
+
+        if (location.href.indexOf('type=h5') != -1) {
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goPromo'})
+          }
+        } else {
+          if (isiOS()) {
+              //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+              go('promo');
+          } else if (window.android) {
+              android.go('promo');
+          }
+        }
+        return;
+    }
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.2">
+  <link rel="stylesheet" href="css/newhand.css?v=0.2">
+  <link rel="stylesheet" type="text/css" href="css/popup.css?v=0.11">
+  <script type="text/javascript" src="js/fastclick.js"></script>
+  <title>新手任务</title>
+</head>
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2"></div>
+      <i></i>
+    </header>
+    <section>
+      <h1>任务一览表</h1>
+      <ul class="task">
+        <li id="1">
+          <img src="img/newhand/icon_01@2x.png" alt="">
+          <span class="txt">注册</span>
+          <span class="num">+188U币</span>
+          <button class="btn canSign" onclick="draw(this)" data-id="1">立即领取</button>
+        </li>
+        <li id="2">
+          <img src="img/newhand/icon_02@2x.png" alt="">
+          <span class="txt">设置昵称</span>
+          <span class="num">+59U币</span>
+          <button class="btn canSign" onclick="draw(this)" data-id="2">立即领取</button>
+        </li>
+        <li id="3">
+          <img src="img/newhand/icon_03@2x.png" alt="">
+          <span class="txt">设置头像</span>
+          <span class="num">+68U币</span>
+          <button class="btn canSign" onclick="draw(this)" data-id="3">立即领取</button>
+        </li>
+        <li id="5">
+          <img src="img/newhand/icon_04@2x.png" alt="">
+          <span class="txt">绑定银行卡</span>
+          <span class="num">+100U币</span>
+          <button class="btn canSign" onclick="draw(this)" data-id="5">立即领取</button>
+        </li>
+        <li id="8">
+          <img src="img/newhand/icon_05@2x.png" alt="">
+          <span class="txt">设置交易密码</span>
+          <span class="num">+100U币</span>
+          <button class="btn canSign" onclick="draw(this)" data-id="8">立即领取</button>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript">
+      FastClick.attach(document.body);
+      var hasLogin = false;
+
+      //h5登录
+      if (location.href.indexOf('type=h5') != -1) {
+        if (location.href.indexOf('hasLogin=true') != -1) {
+          hasLogin = true;
+          queryNewbie();
+        }else{
+          if ( parent && parent.closeIFrame ) {
+            parent.closeIFrame({action: 'goLogin'})
+          } else {
+            if ( location.search != '?goLogin') {
+              location.search = 'goLogin'
+            }
+          }
+        }
+      }
+      window.onload = function() {
+          if (window.android) {
+              hasLogin = android.isLogin();
+          }
+          if(hasLogin){
+              queryNewbie ();
+          }
+      }
+      function isLogin(b) {
+          hasLogin = b
+          if(hasLogin){
+              queryNewbie ();
+          }
+      }
+     /* function back() {
+          if (!hasLogin) {
+              // 还没登录则先登录
+              if (isiOS()) {
+                  //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                  goAppLogin();
+              } else if (window.android){
+                  android.goAppLogin();
+              }
+              return;
+          }
+          queryNewbie ();
+      }*/
+      function isiOS() {
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      }
+      function draw(obj) {
+          var $this = $(obj);
+          if(!hasLogin){
+            if (location.href.indexOf('type=h5') != -1) {
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            } else {
+              if (isiOS()) {
+                  //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                  goAppLogin();
+              } else if (window.android){
+                  android.goAppLogin();
+              }
+            }
+            return;
+          }
+          if(!$this.hasClass('canSign')){
+              return;
+          }
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: {"id": "4", "a": "draw", "t": $this.attr('data-id')},    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function () {
+                  //请求前的处理
+              },
+              success: function (req) {
+                  // console.log(req.state)
+                  try{
+                      if (req.state) {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': req.data,
+                              'submitCallBack': function () {
+                                  $($this).html('已领取').removeClass('canSign');
+                              }
+                          })
+                      } else {
+                          var popup = new Popup({
+                              'type': 'submit',
+                              'title': '提示信息',
+                              'text': req.message
+                          })
+                      }
+                  }catch (e) {
+
+                  }
+              }
+          });
+      }
+
+      function queryNewbie() {
+          $.ajax({
+              url: "/Promos/Detail",
+              jsonp: "callback",
+              // dataType: "jsonp",
+              async: true,
+              data: {"id": "4", "a": "query"},    //参数值
+              type: "GET",   //请求方式
+              beforeSend: function () {
+                  //请求前的处理
+              },
+              success: function (req) {
+                  console.log(req)
+                  if (req.data[1] == 0) {
+                      $("ul li:eq(0) .btn").html("未达标").removeClass('canSign');
+                  } else if (req.data[1] == 1) {
+                      $("ul li:eq(0) .btn").html("立即领取").addClass('canSign');
+                  } else if (req.data[1] == 2) {
+                      $("ul li:eq(0) .btn").html("已领取").removeClass('canSign');
+                  }
+
+                  if (req.data[2] == 0) {
+                      $("ul li:eq(1) .btn").html("未达标").removeClass('canSign');
+                  } else if (req.data[2] == 1) {
+                      $("ul li:eq(1) .btn").html("立即领取").addClass('canSign');
+                  } else if (req.data[2] == 2) {
+                      $("ul li:eq(1) .btn").html("已领取").removeClass('canSign');
+                  }
+
+                  if (req.data[3] == 0) {
+                      $("ul li:eq(2) .btn").html("未达标").removeClass('canSign');
+                  } else if (req.data[3] == 1) {
+                      $("ul li:eq(2) .btn").html("立即领取").addClass('canSign');
+                  } else if (req.data[3] == 2) {
+                      $("ul li:eq(2) .btn").html("已领取").removeClass('canSign');
+                  }
+
+                  if (req.data[5] == 0) {
+                      $("ul li:eq(3) .btn").html("未达标").removeClass('canSign');
+                  } else if (req.data[5] == 1) {
+                      $("ul li:eq(3) .btn").html("立即领取").addClass('canSign');
+                  } else if (req.data[5] == 2) {
+                      $("ul li:eq(3) .btn").html("已领取").removeClass('canSign');
+                  }
+
+                  if (req.data[8] == 0) {
+                      $("ul li:eq(4) .btn").html("未达标").removeClass('canSign');
+                  } else if (req.data[8] == 1) {
+                      $("ul li:eq(4) .btn").html("立即领取").addClass('canSign');
+                      ;
+                  } else if (req.data[8] == 2) {
+                      $("ul li:eq(4) .btn").html("已领取").removeClass('canSign');
+                  }
+                 /* $('.canSign').on('click', function () {
+                      var $this = this;
+                      var index = parseInt($($this).parent('.task li').attr("id"));
+                      drawNewbie($this, index);
+                  });*/
+
+              }
+          });
+      }
+
+  </script>
+</body>
+</html>

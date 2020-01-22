@@ -1,0 +1,91 @@
+body{
+  height: 100%;
+  overflow-y: scroll;
+  background: #000;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header .img1{
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/newhand/img_01@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2{
+  position: relative;
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/newhand/img_02@2x.png') no-repeat;
+  background-size: cover
+}
+header i{
+  position: absolute;
+  bottom: .5rem;
+  width: 100%;
+  height: .2rem;
+  background: url('../img/newhand/img_04@2x.png') no-repeat;
+  background-size: cover
+}
+section h1{
+  width: 7.2rem;
+  line-height: .6rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .3rem;
+  color: #fff;
+  background: rgba(255, 255, 255, .15);
+  border-top: 1px solid #626151;
+}
+section .task{
+  width: 7.2rem;
+  margin: 15px auto;
+}
+section .task li{
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.83rem;
+  font-size: .3rem;
+  margin: 10px 0;
+}
+section .task li img{
+  width: 1.2rem;
+}
+.task li span.txt{
+  font-size: .24rem;
+  margin: 5px 0 3px;
+  color: #fff;
+}
+.task li span.num{
+  color: #f00;
+}
+/* .task li span.btn{
+  font-size: .2rem;
+  margin-top: 5px;
+  padding: 3px 10px;
+  color: #fff;
+  background: #f00;
+  border-radius: 3px;
+} */
+.task li button.btn{
+  font-size: .2rem;
+  margin-top: 5px;
+  padding: 3px 10px;
+  color: #000;
+  background: #818181;
+  pointer-events: none;
+  border-radius: 3px;
+  border: 0;
+}
+.task li button.canSign{
+  color: #fff;
+  background-color: #f00;
+  pointer-events: initial;
+  cursor: pointer;
+}

@@ -1,0 +1,144 @@
+.wrapper{
+	/* padding-bottom: .87rem;*/
+	background-color: #030305;
+}
+.banner{
+	min-width: 12rem;
+	height: 8.36rem;
+	position: relative;
+	background: url('../img/dailytask/bg.jpg') 0 0 no-repeat;
+	background-size: 100% 8.36rem;
+	overflow: hidden;
+}
+.banner2{
+	min-width: 12rem;
+	height: 4.5rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.content{
+	height: 13.1rem;
+	padding-top: .9rem;
+	background: url('../img/dailytask/bg03.png') 0 0 no-repeat;
+	background-size: 100% 14rem;
+	position: relative;
+	/* top: -0.01rem; */
+}
+.list{
+	width: 11.36rem;
+	height: 3.69rem;
+	padding: .45rem .32rem 0;
+	background: url('../img/dailytask/b01.png') 0 0 no-repeat;
+	background-size: 12rem 4.14rem;
+	margin: 0 auto;
+}
+.list li{
+	width: 1.3rem;
+	height: 3.13rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	margin-right: .7rem;
+}
+.list li:last-child{
+	margin-right: 0;
+}
+.taskLevel,.num{
+	color: #e5ac0c;
+	font-style: normal;
+}
+.taskIcon{
+	height: 1.29rem;
+	margin: .2rem auto .12rem;
+}
+.taskIcon img{
+	width: 1.13rem;
+	height: 1.29rem;
+	vertical-align: top;
+}
+.taskInfo1{
+	height: .22rem;
+	line-height: .22rem;
+}
+.taskInfo2{
+	height: .22rem;
+	line-height: .22rem;
+	margin-bottom: .15rem;
+}
+.goGet{
+	height: .33rem;
+	margin-top: .14rem;
+}
+/* .goGet a{
+	display: inline-block;
+	height: .33rem;
+	line-height: .33rem;
+	color: #0d0d0f;
+	background-color: #e5ac0c;
+	vertical-align: top;
+} */
+.goGet button{
+	display: inline-block;
+	height: .33rem;
+	line-height: .33rem;
+	color: #0d0d0f;
+	background-color: #818181;
+	vertical-align: top;
+	border: 0;
+	pointer-events: none;
+}
+.goGet button.canSign{
+	background-color: #e5ac0c;
+	pointer-events: initial;
+	cursor: pointer;
+}
+.goGet button.canSign:hover{
+	opacity: .7;
+}
+
+.actTerm{
+	width: 10.26rem;
+	height: 5.95rem;
+	padding: .6rem .87rem 0;
+	margin: 0.72rem auto 0;
+	background: url('../img/dailytask/b02.png') 0 0 no-repeat;
+	background-size: 12rem 6.55rem;
+}
+.termTitle{
+	width: 10.26rem;
+	height: .36rem;
+	line-height: .36rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	font-size: .36rem;
+	color: #fff;
+	margin-bottom: .95rem;
+}
+.termList{
+	width: 10.26rem;
+}
+.termList li{
+	height: .6rem;
+	line-height: .6rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+}
+.termIndex{
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	line-height: .36rem;
+	text-align: center;
+	background: url('../img/dailytask/icon07.png') 0 0 no-repeat;
+	background-size: .36rem .36rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #0c0d0f;
+	margin-right: .2rem;
+}

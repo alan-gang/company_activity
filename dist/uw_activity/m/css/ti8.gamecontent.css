@@ -1,0 +1,759 @@
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.t_r {
+  text-align: right;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.t_l {
+  text-align: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.none_o {
+  opacity: 0;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.fixed-xf {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.c1 {
+  color: #f3c258;
+}
+
+.c2 {
+  color: C2;
+}
+
+.c3 {
+  color: C3;
+}
+
+.c4 {
+  color: C4;
+}
+
+.c5 {
+  color: C5;
+}
+
+.c6 {
+  color: C6;
+}
+
+.c11 {
+  color: #999;
+}
+
+.c011 {
+  color: #efefef;
+}
+
+.c_s {
+  color: #19be6b;
+}
+
+.c_e {
+  color: #ed3f14;
+}
+
+.c_p {
+  color: #2d8cf0;
+}
+
+.c_w {
+  color: #f90;
+}
+
+.c_d {
+  color: #bbbec4;
+}
+
+.c_f {
+  color: #fff;
+}
+
+.bc1 {
+  background-color: #ecda9d;
+}
+
+.radius {
+  border-radius: 5px;
+}
+
+.mr10 {
+  margin-right: 0.1rem;
+}
+
+.mb10 {
+  margin-bottom: 0.1rem;
+}
+
+.mtb20 {
+  margin: 0.2rem 0;
+}
+
+.mtb15 {
+  margin: 0.15rem 0;
+}
+
+.mtb5 {
+  margin: 0.05rem 0;
+}
+
+.ptb10 {
+  padding: 0.1rem 0;
+}
+
+.pb10 {
+  padding-bottom: 0.1rem;
+}
+
+.pb05 {
+  padding-bottom: 0.05rem;
+}
+
+.ptb15 {
+  padding: 0.15rem 0;
+}
+
+.ptb20 {
+  padding: 0.2rem 0;
+}
+
+.plr15 {
+  padding: 0 0.15rem;
+}
+
+.plr20 {
+  padding: 0 0.2rem;
+}
+
+.pt15 {
+  padding-top: 0.15rem;
+}
+
+.pt20 {
+  padding-top: 0.2rem;
+}
+
+.pb15 {
+  padding-bottom: 0.15rem;
+}
+
+.pb20 {
+  padding-bottom: 0.2rem;
+}
+
+.pl15 {
+  padding-left: 0.15rem;
+}
+
+.pl20 {
+  padding-left: 0.2rem;
+}
+
+.pr15 {
+  padding-right: 0.15rem;
+}
+
+.pr20 {
+  padding-right: 0.2rem;
+}
+
+.mt15 {
+  margin-top: 0.15rem;
+}
+
+.mt20 {
+  margin-top: 0.2rem;
+}
+
+.mb15 {
+  margin-bottom: 0.15rem;
+}
+
+.mb20 {
+  margin-bottom: 0.2rem;
+}
+
+.ml15 {
+  margin-left: 0.15rem;
+}
+
+.ml20 {
+  margin-left: 0.2rem;
+}
+
+.mr15 {
+  margin-right: 0.15rem;
+}
+
+.mr20 {
+  margin-right: 0.2rem;
+}
+
+.h4 {
+  height: 0.4rem;
+}
+
+.h3 {
+  height: 0.3rem;
+}
+
+.hlh3 {
+  height: 0.3rem;
+  line-height: 0.3rem;
+}
+
+.hlh4 {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+
+.hlh45 {
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+
+.hlh5 {
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+
+.hlh6 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+
+.hlh36 {
+  height: 0.36rem;
+  line-height: 0.36rem;
+}
+
+.hlh68 {
+  height: 0.68rem;
+  line-height: 0.68rem;
+}
+
+.ft36 {
+  font-size: 0.36rem;
+}
+
+.ft30 {
+  font-size: 0.3rem;
+}
+
+.ft24 {
+  font-size: 0.24rem;
+}
+
+.ft25 {
+  font-size: 0.25rem;
+}
+
+.ft18 {
+  font-size: 0.18rem;
+}
+
+.ft16 {
+  font-size: 0.16rem;
+}
+
+.ft15 {
+  font-size: 0.15rem;
+}
+
+.ft14 {
+  font-size: 0.14rem;
+}
+
+.ft12 {
+  font-size: 0.12rem;
+}
+
+.text-ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.timepicker {
+  position:  relative;
+}
+.date-drop-down {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 2.8rem;
+  /*background: url(../img/ti8/n_02@3x.png) no-repeat;*/
+  background-color: #277649 ;
+  background-size: 100% 100%;
+}
+.date-drop-down span{
+  padding: .1rem .5rem;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #3cb76d;
+}
+.date-drop-down span:hover{
+  opacity: .8;
+}
+.markets {
+  display: block !important;
+  position: relative;
+  line-height: .4rem;
+}
+.markets .no-matches {
+  position: absolute;
+  left: .2rem;
+  top: .05rem;
+}
+.tabs, .tab-content {
+  display: block !important;
+  position: relative;
+  background: #12171c
+}
+.tab-item {
+  text-align: center;
+  display: inline-block;
+  width: 24%;
+  height: .7rem;
+  line-height: .7rem;
+  color: #aaa !important;
+}
+.tab-item.active,
+.tab-item.hover {
+  color: #fff !important;
+  background-image: url(../img/ti8/n_03@2x.png);
+}
+row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+i-col {
+    display: block;
+    width: 33.3%;
+}
+i-col[span="24"] {
+width: 100%;
+}
+i-col[span="8"] {
+  /*width: 33%;*/
+  /*display: block;*/
+  /*width: 33.33333333%;*/
+  /*float: left;*/
+  /*margin: 0 -5px;*/
+  display: inline-block;
+  max-width: 2rem; 
+  margin-left: .2rem;
+  margin: 0 .1rem 0 .2rem;
+}
+.t_c {
+  text-align: center;
+}
+.ob_box  {
+  box-sizing: border-box;
+  width: 33.33333333%;
+  padding: 0 10px;
+  margin: 0;
+}
+.ob_box .ob:hover 
+.ob_box .ob.active  {
+  border: solid 1px #2d5017
+}
+.ob_box .ob.active  {
+    background: rgba(14,100,24, .2)
+}
+ul.bis li.active {
+  padding-bottom: 0
+}
+.ob {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2rem;
+  vertical-align: middle;
+  background-color: #0e1118;
+  border: solid 1px #2f2f2f;
+  margin: 0.05rem 0;
+}
+
+
+.orders {
+  display: block !important;
+  width: auto;
+  min-height: auto;
+  height: auto;
+  background: rgb(13,15,20);
+}
+.orders .pd,
+.orders .pd p,
+.orders .pc {
+  display: block !important;
+
+}
+.orders .pbox {
+  background-color: #1b1b1b;
+}
+
+.orders .pa {
+  font-weight: bold;
+}
+
+.orders .pb {
+  width: 50%;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  box-sizing: content-box;
+}
+
+.orders .pb:hover {
+  color: #f3c258;
+}
+
+.orders .pb.active {
+  color: #f3c258;
+  border: none;
+  background-image: linear-gradient(0deg, #342308 0%, #675733 100%), linear-gradient(#12171d, #12171d);
+}
+
+.orders .pb.active span {
+  color: #f3c258;
+}
+
+.orders .pc {
+  padding: 0 0.15rem 0.15rem 0.15rem;
+  line-height: 0.3rem;
+}
+
+.orders .pd.empty {
+  display: none;
+  line-height: 1.4rem;
+}
+
+.bet-con .cont {
+  background-image: url("../img/egaming/20.png");
+
+}
+.orders .pd {
+  height: 1.82rem;
+  padding: 0.15rem;
+  background-image: url("../img/egaming/20.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.1rem;
+  transition: height 1s ease-in-out;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+
+.orders .pbox {
+  background-color: #1b1b1b;
+}
+
+.orders .pa {
+  font-weight: bold;
+}
+
+.orders .pb {
+  width: 50%;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  box-sizing: content-box;
+}
+
+.orders .pb:hover {
+  color: #f3c258;
+}
+
+.orders .pb.active {
+  color: #f3c258;
+  border: none;
+  background-image: linear-gradient(0deg, #342308 0%, #675733 100%), linear-gradient(#12171d, #12171d);
+}
+
+.orders .pb.active span {
+  color: #f3c258;
+}
+
+.orders .pc {
+  padding: 0 0.15rem 0.15rem 0.15rem;
+  line-height: 0.3rem;
+}
+
+.orders .pd.empty {
+  display: none;
+  line-height: 1.4rem;
+}
+
+.orders .pd {
+  height: 1.82rem;
+  padding: 0.15rem;
+  background-image: url("../img/egaming/20.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.1rem;
+  transition: height 1s ease-in-out;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.tab-content .ob.Suspended {
+  background-color: rgba(255,255,255,0.2);
+  background: url("../img/egaming/lock.png") right 0.15rem center no-repeat;
+  border: solid 1px #434343;
+  background-size: 0.2rem;
+}
+.tab-content .ob.Suspended .f_r{
+  display: none;
+}
+
+
+.bet-con .cont.Suspended,
+.orders .pd.Suspended,
+.orders .pd.failed {
+  background-color: #220202;
+}
+.bet-con .cont.success,
+.orders .pd.success {
+  background-color: #061203;
+}
+
+.orders .pd .close {
+  right: 0.1rem;
+  top: 0.1rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 0.05rem;
+  background-color: #282d34;
+  background-image: url("../img/egaming/19.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s;
+}
+
+.orders .pd .close:hover {
+  transform: rotateZ(90deg);
+  opacity: 0.8;
+}
+.bet-con .cont .loading {
+  left: 0.2rem;
+  top: 0.2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.05rem;
+  background-color: #282d34;
+  background-image: url("../img/egaming/loading.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: Spin 1s linear infinite;
+}
+.orders .pd .loading {
+  left: 0.2rem;
+  top: 0.2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.05rem;
+  background-color: #282d34;
+  background-image: url("../img/egaming/loading.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: Spin 1s linear infinite;
+}
+
+.orders .pd .ivu-input-wrapper,
+.orders .pd .ivu-input-number {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+.orders .pd .ivu-input-wrapper input,
+.orders .pd .ivu-input-number input {
+  padding-right: 0.15rem;
+  background: none;
+  text-align: right;
+  color: #fff;
+}
+
+.orders .pd .ivu-input-wrapper .ivu-input-number-handler-wrap,
+.orders .pd .ivu-input-number .ivu-input-number-handler-wrap {
+  display: none;
+}
+
+.orders .pe {
+  background-color: #4d4d4d;
+  border: solid 1px #2f2f2f;
+}
+.orders .pe input {
+    border: none;
+    background: none;
+    text-align: right;
+    width: 80%;
+    float: right;
+    height: .6rem;
+    line-height: .6rem;
+}
+
+.orders .pg {
+  background-color: #3c3c3c;
+  box-shadow: inset 2px 3px 3px 0px rgba(0,0,0,0.29);
+  border: none;
+}
+
+.orders .pg:first-child {
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+}
+
+.orders .pg:last-child {
+  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+}
+
+.orders .ph {
+  padding-left: 0.2rem;
+}
+
+.orders .pha {
+  width: 0.22rem;
+  height: 0.22rem;
+  background-color: #282d34;
+  box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.25), inset 0px 1px 8px 0px rgba(0,0,0,0.25);
+  border-radius: 0.03rem;
+  vertical-align: top;
+  transform: translateY(10%);
+}
+
+.orders .pha.checked {
+  background: url("../img/egaming/21.png") center no-repeat;
+}
+
+.orders .pia {
+  width: 0.4rem;
+  height: 0.4rem;
+  vertical-align: bottom;
+  background: url("../img/egaming/22.png") center no-repeat;
+}
+
+.orders .pia:hover {
+  opacity: 0.8;
+}
+
+.orders .pib {
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  background: #3cb76d;
+  /*background-image: linear-gradient(0deg, #342308 0%, #675733 100%), linear-gradient(#12171d, #12171d);*/
+  border-radius: 0.1rem;
+  /*background: url("../img/egaming/btn.png") center no-repeat;*/
+}
+
+.orders .pib:not(.disabled):hover {
+  opacity:  .8;  
+  /*background: url("../img/egaming/btn_.png") center no-repeat;*/
+}
+
+.orders .pib.disabled {
+  background: #808080;
+  color: #bdbdbd;
+}
+.ivu-tabs.tab-5 .ivu-tabs-tab {
+  width: 19%;
+}
+
+.ivu-tabs.tab-6 .ivu-tabs-tab {
+  width: 16%;
+}
+
+.ivu-tabs.tab-7 .ivu-tabs-tab {
+  width: 14%;
+}
+
+.ivu-tabs.tab-8 .ivu-tabs-tab {
+  width: 12%;
+}
+
+.ivu-tabs.tab-9 .ivu-tabs-tab {
+  width: 10%;
+}
+
+.ivu-tabs.tab-10 .ivu-tabs-tab {
+  width: 10%;
+}
+
+.ivu-tabs.tab-11 .ivu-tabs-tab .ivu-tabs.tab-12 .ivu-tabs-tab {
+  width: 9%;
+}
+@keyframes Spin {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+}

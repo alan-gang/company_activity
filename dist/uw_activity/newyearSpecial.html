@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="renderer" content="webkit">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <title>新年特权活动</title>
+    <link rel="stylesheet" type="text/css" href="./css/newyearSpecial.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="goBack" onclick="back({action: 'goToList'})">
+            返回列表
+        </div>
+        <div class="main-wrapper">
+            <img class="banner" src="./img/newyearSpecial/banner.jpg" alt="">
+            <div class="content-container">
+                <img class="activity-content-img" src="./img/newyearSpecial/title.png" alt="">
+                <ul class="activity-date">
+                    <li class="">
+                        <img src="./img/newyearSpecial/tick.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/newyearSpecial/tick.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/newyearSpecial/tick.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/newyearSpecial/tick.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/newyearSpecial/tick.png" alt="">
+                    </li>
+                </ul>
+                <img class="activity-content" src="./img/newyearSpecial/p01.png" alt="">
+                <img class="rule-content-img" src="./img/newyearSpecial/rule.png" alt="">
+                <div class="rule-content-container">
+                    <div class="rule-content-wp">
+                        <ul>
+                            <li>
+                                <span class="serial-number">1</span>
+                                <span>活动期间用户完成每日活动要求后请于次日17:00后联系平台客服领取奖励；</span>
+                            </li>
+                            <li>
+                                <span class="serial-number">2</span>
+                                <span>此活动不可与平台其他充值、返水活动叠加；</span>
+                            </li>
+                            <li>
+                                <span class="serial-number">3</span>
+                                <span>活动返现、投注等奖励规则以平台天天返水活动要求为准；</span>
+                            </li>
+                            <li>
+                                <span class="serial-number">4</span>
+                                <span>每一名用户同一IP、同姓名、同手机号、仅限领取一次活动，同一代理下多批套利者，发现后会批
+量冻结相关账号；</span>
+                            </li>
+                            <li>
+                                <span class="serial-number">5</span>
+                                <span>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        function back(args) {
+            if (parent && parent.closeIFrame) {
+                parent.closeIFrame(args)
+            } else {
+                location.search = args.action
+            }
+        }
+    </script>
+
+    <script>
+        switch (new Date().getDate()) {
+            case 25:
+                $('.activity-date').find('li').eq(0).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${1}.png`)
+                break;
+            case 26:
+                $('.activity-date').find('li').eq(1).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${2}.png`)
+                break;
+            case 27:
+                $('.activity-date').find('li').eq(2).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${3}.png`)
+                break;
+            case 28:
+                $('.activity-date').find('li').eq(3).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${4}.png`)
+                break;
+            case 29:
+                $('.activity-date').find('li').eq(4).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${5}.png`)
+                break;
+            default:
+                $('.activity-date').find('li').eq(0).addClass('active')
+                $('.activity-content').attr('src', `./img/newyearSpecial/p0${1}.png`)
+        }
+    </script>
+</body>
+
+</html>

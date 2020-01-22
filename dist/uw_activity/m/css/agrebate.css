@@ -1,0 +1,108 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+html{font-size: 100px;}
+@media screen and (min-width: 2000px){
+	html {
+		font-size: 120px;
+	}
+}
+@media screen and (max-width: 1200px){
+	html {
+		font-size: 80px;
+	}
+}
+body{
+	font-size: .14rem;
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+}
+
+.wrapper{
+	/* height: 100vh; */
+	background-color: #030303;
+	padding-bottom: 0.5rem;
+}
+.banner{
+	height: 5.8rem;
+	background: url('../img/agrebate/bg01@2x.png') 0 0 no-repeat;
+	background-size: 100% 2.9rem;
+	position: relative;
+}
+.banner2{
+	height: 2.9rem;
+	position: absolute;
+	left: 0;
+	top: 2.89rem;
+	z-index: 1;
+}
+
+.actTerm{
+	width: 6.43rem;
+	padding-top: .5rem;
+	margin: 0 auto;
+	background-color: rgba(0,10,20, 0.9);
+	border: 3px solid #f1827b;
+	position: relative;
+	top: -1rem;
+	z-index: 3;
+}
+.termTitle{
+	width: 4.38rem;
+	height: .57rem;
+	margin: 0 auto;
+	background: #070d21 url('../img/agrebate/t01@2x.png') 0 0 no-repeat;
+	background-size: 100% .57rem;
+}
+.termList{
+	width: 100%;
+	padding-top: .5rem;
+}
+.termList li{
+	height: 1rem;
+	line-height: 1rem;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-bottom: .2rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .39rem;
+	height: .39rem;
+	line-height: .39rem;
+	text-align: center;
+	background: url('../img/agrebate/n01@2x.png') 0 0 no-repeat;
+	background-size: .39rem .39rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .16rem;
+	letter-spacing: 0px;
+	color: #f7bbb8;
+	margin-right: .15rem;
+	margin-left: .2rem;
+}
+.termInfo{
+	display: inline-block;
+	width: 5.3rem;
+	height: .6rem;
+	line-height: .4rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .28rem;
+	text-align: justify;
+}
+.termList li:nth-child(3){
+	margin-bottom: 0;
+}

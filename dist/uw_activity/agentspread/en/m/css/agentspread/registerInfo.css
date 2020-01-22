@@ -1,0 +1,136 @@
+body{
+	background-color: #000 !important;
+}
+.wrapper{
+	height: 13.32rem;
+	max-width: 10rem;
+	min-height: 100vh;
+	margin: 0 auto;
+	background: #000;
+	padding-bottom: .5rem;
+}
+/* 效果CSS开始 */
+.m-r-1{
+	margin: 0.7rem auto 0;
+}
+.c-input{
+	width: 6rem !important;
+	margin: 0 auto !important;
+}
+.f-input{
+	width: 6rem;
+	height: .7rem;
+	margin: 0 auto .44rem;
+	border-bottom: 1px solid #4e4f52;
+}
+.n-input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	padding-left: 0.22rem;
+	box-sizing: border-box;
+	background: none;
+	color: #959596;
+	line-height: .7rem;
+	font-size: .32rem;
+	vertical-align: top;
+}
+.c-input .input-c-f{
+	width: 3.9rem !important;
+}
+.login-i{
+	display: block;
+	width: 3.3rem;
+	margin: .8rem auto 0;
+}
+.m{
+  margin: 0.74rem auto 0;
+}
+.password-e{
+  width: 6rem;
+  margin: 0 auto;
+  color: $themeColor2;
+  line-height: 0.8rem;
+  font-size: .14rem;
+}
+.m-1{
+  margin: .5rem auto 0.7rem !important;
+}
+.p-l-c-2{
+  padding-left: 0.22rem;
+}
+.from{
+  width: 6.2rem;
+  margin: 0.37rem auto 2rem;
+}
+label{
+	display: block;
+	width: 100%;
+}
+p{
+	color: themeColor1;
+	font-size: .16rem;
+	line-height: 0.64rem;
+}
+input{
+	width: 100%;
+	height: .67rem;
+	line-height: .67rem;
+	margin-bottom: .26rem;
+	border-radius: 10px;
+	padding-left: .2rem;
+	box-sizing: border-box;
+}
+.label-select{
+    display: block;
+    width: 100%;
+    height: 0.67rem;
+    line-height: 0.67rem;
+    margin-bottom: 0.26rem;
+    border-radius: 10px;
+    padding-left: 0.2rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: .14rem;
+}
+.labe-se{
+	position: relative;
+}
+.labe-se:after{
+  content: ""
+  pointer-events: none;
+  position: absolute;
+  width: 0.21rem
+  height: 0.11rem
+  /* background-image: url */
+  right: 0.2rem;
+  top: 70%
+}
+.labe-se-2:after{
+  content: ""
+  top: 40%
+}
+.m-r-1{
+	width: 6.14rem;
+	height: .92rem;
+	text-align: center;
+	line-height: .92rem;
+	background-image: url('../../img/agentspread/login_btn.png');
+	background-size: cover;
+	display: block;
+	font-size: .36rem;
+	font-weight: bold;
+	letter-spacing: 3px;
+	color: rgb(9, 13, 22);
+}
+.code{
+	width: 1.92rem;
+	height: .65rem;
+	background-image:linear-gradient(180deg, #ffd800 0%, #e58100 100%);
+	box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.74);
+	border-radius: 10px;
+	font-size: .26rem;
+	font-weight: bold;
+	line-height: .65rem;
+	letter-spacing: 0;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>周周转好运，竞猜转运金</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/goodluck.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1">
+			<img class="banner2" src="img/goodluck/bg02.png" alt="">
+			<img class="banner3" src="img/goodluck/bg03.png" alt="">
+		</div>
+		<div class="actInfo">
+			<ul class="list list-top">
+				<li class="fl">负盈利</li>
+				<!-- <li class="fl">2000元</li>
+				<li class="fl">5000元</li>
+				<li class="fl">20000元</li>
+				<li class="fl">50000元</li>
+				<li class="fl">100000元</li>
+				<li class="fl">200000元</li> -->
+			</ul>
+			<ul class="list list-bot">
+				<li class="fl">转运金</li>
+				<!-- <li class="fl">58元</li>
+				<li class="fl">88元</li>
+				<li class="fl">388元</li>
+				<li class="fl">888元</li>
+				<li class="fl">2888元</li>
+				<li class="fl">5888元</li> -->
+			</ul>
+			<div class="goGet w1 tac">
+				<button class="w1 fz16 tac" href="javascript:" title="">
+					立即领取
+				</button>
+			</div>
+		</div>
+		<div class="actTerm">
+			<div class="termTitle">规则条款</div>
+			<ul class="termList w12 mat">
+				<li>
+					<i class="termIndex">1</i>竞猜转运金只限电竞赛事、体育赛事；
+				</li>
+				<li>
+					<i class="termIndex">2</i>一周内可领取一次转运金，本周内无负盈利将无法领取；
+				</li>
+				<li>
+					<i class="termIndex">3</i>负盈利结算时间：每周一00:00:00分--周日23:59:59分，领取时间为每周二--周四，指定时间未领取视为弃权；
+				</li>
+				<li>
+					<i class="termIndex">4</i>领取转运金后需一倍流水可进行提款，所有平局、对赌、对冲、无效或被取消之投注，均不计算在此活动有效流水内。
+				</li>
+				<li>
+					<i class="termIndex">5</i>每一名用户同一IP段、同一代理下多批套利者，如发现恶意刷取活动套利者，将扣除红利及所得盈利；
+				</li>
+				<li>
+					<i class="termIndex">6</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+				</li>
+			</ul>
+			<img class="decorate" src="img/goodluck/img05.png" alt="">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			if (location.href.indexOf('login=true') != -1) {
+				// checkGood();
+			}else{
+				if ( parent && parent.closeIFrame ) {
+		          	parent.closeIFrame({action: 'goLogin'})
+		        } else {
+		          	if ( location.search != '?goLogin') {
+		        		location.search = 'goLogin'
+		        	}
+		        }
+			}
+			checkGood();
+			function checkGood () {
+				$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "13","a": "Check" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	// console.log(req.data)
+				    	var list = req.data;
+			    		$.map( list, function(v){
+						    $('.list-top').append('<li class="fl">'+ v.minAmount +'元</li>');
+						    $('.list-bot').append('<li class="fl">'+ v.bonus +'元</li>');
+						    if ( v.iswin ) {
+						    	$('.goGet button').html("可领取"+ v.bonus +"元").addClass('canSign');
+						    }
+						});
+			    		$(document).on('click', '.canSign', function(){
+						    drawGood();
+						});
+				    	if ( !req.state ) {
+				    		$('.goGet button').html("未达标");
+				    	}
+					}
+				});
+			}
+			function drawGood () {
+				var $this = this;
+		    	$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "13","a": "Claim" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	// console.log(req.data)
+				    	if ( req.state ) {
+						    var popup = new Popup({
+						        'type': 'submit',
+						        'title': '信息',
+						        'text': req.data,
+						        'submitCallBack': function(){
+						            $($this).html("已领取").removeClass('canSign')
+						        }
+						    })
+				    	} else {
+						    var popup = new Popup({
+						        'type': 'submit',
+						        'title': '信息',
+						        'text': req.message
+						    })
+				    	}
+
+				    }
+				});
+			}
+
+		})
+	</script>
+</body>
+</html>

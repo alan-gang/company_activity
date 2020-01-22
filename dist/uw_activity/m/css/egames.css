@@ -1,0 +1,90 @@
+
+.wrapper{
+	/* height: 17.04rem; */
+	background-color: #12171d;
+	/* background-size: 100% 10.23rem; */
+	padding-bottom: 1rem;
+}
+.banner{
+	height: 5.07rem;
+	background: url('../img/egames/bg01@2x.png') 0 0 no-repeat;
+	background-size: 100% 3rem;
+	position: relative;
+}
+.banner img{
+	vertical-align: top;
+}
+.banner2{
+	height: 2.07rem;
+	position: absolute;
+	left: 0;
+	top: 2.99rem;
+	z-index: 1;
+}
+.actTerm{
+	height: auto;
+	padding-top: .8rem;
+	background: url('../img/egames/divider@2x.png') 0 0 no-repeat;
+	background-size: 100% .36rem;
+}
+.termTitle,.giftTitle{
+	width: 6.5rem;
+	height: .45rem;
+	margin-bottom: .6rem;
+}
+.termTitle{
+	background: url('../img/egames/title1@2x.png') 0 0 no-repeat;
+	background-size: 6.5rem .45rem;
+}
+.termList{
+	width: 85%;
+	/* height: 1.5rem; */
+	/* padding-left: .1rem; */
+	margin-bottom: .6rem;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .35rem;
+	font-family: MicrosoftYaHei;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .4rem;
+	height: .41rem;
+	line-height: .41rem;
+	background: url('../img/egames/bullet@2x.png') 0 0 no-repeat;
+	background-size: .4rem .41rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	color: #0d0d0d;
+	margin-right: .2rem;
+}
+.giftTitle{
+	background: url('../img/egames/title2@2x.png') 0 0 no-repeat;
+	background-size: 6.5rem .45rem;
+}
+.giftList{
+	width: 87%;
+}
+.giftList li,.giftList li>img{
+	width: 1.4rem;
+	height: 1.15rem;
+}
+.giftList li{
+	margin-right: .3rem;
+	margin-bottom: .2rem;
+}
+.giftList li:nth-child(4n+4){
+	margin-right: 0;
+}
+.giftList li>img{
+	vertical-align: top;
+}

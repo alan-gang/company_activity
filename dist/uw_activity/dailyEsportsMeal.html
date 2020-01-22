@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>每日包赔活动</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/dailyEsportsMeal.css?v=0.01">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1"></div>
+		<div class="divider"></div>
+		<div class="actTerm w1">
+			<div class="actTitle title"></div>
+			<div class="allInfo mat">
+				<div class="gameDetail">
+					<div style="margin-bottom: 0.2rem">
+						<!--<div>您有 <span>400元</span> 彩金可以领取</div>-->
+						<!--<div><a href="javascript:;">领取彩金</a></div>-->
+					</div>
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th width="120">每日首存</th>
+						<th width="120">包赔彩金</th>
+						<!--<th>包赔单赢后所需流水</th>-->
+						<th>包赔单输后加上彩金所需流水</th>
+						<th>限制平台</th>
+					</tr>
+					<tr>
+						<td>1,000元</td>
+						<td>包赔 <span>200元</span></td>
+						<!--<td rowspan="4">本金<span>一倍流水</span>即可提现</td>-->
+						<td rowspan="4">彩金仅需<span>5倍流水</span>即可提现</td>
+						<td rowspan="4">彩金不可投注真人娱乐,其他游戏均可投注</td>
+					</tr>
+					<tr>
+						<td>3,000元</td>
+						<td>包赔 <span>400元</span></td>
+					</tr>
+					<tr>
+						<td>5,000元</td>
+						<td>包赔 <span>666元</span></td>
+					</tr>
+					<tr>
+						<td>10,000元</td>
+						<td>包赔 <span>888元</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="rule">
+			<div class="ruleTitle title"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">1.</i>
+					<p>
+						该活动每位用户每天仅能参加一次包赔活动！比赛结算之后24小时没有联系官网客服申请，则视为放弃；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">2.</i>
+					<p>
+						仅限每天第一笔存款达到100元以上的玩家方可参加！且玩家投注该注单金额不能低于包赔金额；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">3.</i>
+					<p>
+						连串过关投注不计算在包赔活动之内，用户参与此活动之后，则当天不能参加其他存送或者霸王餐活动；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">4.</i>
+					<p>
+						每位用户（同姓名、同手机号、同IP等），仅限一个账号参加此活动；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">5.</i>
+					<p>
+						如发现恶意刷取活动套利者，平台将会扣除红利以及所得盈利；
+					</p>
+				</li>
+				<li>
+					<i class="termIndex">6.</i>
+					<p>
+						凡是参加此活动，即表示接收且自愿遵守平台规定，平台保留最终解释权.
+					</p>
+				</li>
+			</ul>
+			<div class="back" onclick="back({action: 'goToList'})"></div >
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+	</script>
+</body>

@@ -1,0 +1,120 @@
+.wrapper{
+	/* padding-bottom: .87rem;
+	background-color: #030305; */
+}
+.banner{
+	min-width: 12rem;
+	height: 9.26rem;
+	position: relative;
+	background: url('../img/newbietask/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 9.26rem;
+	overflow: hidden;
+}
+.banner2{
+	width: 12.6rem;
+	height: 7.82rem;
+	position: absolute;
+	left: 50%;
+	top: 0.17rem;
+	margin-left: -6.3rem;
+}
+.banner3{
+	width: 7.7rem;
+	height: 2.67rem;
+	position: absolute;
+	left: 50%;
+	top: 5.16rem;
+	margin-left: -3.85rem;
+}
+
+.content{
+	height: 6.46rem;
+	padding-top: .32rem;
+	background: url('../img/newbietask/bg04.png') 0 0 no-repeat;
+	background-size: 100% 6.78rem;
+	position: relative;
+	top: -0.02rem;
+}
+.actTitle{
+	height: .35rem;
+	background: url('../img/newbietask/img01.png') 0 0 no-repeat;
+	background-size: 100% .35rem;
+}
+.listTitle{
+	height: .73rem;
+	line-height: .73rem;
+	background: url('../img/newbietask/bg05.png') 0 0 no-repeat;
+	background-size: 100% .73rem;
+	margin-top: .53rem;
+}
+.list{
+	width: 12rem;
+	height: 3.11rem;
+	background-color: #0e0e10;
+	margin: 0 auto;
+	border-right: 1px solid #171718;
+}
+.list li{
+	width: 2.38rem;
+	height: 2.71rem;
+	padding-top: .4rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	border-left: 1px solid #171718;
+	border-bottom: 1px solid #171718;
+}
+.taskIcon{
+	height: 1.29rem;
+}
+.taskIcon img{
+	width: 1.13rem;
+	height: 1.29rem;
+	vertical-align: top;
+}
+.taskInfo{
+	height: .16rem;
+	line-height: .16rem;
+	margin-top: .16rem;
+	font-family: MicrosoftYaHei;
+}
+.taskAward{
+	height: .42rem;
+	line-height: .42rem;
+	font-family: MicrosoftYaHei;
+	color: #dd3230;
+}
+.goGet{
+	height: .33rem;
+}
+/* .goGet a{
+	display: inline-block;
+	width: 1.3rem;
+	height: .33rem;
+	line-height: .33rem;
+	background-color: #dd3230;
+	vertical-align: top;
+} */
+.goGet button{
+	display: inline-block;
+	width: 1.3rem;
+	height: .33rem;
+	line-height: .33rem;
+	background-color: #818181;
+	vertical-align: top;
+	border: 0;
+	pointer-events: none;
+}
+.goGet button.canSign{
+	background-color: #dd3230;
+	pointer-events: initial;
+	cursor: pointer;
+}
+.goGet button.canSign:hover{
+	opacity: .7;
+}
+.termTitle{
+	margin-top: .76rem;
+	height: .35rem;
+	background: url('../img/newbietask/img02.png') 0 0 no-repeat;
+	background-size: 100% .35rem;
+}

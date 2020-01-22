@@ -1,0 +1,164 @@
+*{
+ -moz-box-sizing:border-box;
+ -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:0px;
+  margin:0px;
+}
+body{
+    background-color:#1B1B27;
+}
+section{
+    width:100%;
+    /* background-color:#1B1B27; */
+    /* padding-bottom:60px; */
+}
+.m_event_top{
+    height:5.44rem;
+    width:100%;
+    background:url('../img/first_bonus/bg01@2x.png') no-repeat;
+    background-size: 100% 2.72rem;
+    position: relative;
+}
+.banner2{
+    width:100%;
+    height:2.72rem;
+    position: absolute;
+    left: 0;
+    top: 2.71rem;
+}
+section .m_event_bottom{
+    width:100%;
+    padding-bottom: 0.7rem;
+    background:url('../img/first_bonus/bg03@2x.png') no-repeat;
+    background-size: 100% 100%;
+/*     position: relative;
+    top: -0.7rem;
+    z-index: 2; */
+}
+.event_content_title{
+    width: 6.47rem;
+    height: 0.74rem;
+    margin: 0 auto 0.2rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 6.47rem 0.74rem;
+}
+.event_title_1{
+    background-image: url('../img/first_bonus/t01.png');
+}
+.event_title_2{
+    background-image: url('../img/first_bonus/t02.png');
+}
+.m_event_bottom_bonus{
+    width:95%;
+    margin: 0 auto 0.5rem;
+}
+.m_event_bottom_bonus table{
+    width:100%;
+    margin:0px auto;
+    /* border-collapse:collapse; */
+    font:0.28rem "微软雅黑";
+    color:#fff;
+    text-align:center;
+}
+.m_event_bottom_bonus table tr:nth-child(odd) td{
+    background-color: rgba(15,102,159,0.1);
+}
+.m_event_bottom_bonus table tr:nth-child(even) td{
+    background-color: rgba(15,102,159,.05);
+}
+.m_event_bottom table tr td{
+    height: .45rem;
+    width: 2.355rem;
+    text-align: center;
+}
+.m_event_bottom_bonus_cell_1{
+   background-color: #0f669f !important;
+    color: #6cc5ff;
+}
+.m_event_bottom_bonus_cell_bottom{
+    color:#08CCE6;
+}
+.m_event_bottom_terms{
+    width:100%;
+    margin:0px auto;
+    font:0.1rem "微软雅黑";
+    color:#fff;
+    padding:6px;
+}
+.m_event_terms_per{
+    clear:both;
+    margin-top:10px;
+    height:0.8rem;
+}
+.m_event_terms_order{
+    width:0.4rem;
+    height:0.4rem;
+    text-align:center;
+    line-height:0.4rem;
+    color:#141510;
+    background-color:#08CCE6;
+    float:left;
+    margin-top: 5px;
+}
+.m_event_terms_content{
+    width: 5.8rem;
+    height:0.8rem;
+    float:left;
+    line-height:0.4rem;
+    margin-left:10px;
+}
+.m_event_terms_empty_order{
+    width:0.4rem;
+    height:0.4rem;
+    float:left;
+}
+.m_event_terms_box .m_event_terms_per:nth-child(4) .m_event_terms_content{
+    padding-top: .1rem;
+}
+.claim_button {
+    background-color: #ff0;
+    color: black;
+    border-radius: 6px;
+    margin: 0 auto;
+    height: 24px;
+    line-height: 24px;
+}
+.m_event_bottom_bonus table tr td.canSign{
+    padding: .1rem;
+    background-color: #ff0;
+    color: black;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 12px;
+    cursor: pointer;
+}
+.termList{
+    width: 90%;
+    margin: 0 auto;
+}
+.termList li{
+    /* height: .6rem; */
+    line-height: .45rem;
+    font-size: .28rem;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: .24rem;
+    text-align: justify;
+}
+.termIndex{
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    background-color: #0f669f;
+    border-radius: 2px;
+    font-family: "Microsoft-YaHei";
+    font-style: normal;
+    font-size: .28rem;
+    letter-spacing: 0px;
+    color: #6cc5ff;
+    margin-right: .2rem;
+}

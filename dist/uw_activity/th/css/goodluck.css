@@ -1,0 +1,134 @@
+.wrapper{
+	padding-bottom: .87rem;
+	background-color: #030305;
+}
+.banner{
+	min-width: 12rem;
+	height: 9.36rem;
+	position: relative;
+	background: url('../img/goodluck/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 9.36rem;
+	overflow: hidden;
+}
+.banner2{
+	width: 10.29rem;
+	height: 3.7rem;
+	position: absolute;
+	left: 50%;
+	top: 3.62rem;
+	margin-left: -5.15rem;
+}
+.banner3{
+	width: 10.76rem;
+	height: 7.96rem;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -5.15rem;
+}
+.actInfo{
+	width: 12rem;
+	margin: 0.72rem auto 0;
+}
+.list{
+	width: 12rem;
+	height: .7rem;
+	margin: 0 auto;
+}
+.list li{
+	width: 1.66rem;
+	height: .7rem;
+	line-height: .7rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #d98f17;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+.list li:first-child{
+	color: #000;
+	background: url('../img/goodluck/img01.png') 0 0 no-repeat;
+	background-size: 1.66rem 1.4rem;
+}
+.list li:last-child{
+	margin-right: 0;
+}
+.goGet button{
+	display: inline-block;
+	width: 3.0rem;
+	height: .7rem;
+	line-height: .7rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	color: #0d0d0f;
+	background-color: #818181;
+	vertical-align: top;
+	border: 0;
+	margin-top: 0.5rem;
+	pointer-events: none;
+}
+.goGet button.canSign{
+	background-color: #e5ac0c;
+	pointer-events: initial;
+	cursor: pointer;
+}
+.goGet button.canSign:hover{
+	opacity: .7;
+}
+.actTerm{
+	width: 12rem;
+	margin: 1.26rem auto 0;
+	position: relative;
+}
+.termTitle{
+	width: 12rem;
+	height: .42rem;
+	line-height: .42rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .42rem;
+	color: #d98f17;
+	background-image: url('../img/goodluck/img02.png');
+	background-size: 8.69rem .21rem;
+	background-position: 1.62rem .1rem;
+	background-repeat: no-repeat;
+	margin-bottom: .72rem;
+}
+.termList{
+	padding: .25rem .86rem 0;
+	height: 4rem;
+	background: url('../img/goodluck/img04.png') 0 0 no-repeat;
+	background-size: 12rem 4rem;
+}
+.termList li{
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #d98f17;
+}
+.termIndex{
+	display: inline-block;
+	width: .31rem;
+	height: .31rem;
+	line-height: .31rem;
+	text-align: center;
+	background-color: #d98f17;
+	border-radius: .5rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #000;
+	margin-right: .47rem;
+}
+.decorate{
+	width: 2.3rem;
+	height: 1.77rem;
+	position: absolute;
+	right: .05rem;
+	bottom: -0.38rem;
+}

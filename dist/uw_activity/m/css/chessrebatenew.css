@@ -1,0 +1,214 @@
+.wrapper{
+	color: #fff;
+	font-size: .32rem;
+	background-color: #ffde00;
+	padding-bottom: 1rem;
+}
+.banner{
+	height: 5.37rem;
+	background: url('../img/chessrebatenew/bg01@2x.png') 0 0 no-repeat;
+	background-size: 100% 5.37rem;
+	position: relative;
+}
+
+.actTerm{
+	height: auto;
+}
+.btnBar{
+	/* width: 80%; */
+	margin-bottom: .5rem;
+}
+.btn{
+	width: 5rem;
+	height: .86rem;
+	line-height: .86rem;
+	font-size: .3rem;
+	text-align: center;
+	letter-spacing: 1px;
+	background-image: url('../img/chessrebatenew/btn03@2x.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+	user-select: none;
+	display: none;
+}
+
+#draw .bonus,#draw .yuan{
+	display: inline-block;
+	font-style: normal;
+	font-weight: 600;
+	color:#ffce52;
+	font-size: .3rem;
+}
+#draw .bonus{
+	margin-left: .1rem;
+}
+#draw .yuan{
+	margin-right: .1rem;
+}
+#draw,#topUp{
+	color:#fff;
+	font-weight: 600;
+}
+.termTitle,.conTitle{
+	height: .93rem;
+	margin-bottom: .4rem;
+}
+.termTitle{
+	margin-top: .8rem;
+}
+.conTitle{
+	width: 3.66rem;
+	background: url('../img/chessrebatenew/title1.png') 0 0 no-repeat;
+	background-size: 100% .93rem;
+}
+.termTitle{
+	width: 4.54rem;
+	background: url('../img/chessrebatenew/title2.png') 0 0 no-repeat;
+	background-size: 100% .93rem;
+}
+.actTerm table{
+	width: 6rem;
+	/* margin-left: .5rem; */
+	font-size: 18px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+}
+.actTerm table th{
+	width: 2.51rem;
+	border: 0;
+}
+.actTerm table .cf{
+	color: #fff;
+	background-color: #676767;
+}
+.actTerm table .cd{
+	color: #383737;
+	background-color: #fff;
+}
+.actTerm table th,.actTerm table td{
+	width: 2.51rem;
+	font-weight: normal;
+	padding: .1rem .1rem;
+	border: 1px solid #1d0503;
+}
+.actTerm table th{
+	font-weight: normal;
+}
+.termList{
+	width: 80%;
+	/* height: 1.5rem; */
+	padding:.3rem;
+	margin-bottom: .44rem;
+	background-color: #534f4f;
+	box-shadow: inset 2px 3px 29px 9px
+		rgba(255, 222, 0, 0.35);
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .4rem;
+	font-family: MicrosoftYaHei;
+	font-size: .3rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	background-image: linear-gradient(0deg,
+		#b0874d 0%,
+		#ebcf8c 100%),
+	linear-gradient(
+		#ffce52,
+		#ffce52);
+	background-blend-mode: normal,
+		normal;
+	border-radius: .5rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #0d0d0d;
+	margin-right: .1rem;
+	vertical-align: top;
+	margin-top: .05rem;
+}
+.timeIndex{
+	display: inline-block;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .32rem;
+	color: #fea533;
+	letter-spacing: 0px;
+	margin-right: .2rem;
+	text-indent: .1rem;
+}
+.termList li p{
+	display: inline-block;
+    width: 90%;
+    text-align: justify;
+}
+
+/* 领取弹框 */
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  overflow-y: auto;
+}
+.mCon{
+	width: 5.84rem;
+	height: 2.6rem;
+	padding-top: 1.33rem;
+	background: url('../img/chessrebatenew/popup_bg@2x.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: 2rem auto;
+	position: relative;
+}
+.closeMask{
+   display: inline-block;
+   width: .82rem;
+   height: .82rem;
+   position: absolute;
+   left: 2.4rem;
+   bottom: -2rem;
+   cursor: pointer;
+}
+.mTop{
+	/* height: .4rem; */
+	line-height: .4rem;
+	color: #bdbdbd;
+	text-indent: .2rem;
+	font-size: .3rem;
+	text-align: center;
+}
+#money{
+	font-size: .3rem;
+	font-style: normal;
+	color: #f3c258;
+}
+.mBot{
+	height: 1.73rem;
+	padding: .4rem 0;
+	line-height: 2.33rem;
+	background-color: #2e3136;
+	text-align: center;
+}
+.cImg{
+	width: 1.24rem;
+	height: 1.5rem;
+	margin: 0 .2rem;
+	cursor: pointer;
+}

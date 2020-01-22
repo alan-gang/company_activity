@@ -1,0 +1,105 @@
+body{
+  height: 100%;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;/* Stops scrolling immediately */
+  background: #000;
+  /* padding-bottom: 1.5rem; */
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header .img1{
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/fanpai/img_1@2x.png') no-repeat;
+  background-size: cover
+}
+header .img2{
+  position: relative;
+  width: 100%;
+  height: 2.89rem;
+  background: url('../img/fanpai/img_2@2x.png') no-repeat;
+  background-size: cover
+}
+header i{
+  box-sizing: border-box;
+  position: absolute;
+  right: .7rem;
+  top: 0;
+  display: block;
+  width: 0.972rem;
+  height: 1.215rem;
+  background: url('../img/fanpai/rule.png') no-repeat;
+  background-size: 100% 100%;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .pai{
+  width: 6rem;
+  margin-bottom: 10px;
+}
+section .pai>li{
+  display: inline-block;
+  width: 1.21rem;
+  height: 1.68rem;
+  background-size: contain;
+}
+section .pai>li.mg{
+  margin-right: .1rem;
+}
+section .pai>li.undone{
+  background-image: url('../img/fanpai/img_05@2x.png');
+}
+section .pai>li.active{
+  background-image: url('../img/fanpai/img_06@2x.png');
+}
+section .pai>li.done{
+  background-image: url('../img/fanpai/p_01@2x.png');
+}
+section .chance{
+  width: 6rem;
+  height: .8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  font-size: .3rem;
+  font-weight: bold;
+  color: #000;
+  background: linear-gradient(0,#FFC317,#FFDC60);
+  border-radius: 5px;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.closeMask{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  font-size: .4rem;
+  color: #fff;
+  margin-top: .4rem;
+}
+.mask ul{
+  width: 6rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+.mask ul li{
+  line-height: .5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.28rem;
+  color: #fff;
+  text-align: justify;
+}

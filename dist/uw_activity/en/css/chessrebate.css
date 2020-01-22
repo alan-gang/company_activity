@@ -1,0 +1,225 @@
+.wrapper{
+	background-color: #12171d;
+	padding-bottom: 1rem;
+}
+.banner{
+	min-width: 12rem;
+	height: 8.56rem;
+	background: url('../img/chessrebate/bg.png') 0 0 no-repeat;
+	background-size: 100% 8.56rem;
+	position: relative;
+}
+/* .banner img{
+	vertical-align: top;
+}
+.banner2{
+	height: 3.96rem;
+	position: absolute;
+	left: 0;
+	top: 4.58rem;
+	z-index: 1;
+}
+.banner3{
+	width: 9.62rem;
+	height: 2.69rem;
+	position: absolute;
+	left: 50%;
+	top: 3.68rem;
+	margin-left: -4.81rem;
+	z-index: 3;
+} */
+.actTerm{
+	height: auto;
+}
+.bar{
+	height: .1rem;
+	background: url('../img/chessrebate/divider.png') 0 0 no-repeat;
+	background-size: 100% .1rem;
+}
+.bar1{
+	margin-bottom: .5rem;
+}
+.btnBar{
+	width: 6.1rem;
+	margin-bottom: .5rem;
+}
+/* .btn1{
+	background-image: url('../img/chessrebate/btn1.png');
+}
+.btn2{
+	background-image: url('../img/chessrebate/btn2.png');
+} */
+.btn{
+	width: 5.92rem;
+	height: 1.02rem;
+	line-height: 1.02rem;
+	font-size: .34rem;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	background-image: url('../img/chessrebate/btn3.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+	user-select: none;
+	color:#fff;
+	font-style: italic;
+	display: none;
+}
+.btn .bonus,.btn .yuan{
+	display: inline-block;
+	font-style: normal;
+	font-weight: 600;
+	color:#ffce52;
+	font-size: .34rem;
+}
+.btn .bonus{
+	margin-left: .15rem;
+}
+.btn .yuan{
+	margin-right: .1rem;
+}
+#topUp{
+	color:#fff;
+}
+.termTitle,.conTitle{
+	height: 1.15rem;
+	margin-top: .5rem;
+	margin-bottom: .2rem;
+}
+.conTitle{
+	width: 3.39rem;
+	background: url('../img/chessrebate/txt1.png') 0 0 no-repeat;
+	background-size: 3.39rem 1.15rem;
+}
+.termTitle{
+	width: 4.25rem;
+	background: url('../img/chessrebate/txt2.png') 0 0 no-repeat;
+	background-size: 4.25rem 1.15rem;
+}
+
+.termList{
+	width: 10rem;
+	/* height: 1.5rem; */
+	padding: .4rem;
+	background: url('../img/chessrebate/tabbg02.png') 0 0 no-repeat;
+}
+.conList{
+	height: 2.4rem;
+	background-size: 100% 2.4rem;
+}
+.ruleList{
+	height: 4.59rem;
+	background-size: 100% 4.59rem;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .4rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	background-image: linear-gradient(0deg,
+		#b0874d 0%,
+		#ebcf8c 100%),
+	linear-gradient(
+		#ffce52,
+		#ffce52);
+	background-blend-mode: normal,
+		normal;
+	border-radius: .5rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #0d0d0d;
+	margin-right: .2rem;
+}
+.timeIndex{
+	display: inline-block;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .24rem;
+	color: #fea533;
+	letter-spacing: 0px;
+	margin-right: .2rem;
+	text-indent: .1rem;
+}
+.back{
+	width: 7.34rem;
+	height: .97rem;
+	margin: 1rem auto .5rem;
+	cursor: pointer;
+	background: url('../img/chessrebate/btn.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 领取弹框 */
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  overflow-y: auto;
+}
+.mCon{
+	width: 5.5rem;
+	height: auto;
+	margin: 3rem auto;
+	position: relative;
+}
+.closeMask{
+   display: inline-block;
+   width: .25rem;
+   height: .25rem;
+   position: absolute;
+   top: .15rem;
+   right: .2rem;
+   cursor: pointer;
+}
+.mTop{
+	height: .6rem;
+	line-height: .6rem;
+	color: #bdbdbd;
+	text-indent: .2rem;
+	font-size: .2rem;
+	background-color: #181919;
+}
+#money{
+	font-size: .22rem;
+	font-style: normal;
+	color: #f3c258;
+}
+.mBot{
+	height: 1.73rem;
+	padding: .4rem 0;
+	line-height: 2.33rem;
+	background-color: #2e3136;
+	text-align: center;
+}
+.cImg{
+	width: 1.24rem;
+	height: 1.46rem;
+	margin: 0 .2rem;
+	cursor: pointer;
+}
+.a1:hover{
+	content: url('../img/chessrebate/a1_.png');
+}
+.a2:hover{
+	content: url('../img/chessrebate/a2_.png');
+}
