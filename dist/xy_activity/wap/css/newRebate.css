@@ -1,0 +1,80 @@
+
+.wrapper{
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: .5rem;
+	color: #fff;
+	font-size: .3rem;
+	font-family: MicrosoftYaHei;
+	position: relative;
+	background-color: #311e22;
+}
+.banner{
+	width: 100%;
+	height: 3.4rem;
+}
+.info{
+	width: 90%;
+	margin: .4rem auto;
+}
+.info .title{
+	display: inline-block;
+	height: .5rem;
+	padding: 0 .2rem;
+	line-height: .5rem;
+	background-color:#dcd7bc;
+	border-radius: .2rem;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+	color: #000;
+}
+.info .content{
+	margin: .15rem;
+}
+.list{
+	/* width: 100%; */
+}
+.list-title{
+	height: .44rem;
+	line-height: .44rem;
+	background-color:rgba(0,0,0,.5);
+}
+.list-item{
+	height: .54rem;
+	line-height: .54rem;
+	background-color: hsla(0,0%,100%,.1);
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+.list .el-col{
+	min-width: 1rem;
+	text-align: center;
+}
+.el-col-s-2-1{
+	width: 20%;
+}
+.ruleList{
+	padding: .4rem 0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	text-align: justify;
+	margin: 0 auto;
+}
+.ruleList li{
+	line-height: .38rem;
+	letter-spacing: 0px;
+	margin-bottom: .2rem;
+}
+.ruleList li p{
+	display: inline-block;
+	width: 90%;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	height: .35rem;
+	line-height: .35rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	letter-spacing: 0px;
+	vertical-align: top;
+}

@@ -1,0 +1,276 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+body {
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #9c6700;
+    font-size: .32rem;
+    overflow-y: scroll;
+    /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
+    /* Stops scrolling immediately */
+}
+
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root body {
+    position: absolute;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 12rem;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.w1 {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.bannerWrap {
+    height: 6.36rem;
+    background: url('../images/banktopup/banner@2x-min.png') center 0 no-repeat;
+    background-size: 100% 6.36rem;
+    position: relative;
+}
+
+.conWrap {
+    height: auto;
+    background-color: #ffe8a5;
+    padding: .3rem 0 1.5rem;
+}
+
+.timeTitle {
+    background-image: url('../images/banktopup/title_01@2x.png');
+}
+
+.conTitle {
+    background-image: url('../images/banktopup/title_02@2x.png');
+}
+
+.ruleTitle {
+    background-image: url('../images/banktopup/title_03@2x.png');
+}
+
+.title {
+    width: 5.11rem;
+    height: .29rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: .6rem auto .36rem;
+    background-size: 100% 100%;
+}
+
+.timeTitle {
+    margin: .1rem auto .36rem;
+}
+
+.info {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e4d6ad;
+    box-sizing: border-box;
+}
+
+.timeInfo {
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.conInfo {
+    /* padding: .42rem 0.5rem .6rem; */
+}
+
+.giftInfo {
+    width: 90%;
+    margin: .5rem auto 0;
+    line-height: .4rem;
+    text-align: justify;
+}
+
+.listWrap {
+    width: 90%;
+    margin: .5rem auto;
+}
+
+.listWrap .tableList:first-child {
+    margin-bottom: .25rem;
+}
+
+.tableList th {
+    border: 1px solid #fff;
+    height: .9rem;
+    line-height: .34rem;
+    font-size: .3rem;
+    font-weight: normal;
+    border-left: 0;
+    color: #790008;
+    background-color: #ed9e14;
+}
+
+.tableList td {
+    border-right: 1px solid #fff;
+    line-height: .9rem;
+    font-size: .3rem;
+    text-align: center;
+    color: #fff;
+    background-color: #1d95e3;
+}
+
+.tableList th:last-child,
+.tableList td:last-child {
+    border-right: 0;
+}
+
+table {
+    border-color: transparent;
+}
+
+.ruleInfo {}
+
+.termList {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.termList li {
+    line-height: .4rem;
+    text-align: justify;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0px;
+}
+
+.termIndex {
+    display: inline-block;
+    width: .34rem;
+    height: .32rem;
+    line-height: .32rem;
+    text-align: center;
+    background: url('../images/banktopup/icon_bg@2x.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    font-family: MicrosoftYaHei;
+    font-style: normal;
+    font-size: .18rem;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-right: .12rem;
+    vertical-align: top;
+}
+
+.termList li p {
+    width: 90%;
+    display: inline-block;
+}

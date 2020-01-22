@@ -1,0 +1,152 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #fff;
+	font-size: .28rem;
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  max-width: 10rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper{
+	overflow: auto;
+}
+.bannerWrap{
+	height: 4.5rem;
+	background-image: url('../images/payrebate/banner@2x.png');
+	background-size: 100% 4.5rem;
+}
+.conWrap{
+	background-color: #392257;
+	padding-top: .7rem;
+	padding-bottom: 1.5rem;
+	position: relative;
+}
+.content{
+	width: 95%;
+}
+.title{
+	height: .86rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: .65rem auto 0;
+}
+.timeTitle{
+	margin: 0 auto;
+	background-image: url('../images/payrebate/title_01@2x.png');
+	background-size: 100% .86rem;
+}
+.conTitle{
+	background-image: url('../images/payrebate/title_02@2x.png');
+	background-size: 100% .86rem;
+}
+.exampleTitle{
+	background-image: url('../images/payrebate/title_03@2x.png');
+	background-size: 100% .86rem;
+}
+.ruleTitle{
+	background-image: url('../images/payrebate/title_04@2x.png');
+	background-size: 100% .86rem;
+}
+.info{
+	background-image: linear-gradient(
+		#2f1a49,
+		#2f1a49),
+	linear-gradient(
+		#ffc343,
+		#ffc343);
+	background-blend-mode: normal,
+		normal;
+	border: solid .01rem rgba(248, 195, 94, 0.7);
+	border-top: 0;
+	border-top-color: transparent;
+	box-sizing: border-box;
+	/* border-radius: .02rem; */
+	position: relative;
+	top: -0.01rem;
+}
+.strong{
+	font-style: normal;
+	color: #ffc343;
+}
+.timeInfo{
+	width: 100%;
+	height: 1.3rem;
+	padding-top: .3rem;
+	line-height: .3rem;
+	text-align: center;
+}
+.conInfo{
+	width: 100%;
+	/* height: 2.22rem; */
+	padding: .3rem 0.1rem .6rem;
+}
+.listWrap,.list{
+	display: inline-block;
+	width: 100%;
+	/* height: 1.2rem; */
+}
+.list li{
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+	background-color: #4f3e63;
+}
+#topList{
+	background-color: #b48300;
+}
+.list li span{
+	display: inline-block;
+	width: 20%;
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+	vertical-align: top;
+	font-size: .26rem;
+	overflow: hidden;
+}
+.list li span:nth-child(2){
+	width: 16%;
+}
+.list li span:nth-child(3) {
+	width: 24%;
+}
+.exampleInfo{
+	width: 100%;
+	/* height: 1.65rem; */
+	padding: .3rem .3rem 0.6rem;
+	line-height: .38rem;
+	text-align: justify;
+}
+.ruleInfo{
+	width: 100%;
+	/* height: 3.5rem; */
+	padding: .3rem .3rem .5rem;
+	line-height: .38rem;
+	text-align: justify;
+	top: -0.02rem;
+}

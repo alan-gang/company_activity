@@ -1,0 +1,480 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+:root {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #ffffff;
+    font-size: .32rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
+}
+
+.wrapper {
+    width: 100%;
+    background: url("../images/luckdraw/bg@2x.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.lucky-title {
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+}
+
+
+/* rotate */
+
+.turntable-wrapper {
+    width: 100%;
+    height: 8.67rem;
+    background: url("../images/luckdraw/rotate/zp_bg_33@2x.png");
+    background-size: cover;
+    position: relative;
+    margin-top: -0.86rem;
+}
+
+.turntable-wrapper>img {
+    width: 4.87rem;
+    height: 4.87rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.435rem;
+    margin-top: -2.65rem;
+}
+
+.turntable-center {
+    width: 2.45rem;
+    height: 2.72rem;
+    background: url("../images/luckdraw/rotate/zp_bg_1@2x.png");
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.turntable-center .start {
+    font-size: .58rem;
+    color: #4e1306;
+    font-weight: bold;
+}
+
+.turntable-center span {
+    font-size: .16rem;
+    color: #4e1306;
+}
+
+.turntable-footer {
+    width: 5.79rem;
+    height: .62rem;
+    position: absolute;
+    bottom: .68rem;
+    left: 1.35rem;
+    font-size: .22rem;
+    line-height: .62rem;
+}
+
+.turntable-num {
+    margin-left: .08rem;
+}
+
+.turntable-footer>img {
+    width: 1.64rem;
+    height: .54rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.turntable-footer>img.zp_10lc {
+    margin: 0 .1rem;
+    right: 1.6rem;
+}
+
+.turntable-footer>img.zp_100lc {
+    right: 0rem;
+}
+
+
+/* 中奖名单 */
+
+.turntable-winners-wrapper {
+    position: relative;
+}
+
+.turntable-winners-wrapper>img {
+    width: 7.1rem;
+    height: 4.68rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.turntable-winners-wrapper>.turntabe-content-wp {
+    width: 7rem;
+    height: 3.6rem;
+    position: absolute;
+    top: 1.07rem;
+    left: 0.2rem;
+    padding: 0 .05rem;
+    overflow: hidden;
+}
+
+.turntabe-content-container {}
+
+.turntabe-content-container>div {
+    font-size: .26rem;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: .69rem;
+    color: #333333;
+    height: .69rem;
+    padding: 0 .8rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.turntabe-content-container>div>span:last-child {
+    align-self: flex-end;
+}
+
+.amount {
+    color: #f45060;
+}
+
+.turntable-winners-wrapper>.turntabe-content>div:last-child {
+    border: 0;
+}
+
+.turntable-winners-wrapper>.turntabe-content>div>span.xing {
+    color: #999999;
+}
+
+.turntable-winners-wrapper>.turntabe-content>div>span.amount {
+    color: #f45060;
+}
+
+
+/* 活动说明 */
+
+.turntable-explain-wrapper {
+    width: 6.82rem;
+    position: relative;
+    padding-bottom: .75rem;
+    margin: 0.35rem auto 0;
+}
+
+.turntable-explain-wrapper>img {
+    width: 4.98rem;
+    height: .64rem;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* 活动说明 */
+
+.turntable-explain-wrapper>.explain-content {
+    width: 6.82rem;
+    font-size: .22rem;
+    font-weight: normal;
+    line-height: .43rem;
+    color: #ffffff;
+    margin-top: .34rem;
+}
+
+
+/* 遮罩层 */
+
+.masker-wrapper,
+.prompt-masker {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.masker-main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.masker-wrapper .masker-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.masker-wrapper .masker-content>img {
+    width: 4.82rem;
+    height: 2.83rem;
+}
+
+.masker-content>.masker-keyword {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.masker-content>.masker-keyword>div {
+    text-align: center;
+}
+
+.masker-content>.masker-keyword>div:nth-child(1) {
+    font-size: 1.2rem;
+    color: #ffb400;
+    margin-bottom: .46rem;
+    line-height: 1.2rem;
+}
+
+.masker-content>.masker-keyword>div:nth-child(2) {
+    font-size: .3rem;
+    color: #ffffff;
+    margin-bottom: .28rem;
+    line-height: .3rem;
+}
+
+.masker-content>.masker-keyword>div:nth-child(3) {
+    font-size: .6rem;
+    color: #ffb400;
+    overflow: auto;
+    line-height: .9rem;
+    max-height: 3.6rem;
+}
+
+.masker-content>.masker-bottons {
+    margin-top: .64rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.masker-content>.masker-bottons>.close {
+    width: 2.36rem;
+    height: .74rem;
+    margin-right: .2rem;
+    background-image: linear-gradient(0deg, #a5a5a5 0%, #c3c3c3 100%), linear-gradient( #c41400, #c41400);
+    background-blend-mode: normal, normal;
+    box-shadow: 1px 2px 0px 0px #626262;
+    border-radius: .1rem;
+    border: 0;
+    outline: 0;
+}
+
+.masker-content>.masker-bottons>.look {
+    width: 2.36rem;
+    height: .74rem;
+    background-image: linear-gradient(0deg, #d38411 0%, #e0960d 50%, #eca809 100%), linear-gradient( #c41400, #c41400);
+    background-blend-mode: normal, normal;
+    box-shadow: 1px 2px 0px 0px #626262;
+    border-radius: .1rem;
+    border: 0;
+    color: #fff;
+    outline: 0;
+}
+
+
+/* 提示框遮罩层 */
+
+.prompt-main {
+    width: 7.02rem;
+    height: 5.19rem;
+    background-color: #fff;
+    border-radius: .15rem;
+    position: absolute;
+    left: 50%;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding-bottom: .28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-wp {
+    height: .91rem;
+    width: 100%;
+    background-image: linear-gradient(90deg, #ff8331 0%, #ff5429 100%), linear-gradient( #ffffff, #ffffff);
+    background-blend-mode: normal, normal;
+    font-size: .29rem;
+    line-height: .91rem;
+    text-align: center;
+    position: relative;
+}
+
+.prompt-close {
+    position: absolute;
+    top: 50%;
+    font-size: .5rem;
+    right: .4rem;
+    transform: translateY(-50%);
+}
+
+.prompt-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: PingFang-SC-Medium;
+    font-size: .24rem;
+    color: #666666;
+}
+
+.btn-group {
+    padding: 0 .4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .27rem;
+}
+
+.prompt-cancel {
+    width: 100%;
+    height: .82rem;
+    margin-right: .1rem;
+    background-image: linear-gradient(0deg, #a5a5a5 0%, #c3c3c3 100%), linear-gradient(90deg, #ff8331 0%, #ff5429 100%), linear-gradient( #1ea2ff, #1ea2ff);
+    background-blend-mode: normal, normal, normal;
+    border-radius: .1rem;
+    border: none;
+    outline: none;
+}
+
+.confirm {
+    width: 100%;
+    height: .82rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ff8331 0%, #ff5429 100%), linear-gradient( #1ea2ff, #1ea2ff);
+    background-blend-mode: normal, normal;
+    border-radius: .1rem;
+    border: none;
+    outline: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex span:nth-child(1) {
+    margin-right: .1rem;
+}

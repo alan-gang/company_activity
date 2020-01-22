@@ -1,0 +1,229 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #fff;
+	font-size: .22rem;
+}
+html{font-size: 100px;}
+
+@media screen and (min-width: 992px){
+	html {
+		font-size: 53px;
+	}
+}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 65px;
+	}
+}
+@media screen and (min-width: 1366px){
+	html {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width: 1440px){
+	html {
+		font-size: 75px;
+	}
+}
+@media screen and (min-width: 1600px){
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1920px){
+	html {
+		font-size: 100px;
+	}
+}
+@media screen and (min-width: 1921px){
+	html {
+		font-size: 129px;
+	}
+	.floor4Wrap div.actRule{
+		right: 4.1rem;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+.wrapper{
+	min-width: 12rem;
+	overflow: auto;
+}
+.w1{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.w12{
+	margin: 0 auto;
+}
+.bannerWrap{
+	height: 7rem;
+	background-image: url('../images/payrebate/banner.jpg');
+	background-size: 100% 7rem;
+	position: relative;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .36rem;
+	line-height: .36rem;
+	padding: .1rem .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .22rem .22rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.5;
+	position: absolute;
+	top: .5rem;
+	right: 3rem;
+}
+.conWrap{
+	background-color: #392257;
+	padding-top: .7rem;
+	padding-bottom: 1.5rem;
+	position: relative;
+}
+.flag1,.flag2{
+	width: 3.59rem;
+	height: 1.74rem;
+	position: absolute;
+	top: 0;
+}
+.flag1{
+	left: 0;
+}
+.flag2{
+	right: 0;
+}
+.title{
+	height: .85rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: .65rem auto 0;
+}
+.timeTitle{
+	margin: 0 auto;
+	background-image: url('../images/payrebate/title_01.jpg');
+	background-size: 12rem .85rem;
+}
+.conTitle{
+	background-image: url('../images/payrebate/title_02.jpg');
+	background-size: 12rem .85rem;
+}
+.exampleTitle{
+	background-image: url('../images/payrebate/title_03.jpg');
+	background-size: 12rem .85rem;
+}
+.ruleTitle{
+	background-image: url('../images/payrebate/title_04.jpg');
+	background-size: 12rem .85rem;
+}
+.info{
+	background-image: linear-gradient(
+		#2f1a49,
+		#2f1a49),
+	linear-gradient(
+		#ffc343,
+		#ffc343);
+	background-blend-mode: normal,
+		normal;
+	border: solid 1px #f8c35e;
+	border-top: 0;
+	border-top-color: transparent;
+	box-sizing: border-box;
+	/* border-radius: .02rem; */
+	position: relative;
+	top: -0.01rem;
+}
+.strong{
+	font-style: normal;
+	color: #ffc343;
+}
+.timeInfo{
+	height: 1rem;
+	padding-top: .33rem;
+	line-height: .2rem;
+	text-indent: .5rem;
+}
+.conInfo{
+	width: 12rem;
+	/* height: 2.22rem; */
+	padding: .42rem 0.5rem .6rem;
+}
+.listWrap,.list{
+	display: inline-block;
+	width: 11rem;
+	/* height: 1.2rem; */
+}
+.list li{
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+	background-color: #4f3e63;
+}
+#topList{
+	background-color: #b48300;
+}
+.list li span{
+	display: inline-block;
+	width: 20%;
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+}
+.exampleInfo{
+	width: 12rem;
+	height: 1.65rem;
+	padding: .4rem .5rem 0.6rem;
+	line-height: .3rem;
+	text-align: justify;
+}
+.ruleInfo{
+	width: 12rem;
+	/* height: 3.5rem; */
+	padding: .4rem .5rem .5rem;
+	line-height: .36rem;
+	text-align: justify;
+	top: -0.02rem;
+}

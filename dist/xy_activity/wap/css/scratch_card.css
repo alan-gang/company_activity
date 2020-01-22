@@ -1,0 +1,362 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+body {
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #fff;
+    font-size: .22rem;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root body {
+    position: absolute;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.wrapper {
+    background-image: url('../images/scratch_card/bg.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.activity-content-title,
+.rule-img {
+    display: block;
+    width: 2.32rem;
+    height: .6rem;
+    margin: 0px auto;
+}
+
+.spacer {
+    height: 3.42rem;
+}
+
+.content-text-wrapper {
+    background-image: url(../images/scratch_card/content_bg.png);
+    background-size: 100% auto;
+    width: 6.92rem;
+    height: 2.42rem;
+    padding-left: 1.83rem;
+    margin: .11rem auto .22rem;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    padding-top: .23rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pos-text {
+    position: absolute;
+    background-image: url('../images/scratch_card/award@2x.png');
+    background-size: 100% auto;
+    right: -.04rem;
+    top: -.18rem;
+    width: .85rem;
+    height: .9rem;
+}
+
+.card-icon {
+    display: flex;
+}
+
+.card-icon>img {
+    margin-right: .10rem;
+    width: 1.61rem;
+    height: .86rem;
+}
+
+.card-text {
+    width: 4.86rem;
+    font-size: .22rem;
+    line-height: .3rem;
+    margin-top: .22rem;
+    letter-spacing: .01rem;
+    color: #2a2929;
+}
+
+.rule-container {
+    width: 6.92rem;
+    height: 5.12rem;
+    margin: .19rem auto 0px;
+    background-image: url('../images/scratch_card/rule-bg.png');
+    background-size: 100% auto;
+    padding: .4rem .39rem .86rem .56rem;
+    box-sizing: border-box;
+}
+
+.rule-container>ul>li {
+    font-size: .22rem;
+    line-height: .3rem;
+    letter-spacing: .02rem;
+    color: #363636;
+}
+
+.activity-rule-container {
+    padding-bottom: .66rem;
+}
+
+
+/* 刮刮卡样式 */
+
+.stratch-card-wrapper {
+    background-image: url('../images/scratch_card/stratch_card_bg.png');
+    background-size: 100% auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.66rem;
+    height: 4rem;
+}
+
+.close {
+    background-image: url('../images/scratch_card/close@2x.png');
+    background-size: 100% auto;
+    width: .63rem;
+    height: .68rem;
+    position: absolute;
+    right: 0;
+    top: .18rem;
+}
+
+.gift-wrapper {
+    background-image: url(../images/scratch_card/gift@2x.png);
+    background-size: 100% auto;
+    width: 3.09rem;
+    height: 3.5rem;
+    position: absolute;
+    right: .7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-bottom: .46rem;
+}
+
+.gift {
+    background-image: url('../images/scratch_card/gift_inner@2x.png');
+    width: 1.57rem;
+    height: 1.6rem;
+    background-size: 100% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: .92rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.action-button {
+    width: 1.73rem;
+    height: .54rem;
+}
+
+.chess,
+.tigher,
+.select_before,
+.doubel {
+    width: .83rem;
+    height: 1.06rem;
+    background-size: 100% auto;
+}
+
+.select_before {
+    background-image: url('../images/scratch_card/select_before@2x.png');
+}
+
+.select_after {
+    width: 1.92rem;
+    height: 1.14rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('../images/scratch_card/select_after@2x.png');
+}
+
+.rotate {
+    transform: rotateY(720deg);
+    transition: all 1s linear;
+}
+
+.gift-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4rem;
+}
+
+.footer-left {
+    display: none;
+    float: left;
+    background-image: url('../images/scratch_card/show_card@2x.png');
+    width: 1.74rem;
+    background-size: 100% auto;
+    height: .47rem;
+}
+
+.footer-right {
+    float: right;
+}
+
+.footer-right .select-before-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 .52rem .14rem 0rem;
+    position: relative;
+}
+
+.select-before-container img {
+    width: .2rem;
+    height: .2rem;
+}
+
+.no-prompt {
+    font-family: PingFang-SC-Regular;
+    font-size: .22rem;
+    line-height: .22rem;
+    letter-spacing: 0px;
+    margin-left: .1rem;
+    color: #fff252;
+}
+
+.is-select {
+    background-image: url('../images/scratch_card/select_right.png');
+    background-size: 100% auto;
+    position: absolute;
+    width: .27rem;
+    height: .24rem;
+    bottom: .04rem;
+}
+
+.confirm-btn {
+    display: none;
+    width: 1.4rem;
+    height: .48rem;
+    background-image: url('../images/scratch_card/confirm@2x.png');
+    background-size: 100% auto;
+    margin: 0 .7rem .18rem 0;
+}
+
+.prompt-txt {
+    font-family: PingFang-SC-Regular;
+    font-size: .2rem;
+    color: #ffe557;
+    line-height: .28rem;
+    margin-bottom: -.2rem;
+    text-align: center;
+}
+
+.gray,
+.get,
+.award {
+    color: #ffbb98;
+}

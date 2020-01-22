@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>信游拜大年 全民抢红包</title>
+	<link rel="stylesheet" type="text/css" href="css/redpacket.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="bannerWrap w1 mat">
+			<div class="goBack" onclick="back({action: 'goToList'})">
+				返回列表
+			</div>
+			<img class="banner1 mat" src="images/redpacket/index_03.jpg" alt="">
+			<img class="banner2 mat" src="images/redpacket/index_05.jpg" alt="">
+		</div>
+		<div class="conWrap w1">
+			<div class="content w1 mat">
+				<div class="title timeTitle"></div>
+				<div class="info timeInfo">
+					2019年8月5日00:00:00--9月15日23:59:59
+				</div>
+				<div class="title conTitle"></div>
+				<div class="conInfo">
+					<div class="info giftInfo">
+						活动期间，用户的总投注额每累计1000元，即可累计获得1次抢红包的机会，<br>获得机会后在红包池里面争抢未开启的红包。
+					</div>
+					<div class="listWrap">
+						<table class="tableList conList mat" border="1" cellspacing="0" cellpadding="0">
+							<tr>
+								<th>红包类型</th>
+								<th>红包内容</th>
+								<th>消耗机会次数</th>
+							</tr>
+							<tr>
+								<td class="p1 rp">初级红包</td>
+								<td>刮刮乐1张、1元、2元、3元、4元、5元、10元<br>888元、1888元、2888元、5888元、8888元</td>
+								<td>每抢一个消耗<span class="sp">1</span>次机会</td>
+							</tr>
+							<tr>
+								<td class="p2 rp">高级红包</td>
+								<td>6元、10元、20元、30元、40元、50元、100元<br>888元、1888元、2888元、5888元、8888元</td>
+								<td>每抢一个消耗<span class="sp">10</span>次机会</td>
+							</tr>
+							<tr>
+								<td class="p3 rp">终级红包</td>
+								<td>60元、100元、200元、300元、400元、500元<br>1000元、1888元、2888元、5888元、8888元</td>
+								<td>每抢一个消耗<span class="sp">100</span>次机会</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="goRedpacket mat">
+					我要抢红包
+				</div>
+				<div class="title ruleTitle"></div>
+				<div class="info ruleInfo">
+					<ul class="termList">
+						<li>
+							1.此活动投注统计范围为：棋牌，捕鱼，电游，彩票产品中的有效流水；
+						</li>
+						<li>
+							2.每个等级的奖池当中默认有500个未开启的红包，豪礼红包888、1888、2888、5888、8888会随机分布在每个奖池当中，奖池等级越高获得豪礼红包的机会越大；
+						</li>
+						<li>
+							3.当奖池中的红包剩余数量小于50个或豪礼红包都被开启后，系统将会重新刷新分配500个新红包；
+						</li>
+						<li>
+							4.任何违规投注、对打、套利行为，信游将保留冻结账号扣除盈利的权利；
+						</li>
+						<li>
+							5.每位玩家只能使用单个账号参加优惠活动，且同一住址、电话号码﹑电子邮箱地址、IP（例如网吧，其他公共用计算机）﹑支付方式(相同借记卡/银行帐户姓名及号码) ，信游将保留或取消玩家优惠彩金的权利；
+						</li>
+						<li>
+							6.平台保有修改活动以及解释活动之权利。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="mask">
+			<div class="choose clearfix">
+				<div class="ctit w1">
+					<div class="chance">
+						您还有<i id="times" class="times">0</i>次机会
+					</div>
+					<img class="closeMask" src="images/redpacket/close_icon_big.png" alt="">
+				</div>
+				<div class="plat mat clearfix">
+					<div class='tabs fl'>
+					    <ul class="tabTop clearfix">
+					        <li class="fl" data-id="1">
+					        	<a class="tabTitle tt1 w1" alt="#tab-1" data-id="1">
+					        		<span class="t1">初级红包</span>
+									<span class="t2">每抢一个消耗<i class="tsp">1</i>次机会</span>
+					        	</a>
+					        </li>
+					        <li class="fl" data-id="2">
+					        	<a class="tabTitle tt2 w1" alt="#tab-2" data-id="2">
+						        	<span class="t1">高级红包</span>
+									<span class="t2">每抢一个消耗<i class="tsp">10</i>次机会</span>
+						        </a>
+					        </li>
+					        <li class="fl" data-id="3">
+					        	<a class="tabTitle tt3 w1" alt="#tab-3" data-id="3">
+						        	<span class="t1">终极红包</span>
+									<span class="t2">每抢一个消耗<i class="tsp">100</i>次机会</span>
+						        </a>
+						    </li>
+					    </ul>
+					    <section class="tabBar mat">
+							<div class="bar1 fl">
+							    <label for="bar1">
+							    	<input type="radio" class="bar" id="bar1" name="tabBar" value="1" checked/>显示全部红包
+							    </label>
+							</div>
+							<div class="bar2 fl">
+							    <label for="bar2">
+							    	<input type="radio" class="bar" id="bar2" name="tabBar" value="2" />只显示可抢的红包
+							    </label>
+							</div>
+						</section>
+						<!-- 初级红包 -->
+					    <div id='tab-1' class="tabCon w1" data-id="1">
+							<div class="ulWrap w1">
+								<ul id="ulList" class="ulList clearfix">
+									<!-- <li class="fl">
+										<div class="packetLi w1">
+											<a href="javascript:" title="" class="usedMask w1">
+												<p class="prize w1">209元</p>
+												<p class="userName w1">t**5555dd</p>
+												<p class="getTime w1">2019-01-03</p>
+											</a>
+										</div>
+										<p class="packetNum">1</p>
+									</li>
+									<li class="fl">
+										<div class="packetLi w1">
+											<a href="javascript:" title="" class="usedMask w1">
+												<p class="prize w1">209元</p>
+												<p class="userName w1">t**5555dd</p>
+												<p class="getTime w1">2019-01-03</p>
+											</a>
+										</div>
+										<p class="packetNum">2</p>
+									</li> -->
+								</ul>
+								<ul class="pagination clearfix" id="pagination1">
+									<li class="prev1">
+										<a href="javascript:void(0);">
+											<i class="arrow arrow2"></i>上一页
+										</a>
+									</li>
+									<li class="page active">
+										<a href="javascript:void(0);">
+											<i class="pageCur">1</i>/<i class="pageSum">11</i>
+										</a>
+									</li>
+									<li class="next1">
+										<a href="javascript:void(0);">
+											下一页<i class="arrow arrow3"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+					    </div>
+					    <!-- 高级红包 -->
+					    <div id='tab-2' class="tabCon w1" data-id="2">
+							<div class="ulWrap w1">
+								<ul class="ulList clearfix">
+									<!-- <li class="fl">
+										<div class="packetLi w1">
+											<a href="javascript:" title="" class="usedMask w1">
+												<p class="prize w1">29元</p>
+												<p class="userName w1">asd</p>
+												<p class="getTime w1">2019-01-03</p>
+											</a>
+										</div>
+										<p class="packetNum">1</p>
+									</li>-->
+								</ul>
+								<ul class="pagination clearfix" id="pagination2">
+									<li class="prev1">
+										<a href="javascript:void(0);">
+											<i class="arrow arrow2"></i>上一页
+										</a>
+									</li>
+									<li class="page active">
+										<a href="javascript:void(0);">
+											<i class="pageCur">1</i>/<i class="pageSum">11</i>
+										</a>
+									</li>
+									<li class="next1">
+										<a href="javascript:void(0);">
+											下一页<i class="arrow arrow3"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+					    </div>
+					    <!-- 终级红包 -->
+					    <div id='tab-3' class="tabCon w1" data-id="3">
+							<div class="ulWrap w1">
+								<ul class="ulList clearfix">
+									<!-- <li class="fl">
+										<div class="packetLi w1">
+											<a href="javascript:" title="" class="usedMask w1">
+												<p class="prize w1">29元</p>
+												<p class="userName w1">asd</p>
+												<p class="getTime w1">2019-01-03</p>
+											</a>
+										</div>
+										<p class="packetNum">1</p>
+									</li> -->
+								</ul>
+								<ul class="pagination clearfix" id="pagination3">
+									<li class="prev1">
+										<a href="javascript:void(0);">
+											<i class="arrow arrow2"></i>上一页
+										</a>
+									</li>
+									<li class="page active">
+										<a href="javascript:void(0);">
+											<i class="pageCur">1</i>/<i class="pageSum">11</i>
+										</a>
+									</li>
+									<li class="next1">
+										<a href="javascript:void(0);">
+											下一页<i class="arrow arrow3"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+					    </div>
+					</div>
+					<div class="ranking fl">
+						<div class="rankTitle w1">豪礼红包榜单</div>
+						<div class="rankIntro w1">
+							累计已送出 <i id="sum" class="sum">0</i> 元现金
+						</div>
+						<div class="rankWrap w1">
+							<table id="rankList" class="rankList mat" border="1" cellspacing="0" cellpadding="0">
+								<!-- <tr>
+									<th>玩家</th>
+									<th>累计抢红包金额</th>
+								</tr> -->
+								<!-- <tr>
+									<td>sdsd</td>
+									<td>65658元</td>
+								</tr> -->
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="record mat">
+					<div class="reTitle">
+						<span class="rt1">我的抢红包记录</span>
+						<span id="desc" class="rt2">您一共抢到<i class="rsp">0</i>个红包 ，包含<i class="rsp">0</i>元现金，<i class="rsp">0</i>张刮刮乐</span>
+					</div>
+					<div class="tableWrap w1">
+						<table id="myList" class="myList mat" border="1" cellspacing="0" cellpadding="0">
+							<!-- <tr>
+								<th>抢红包时间</th>
+								<th>红包类型</th>
+								<th>红包序号</th>
+								<th>红包内容</th>
+							</tr> -->
+							<!-- <tr>
+								<td>2018-12-30  12:33:23</td>
+								<td>初级红包</td>
+								<td>11</td>
+								<td>刮刮乐</td>
+							</tr> -->
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tabslet.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jqPaginator.js"></script> -->
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+
+		$('.tabs').tabslet({
+	    	mouseevent: 'click',
+		  	attribute: 'alt',
+		  	animation: false
+	    });
+
+
+		// $(function() {
+			$('.goRedpacket').on('click', function(){
+		        $('#mask').css('display','block');
+			});
+			$('.closeMask').on('click', function(){
+	            $('#mask').css('display','none');
+	      	});
+
+			// 剩余机会
+			queryChance();
+			// 豪奖排行榜
+			queryRanking();
+			// 我的抢红包记录
+			queryMe();
+			// 抢红包
+			// redBagType	int	红包类型（1;初级红包；2：高级红包；3：终极红包）
+			// entry	String	红包序号
+			// showType	int	展示类型（1：显示全部红包；2：只显示可抢的红包）
+			// redBagType	int	红包类型（1;初级红包；2：高级红包；3：终极红包）
+			var redBagType = 1;
+			var entry = 0;
+			var showType = 1;
+			var redBagType = 1;
+
+			var page = 1;
+			// 红包奖池
+			queryPacket(showType,redBagType,page);
+
+			// 显示全部与否
+			$('.bar').on('click', function(){
+	            var $this = this;
+	            redBagType = $( '.tabTop li.active .tabTitle' ).attr("data-id");
+	            $('.pageCur').html('1');
+	            page = 1;
+	            showType = $('input[name="tabBar"]:checked').val();
+	            queryPacket(showType,redBagType,page);
+	      	});
+
+			// 显示初高终极
+			$('.tabTop li').on('click',function(){
+				// alert('000')
+				$('.pageCur').html('1');
+	            page = 1;
+	            var $this = this;
+	            redBagType = $( '.tabTop li.active .tabTitle' ).attr("data-id")
+	            showType = $('input[name="tabBar"]:checked').val();
+	            // alert(redBagType)
+	            queryPacket(showType,redBagType,page);
+	      	});
+
+	      	// 翻页
+			$('.next1').on('click', function(){
+				page = $('.pageCur').html();
+	            page++;
+	            maxPage = $('.pageSum').html();
+	            if ( page > maxPage ){
+	            	return;
+	            }
+	            queryPacket(showType,redBagType,page);
+	      	});
+	      	$('.prev1').on('click', function(){
+	      		page = $('.pageCur').html();
+	            page--;
+	            if ( page < 1 ){
+	            	return;
+	            }
+	            queryPacket(showType,redBagType,page);
+	      	});
+
+			// 抢红包
+	      	$(document).on('click', '.packetLi',function(){
+	      		$('.packetLi').css('pointer-events','none');
+	      		var $this = this;
+	     		redBagType = $( $this ).parents(".tabCon").attr("data-id");
+	     		entry = $( $this ).attr("data-number");
+		        draw(redBagType,entry);
+	     	});
+
+      	// 抢红包剩余机会
+		// /activity.do?method=showRedEnvelopeNumber
+	     	function queryChance(){
+				$.ajax({
+					url: "/dscagamesclient/activity.do?method=showRedEnvelopeNumber",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: {},    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+						if( req.success == 1 ) {
+							var times = req.redEnvelopeNumber;
+							$('#times').html( times );
+				    	}else if( req.success == 0 ){
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg
+						    })
+				    	}
+				    }
+				});
+			}
+
+		// 豪奖排行榜
+		// /activity.do?method=showBigAward
+			function queryRanking(){
+				$.ajax({
+					url: "/dscagamesclient/activity.do?method=showBigAward",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: {},    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+						if( req.success == 1 ) {
+							var sum = req.totalPrize;
+							var bigAward = req.bigAward;
+							$('#sum').html( sum );
+							$('#rankList').html('');//加载前清空列表
+							var raHtml = '<tr><th>玩家</th><th>累计抢红包金额</th></tr>';
+							$('#rankList').append(raHtml);
+				    		for(var i in bigAward){
+							   var html = '<tr><td>'+ bigAward[i].userName +'</td><td>' + bigAward[i].redBagPrize + '元</td></tr>'
+							   $('#rankList').append(html)
+							}
+				    	}else if( req.success == 0 ){
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg
+						    })
+				    	}
+				    }
+				});
+			}
+
+		// 我的抢红包记录
+		// /activity.do?method=myRedBag
+			function queryMe(){
+				$.ajax({
+					url: "/dscagamesclient/activity.do?method=myRedBag",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: {},    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	if ( req.success == -1 ) {
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': '请先登录！'
+						    })
+				    	}else if( req.success == 1 ) {
+				    		var desc = req.desc;
+							var myRedBag = req.myRedBag;
+							$('#desc').html( desc );
+							$('#myList').html('');//加载前清空列表
+							var meHtml = '<tr><th>抢红包时间</th><th>红包类型</th><th>红包序号</th><th>红包内容</th></tr>';
+							$('#myList').append(meHtml);
+							for(var i in myRedBag){
+							   var html = '<tr><td>'+ myRedBag[i].getTime +'</td><td>' + myRedBag[i].redBagType + '</td><td>'+ myRedBag[i].redBagNumber +'</td><td>' + myRedBag[i].redBagPrize + '</td></tr>';
+							   $('#myList').append(html);
+							}
+				    	}else if( req.success == 0 ){
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg
+						    })
+				    	}
+				    }
+				});
+			}
+
+		// 红包奖池
+		// /activity.do?method=getRedBagPool
+			function queryPacket(showType,redBagType,page){
+				$.ajax({
+					url: "/dscagamesclient/activity.do?method=getRedBagPool",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "showType": showType, "redBagType": redBagType, "page": page },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	if ( req.success == 1 ) {
+				    		var pageNum = Math.ceil(req.totalSize/49);
+							var redBagList = req.redBagList;
+							$('.pageCur').html( page );
+							$('.pageSum').html( pageNum );
+
+							$('.ulList').html('');//加载前清空列表
+							for(var i in redBagList){
+								if ( redBagList[i].isUsed == 1 ) {
+									var isUsed = 'block';
+								} else if ( redBagList[i].isUsed == 0 ){
+									var isUsed = 'none';
+								}
+							   var html = '<li class="fl"><div class="packetLi w1" data-used="' + redBagList[i].isUsed  + '" data-number="' + redBagList[i].redBagNumber+ '"><a href="javascript:" title="" class="usedMask w1" style="display:' + isUsed + ';"><p class="prize w1">'+ redBagList[i].redBagPrize +'</p><p class="userName w1">'+ redBagList[i].userName +'</p><p class="getTime w1">'+ redBagList[i].getTime +'</p></a></div><p class="packetNum">'+ redBagList[i].entry +'</p></li>';
+							   $('.ulList').append(html);
+							}
+				    	}else if( req.success == 0 ){
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg
+						    })
+				    	}
+				    }
+				});
+			}
+
+			// 抢红包
+			// /activity.do?method=openRedBag
+			function draw(redBagType,entry){
+				$.ajax({
+					url: "/dscagamesclient/activity.do?method=openRedBag",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "redBagType": redBagType, "entry": entry },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	if ( req.success == -1 ) {
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': '请先登录！',
+						        'submitCallBack': function(){
+    								$('.packetLi').css('pointer-events','visible');
+						      	},
+						      	'closeCallBack': function(){
+    								$('.packetLi').css('pointer-events','visible');
+					      		}
+						    })
+				    	}else if( req.success == 1 ) {
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg,
+						        'submitCallBack': function(){
+						        	$('.packetLi').css('pointer-events','visible');
+						        	queryChance();
+									queryRanking();
+									queryMe();
+									page = $('.pageCur').html();
+						            redBagType = $( '.tabTop li.active .tabTitle' ).attr("data-id");
+						            showType = $('input[name="tabBar"]:checked').val();
+						            queryPacket(showType,redBagType,page);
+						      	},
+						      	'closeCallBack': function(){
+						      		$('.packetLi').css('pointer-events','visible');
+						      		queryChance();
+									queryRanking();
+									queryMe();
+									page = $('.pageCur').html();
+						            redBagType = $( '.tabTop li.active .tabTitle' ).attr("data-id");
+						            showType = $('input[name="tabBar"]:checked').val();
+						            queryPacket(showType,redBagType,page);
+						      	}
+						    })
+				    	}else if( req.success == 0 ){
+				    		var popup = new Popup({
+				    			'bgcolor': '#ed9e14',
+				    			'submitbgcolor': '#ed9e14',
+				    			'submitbordercolor': '#ed9e14',
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.msg,
+						        'submitCallBack': function(){
+    								$('.packetLi').css('pointer-events','visible');
+						      	},
+						      	'closeCallBack': function(){
+    								$('.packetLi').css('pointer-events','visible');
+					      		}
+						    })
+				    	}
+				    }
+				});
+			}
+
+		//  })
+	</script>
+</body>
+</html>

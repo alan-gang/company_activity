@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="renderer" content="webkit">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <title>金鼠祥瑞纳新春，万元红包转不停</title>
+    <link rel="stylesheet" type="text/css" href="./css/luckdraw.css?v=14-49">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/jquery.rotate.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="goBack" onclick="back({action: 'goToList'})">
+            返回列表
+        </div>
+        <div class="main-wrapper">
+            <div class="title"></div>
+            <div class="luck-draw-wrapper">
+                <div class="left">
+                    <div class="play-wrapper">
+                        <img class="rotate-img" src="./images/luckdraw/scroll_bg_inner.png" alt="">
+                        <div class="controller-wp">
+                            <div class="status-btn">开始</div>
+                            <span class="">
+                              还有
+                              <span class="amount">-</span> 次机会
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="user-activity-wrapper">
+                        <div class="user-name">亲！ <span id="userName">title ****</span> 玩家</div>
+                        <div class="residue-amount">您还有<span class="residue-number" id="residueNumber">-</span>次机会</div>
+                        <div class="play-methods">
+                            <div class="ten">10连抽</div>
+                            <div class="one-hundred">100连抽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="activity-desc-wrapper">
+            <div class="activity-content">
+                <div class="title-content">好礼摇不停 惊喜转转转</div>
+                <div class="list">
+                    <span class="number">1</span>
+                    <span class="slist-content">活动时间：2020-1-18 00:00:00 — 2020-2-1 23:59:59；</span>
+                </div>
+                <div class="list">
+                    <span class="number">2</span>
+                    <span class="slist-content">活动内容：用户投注满500元即可参与转盘游戏，最高可中8888元奖金；</span>
+                </div>
+                <div class="list">
+                    <span class="number">3</span>
+                    <span class="slist-content">温馨提示：体验金2倍流水即可提现，新年现金红包可以直接提现。</span>
+                </div>
+            </div>
+            <div class="activity-content">
+                <div class="list">
+                    <span class="number">1</span>
+                    <span class="slist-content">本次活动无需报名，只要有积分即可参与；</span>
+                </div>
+                <div class="list">
+                    <span class="number">2</span>
+                    <span class="slist-content">投注满500元获得1次机会，以此类推；</span>
+                </div>
+                <div class="list">
+                    <span class="number">3</span>
+                    <span class="slist-content">现金红包和体验券将直接发行到优惠券中，请及时领取，活动结束后作废；</span>
+                </div>
+                <div class="list">
+                    <span class="number">4</span>
+                    <span class="slist-content">活动期间禁止一切作弊行为，如发现有刷水套利等作弊行为，一经平台发现，将取消参与活动资格，情节严重的将冻结处理；</span>
+                </div>
+                <div class="list">
+                    <span class="number">5</span>
+                    <span class="slist-content">河内1分彩、河内5分彩、奇趣腾讯分分彩、奇趣腾讯5分彩、奇趣腾讯10分彩、棋牌百家乐龙虎玩法、老虎机刮刮卡、翻倍吃角子、视频扑克游戏等流水不纳入本次优惠统计之中；</span>
+                </div>
+                <div class="list">
+                    <span class="number">6</span>
+                    <span class="slist-content">本次活动最终解释权归本平台所有。</span>
+                </div>
+            </div>
+            <div class="bear-palm right">
+                <div class="user-activity-wrapper">
+                    <div class="list-container">
+                        <ul class="bear-list-wrapper">
+                            <li>
+                                活动暂未开始！
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  dialog -->
+
+    <div class="dialog-wrapper">
+        <div class="dialog-main">
+            <div class="title-wrapper">
+                <h2>温馨提示</h2>
+                <div class="close" id="close">&times;</div>
+            </div>
+            <div class="dialog-content">
+                <span>第一行</span>
+                <span>第二行</span>
+            </div>
+            <div class="activity-btn-wp">
+                <button class="cancel" id="cancel">否</button>
+                <button class="confirm" id="confirm">是</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function back(args) {
+            if (parent && parent.closeIFrame) {
+                parent.closeIFrame(args)
+            } else {
+                location.search = args.action
+            }
+        }
+    </script>
+
+    <script src="./js/luckydraw.js?v=15-37"></script>
+</body>
+
+</html>

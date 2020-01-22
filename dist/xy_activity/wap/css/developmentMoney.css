@@ -1,0 +1,248 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+:root {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #ffffff;
+    font-size: .32rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
+}
+
+.wrapper {
+    width: 100%;
+    background: url('../images/developmentmoney/index_bg.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.empty {
+    height: 5.92rem;
+}
+
+.activity-introduction {
+    width: 100%;
+    padding: 0 .3rem;
+    box-sizing: border-box;
+    line-height: .31rem;
+    text-align: left;
+    font-size: .24rem;
+    letter-spacing: 1px;
+}
+
+.money {
+    color: #fff949;
+    font-size: .28rem;
+}
+
+.content-wrapper {
+    margin-top: .48rem;
+}
+
+.dotted-bg {
+    font-size: .28rem;
+    margin-bottom: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.inner-content {
+    padding: 0 .3rem;
+}
+
+.dotted-bg:before {
+    content: "";
+    width: .53rem;
+    height: .19rem;
+    background-image: url('../images/developmentmoney/left.png');
+    background-size: cover;
+}
+
+.dotted-bg:after {
+    content: "";
+    width: .53rem;
+    height: .19rem;
+    background-image: url('../images/developmentmoney/right.png');
+    background-size: cover;
+}
+
+.activity-timer-container {
+    text-align: center;
+    margin-top: .3rem;
+}
+
+.timer-desc {
+    font-size: .24rem;
+}
+
+.activity-content {
+    margin-top: .49rem;
+}
+
+.content-table-wrapper {
+    width: 100%;
+    padding: 0 .14rem;
+    box-sizing: border-box;
+}
+
+.content-table {
+    width: 100%;
+    border-radius: .18rem;
+    border: 1px solid #feb58c;
+    overflow: hidden;
+}
+
+.table-head {
+    height: .87rem;
+    background: url('../images/developmentmoney/table-title.png') no-repeat 0px;
+}
+
+.table-head td {
+    font-size: .26rem;
+    color: #fff;
+    width: 25%;
+    text-align: center;
+    padding: 0 .25rem;
+}
+
+
+/* .table-head td:last-child {
+    padding: 0 .05rem;
+} */
+
+.table-body {
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-body>tbody>tr>td {
+    border: 1px solid #e3e3e3;
+    height: .53rem;
+    text-align: left;
+    padding: .15rem;
+    font-size: .22rem;
+    letter-spacing: 0;
+    color: #262626;
+}
+
+.activity-rules {
+    padding: .5rem 0rem .88rem;
+}
+
+.rules-content-wrapper {
+    box-sizing: border-box;
+    padding: 0 .29rem 0 .27rem;
+}
+
+.activity-rules ol li {
+    list-style: decimal;
+    color: #fff;
+    font-size: .24rem;
+    /* padding-left: .5rem; */
+    margin-left: .3rem;
+    line-height: .32rem;
+    letter-spacing: 1px;
+}

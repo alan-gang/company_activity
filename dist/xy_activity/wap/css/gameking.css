@@ -1,0 +1,151 @@
+.game-king {
+  background: url('../images/gameking/img_01@2x.png') no-repeat;
+  background-color: #e7b23a;
+  background-size: 100% auto;
+}
+.wrap {
+  padding: 6.7rem .35rem .52rem;
+  font-size: .36rem;
+}
+.explain {
+  padding: 0 .4rem;
+  color: #6c4d29;
+  line-height: .6rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.imp {
+  color: #fff;
+}
+.info {
+  position: relative;
+  color: #ffe7b7;
+  border-radius: .25rem;
+  background: #6c4d29;
+  border: 1px solid #ffc85a;
+  box-sizing: border-box;
+  padding: 0 .22rem;
+  text-align: center;
+}
+.info .title,
+.conInfo-title {
+  width: 5.2rem;
+  height: .84rem;
+  line-height: .84rem;
+  text-align: center;
+  font-size: .42rem;
+  font-weight: bold;
+  margin: 0 auto;
+  color: #7f4f17;
+  background: url('../images/gameking/img_02@2x.png') no-repeat;
+  background-size: contain;
+}
+.timeInfo {
+  padding-top: .44rem;
+  line-height: 1.2rem;
+  margin-bottom: .52rem;
+}
+.timeInfo .title,
+.ruleInfo .title {
+  position: absolute;
+  top: -0.42rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.conInfo-title {
+  margin-bottom: .42rem;
+}
+.game {
+  padding-top: 1.42rem;
+  background-image: url('../images/gameking/img_03@2x.png');
+  background-repeat: no-repeat;
+  background-size: 3.35rem 1.12rem;
+  background-position: center top;
+  margin-bottom: .35rem;
+  padding-bottom: .6rem;
+}
+.game-explain {
+  margin-top: .4rem;
+}
+.game table {
+  width: 100%;
+  line-height: .96rem;
+  border-spacing: 0;
+  text-align: center;
+}
+.game table thead {
+  background: #f9d386;
+  color: #7f4f17;
+}
+.game table tbody tr {
+  background: #b39058;
+}
+.game table tbody tr:nth-child(odd) {
+  background-color: #7a5b32;
+}
+.game .game-title {
+  position: absolute;
+  top: .35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: .48rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.game:nth-child(2) .game-title {
+  width: 1.7rem;
+  background-image: url('../images/gameking/img_06@2x.png');
+}
+.game:nth-child(3) .game-title {
+  width: 1.76rem;
+  background-image: url('../images/gameking/img_07@2x.png');
+}
+.game:nth-child(4) .game-title {
+  width: 1.82rem;
+  background-image: url('../images/gameking/img_08@2x.png');
+}
+/* .game table span:after {
+  content: "\u9886\u53d6";
+}
+.game table .already:after {
+  content: "\u5df2\u9886\u53d6";
+}
+.game table .btn:after {
+  content: '';
+} */
+.game table .btn {
+  display: inline-block;
+  width: 1.9rem;
+  height: .72rem;
+  background: url('../images/gameking/img_04@2x.png') no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+.game table thead th:last-child {
+  width: 2.2rem;
+}
+.join-game {
+  width: 4.2rem;
+  height: .9rem;
+  line-height: .9rem;
+  margin: .46rem auto 0;
+  background: url('../images/gameking/img_05@2x.png') no-repeat;
+  background-size: contain;
+  text-align: center;
+  color: #f1bb3f;
+  font-weight: bold;
+  cursor: pointer;
+}
+.ruleInfo {
+  margin-top: .76rem;
+  padding-top: 1rem;
+  padding: 1.1rem .66rem;
+  text-align: left;
+  font-size: .34rem;
+  font-weight: bold;
+}
+.ruleInfo p:not(:last-child) {
+  margin-bottom: .5rem;
+}

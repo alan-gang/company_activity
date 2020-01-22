@@ -1,0 +1,240 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #fff;
+	font-size: .22rem;
+}
+html{font-size: 100px;}
+
+@media screen and (min-width: 992px){
+	html {
+		font-size: 53px;
+	}
+}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 65px;
+	}
+}
+@media screen and (min-width: 1366px){
+	html {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width: 1440px){
+	html {
+		font-size: 75px;
+	}
+}
+@media screen and (min-width: 1600px){
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1920px){
+	html {
+		font-size: 100px;
+	}
+}
+@media screen and (min-width: 1921px){
+	html {
+		font-size: 129px;
+	}
+	.floor4Wrap div.actRule{
+		right: 4.1rem;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+.wrapper{
+	min-width: 1200px;
+	overflow: auto;
+}
+.w1{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.w12{
+	margin: 0 auto;
+}
+.bannerWrap{
+	height: 7.79rem;
+	background-image: url('../images/scratchers/top_01.jpg');
+	background-size: 100% 7.79rem;
+	position: relative;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .36rem;
+	line-height: .36rem;
+	padding: .1rem .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .22rem .22rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.5;
+	position: absolute;
+	top: .5rem;
+	right: 3rem;
+}
+.conWrap{
+	background-color: #0054a8;
+	padding-top: .7rem;
+	padding-bottom: 1.5rem;
+}
+.title{
+	height: .44rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: .7rem auto .28rem;
+}
+.conTitle{
+	margin: 0 auto .28rem;
+	background-image: url('../images/scratchers/top_02.jpg');
+	background-size: 12rem .44rem;
+}
+.timeTitle{
+	background-image: url('../images/scratchers/top_03.jpg');
+	background-size: 12rem .44rem;
+}
+.ruleTitle{
+	background-image: url('../images/scratchers/top_04.jpg');
+	background-size: 12rem .44rem;
+}
+.info{
+	background-image: linear-gradient(
+		#00458a,
+		#00458a),
+	linear-gradient(
+		#ffc343,
+		#ffc343);
+	background-blend-mode: normal,
+		normal;
+	box-shadow: 2px 3px 3px 0px
+		rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+.strong{
+	font-style: normal;
+	color: #ffc343;
+}
+.conInfo{
+	width: 11rem;
+	height: 4.12rem;
+	padding: .45rem 0.5rem 0;
+}
+.leftInfo{
+	width: 3.8rem;
+	height: 4.12rem;
+	line-height: .32rem;
+	text-align: justify;
+}
+.rightInfo{
+	width: 7.2rem;
+	height: 4.12rem;
+}
+.rLeft{
+	display: inline-block;
+	width: 1.1rem;
+	height: 4.12rem;
+	vertical-align: top;
+	text-align: right;
+}
+.listWrap,.list{
+	display: inline-block;
+	width: 6rem;
+	height: 4.12rem;
+}
+.list li{
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+}
+.list li:nth-child(odd){
+	background-color: #344d67;
+}
+.list li:nth-child(even){
+	background-color: #283e55;
+}
+#topList{
+	background-color: #d2a427;
+}
+.list li span{
+	display: inline-block;
+	width: 50%;
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+}
+.timeInfo{
+	height: 1.07rem;
+	line-height: 1.07rem;
+	text-indent: .5rem;
+}
+.ruleInfo{
+	width: 11rem;
+	height: 3.5rem;
+	padding: .5rem .5rem 0;
+	line-height: .3rem;
+	text-align: justify;
+}
+.btn{
+	text-align: center;
+}
+.joinNow{
+	cursor: pointer;
+	display: inline-block;
+	width: 2.9rem;
+	height: 1.1rem;
+	margin: 1.5rem auto .5rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-image: url('../images/scratchers/menu_join.png');
+	background-size: 2.9rem 1.1rem;
+	transition: all .2s;
+}
+.joinNow:hover{
+	background-image: url('../images/scratchers/menu_join_ahover.png');
+	background-size: 2.9rem 1.1rem;
+}

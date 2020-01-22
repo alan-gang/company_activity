@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="renderer" content="webkit">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <title>刮刮卡翻倍送，体验券免费领</title>
+    <link rel="stylesheet" type="text/css" href="css/scratch_card.css??v=1578622839788">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="goBack" onclick="back({action: 'goToList'})">
+            返回列表
+        </div>
+        <div class="spacer"></div>
+        <div class="activity-content-container">
+            <img class="activity-content-title" src="./images/scratch_card/activity_content_title.png" alt="">
+            <div class="content-text-wrapper">
+                <div class="card-icon">
+                    <img src="./images/scratch_card/chess.png" alt="">
+                    <img src="./images/scratch_card/tigher.png" alt="">
+                    <img src="./images/scratch_card/double.png" alt="">
+                </div>
+                <div class="card-text">
+                    活动期间，您只需保持每日投注满足666元流水要求，即可有资格抽取每天近千张棋牌/老虎机8元体验券和刮刮卡翻倍奖励！
+                </div>
+            </div>
+        </div>
+        <div class="activity-rule-container">
+            <img class="rule-img" src="./images/scratch_card/rule.png" alt="">
+            <div class="rule-container">
+                <ul>
+                    <li>1. 活动期间内，客户需要满足前一日最低流水要求666元，才能激活刮刮卡翻倍奖励，并同时享有抽体验券的资格；</li>
+                    <li>2. 每天近千张棋牌/老虎机8元体验券将在不定时间内生成在活动页面中，抢完即止，每个用户每天只能领取一张8元体验券；</li>
+                    <li>3. 体验券可以累加，有效期为3天，逾期不候。</li>
+                    <li>4. 任何违规投注、对打、套利行为，信游将保留冻结账号扣除盈利的权利；</li>
+                    <li>5. 每个账号每天只能享有一次优惠，且同一住址、电话号码﹑电子邮箱地址、手机、IP（例如网吧，其他公共用计算机）﹑支付方式(相同借记卡/银行帐户姓名及号码) 仅适用一次活动优惠，若玩家有重复申请（如关联账号）之行为，信游将保留或取消玩家优惠彩金的权利；</li>
+                    <li>6. 平台保有修改活动以及解释活动之权利。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="stratch-card-wrapper">
+        <div class="close"></div>
+        <div class="gift-wrapper">
+            <div class="gift">
+                <div class="select_before"></div>
+            </div>
+            <img class="action-button" src="./images/scratch_card/action_button.png" alt="">
+            <div class="prompt-txt"></div>
+            <div class="get-gift"></div>
+        </div>
+        <div class="gift-footer">
+            <div class="footer-left">
+
+            </div>
+            <div class="footer-right">
+                <!-- <div class="select-before-container">
+                    <img src="./images/scratch_card/checkbox.png" alt="">
+                    <div class="is-select"></div>
+                    <div class="no-prompt">今日不在提示</div>
+                </div> -->
+                <div class="confirm-btn"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function back(args) {
+            if (parent && parent.closeIFrame) {
+                parent.closeIFrame(args)
+            } else {
+                location.search = args.action
+            }
+        }
+    </script>
+    <script src="./js/scratch_card.js?v=1578912815159"></script>
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+body {
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #fff;
+    font-size: .22rem;
+}
+
+html {
+    font-size: 100px;
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 53px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 65px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    html {
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 80px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    html {
+        font-size: 129px;
+    }
+    .floor4Wrap div.actRule {
+        right: 4.1rem;
+    }
+}
+
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root body {
+    position: absolute;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.goBack {
+    /* width: .9rem; */
+    height: .36rem;
+    line-height: .36rem;
+    padding: .1rem .3rem;
+    font-family: MicrosoftYaHei;
+    font-size: .18rem;
+    text-indent: .28rem;
+    color: #666;
+    background-color: #fff;
+    background-image: url('../images/return_icon.png');
+    background-size: .22rem .22rem;
+    background-position: .23rem center;
+    background-repeat: no-repeat;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+    position: absolute;
+    top: .5rem;
+    right: 3rem;
+}
+
+.wrapper {
+    background-image: url('../images/scratch_card/bg.jpg');
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-content-title,
+.rule-img {
+    display: block;
+    margin: 0px auto;
+}
+
+.spacer {
+    height: 644px;
+}
+
+.content-text-wrapper {
+    background-image: url(../images/scratch_card/content_bg.png);
+    width: 1080px;
+    height: 376px;
+    padding-left: 286px;
+    margin: 31px auto 61px;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 92px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-icon>img {
+    margin-right: 10px;
+}
+
+.card-text {
+    width: 720px;
+    font-size: 22px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    color: #2a2929;
+    margin-top: 59px;
+}
+
+.rule-container {
+    width: 1080px;
+    height: 556px;
+    margin: 30px auto 0px;
+    background-image: url('../images/scratch_card/rule-bg.png');
+    padding: 64px 61px 109px 87px;
+    box-sizing: border-box;
+}
+
+.rule-container>ul>li {
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    color: #363636;
+}
+
+.activity-rule-container {
+    padding-bottom: 155px;
+}
+
+
+/* 礼品卡 */
+
+.stratch-card-wrapper {
+    background-image: url('../images/scratch_card/stratch_card_bg.png');
+    background-size: 100% auto;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    width: 1189px;
+    height: 731px;
+}
+
+.close {
+    background-image: url('../images/scratch_card/close.png');
+    background-size: 100% auto;
+    width: 86px;
+    height: 89px;
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    cursor: pointer;
+}
+
+.gift-wrapper {
+    background-image: url(../images/scratch_card/gift.png);
+    background-size: 100% auto;
+    width: 415px;
+    height: 445px;
+    position: absolute;
+    right: 215px;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    /* padding-bottom: .46rem; */
+}
+
+.gift {
+    background-image: url('../images/scratch_card/gift_inner.png');
+    width: 195px;
+    height: 194px;
+    margin-top: 50px;
+    background-size: 100% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button {
+    width: 184px;
+    height: 59px;
+    cursor: pointer;
+}
+
+.chess,
+.tigher,
+.select_before,
+.doubel {
+    width: 72px;
+    height: 95px;
+    background-size: 100% auto;
+}
+
+.select_before {
+    background-image: url('../images/scratch_card/select_before_card.png');
+}
+
+.select_after {
+    width: 214px;
+    height: 127px;
+    background-size: 100% auto;
+    background-image: url('../images/scratch_card/select_after.png');
+}
+
+.chess {
+    background-image: url('../images/scratch_card/chess_card.png');
+}
+
+.tigher {
+    background-image: url('../images/scratch_card/tigher_card.png');
+}
+
+.doubel {
+    background-image: url('../images/scratch_card/double_card.png');
+}
+
+.rotate {
+    transform: rotateY(720deg);
+    transition: all 1s linear;
+}
+
+.gift-footer {
+    position: absolute;
+    bottom: 100px;
+    right: 130px;
+    width: 510px;
+}
+
+.footer-left {
+    display: none;
+    float: left;
+    background-image: url('../images/scratch_card/show_card.png');
+    width: 190px;
+    cursor: pointer;
+    background-size: 100% auto;
+    height: 51px;
+}
+
+.footer-right {
+    float: right;
+    position: relative;
+}
+
+.footer-right .select-before-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 134px;
+    right: 20px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.select-before-container img {
+    width: 16px;
+    height: 16px;
+}
+
+.no-prompt {
+    font-family: PingFang-SC-Regular;
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 10px;
+    color: #fff252;
+}
+
+.is-select {
+    background-image: url('../images/scratch_card/select_right.png');
+    background-size: 100% auto;
+    position: absolute;
+    width: 23px;
+    height: 20px;
+    bottom: 4px;
+}
+
+.confirm-btn {
+    display: none;
+    width: 194px;
+    height: 55px;
+    cursor: pointer;
+    background-image: url('../images/scratch_card/confirm.png');
+    background-size: 100% auto;
+    margin: 0px 71px 16px 0;
+}
+
+.prompt-txt {
+    font-family: PingFang-SC-Regular;
+    font-size: 16px;
+    color: #ffe557;
+    text-align: center;
+}
+
+.gray,
+.get,
+.award {
+    color: #ffbb98;
+}

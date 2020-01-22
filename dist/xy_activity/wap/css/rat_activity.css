@@ -1,0 +1,283 @@
+    body,
+    ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd,
+    p,
+    input,
+    i,
+    b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    fieldset,
+    table,
+    td,
+    img,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+    
+    i,
+    b,
+    h4,
+    h3,
+    h5 {
+        font-weight: normal;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img,
+    input {
+        border: 0;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    /* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+    /*清浮动*/
+    
+    .clearfix:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .clearfix {
+        zoom: 1;
+    }
+    
+    .fl {
+        float: left;
+    }
+    
+    .fr {
+        float: right;
+    }
+    
+    body {
+        width: 100vw;
+        overflow: hidden;
+        font-family: MicrosoftYaHei, ArialMT, Arial;
+        color: #ffffff;
+        font-size: .32rem;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: auto;
+    }
+    
+     :root {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    
+    .main-container {
+        background-image: url('../images/rat_acitvity/bg@2x.jpg');
+        background-size: 100% auto;
+        width: 100%;
+    }
+    
+    .spacer {
+        height: 5.6rem;
+    }
+    
+    .activity-time,
+    .activity_content {
+        display: block;
+        margin: 0 auto;
+        width: 4.81rem;
+        height: .7rem;
+    }
+    
+    .activity-time-text {
+        background-image: url('../images/rat_acitvity/activity_time_text@2x.png');
+        width: 5.7rem;
+        background-size: 100% auto;
+        height: 1.41rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .15rem auto .5rem;
+        font-size: .24rem;
+        letter-spacing: .02rem;
+        color: #f7d5a7;
+    }
+    
+    .check-money-container {
+        background-image: url('../images/rat_acitvity/check_money@2x.png');
+        width: 100%;
+        background-size: 100% auto;
+        height: 7.88rem;
+        margin: .33rem auto 0;
+        position: relative;
+    }
+    
+    .highest-money {
+        font-size: .22rem;
+        letter-spacing: 1px;
+        color: #fad984;
+        position: absolute;
+        text-align: center;
+        top: 1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .desc-content {
+        position: absolute;
+        font-size: .20rem;
+        width: 4.47rem;
+        top: 1.7rem;
+        left: 50%;
+        letter-spacing: 1px;
+        color: #621a1a;
+        transform: translateX(-51%);
+    }
+    
+    .desc-num {
+        width: .73rem;
+        height: .3rem;
+        background-color: #1c6787;
+        border: solid .02rem #1b4e5d;
+        font-size: .28rem;
+        font-weight: normal;
+        letter-spacing: .02rem;
+        padding: 0 .04rem;
+        color: #ffe13c;
+    }
+    
+    .content-table {
+        position: absolute;
+        bottom: .52rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5.07rem;
+        height: 3.39rem;
+    }
+    
+    .thead {
+        width: 100%;
+        height: .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: .26rem;
+        color: #feae34;
+    }
+    
+    .tbody>.tr {
+        height: .5rem;
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        border: 1px solid transparent;
+    }
+    
+    .tbody>.tr>span {
+        width: 33%;
+        text-align: center;
+        font-size: .24rem;
+        color: #ffffff;
+    }
+    
+    .activity-example-title {
+        width: 4.82rem;
+        margin: .7rem auto 0;
+        display: block;
+    }
+    
+    .example-content {
+        width: 5.71rem;
+        height: 5.26rem;
+        margin: .34rem auto;
+        background-size: 100% auto;
+        background-image: url('../images/rat_acitvity/example_content@2x.png');
+    }
+    
+    .content-txt {
+        font-family: MicrosoftYaHei;
+        font-size: .22rem;
+        padding: .3rem .33rem 0 .29rem;
+        line-height: .34rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    
+    .content-img-wrapper {
+        padding: 0 .63rem;
+        position: relative;
+        margin-top: .42rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .content-img-wrapper>img {
+        width: 1.99rem;
+        height: 1.24rem;
+    }
+    
+    .content-img-wrapper img:nth-child(1),
+    .content-img-wrapper img:nth-child(2) {
+        margin-bottom: .3rem;
+    }
+    
+    .icon {
+        width: .4rem!important;
+        height: .4rem !important;
+        position: absolute;
+        left: .74rem;
+        top: -.5rem;
+    }
+    
+    img.rule-title {
+        width: 4.81rem;
+        display: block;
+        margin: .70rem auto 0;
+    }
+    
+    .rule-content-contaner {
+        background-image: url('../images/rat_acitvity/rule_bg@2x.png');
+        width: 5.7rem;
+        background-size: 100% auto;
+        height: 9.1rem;
+        margin: .15rem auto;
+    }
+    
+    .rule-content-contaner>ul {
+        padding: .34rem .31rem .34rem .31rem;
+    }
+    
+    .rule-content-contaner>ul>li {
+        font-size: .24rem;
+        line-height: .37rem;
+        /* margin-bottom: 9px; */
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    
+    .activity-rule-wrapper {
+        padding-bottom: .6rem;
+    }

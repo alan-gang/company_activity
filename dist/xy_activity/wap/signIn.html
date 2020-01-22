@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>签到领现金</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css?v=20191220">
+	<link rel="stylesheet" type="text/css" href="css/common.css?v=20191220">
+	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.wrapper {
+			background: url(./images/signIn/31@2x.png) no-repeat 0 0 #1c2d3d;
+			background-size: 100%;
+		}
+
+		.con-1 {
+			width: 89%;
+			margin: 0 auto;
+			padding: 4.2rem 0 0 0;
+		}
+
+		.date {
+			background: url(./images/signIn/21@2x.png) no-repeat 0 0;
+			background-size: 103%;
+			margin-left: 0.15rem;
+			padding: 0 0.1rem 1rem 0;
+		}
+
+		.txt-1 {
+			padding: 0.3rem 0 0 0.1rem;
+			white-space: nowrap
+		}
+
+		.txtcolor-red {
+			color: #9e3535;
+		}
+
+		.activity-explain {
+			padding: 0.1rem 0 0 2.9rem;
+		}
+
+		.activity-explain p {
+			line-height: 0.28rem;
+		}
+
+		.btn-signin {
+			width: 2.07rem;
+			height: 0.6rem;
+			background: url(./images/signIn/anniu@2x.png) no-repeat;
+			margin: 0.1rem 0 0 3.4rem;
+			cursor: pointer;
+			background-size: 100%;
+		}
+
+		.prize-wp {
+			/* width: 7.4rem; */
+			justify-content: space-around;
+			flex-wrap: wrap;
+			padding-top: 0.2rem;
+		}
+
+		.prize-wp .prize:nth-child(1) {
+			background: url(./images/signIn/5@2x.png) no-repeat;
+		}
+
+		.prize-wp .prize:nth-child(2) {
+			background: url(./images/signIn/51@2x.png) no-repeat;
+		}
+
+		.prize-wp .prize:nth-child(3) {
+			background: url(./images/signIn/52@2x.png) no-repeat;
+		}
+
+		.prize-wp .prize:nth-child(4) {
+			background: url(./images/signIn/54@2x.png) no-repeat;
+		}
+
+		.prize-wp .prize:nth-child(5) {
+			background: url(./images/signIn/53@2x.png) no-repeat;
+		}
+
+		.wrapper .prize-wp .prize {
+			width: 1.86rem;
+			height: 1.48rem;
+			background-size: 100%;
+			margin-bottom: 0.2rem;
+		}
+
+		.txtcolor-white {
+			color: #ffffff;
+		}
+
+		.rule-wp {
+			width: 8rem;
+			margin-top: 1rem;
+			padding-bottom: 0.4rem;
+		}
+
+		.rules>p::before {
+			display: inline-block;
+			width: 0.3rem;
+			height: 0.3rem;
+			line-height: 0.3rem;
+			background-color: #8fa4b4;
+			text-align: center;
+			color: #172737;
+			margin-right: 0.1rem;
+		}
+
+		.rules>p:nth-child(1)::before {
+			content: '1'
+		}
+
+		.rules>p:nth-child(2)::before {
+			content: '2'
+		}
+
+		.rules>p:nth-child(3)::before {
+			content: '3'
+		}
+
+		.rules>p:nth-child(4)::before {
+			content: '4'
+		}
+
+		.rules>p:nth-child(5)::before {
+			content: '5'
+		}
+
+		.rules>p:nth-child(6)::before {
+			content: '6'
+		}
+
+		.rules>p:nth-child(7)::before {
+			content: '7'
+		}
+
+		.rules>p:nth-child(8)::before {
+			content: '8'
+		}
+
+		.rules>p:nth-child(9)::before {
+			content: '9'
+		}
+
+		.rules>p {
+			margin-top: 0.1rem;
+			display: flex;
+			font-size: 0.14rem;
+		}
+
+		.rules>p span {
+			width: 6.4rem;
+		}
+
+		@media (min-width: 411px) {
+			.prize-wp {
+				/* padding-top:0.6rem; */
+			}
+		}
+
+		@media (min-width: 1000px) {
+			.date {
+				padding-bottom: 2.6rem;
+			}
+
+			.activity-explain {
+				padding-left: 3.9rem;
+			}
+
+			.btn-signin {
+				margin-left: 4.4rem;
+			}
+
+			.con-1 {
+				padding-top: 5.4rem;
+			}
+
+			.rule-wp {
+				margin-left: 0.4rem;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<!-- <div class="goBack" onclick="back({action: 'goToList'})">
+			返回
+		</div> -->
+		<div class="signIn">
+			<div class="con-1">
+				<div class="date">
+					<div class="txt-1">
+						<span class="fz18 txtcolor-red">签到领好礼</span>
+						<span class="fz14">(连续签到达到对应天数的即可获得对应奖励)</span>
+					</div>
+					<div class="activity-explain">
+						<p class="fz14">1.每天达到投注要求点击签到，当天日期及会显示已签到标志；</p>
+						<p class="fz14">2.连续签到达到对应天数的点击领取即可获得对应奖励；</p>
+						<p class="fz14">3.体验金点击领取后会以现金券的形式发放至【优惠券】中，只需1倍流水即可提款;</p>
+					</div>
+					<div class="btn-signin" onclick="back({action: 'goSignIn'})"></div>
+				</div>
+				<div class="flex prize-wp">
+					<div class="prize"></div>
+					<div class="prize"></div>
+					<div class="prize"></div>
+					<div class="prize"></div>
+					<div class="prize"></div>
+				</div>
+				<div class="txtcolor-white rule-wp">
+					<div class="fz20">活动规则</div>
+					<div class="rules">
+						<p><span>本活动无需报名，投注达标即可自动参与；</span></p>
+						<p><span>连续签到获得的游戏体验金，一倍流水即可提现，体验券保留7天，过期作废；</span></p>
+						<p><span>每日投注达标后点击签到，即可在礼品箱领取2元现金，每日签到礼金当日领取，过期作废；</span></p>
+						<p><span>参与连续签到奖励，如中间断签需重新开始签到，例如：A玩家连续签到11天，第12天未签到，则需要重新开始签到；</span></p>
+						<p><span>玩家每月只可享受一次连续签到奖励，如A玩家已领取连续签到3天奖励，之后有断签，重新开始后不可重复领取签到3天奖励；</span></p>
+						<p><span>本活动每月1号00点重置，未领取的连续签到奖励视为自动放弃；</span></p>
+						<p><span>任何违规投注、对打、套利行为，信游将保留冻结账号扣除盈利的权利；</span></p>
+						<p><span>每位玩家只能享有一次优惠，且同一住址、电话号码﹑电子邮箱地址、IP（例如网吧，其他公共用计算机）﹑支付方式(相同借记卡/银行帐户姓名及号码)
+								仅适用一次活动优惠，若玩家有重复申请（如关联账号）之行为，信游将保留或取消玩家优惠彩金的权利；</span></p>
+						<p><span>最终解释权归平台所有。</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

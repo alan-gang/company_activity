@@ -1,0 +1,180 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+	font-size: .2rem;
+}
+html{font-size: 100px;}
+
+@media screen and (min-width: 992px){
+	html {
+		font-size: 53px;
+	}
+}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 65px;
+	}
+}
+@media screen and (min-width: 1366px){
+	html {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width: 1440px){
+	html {
+		font-size: 75px;
+	}
+}
+@media screen and (min-width: 1600px){
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1920px){
+	html {
+		font-size: 100px;
+	}
+}
+@media screen and (min-width: 1921px){
+	html {
+		font-size: 129px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #fbfbfb;
+}
+
+
+.wrapper{
+	overflow: hidden;
+	padding-top: .4rem;
+	padding-bottom: 1rem;
+}
+.w1{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.noclick{
+	pointer-events: none;
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .22rem;
+	color: #fff;
+	font-weight: 600;
+}
+.tabs{
+	min-height: 15rem;
+	background: url('../images/dns/nav1.png') 0 0 no-repeat;
+	background-size: 2.1rem 5.26rem;
+	padding-left: .35rem;
+
+}
+.tabTop{
+	width: 1.7rem;
+	padding-top: .3rem;
+}
+.tabTop li{
+	height: .4rem;
+	line-height: .4rem;
+	color: rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+.tabTop li.active{
+	color: #fff;
+}
+#tab-1,#tab-2,#tab-3,#tab-4,#tab-5{
+	width: 10rem;
+}
+.step{
+	margin-bottom: .3rem;
+}
+.ls{
+	width: 3rem;
+}
+.index{
+	width: .9rem;
+	height: .9rem;
+	line-height: .9rem;
+	font-size: .46rem;
+	color: #fff;
+	text-align: center;
+	background: url('../images/dns/02.png') 0 0 no-repeat;
+	background-size: .9rem .9rem;
+	margin-right: .2rem;
+}
+.info{
+	width: 1.8rem;
+	height: .7rem;
+	padding-top: .1rem;
+	background: url('../images/dns/04.png') 0 bottom no-repeat;
+	background-size: .73rem .08rem;
+}
+.title{
+	height: .3rem;
+	line-height: .3rem;
+	font-size: .24rem;
+	font-weight: 600;
+	color: #333;
+}
+.tE{
+	height: .24rem;
+	line-height: .24rem;
+	font-size: .18rem;
+	color: #aaa;
+}
+.lbot{
+	text-align: justify;
+	line-height: .26rem;
+	font-size: .16rem;
+	margin-top: .2rem;
+}
+.redC{
+	font-style: normal;
+	color: #ff3600;
+}
+#tab-1 .step img,#tab-2 .step img{
+	width: 6rem;
+}
+#tab-3 .step img{
+	width: 5.48rem;
+}
+#tab-4 .step img{
+	width: 3.53rem;
+}
+#tab-5 .step img{
+	width: 3.03rem;
+}
+#tab-4 .rs,#tab-5 .rs{
+	margin-left: 1rem;
+}
