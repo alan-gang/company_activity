@@ -1,0 +1,147 @@
+/*
+* @Author: Wilon
+* @Date:   2018-06-26 12:26:29
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-07-05 15:28:35
+*/
+/*
+* @Author: Wilon
+* @Date:   2018-06-26 11:10:05
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-06-26 12:05:28
+*/
+body{
+	background-color: #292621;
+}
+.dt-wrapper{
+	width: 7.5rem;
+	background-color: #292621;
+	padding-bottom: 0.5rem;
+	margin: 0 auto;
+}
+.dt-top,.dt-top img{
+	width: 7.5rem;
+	height: 3.48rem;
+}
+.dt-mid,.dt-mid img{
+	width: 7.5rem;
+	height: 0.54rem;
+}
+.dt-mid{
+	margin-top: 0.4rem
+}
+.dt-con{
+	width: 7.5rem;
+	height: 7.04rem;
+	background: url('../images/promo_02_title_bg03@2x.png') 0 6.95rem no-repeat;
+	background-size: 7.5rem 0.09rem;
+}
+.dt-con ul{
+	width: 7.5rem;
+	margin: 0 auto;
+}
+.dt-con ul li{
+	width: 6.82rem;
+	padding: 0 0.37rem 0 0.31rem;
+	height: 1.39rem;
+}
+.dt-con ul li:nth-child(odd){
+	background-color: #2c221c;
+}
+.dt-con ul li:nth-child(even){
+	background-color: #241c18;
+}
+.dt-con ul li span{
+	display: inline-block;
+	width: 3.42rem;
+	height: 1.39rem;
+	font-size: .24rem;
+	line-height: 1.39rem;
+	color: #eabd7f;
+	vertical-align: top;
+}
+.dt-con ul li i{
+	display: inline-block;
+	width: 1.54rem;
+	height: 1.39rem;
+	text-indent: 0.86rem;
+	background-position: 0 0.3rem;
+	background-repeat: no-repeat;
+	font-size: 0.24rem;
+	line-height: 1.39rem;
+	font-family: Arial;
+	color: #ffd400;
+	background-size: 0.8rem 0.89rem;
+}
+.dt-con ul li:nth-child(1) i{
+	background-image: url('../images/futou1.png');
+}
+.dt-con ul li:nth-child(2) i{
+	background-image: url('../images/futou2.png');
+}
+.dt-con ul li:nth-child(3) i,.dt-con ul li:nth-child(4) i{
+	background-image: url('../images/futou3.png');
+}
+.dt-con ul li:nth-child(5) i{
+	background-image: url('../images/futou4.png');
+}
+.dt-btn{
+	display: inline-block;
+	width: 1.7rem;
+	height: 0.8rem;
+	font-size: .24rem;
+	line-height: 0.8rem;
+	font-family: MicrosoftYaHei;
+	border-radius: 40px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	margin-top: 0.3rem;
+}
+.dt-btn:hover{
+	opacity: 0.8;
+}
+.dt-unfinished{
+	background-color: #ae0000;
+	color: #fff;
+}
+.finished{
+	background-color: #ffd400;
+	color:#333;
+}
+.received{
+	background-color: #ccc;
+	color: #333;
+}
+.dt-footer{
+	width: 7.5rem;
+	/* height: 4.72rem; */
+	margin: 0.5rem 0 0;
+}
+.dt-bot,.dt-bot img{
+	width: 7.5rem;
+	height: 0.54rem;
+}
+.dt-footer ul{
+	width: 6.7rem;
+	margin: 0 auto;
+	padding: 0.38rem 0.45rem 0.39rem 0.35rem;
+	background-image: radial-gradient(circle,
+		#362a22 0%,
+		#241c18 100%);
+}
+.dt-footer ul li{
+	width: 100%;
+	/* height: 0.64rem; */
+	margin: 0.2rem 0;
+	font-size: .24rem;
+	font-family: MicrosoftYaHei;
+	line-height: 0.36rem;
+	text-align: justify;
+	color: #eabd7f;
+}
+.dt-fot-bot,.dt-fot-bot img{
+	width: 7.5rem;
+	height: 0.09rem;
+	vertical-align: top;
+}

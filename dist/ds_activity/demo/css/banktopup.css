@@ -1,0 +1,235 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #9c6700;
+	font-size: .24rem;
+}
+html{font-size: 100px;}
+
+@media screen and (min-width: 992px){
+	html {
+		font-size: 53px;
+	}
+}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 65px;
+	}
+}
+@media screen and (min-width: 1366px){
+	html {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width: 1440px){
+	html {
+		font-size: 75px;
+	}
+}
+@media screen and (min-width: 1600px){
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1920px){
+	html {
+		font-size: 100px;
+	}
+}
+@media screen and (min-width: 1921px){
+	html {
+		font-size: 129px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+
+.wrapper{
+	min-width: 12rem;
+	overflow: auto;
+}
+.w1{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.bannerWrap{
+	height: 8.16rem;
+	background: url('../images/banktopup/index_bg.jpg') center 0 no-repeat;
+	background-size: 100% 100%;
+	/* text-align: center; */
+	position: relative;
+}
+.banner1{
+	width: 9.64rem;
+	height: 4.04rem;
+	vertical-align: top;
+	display: block;
+}
+.banner2{
+	width: 9.64rem;
+	height: 3.93rem;
+	vertical-align: top;
+	display: block;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .36rem;
+	line-height: .36rem;
+	padding: .1rem .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .22rem .22rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.5;
+	position: absolute;
+	top: .5rem;
+	right: 3rem;
+}
+.conWrap{
+	height: auto;
+	background-color: #ffe8a5;
+	padding: 0 0 1.5rem;
+}
+.conTitle{
+	background-image: url('../images/banktopup/index_08.jpg');
+}
+.ruleTitle{
+	background-image: url('../images/banktopup/index_11.jpg');
+}
+.title{
+	width: 5.75rem;
+	height: .34rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: .6rem auto .36rem;
+	background-size: 100% 100%;
+}
+.info{
+	width: 12rem;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 5px;
+	border: solid 1px #e4d6ad;
+}
+.timeInfo{
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.conInfo{
+	/* padding: .42rem 0.5rem .6rem; */
+}
+.giftInfo{
+	width: 11rem;
+	margin: .5rem auto 0;
+	line-height: .3rem;
+	text-align: justify;
+}
+.listWrap{
+	width: 11rem;
+	margin: .5rem auto;
+}
+.tableList{
+	/* background-color: rgba(95,253,255, .1); */
+}
+.tableList th,.tableList td{
+	/* padding: .2rem .1rem; */
+}
+.tableList th{
+	border: 2px solid #fff;
+	line-height: .6rem;
+	font-size: .24rem;
+	font-weight: normal;
+	border-left: 0;
+	color: #790008;
+	background-color: #ed9e14;
+}
+.tableList td{
+	border-right: 2px solid #fff;
+	line-height: .6rem;
+	font-size: .24rem;
+	text-align: center;
+	color: #fff;
+	background-color: #1d95e3;
+}
+.tableList th:last-child,.tableList td:last-child{
+	border-right: 0;
+}
+table{
+	border-color: transparent;
+}
+.ruleInfo{
+}
+.termList{
+	width: 11rem;
+	margin: 0 auto;
+	padding: .5rem;
+}
+.termList li{
+	line-height: .3rem;
+	text-align: justify;
+	margin-bottom: 0.15rem;
+	letter-spacing: 0px;
+}
+.termIndex{
+	display: inline-block;
+	width: .29rem;
+	height: .27rem;
+	line-height: .3rem;
+	text-align: center;
+	background: url('../images/banktopup/icon_bg.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+	margin-right: .15rem;
+	vertical-align: top;
+}
+.termList li p{
+	width: 90%;
+	display: inline-block;
+}

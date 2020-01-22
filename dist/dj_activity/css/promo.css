@@ -1,0 +1,59 @@
+/*
+* @Author: Wilon
+* @Date:   2018-06-26 10:35:16
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-06-28 12:39:47
+*/
+.pm-wrapper{
+	width: 100%;
+	max-width: 100%;
+	padding-top: 2.16rem;
+	background: url('../images/promo03_inner_img_01.jpg') 0 0 no-repeat;
+	background-size: 100% 2.18rem;
+	overflow: hidden;
+	position: relative;
+}
+.back-up{
+	display: inline-block;
+	width: 1.5rem;
+	height: 0.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* opacity: 0.6; */
+	border-radius: 0.3rem;
+	font-size: 0.14rem;
+	line-height: 0.5rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	color: #fff;
+	cursor: pointer;
+	position: absolute;
+	right: 3.25rem;
+	top: 0.5rem;
+}
+.pm-wrapper div,.pm-wrapper div img{
+	width: 100%;
+}
+.pm-wrapper div img{
+	vertical-align: top;
+}
+.pm-wrapper div:nth-child(2){
+	height: 2.99rem;
+}
+.pm-wrapper div:nth-child(2) img{
+	height: 3.01rem;
+}
+.pm-wrapper div:nth-child(3){
+	height: 2.99rem;
+}
+.pm-wrapper div:nth-child(3) img{
+	height: 3.01rem;
+}
+.pm-wrapper div:nth-child(4){
+	height: 3.54rem;
+}
+.pm-wrapper div:nth-child(4) img{
+	height: 3.56rem;
+}
+.pm-wrapper div:nth-child(5),.pm-wrapper div:nth-child(5) img{
+	height: 4.98rem;
+}

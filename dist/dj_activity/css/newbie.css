@@ -1,0 +1,118 @@
+/*
+* @Author: Wilon
+* @Date:   2018-06-26 11:10:05
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-07-03 18:16:17
+*/
+.nb-wrapper{
+	width: 100%;
+	background-color: #1c1e29;
+	padding-bottom: 1.8rem;
+	overflow: auto;
+	position: relative;
+}
+.back-up{
+	display: inline-block;
+	width: 1.5rem;
+	height: 0.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* opacity: 0.6; */
+	border-radius: 0.3rem;
+	font-size: 0.14rem;
+	line-height: 0.5rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	color: #fff;
+	cursor: pointer;
+	position: absolute;
+	right: 3.25rem;
+	top: 0.6rem;
+}
+.nb-top,.nb-top img{
+	width: 100%;
+	min-width: 14.4rem;
+	height: 6.47rem;
+}
+.nb-con{
+	width: 100%;
+	min-width: 14.4rem;
+	height: 8.57rem;
+	background: url('../images/promo01_inner_img_02.jpg') 0 0 no-repeat;
+	background-size: 100% 8.57rem;
+	overflow: hidden;
+}
+.nb-con ul{
+	width: 9.22rem;
+	min-width: 9.22rem;
+	padding: 0 1.54rem 0 1.64rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.nb-con ul li{
+	width: 9.22rem;
+	min-width: 9.22rem;
+	overflow: hidden;
+	height: 1.39rem;
+}
+.nb-con ul li span{
+	display: inline-block;
+	width: 4.11rem;
+	height: 1.39rem;
+	font-size: .18rem;
+	line-height: 1.39rem;
+	color: #fff;
+	vertical-align: top;
+}
+.nb-con ul li i{
+	display: inline-block;
+	width: 3.85rem;
+	height: 1.39rem;
+	text-indent: 0.85rem;
+	background-position: 0 0.3rem;
+	background-repeat: no-repeat;
+	font-size: 0.24rem;
+	line-height: 1.39rem;
+	font-family: Arial;
+	color: #ffd400;
+}
+.nb-con ul li:nth-child(1) i{
+	background-image: url('../images/futou4.png');
+	background-size: 0.75rem 0.86rem;
+}
+.nb-con ul li:nth-child(2) i{
+	background-image: url('../images/futou1.png');
+	background-size: 0.67rem 0.89rem;
+}
+.nb-con ul li:nth-child(3) i{
+	background-image: url('../images/futou2.png');
+	background-size: 0.67rem 0.89rem;
+}
+.nb-con ul li:nth-child(4) i,.nb-con ul li:nth-child(5) i,.nb-con ul li:nth-child(6) i{
+	background-image: url('../images/futou3.png');
+	background-size: 0.8rem 0.88rem;
+}
+.nb-btn{
+	display: inline-block;
+	width: 1.1rem;
+	height: 0.4rem;
+	font-size: .14rem;
+	line-height: 0.4rem;
+	font-family: MicrosoftYaHei;
+	border-radius: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	margin-top: 0.5rem;
+}
+.nb-unfinished{
+	background-color: #a03aff;
+	color: #fff;
+}
+.finished{
+	background-color: #ffd400;
+	color:#333;
+}
+.received{
+	background-color: #ccc;
+	color: #333;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>loading...</title><script>function getQueryVariable(variable) {
+      let query = window.location.search.substring(1);
+      let vars = query.split("&");
+      for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+      return "";
+    }
+    let path = '/TP/'
+    if (location.href.indexOf('localhost') !== -1) path = '/'
+    const htmls = {
+      22: 'doubleTwelfth', //注册
+      18: 'payRebate', //充值返利
+      11: 'rebate', //投注返利
+      15: 'rebate', //返水
+      // 21: 'signIn', //抽奖
+      3: 'signIn', //连续签到
+      24: 'newYear', //连赢
+      // 32: 'signIn', //负盈利扶持
+      23: 'slotTopup', //老虎机
+      17: 'scratchers' //刮刮乐
+    }
+    let activiTytype = (getQueryVariable('activiTytype') || 22) * 1
+    location.href = path + htmls[activiTytype] + '.html' + location.search</script></head><body><script type=text/javascript src=./static/js/manifest.d5631bf76e03ba655e50.js></script><script type=text/javascript src=./static/js/vendor.cbcd19f4ac2f0b28058a.js></script></body></html>

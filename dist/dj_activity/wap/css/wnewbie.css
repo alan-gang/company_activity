@@ -1,0 +1,109 @@
+/*
+* @Author: Wilon
+* @Date:   2018-06-27 16:28:01
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-07-05 15:28:44
+*/
+/*
+* @Author: Wilon
+* @Date:   2018-06-26 11:10:05
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-06-26 15:54:37
+*/
+body{
+	background-color: #1c1e29;
+}
+.nb-wrapper{
+	width: 7.5rem;
+	background-color: #1c1e29;
+	padding-bottom: 0.55rem;
+	/* overflow: hidden; */
+	margin: 0 auto;
+}
+.nb-top,.nb-top img{
+	width: 7.5rem;
+	height: 3.48rem;
+}
+.nb-mid,.nb-mid img{
+	width: 7.5rem;
+	height: 0.96rem;
+}
+.nb-con{
+	width: 7.5rem;
+	overflow: hidden;
+}
+.nb-con ul{
+	width: 7.5rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.nb-con ul li{
+	width: 6.4rem;
+	padding: 0 0.41rem 0 0.69rem;
+	height: 1.39rem;
+}
+.nb-con ul li:nth-child(odd){
+	background-color: #51009c;
+}
+.nb-con ul li:nth-child(even){
+	background-color: #5b07a9;
+}
+.nb-con ul li span{
+	display: inline-block;
+	width: 2.61rem;
+	height: 1.39rem;
+	font-size: .24rem;
+	line-height: 1.39rem;
+	color: #fff;
+	vertical-align: top;
+}
+.nb-con ul li i{
+	display: inline-block;
+	width: 1.93rem;
+	height: 1.39rem;
+	text-indent: 0.85rem;
+	background-position: 0 0.3rem;
+	background-repeat: no-repeat;
+	font-size: 0.24rem;
+	line-height: 1.39rem;
+	font-family: Arial;
+	color: #ffd400;
+	background-size: 0.8rem 0.89rem;
+}
+.nb-con ul li:nth-child(1) i{
+	background-image: url('../images/futou4.png');
+}
+.nb-con ul li:nth-child(2) i{
+	background-image: url('../images/futou1.png');
+}
+.nb-con ul li:nth-child(3) i{
+	background-image: url('../images/futou2.png');
+}
+.nb-con ul li:nth-child(4) i,.nb-con ul li:nth-child(5) i,.nb-con ul li:nth-child(6) i{
+	background-image: url('../images/futou3.png');
+}
+.nb-btn{
+	display: inline-block;
+	width: 1.7rem;
+	height: 0.8rem;
+	font-size: .24rem;
+	line-height: 0.8rem;
+	font-family: MicrosoftYaHei;
+	border-radius: 40px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+	margin-top: 0.31rem;
+}
+.nb-unfinished{
+	background-color: #a03aff;
+	color: #fff;
+}
+.finished{
+	background-color: #ffd400;
+	color:#333;
+}
+.received{
+	background-color: #ccc;
+	color: #333;
+}

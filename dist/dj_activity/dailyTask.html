@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>日常任务</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/daily.css">
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script> -->
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div class="dt-wrapper">
+		<div class="back-up" onclick="back({action: 'goToList'})">
+			返回活动列表
+		</div>
+		<div class="dt-top">
+			<img src="images/promo02_inner_img_01.jpg" alt="">
+		</div>
+		<div class="dt-con">
+			<ul class="clearfix">
+				<li class="fl">
+					<span>每日签到奖励</span>
+					<i>× 3</i>
+					<div class="dt-btn dt-unfinished" onclick="back({action: 'goToBag'})">
+						去领取
+					</div>
+				</li>
+				<li class="fl">
+					<span>每日竞赛投注累计20次</span>
+					<i></i>
+					<div class="dt-btn dt-unfinished" onclick="back({action: 'goToBag'})">
+						去领取
+					</div>
+				</li>
+				<li class="fl">
+					<span>每日单笔投注金额≥100元</span>
+					<i></i>
+					<div class="dt-btn dt-unfinished" onclick="back({action: 'goToBag'})">
+						去领取
+					</div>
+				</li>
+				<li class="fl">
+					<span>每日投注金额累计1888元</span>
+					<i>× 2</i>
+					<div class="dt-btn dt-unfinished" onclick="back({action: 'goToBag'})">
+						去领取
+					</div>
+				</li>
+				<li class="fl">
+					<span>每日充值金额累计≥2888元</span>
+					<i>× 2</i>
+					<div class="dt-btn dt-unfinished" onclick="back({action: 'goToBag'})">
+						去领取
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="dt-footer">
+			<ul class="clearfix">
+				<li class="fl">
+					1.玩家每天可完成5次日常任务，每任务完成一项任务可领取对应奖励；
+				</li>
+				<li class="fl">
+					2.任务完成后玩家可在活动页面领取活动奖励；
+				</li>
+				<li class="fl">
+					3.日常任务每天00:00分清空重置，未领取奖励玩家视为弃权；
+				</li>
+				<li class="fl">
+					4.每一名用户同一IP段、同一代理下多批套利者，发现后会批量冻结相关账号；
+				</li>
+				<li class="fl">
+					注:凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权；
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		// axios.get('/djfront/home/userInfo.do?method=getUserFund')
+	 //  .then(function (response) {
+	 //    console.log(response)
+	 //  })
+	</script>
+</body>
+</html>
