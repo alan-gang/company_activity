@@ -1,0 +1,219 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w1 {
+    width: 100%;
+}
+
+.w12 {
+    width: 12rem;
+}
+
+.mw12 {
+    min-width: 12rem;
+}
+
+.mat {
+    margin: 0 auto;
+}
+
+:root {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    font-size: .32rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.activity-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: .25rem;
+    background-image: url(../images/every_eight_betfair/bg@2x.jpg);
+    background-size: 100% auto;
+}
+
+.spacer {
+    height: 7.86rem;
+}
+
+.activity-content {
+    background-image: url('../images/every_eight_betfair/content_list_bg@2x.png');
+    padding-bottom: .5rem;
+    background-size: 100% auto;
+    width: 6.61rem;
+    margin: 0 auto;
+}
+
+.content-title {
+    font-size: .22rem;
+    width: 5.28rem;
+    margin: 0 auto;
+    font-family: PingFang-SC-Regular;
+    letter-spacing: 1px;
+    color: #fab55a;
+    padding-top: 1.05rem;
+    padding-bottom: .27rem;
+    text-align: center;
+}
+
+.content-table {
+    width: 5.92rem;
+    height: 5.72rem;
+    margin: 0 auto;
+    background-image: url('../images/every_eight_betfair/table@2x.png');
+    background-size: 100% auto;
+}
+
+.table-title {
+    height: .56rem;
+    font-family: MicrosoftYaHei;
+    font-size: .24rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fab55a;
+}
+
+.tr {
+    height: .475rem;
+    font-size: .22rem;
+    color: #fab55a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid transparent;
+}
+
+.content-table span {
+    text-align: center;
+}
+
+.table-title span:nth-child(1),
+.tr span:nth-child(1) {
+    width: 1.91rem;
+}
+
+.table-title span:nth-child(2),
+.tr span:nth-child(2) {
+    width: 2.15rem;
+}
+
+.table-title span:nth-child(3),
+.tr span:nth-child(3) {
+    width: 1.98rem;
+}
+
+.content-foot {
+    font-size: .24rem;
+    width: 5.76rem;
+    font-family: PingFang-SC-Regular;
+    letter-spacing: 1px;
+    color: #fab55a;
+    margin: .26rem auto 0px;
+}
+
+.activity-details {
+    width: 6.61rem;
+    height: 11.04rem;
+    padding-top: 1rem;
+    margin: .5rem auto 0;
+    box-sizing: border-box;
+    background-repeat-y: no-repeat;
+    background-image: url('../images/every_eight_betfair/list_bg@2x.png');
+    background-size: 100% auto;
+}
+
+.activity-container {
+    width: 5.85rem;
+    margin: 0px auto 0;
+    font-size: .22rem;
+    line-height: .33rem;
+    color: #fab55a;
+}
+
+.activity-container li {
+    margin-bottom: .2rem;
+}

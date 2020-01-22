@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>live800 useInfo page</title>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <style>
+    html, body { color: #999; }
+    body { padding: 20px;  }
+    label { margin-right: 30px; display: block; padding: 10px 20px;  }
+    label span:nth-child(2) { color: #333;  }
+  </style>
+</head>
+<body>
+  <label for="">
+    <span>用户名</span>:
+    <span id="name"> 张三 </span>
+  </label>
+
+  <label for="">
+    <span>等级</span>:
+    <span id="grade"> 15级 </span>
+  </label>
+
+  <label for="">
+    <span>注册时间</span>:
+    <span id="rtime"> 1995/05/05 </span>
+  </label>
+
+  <script>
+    ['name', 'grade', 'rtime'].forEach(function(x) {
+      eval('window.w' + x + ' = document.getElementById("' + x + '")')
+      // eval('console.log(w' + x + ')')
+    })
+    function getInfo (fn) {
+      $.ajax({
+          url: "/dscagamesclient/login/login.do?method=getChatUserInfo&" + location.search.substr(1),
+          data: {},    //参数值
+          type: "GET",
+          success: function(rep) {
+            if ( rep.success === 1 ) {
+              wname.innerHTML = rep.userName
+              wgrade.innerHTML = rep.levelName + ' (Lv' + rep.subLevel + ')'
+              wrtime.innerHTML = rep.registerTime
+            }
+          }
+      })
+    }
+    $(document).ready(getInfo)
+
+  </script>
+  
+</body>
+</html>

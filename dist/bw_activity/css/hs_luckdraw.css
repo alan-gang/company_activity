@@ -1,0 +1,576 @@
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+input,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+i,
+b,
+h4,
+h3,
+h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+
+
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    font-family: MicrosoftYaHei, ArialMT, Arial;
+    color: #333333;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+:root body {
+    position: absolute;
+}
+
+body {
+    width: 100vw;
+}
+
+.goBack {
+    height: .36rem;
+    line-height: .39rem;
+    font-size: .16rem;
+    color: #666;
+    background-color: #fff;
+    background-image: url(../images/return_icon.png);
+    background-size: .17rem;
+    background-repeat: no-repeat;
+    background-position: .14rem .09rem;
+    border-radius: .55rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+    top: .05rem;
+    position: absolute;
+    right: 1.64rem;
+    top: .32rem;
+    padding: 0 .2rem;
+    text-indent: .3rem;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url('../images/hs_luckdraw/pc/bg-a.png');
+    background-repeat: no-repeat;
+}
+
+.main-wrapper {
+    border-top: 1px solid transparent;
+    width: 9.8rem;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 1.5rem;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.main-wrapper .title {
+    margin: .39rem auto .6rem;
+    height: 4.02rem;
+    width: 6.63rem;
+    background: url(../images/hs_luckdraw/pc/bt.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -.41rem;
+    right: -1.45rem;
+}
+
+.luck-draw-wrapper {
+    display: flex;
+    width: 9.8rem;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.luck-draw-wrapper .left {
+    position: relative;
+    /* top: .2rem; */
+    /* margin-top: 10px; */
+}
+
+.luck-draw-wrapper .left .play-wrapper {
+    background-image: url('../images/luckdraw/scroll-bg.png');
+    width: 6.08rem;
+    height: 6.04rem;
+    background-size: cover;
+    position: relative;
+    /* margin-top: 10px; */
+}
+
+.luck-draw-wrapper .left .play-wrapper img {
+    position: absolute;
+    left: 50%;
+    width: 4.88rem;
+    top: 50%;
+    margin-left: -2.44rem;
+    margin-top: -2.44rem;
+    transform: rotate(0deg);
+    height: 4.88rem;
+}
+
+.controller-wp {
+    background-image: url(../images/luckdraw/scroll_arrow.png);
+    width: 2.45rem;
+    background-size: cover;
+    height: 2.72rem;
+    position: absolute;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.status-btn {
+    font-family: FZLTTHJW--GB1-0;
+    font-size: .58rem;
+    color: #501302;
+    font-weight: bold;
+}
+
+.controller-wp span {
+    font-family: PingFang-SC-Bold;
+    font-size: .12rem;
+    color: #501203;
+    font-weight: bold;
+}
+
+.user-name {
+    margin: 25px 0 9px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #993300;
+}
+
+.residue-amount {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.residue-number {
+    color: #ff6633;
+    padding: 0 5px;
+}
+
+.play-methods {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 18px 0;
+    box-sizing: border-box;
+}
+
+.ten,
+.one-hundred {
+    width: 136px;
+    height: 36px;
+    line-height: 36px;
+    font-family: MicrosoftYaHeiLight;
+    background-color: #f11532;
+    border: solid 1px #cc3333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.activity-desc-wrapper {
+    background-image: url(../images/hs_luckdraw/pc/bg-b.png);
+    position: relative;
+    background-size: 100% 100%;
+    /* margin-top: -359px; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 1.53rem;
+    z-index: -1;
+}
+
+.title-content {
+    font-family: FZDHTJW--GB1-0;
+    font-size: 30px;
+    color: #d22505;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bear-palm {
+    height: 430px;
+}
+
+.bear-palm.right .user-activity-wrapper .list-container {
+    padding: 0 29px;
+    margin-top: 80px;
+    height: 340px;
+    overflow: hidden;
+}
+
+.bear-palm.right .user-activity-wrapper ul li {
+    height: 48px;
+    line-height: 48px;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    color: #333333;
+}
+
+.user {
+    color: #d22505;
+}
+
+.right {
+    width: 3.52rem;
+    position: relative;
+}
+
+.user-name {
+    margin: 25px 0 9px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #993300;
+}
+
+.residue-amount {
+    font-weight: bold;
+    font-family: MicrosoftYaHeiLight;
+    font-size: .26rem;
+    font-stretch: normal;
+    margin-top: .2rem;
+    text-align: left;
+    color: #333333;
+}
+
+.residue-number {
+    color: #ff6633;
+    padding: 0 .05rem;
+}
+
+.play-methods {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 18px 0;
+    box-sizing: border-box;
+}
+
+.ten {
+    margin-bottom: .24rem;
+}
+
+.ten,
+.one-hundred {
+    font-family: MicrosoftYaHeiLight;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: .26rem;
+    width: 3.00rem;
+    height: .66rem;
+    line-height: .66rem;
+    background-color: #fa6c6b;
+    border-radius: .10rem;
+    border: solid 1px #cc3333;
+}
+
+.title-content {
+    font-family: FZDHTJW--GB1-0;
+    font-size: 30px;
+    color: #d22505;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bear-palm.right {
+    position: absolute;
+    right: 0;
+    top: 130px;
+}
+
+.bear-palm {
+    height: 430px;
+}
+
+.user {
+    color: #d22505;
+}
+
+.get {
+    margin: 0 5px;
+}
+
+
+/* 对话框样式 */
+
+.dialog-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.dialog-main {
+    width: 500px;
+    height: 290px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 55px;
+}
+
+.title-wrapper {
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.title-wrapper h2 {
+    font-size: 18px;
+    color: #333333;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: -2px;
+    font-size: 27px;
+    color: #666;
+    cursor: pointer;
+}
+
+.dialog-content {
+    margin: 20px 0;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.activity-btn-wp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-btn-wp>button:nth-child(1) {
+    width: 137px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #28aba0;
+    border-radius: 2px;
+    font-size: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.activity-btn-wp>button:nth-child(2) {
+    width: 137px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #fbdf00;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.show-bear {
+    margin-top: .20rem;
+}
+
+.red,
+#lastNum {
+    color: #ff0000;
+}
+
+.rotate-style {
+    overflow: auto;
+    justify-content: start;
+}
+
+.bear-list-wp {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.bear-list-wp>div:nth-child(1) {
+    margin-right: 15px;
+}
+
+.flex {
+    display: flex;
+    height: .63rem;
+    line-height: .63rem;
+    width: 7rem;
+    padding-left: .5rem;
+    border-bottom: 2px solid #e1e1e1;
+    font-size: .26rem;
+    box-sizing: border-box;
+}
+
+.bear-list-top {
+    background-image: url(../images/hs_luckdraw/pc/cjk_3.png);
+    background-size: cover;
+    margin: -1.09rem auto 0;
+    width: 9.04rem;
+    height: 6.54rem;
+    z-index: 111;
+    position: relative;
+}
+
+.right .user-activity-wrapper {
+    width: 3.31rem;
+    height: 2.26rem;
+    position: absolute;
+    left: .40rem;
+    top: 2.63rem;
+    text-align: center;
+}
+
+#listContainer {
+    width: 100%;
+    font-size: .26rem;
+    top: 2.9rem;
+    height: 3.25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#listContainer ul {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.bear-list-bottom {
+    background-image: url(../images/hs_luckdraw/pc/cjk_2.png);
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto 0;
+    width: 9.04rem;
+    height: 5.14rem;
+    margin-top: .28rem;
+    position: relative;
+}
+
+.activity-content {
+    width: 7.57rem;
+    height: 3.23rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .22rem;
+}
+
+.list {
+    line-height: .48rem;
+    display: flex;
+}
+
+.list:nth-child(4)>span:nth-child(2) {
+    flex-shrink: 0;
+}

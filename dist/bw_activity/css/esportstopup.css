@@ -1,0 +1,218 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #ad8c56;
+	font-size: .24rem;
+}
+html{font-size: 100px;}
+
+@media screen and (min-width: 992px){
+	html {
+		font-size: 53px;
+	}
+}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 65px;
+	}
+}
+@media screen and (min-width: 1366px){
+	html {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width: 1440px){
+	html {
+		font-size: 75px;
+	}
+}
+@media screen and (min-width: 1600px){
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1920px){
+	html {
+		font-size: 100px;
+	}
+}
+@media screen and (min-width: 1921px){
+	html {
+		font-size: 129px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+
+.wrapper{
+	min-width: 12rem;
+	overflow: auto;
+}
+.w1{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.bannerWrap{
+	height: 9.8rem;
+	background: url('../images/esportstopup/1.jpg') center 0 no-repeat;
+	background-size: 100% 4.91rem;
+	position: relative;
+}
+.banner2{
+	height: 4.9rem;
+	position: absolute;
+	left: 0;
+	top: 4.9rem;
+	z-index: 1;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .36rem;
+	line-height: .36rem;
+	padding: .1rem .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .22rem .22rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.5;
+	position: absolute;
+	top: .5rem;
+	right: 3rem;
+}
+.conWrap{
+	height: auto;
+	background-color: #1f2020;
+	padding: .6rem 0 1.5rem;
+}
+.timeTitle{
+	background-image: url('../images/esportstopup/4.png');
+}
+.conTitle{
+	background-image: url('../images/esportstopup/5.png');
+}
+.ruleTitle{
+	background-image: url('../images/esportstopup/6.png');
+}
+.title{
+	width: 8.87rem;
+	height: .28rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: .6rem auto .36rem;
+	background-size: 100% 100%;
+}
+.timeTitle{
+	margin: .1rem auto .36rem;
+}
+.info{
+	width: 12rem;
+	margin: 0 auto;
+	background-color: #222626;
+	border-radius: 5px;
+}
+.timeInfo{
+	height: .86rem;
+	line-height: .86rem;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.conInfo{
+	/* padding-bottom: .5rem; */
+}
+.listWrap{
+	width: 11rem;
+	padding: .5rem;
+}
+.tableList{
+	background-color: #1e2121;
+}
+.tableList th,.tableList td{
+	/* padding: .2rem .1rem; */
+	color: #ad8c56;
+}
+.tableList th{
+	border: 1px solid #222626;
+	line-height: .6rem;
+	font-size: .24rem;
+	font-weight: normal;
+	border-left: 0;
+}
+.tableList td{
+	border: 1px solid #222626;
+	line-height: .6rem;
+	font-size: .24rem;
+	text-align: center;
+}
+.tableList th:last-child,.tableList td:last-child{
+	border-right: 0;
+}
+.tableList th.sP,.tableList td.sP{
+	color: #000;
+	background-color: #c59b5f;
+}
+table{
+	border-color: transparent;
+}
+#draw{
+	width: 3.55rem;
+	height: .66rem;
+	background: url('../images/esportsTopup/b2.png') 0 0 no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.ruleInfo{
+}
+.termList{
+	width: 11rem;
+	margin: 0 auto;
+	padding: .5rem;
+}
+.termList li{
+	line-height: .3rem;
+	text-align: justify;
+	margin-bottom: 0.15rem;
+	letter-spacing: 0px;
+	color: #ad8c56;
+}

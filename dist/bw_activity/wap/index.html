@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>loading...</title>
+    <script>
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return "";
+        }
+        // let path = '/TP/'
+        let path = '/'
+        if (location.href.indexOf('localhost') !== -1) path = '/bw_activity/'
+        const htmls = {
+            22: 'doubleTwelfth', //注册
+            18: 'payRebate', //充值返利
+            12: 'rebate', //投注返利
+            15: 'rebate', //返水
+            21: 'every_eight_betfair', //抽奖 转风车
+            3: 'signIn', //连续签到
+            24: 'newYear', //连赢
+            33: 'hs_luckdraw', //银行卡充值返利
+            // 32: 'signIn', //负盈利扶持
+            23: 'slotTopup', //老虎机
+            17: 'scratchers', //刮刮乐
+            29: 'bankTopup', //银行卡充值返利
+            33: 'hs_luckdraw', //银行卡充值返利
+            27: 'netSilver', //网银卡充值返利
+        }
+        const ehtmls = {
+            189: 'sports', //体育 50%
+            228: 'ec_luckdraw',
+            200: 'ec_luckdraw',
+            100: 'hs_luckdraw',
+            229: 'hs_luckdraw',
+            547: 'ec_luckdraw',
+            549: 'hs_luckdraw'
+                // 539: 'unlimited', //0.88无上限
+                // 538: 'MariaOzawa' //小泽玛利亚
+        }
+        let activiTytype = (getQueryVariable('activiTytype') || 22) * 1
+        let entry = (getQueryVariable('entry'))
+        if (ehtmls[entry]) {
+            location.href = path + ehtmls[entry] + '.html' + location.search;
+        } else {
+            location.href = path + htmls[activiTytype] + '.html' + location.search
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

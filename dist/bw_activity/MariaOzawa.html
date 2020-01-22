@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<title>我和小泽玛利亚有个约会</title>
+	<link rel="stylesheet" type="text/css" href="css/MariaOzawa.css?v=1911141802">
+	<link rel="stylesheet" href="./js/layui/css/layui.css?v=1911141802" media="all">
+	<script src="./js/layui/layui.js?v=1911141802" charset="utf-8"></script>
+	<script src="js/sethtml.js?v=1911141802"></script>
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="bannerWrap w1">
+			<!-- <div class="goBack" onclick="back({action: 'goToList'})">
+				返回列表
+			</div> -->
+			<!-- <div class="banner1 w1"></div> -->
+			<img src="./images/MariaOzawa/1.jpg" />
+			<img src="./images/MariaOzawa/2.jpg" />
+		</div>
+		<div class="content w12 mat dis">
+			会员只需本月单笔首投负盈利最低 200 元即可申请获取 50% 体育返还！最高返还为 200 元！<br />时间有限，抓紧机会，先到先得！
+		</div>
+		<div class="conWrap w1 mat">
+			<div class="content w12 mat COMBG">
+				<div class="title">如何申请</div>
+				<div class="info timeInfo mat">
+					1. 活动时间内，会员每日只限申请一次真人 30 % 再存红利优惠。<br />
+					2. 存款后在礼品箱领取并选择相应真人钱包并兑换礼金<br />
+					3. 此优惠只适用于【真人】。<br />
+					4. YO88 将会选出 50 位幸运玩家参与 5 天 4 夜畅游菲律宾首都之旅，将和我们品牌官方代言人小泽
+					玛利亚见面。<br />
+					5. 幸运儿将以玩家从北京时间 2019年 11 月 1 日 00:00 至 2020 年 2 月 31 日 23:59 之间 的总存款
+					量及总投注量选出。<br />
+					6. YO88 将会在官网公布获奖名单，客服专员将会使用邮箱方式联系玩家，所以想成为幸运儿的玩家
+					必须填写你们的邮箱地址。<br />
+					<div class="applySub">
+						<a href="javascript:;">立即申请</a>
+					</div>
+				</div>
+			</div>
+			<div class="content w12 mat COMBG">
+				<div class="title">活动详情</div>
+				<div class="activitycon info mat">
+					<table>
+						<thead>
+							<tr>
+								<td>红利率</td>
+								<td>最低存款金额</td>
+								<td>流水倍数</td>
+								<td>红利上限</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>30%</td>
+								<td>888</td>
+								<td>15</td>
+								<td>1800</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						例：<br />
+						存款金额 = RMB 888（需转帐至游真人户进行投注）<br />
+						可获红利 = 888 * 30% = RMB 266.40<br />
+						流水要求 =（888 + 266.40）* 15 = RMB 17,316<br />
+
+					</p>
+				</div>
+			</div>
+			<div class="content w12 mat COMBG">
+				<div class="title">注意事项</div>
+				<div class="ruleList info mat">
+					1. 申请名额上限为 500 名，先到先得。<br />
+					2. 会员需在申请本优惠后的 30 天内完成流水要求并领取红利，否则红利将过期失效。<br />
+					3. 提前兑现的注单不符合资格申请返还。<br />
+					4. 获得红利后需 3 倍流水方可提款。<br />
+					5. 若发现有套利客户，对赌或不诚实获取盈利之行为，将取消其优惠资格。<br />
+					6. Yo88保留可单方面执行的决定权，在任何时候无事先通知的情况下，修改、改变、停止、取消以
+					及/或使此推广失效。<br />
+					7. 参与此活动的会员必须接受及遵循上述规则与条款以及 Yo88 使用的一切网站相关规则与条款。<br />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="ApplyPop">
+		<form class="layui-form" action="">
+			<div class="layui-form radiolist">
+				<input type="radio" name="platId" value="2" title="BG" checked />
+				<input type="radio" name="platId" value="4" title="AG" />
+				<input type="radio" name="platId" value="5" title="PT" />
+			</div>
+			<div class="formsub">
+				<button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
+<script>
+	layui.use(['layer', 'form'], function () {
+		var $ = layui.jquery, layer = layui.layer;
+		var form = layui.form;
+		//立即申请
+		$('.applySub a').click(function (e) {
+			layer.open({
+				type: 1,
+				title: '请选择平台',
+				content: $('#ApplyPop')
+			});
+		});
+		//监听提交
+		form.on('submit(formDemo)', function (data) {
+			// console.log(data.field)
+			//loading层
+			var index = layer.load(1, {
+				shade: [0.3, '#000']
+			});
+			$.ajax({
+				data: {
+					christmasType: 1, //活动ID
+					platId: data.field.platId, //平台ID
+					uuid: getQueryVariable("uuid")//用户UUID
+				},
+				type: "post",
+				url: window.api.addDividend,
+				dataType: "json",
+				success: (data) => {
+					if (data.success == 1) layer.closeAll()
+					setTimeout(() => {
+						layer.msg(data.msg);
+					}, 100);
+				},
+				complete: () => {
+					layer.closeAll('loading');
+				}
+			})
+			return false;
+		});
+	});
+</script>
+<script type="text/javascript">
+	function back(args) {
+		if (parent && parent.closeIFrame) {
+			parent.closeIFrame(args)
+		} else {
+			location.search = args.action
+		}
+	}
+</script>

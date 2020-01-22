@@ -1,0 +1,139 @@
+
+.wrapper{
+	max-width: 10rem;
+	margin: 0 auto;
+	padding-bottom: .5rem;
+	font-size: .16rem;
+	/* font-family: MicrosoftYaHei; */
+	position: relative;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .3rem;
+	line-height: .3rem;
+	padding: .1rem .3rem;
+	font-family: MicrosoftYaHei;
+	font-size: .16rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .12rem .12rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.7;
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+	/* transition: all .2s; */
+}
+.goBack:hover{
+	/* color: #fff; */
+	background-color: #ffa930;
+	opacity: 1;
+}
+.info{
+	margin: .4rem .2rem;
+}
+.info .title{
+	display: inline-block;
+	height: .4rem;
+	padding: 0 .2rem;
+	line-height: .4rem;
+	background-color:#ff0;
+	border-radius: .2rem;
+	font-size: .18rem;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+	color: #000;
+}
+.info .content{
+	margin: .15rem;
+	color: #fff;
+	font-size: .18rem;
+	/* font-family: MicrosoftYaHei; */
+}
+.list{
+	min-width: 5rem;
+}
+.list-title{
+	height: .36rem;
+	line-height: .36rem;
+	background-color:rgba(0,0,0,.5);
+}
+.list-item{
+	height: .4rem;
+	line-height: .4rem;
+	background-color: hsla(0,0%,100%,.1);
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+.list .el-col{
+	min-width: 1rem;
+	/* padding: 0 .2rem; */
+	text-align: center;
+}
+.el-col-s-1{
+	width: 14.2855%;
+}
+.el-col-1{
+	width: 8.33333%;
+}
+.el-col-2{
+	width: 16.66666%;
+}
+.el-col-3{
+	width: 25%;
+}
+.el-col-4{
+	width: 33.33333%;
+}
+.el-col-5{
+	width: 41.66666%;
+}
+.el-col-6{
+	width: 50%;
+}
+.el-col-7{
+	width: 58.33333%;
+}
+.el-col-8{
+	width: 66.66666%;
+}
+.el-col-9{
+	width: 75%;
+}
+.el-col-10{
+	width: 83.33333%;
+}
+.el-col-11{
+	width: 91.66666%;
+}
+.el-col-12{
+	width: 100%;
+}
+.actions{
+	margin: .7rem .2rem;
+	text-align: center;
+}
+.actions .btn{
+	display: inline-block;
+	width: 3rem;
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .24rem;
+	padding: 0 .22rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	user-select: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	vertical-align: middle;
+	border: 0;
+	background: linear-gradient(180deg,#ffbf00,#e98800);
+	border-radius: .5rem;
+}
+

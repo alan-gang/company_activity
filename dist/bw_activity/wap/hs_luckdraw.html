@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>金鼠祥瑞纳新春，万元红包转不停</title>
+    <link rel="stylesheet" type="text/css" href="./css/hs_luckdraw.css?v=1578733468932">
+    <script src="./js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/jquery.rotate.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img class="lucky-title" src="./images/hs_luckdraw/h5/bt@2x.png" />
+
+        <div class="turntable-wrapper">
+            <div class="turntable-pic">
+                <img class="rotate-img" src="./images/luckdraw/rotate/zp_bg_2@2x.png?v=1" alt="">
+                <div class="turntable-center" id="startBtn">
+                    <div class="start">开始</div>
+                    <span>万元红包转不停</span>
+                    </divc>
+                </div>
+            </div>
+            <div class="turntable-footer">
+                <div class="turntable-num">
+                    <span>我的剩余次数：<span class="last-amount">-</span>次</span>
+                </div>
+                <img id="tenBtn" src="./images/luckdraw/zp_10lc@2x.png" class="zp_10lc">
+                <img id="hundredBtn" src="./images/luckdraw/zp_100lc@2x.png" class="zp_100lc">
+            </div>
+        </div>
+        <div class="turntable-winners-wrapper">
+            <img src="./images/hs_luckdraw/h5/title_zjmd_3@2x.png" alt="">
+            <div class="turntabe-content-wp">
+                <div class="turntabe-content-container">
+                    <div>【请登陆后查看】</div>
+                </div>
+            </div>
+        </div>
+        <div class="turntable-explain-wrapper">
+            <div class="explain-content">
+                <p class="flex">
+                    1.2020-1-1 00:00:00 — 2020-2-1 23:59:59期间，用户满投注500元即可；参与转盘游戏，最高可中8888元奖金；
+                </p>
+                <p class="flex">
+                    2.体验金2倍流水即可提现，新年现金红包可以直接提现；
+                </p>
+                <p class="flex">
+                    3.本次活动无需报名，投注满500元获得1次机会，以此类推；
+                </p>
+                <p class="flex">
+                    4.现金红包和体验券将直接发行到优惠券中，请及时领取，活动结束后作废；
+                </p>
+                <p class="flex">
+                    5.活动期间禁止一切作弊行为，如发现有刷水套利等作弊行为，一经平台发现，将取消参与活动资格，情节严重的将冻结处理；
+                </p>
+                <p class="flex">
+                    6.本次活动最终解释权归本平台所有。
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- dialog -->
+    <div class="masker-wrapper">
+        <div class="masker-main">
+            <div class="masker-content">
+                <img src="./images/luckdraw/gxzj@2x.png" alt="">
+                <div class="masker-keyword">
+                    <div class="masker-title">恭喜</div>
+                    <div>恭喜 <span id="playUser"> itte ******</span> 玩家</div>
+                    <div id="prizeMessage">
+                        <div class="prize-message-main">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="masker-bottons">
+                    <button class="close">关闭</button>
+                    <button class="look">查看奖品</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="prompt-masker">
+        <div class="prompt-main">
+            <div class="title-wp">
+                <span class="title">温馨提示</span>
+                <span class="prompt-close">&times;</span>
+            </div>
+            <div class="prompt-content">
+                当前投注额不足，请投注后重试~
+            </div>
+            <div class="btn-group">
+                <button class="prompt-cancel">否</button>
+                <button class="confirm">确定</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/hs_luckydraw.js?time=1578740690614"></script>
+    <script>
+        window.onload = function() {
+            let h = document.documentElement.scrollHeight || this.document.body.scrollHeight;
+            sendMessage(h)
+        }
+    </script>
+</body>
+
+</html>

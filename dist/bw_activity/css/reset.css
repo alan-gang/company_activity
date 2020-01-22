@@ -1,0 +1,70 @@
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.fz14{font-size: 0.14rem;}
+.fz16{font-size: 0.16rem;}
+.fz18{font-size: 0.18rem;}
+.fz20{font-size: 0.2rem;}
+.fz24{font-size: 0.24rem;}
+.fz36{font-size: 0.36rem;}
+.fz40{font-size: 0.4rem;}
+.fw600{font-weight: 600;}
+.tac{text-align: center;}
+.tar{text-align: right}
+.w1{width: 100%;}
+.w12{width: 12rem;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+.c3{color: #333;}
+.c6{color: #666;}
+.c8{color: #8c8c8c;}
+.c9{color: #fff900;}
+.cf{color: #fff;}
+.bcf{background-color: #fff;}
+.bc0{background-color: rgba(0,0,0,0.2);}
+.pr{position: relative;}
+.pb{position: absolute;}
+.l0{left: 0;}
+.t0{top: 0;}
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+}
+html{font-size: 100px;}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 120px;
+	}
+}
+@media screen and (min-width: 992px){
+	html {
+		font-size: 100px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+

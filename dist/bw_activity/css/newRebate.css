@@ -1,0 +1,110 @@
+
+.wrapper{
+	width: 12rem;
+	margin: 0 auto;
+	padding-bottom: .5rem;
+	color: #fff;
+	font-size: .18rem;
+	font-family: MicrosoftYaHei;
+	position: relative;
+	background-color: #311e22;
+}
+.goBack{
+	/* width: .9rem; */
+	height: .2rem;
+	line-height: .2rem;
+	padding: .1rem .2rem;
+	font-family: MicrosoftYaHei;
+	font-size: .16rem;
+	text-indent: .28rem;
+	color: #666;
+	background-color: #fff;
+	background-image: url('../images/return_icon.png');
+	background-size: .12rem .12rem;
+	background-position: .23rem center;
+	background-repeat: no-repeat;
+	border-radius: .5rem;
+	cursor: pointer;
+	box-shadow: 1px 1px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	opacity: 0.7;
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+	transition: all .2s;
+}
+.goBack:hover{
+	/* color: #fff; */
+	background-color: #ffa930;
+	opacity: 1;
+}
+.banner{
+	width: 100%;
+	height: 2.5rem;
+}
+.info{
+	width: 90%;
+	margin: .4rem auto;
+}
+.info .title{
+	display: inline-block;
+	height: .4rem;
+	padding: 0 .2rem;
+	line-height: .4rem;
+	background-color:#dcd7bc;
+	border-radius: .2rem;
+	font-size: .18rem;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+	color: #000;
+}
+.info .content{
+	margin: .15rem;
+}
+.list{
+	/* width: 100%; */
+}
+.list-title{
+	height: .36rem;
+	line-height: .36rem;
+	background-color:rgba(0,0,0,.5);
+}
+.list-item{
+	height: .4rem;
+	line-height: .4rem;
+	background-color: hsla(0,0%,100%,.1);
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+.list .el-col{
+	min-width: 1rem;
+	text-align: center;
+}
+.el-col-s-2-1{
+	width: 20%;
+}
+.ruleList{
+	padding: .4rem 0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	text-align: justify;
+	margin: 0 auto;
+}
+.ruleList li{
+	line-height: .32rem;
+	letter-spacing: 0px;
+	margin-bottom: .2rem;
+}
+.ruleList li p{
+	display: inline-block;
+	width: 95%;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	height: .35rem;
+	line-height: .35rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	letter-spacing: 0px;
+	vertical-align: top;
+}

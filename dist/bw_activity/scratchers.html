@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>信游刮刮乐</title>
+	<link rel="stylesheet" type="text/css" href="css/scratchers.css?v=1911141802">
+	<script src="js/sethtml.js?v=1911141802"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<!-- <div class="bannerWrap w1">
+			<div class="goBack" onclick="back({action: 'goToList'})">
+				返回列表
+			</div>
+		</div> -->
+		<img alt="" class="titleimg" />
+		<div class="conWrap w1">
+			<div class="content w12 mat">
+				<div class="title conTitle w12"></div>
+				<div class="info conInfo clearfix">
+				</div>
+				<div class="title timeTitle w12"></div>
+				<div class="info timeInfo w12">
+					长期有效。
+				</div>
+				<div class="title ruleTitle w12"></div>
+				<div class="info ruleInfo">
+				</div>
+			</div>
+			<!-- <div class="w1 btn">
+				<a href="javascript:" class="joinNow"></a>
+			</div> -->
+		</div>
+	</div>
+	<script type="text/javascript">
+		initHtml(function(data, rule) {
+			let start = new Date(data.beginDate.time)
+			let end = new Date(data.endDate.time)
+			let timeRange = getTime(start) + '-' + getTime(end)
+			$('.timeInfo').html(timeRange)
+			if (data.ruleDetails) {
+				$('.ruleInfo').html(JSON.parse(data.ruleDetails).rule)
+			}
+			$('.conInfo').html(rule.content)
+			$('.titleimg').attr('src', data.bgpic)
+			$('.wrapper').css('background-color', '#' + data.bgcolor)
+		})
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+	</script>
+</body>
+</html>

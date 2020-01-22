@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+        var hash = GetRequest();
+		$.ajax({
+		    url: "/dscagamesclient/login/login.do?method=activityLog",
+		    jsonp: "callback",
+		    // dataType: "jsonp",
+		    async: true,
+		    data: { "userId": hash.userId,"sessionKey": hash.sessionKey ,"channelType": hash.channelType },    //参数值
+		    type: "GET",   //请求方式
+		    beforeSend: function() {
+		        //请求前的处理
+
+		    },
+		    success: function(req) {
+		    	// console.log('1111111111')
+		    }
+		});
+		console.log(hash)
+		function GetRequest() {
+
+		   var url = location.search;
+
+		   var theRequest = new Object();
+
+		   if (url.indexOf("?") != -1) {
+
+		      var str = url.substr(1);
+
+		      strs = str.split("&");
+
+		      for(var i = 0; i < strs.length; i ++) {
+		         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+
+		      }
+		   }
+		   return theRequest;
+
+		}
+	</script>
+</body>
+</html>

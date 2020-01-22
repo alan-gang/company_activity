@@ -1,0 +1,219 @@
+    body,
+    ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd,
+    p,
+    input,
+    i,
+    b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    fieldset,
+    table,
+    td,
+    img,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+    
+    i,
+    b,
+    h4,
+    h3,
+    h5 {
+        font-weight: normal;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img,
+    input {
+        border: 0;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    /* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+    /*清浮动*/
+    
+    .clearfix:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .clearfix {
+        zoom: 1;
+    }
+    
+    .fl {
+        float: left;
+    }
+    
+    .fr {
+        float: right;
+    }
+    
+    body {
+        font-family: MicrosoftYaHei, ArialMT, Arial;
+        color: #333333;
+    }
+    
+    html {
+        overflow-y: scroll;
+    }
+    
+     :root {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    
+    .goBack {
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        font-size: 16px;
+        color: #666;
+        background-color: #fff;
+        background-image: url(../images/return_icon.png);
+        background-size: 17px;
+        background-repeat: no-repeat;
+        background-position: 14px 9px;
+        border-radius: 55px;
+        cursor: pointer;
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+        opacity: 0.5;
+        top: 5px;
+        position: absolute;
+        right: 164px;
+        top: 32px;
+        padding: 0 20px;
+        text-indent: 20px;
+    }
+    
+    .activity-wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        background-image: url('../images/every_eight_betfair/bg.jpg');
+    }
+    
+    .spacer {
+        height: 987px;
+    }
+    
+    .activity-content {
+        width: 824px;
+        background-image: url('../images/every_eight_betfair/content_list_bg.png');
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    
+    .content-title {
+        font-size: 20px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #fab55a;
+        padding-top: 145px;
+        padding-bottom: 27px;
+        text-align: center;
+    }
+    
+    .content-table {
+        width: 737px;
+        height: 712px;
+        margin: 0 auto;
+        background-image: url('../images/every_eight_betfair/table.png');
+    }
+    
+    .table-title {
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #fab55a;
+    }
+    
+    .tr {
+        height: 64px;
+        font-size: 18px;
+        color: #fab55a;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .content-table span {
+        text-align: center;
+    }
+    
+    .table-title span:nth-child(1),
+    .tr span:nth-child(1) {
+        width: 217px;
+    }
+    
+    .table-title span:nth-child(2),
+    .tr span:nth-child(2) {
+        width: 270px;
+    }
+    
+    .table-title span:nth-child(3),
+    .tr span:nth-child(3) {
+        width: 250px;
+    }
+    
+    .content-foot {
+        font-size: 20px;
+        width: 713px;
+        /* line-height: 16px; */
+        letter-spacing: 1px;
+        color: #fab55a;
+        margin: 36px auto 0px;
+    }
+    
+    .activity-details {
+        width: 824px;
+        height: 1066px;
+        padding-top: 146px;
+        margin: 50px auto 0;
+        box-sizing: border-box;
+        background-image: url('../images/every_eight_betfair/list_bg.png');
+    }
+    
+    .activity-container {
+        width: 730px;
+        margin: 0px auto 0;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        color: #fab55a;
+    }
+    
+    .activity-container li {
+        margin-bottom: 25px;
+    }

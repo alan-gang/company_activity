@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="renderer" content="webkit">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google" content="notranslate" />
+    <title>版本信息</title>
+    <style type="text/css">
+        body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,button{margin: 0;padding: 0;}
+        ul{list-style:none;}
+        i,b,h4,h3,h5{font-weight: normal;}
+        a{text-decoration:none;}
+        img,input,button{border: 0;}
+        input:focus{outline: none;}
+        /*清浮动*/
+        .clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+        .clearfix{zoom: 1;}
+        .fl{float:left;}
+        .fr{float:right;}
+        body{
+            font-size: 24px;
+            font-family: MicrosoftYaHei, ArialMT, Arial;
+            color: #666;
+            overflow-y: scroll; /* has to be scroll, not auto */
+            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: auto;/* Stops scrolling immediately */
+        }
+        html{font-size: 100px;-webkit-overflow-scrolling : touch;}
+        @media screen and (min-width: 1200px){
+            html {
+                font-size: 120px;
+            }
+        }
+        @media screen and (min-width: 992px){
+            html {
+                font-size: 100px;
+            }
+        }
+        html {
+          overflow-y: scroll;
+          user-select:none;
+        }
+
+        :root {
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+
+        :root body {
+          position: absolute;
+        }
+        *{-webkit-tap-highlight-color:transparent;}
+        body {
+          width: 100vw;
+          max-width: 7.5rem;
+          margin: 0 auto;
+          overflow: hidden;
+          background-color: #f7f7f7;
+        }
+        .wrapper{
+            width: 100%;
+            /* min-height: 100vh; */
+            padding-top: .1rem;
+            background-color: #f7f7f7;
+            /* background-color: #808080; */
+        }
+        .content{
+            width: 100%;
+            /* height: 2.43rem; */
+            padding-top: .1rem;
+            padding-bottom: .1rem;
+            margin-bottom: .16rem;
+            background-color: #fff;
+        }
+        .title{
+            width: 90%;
+            height: .4rem;
+            margin: 0 auto;
+        }
+        .title span{
+            line-height: .4rem;
+        }
+        .title .vertion{
+            font-size: .16rem;
+            font-family: MicrosoftYaHei;
+            font-weight: 600;
+            color: #000;
+        }
+        .title .date{
+            font-size: .14rem;
+            font-family: MicrosoftYaHei;
+            color: #808080;
+            text-align: right;
+        }
+        .versionList{
+            width: 85%;
+            padding-left: 5%;
+            margin: 0 auto;
+            list-style-type: decimal;
+        }
+        .versionList li{
+            line-height: .22rem;
+            font-size: .15rem;
+            color: #000;
+            text-align: justify;
+        }
+        .showMore{
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            font-size: .16rem;
+            color: #ff5429;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <div class="title clearfix">
+                <span class="vertion fl">v2.1.3</span>
+                <span class="date fr">2019-05-17</span>
+            </div>
+            <ol class="versionList" pagesize="4">
+                <li>设置--版本更新；</li>
+                <li>个人中心—彩票记录，盈亏报表；</li>
+                <li>代理中心—团队盈亏，下级个人盈亏；</li>
+                <li>新充值；</li>
+                <li>个人中心和代理中心的样式更改。</li>
+            </ol>
+        </div>
+
+        <div class="content">
+            <div class="title clearfix">
+                <span class="vertion fl">v2.1.1</span>
+                <span class="date fr">2019-05-02</span>
+            </div>
+            <ol class="versionList" pagesize="4">
+                <li>添加彩种—重庆怀旧分分彩；</li>
+                <li>接入幸运棋牌游戏。</li>
+            </ol>
+        </div>
+
+        <div class="content">
+            <div class="title clearfix">
+                <span class="vertion fl">v2.0.9</span>
+                <span class="date fr">2019-04-22</span>
+            </div>
+            <ol class="versionList" pagesize="4">
+                <li>优惠卷使用优惠券接口调整；</li>
+                <li>重庆欢乐生肖彩种游戏界面更改；</li>
+                <li>个人中心>账户安全>邮箱绑定/安全验证 邮箱验证问题修复。</li>
+            </ol>
+        </div>
+
+        <div class="content">
+            <div class="title clearfix">
+                <span class="vertion fl">v1.2.0</span>
+                <span class="date fr">2019-01-21</span>
+            </div>
+            <ol class="versionList" pagesize="4">
+                <li>新增微游抢红包游戏；</li>
+                <li>新版投注界面优化；</li>
+                <li>接入第三方KG游戏。</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        (function () {
+                var versionList = function ($children, n) {
+                    //显示某jquery元素下的前n个隐藏的子元素
+                    var $hiddenChildren = $children.filter(":hidden");
+                    var cnt = $hiddenChildren.length;
+                    for ( var i = 0; i < n && i < cnt ; i++) {
+                        $hiddenChildren.eq(i).show();
+                    }
+                    return cnt-n;//返回还剩余的隐藏子元素的数量
+                }
+
+                //对页中现有的class=showMorehandle的元素，在之后添加显示更多条，并绑定点击行为
+                $(".versionList").each(function () {
+                    var pagesize = $(this).attr("pagesize") || 10;
+                    var $children = $(this).children();
+                    if ($children.length > pagesize) {
+                        for (var i = pagesize; i < $children.length; i++) {
+                            $children.eq(i).hide();
+                        }
+                        $("<div class='showMore' >更多</div>").insertAfter($(this)).click(function () {
+                            if (versionList($children, pagesize) <= 0) {
+                                //如果目标元素已经没有隐藏的子元素了，就隐藏“点击更多的按钮条”
+                                $(this).hide();
+                            };
+                        });
+                    }
+                });
+            })();
+    </script>
+</body>
+</html>

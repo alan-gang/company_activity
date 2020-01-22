@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>签到领现金</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css?v=1911141802">
+	<link rel="stylesheet" type="text/css" href="css/common.css?v=1911141802">
+	<style>
+		.titleimg {
+			width: 100%;
+			display: block;
+		}
+		.content table {
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+		.content table td {
+			border-width: 1px;
+			border-style: solid;
+		}
+	</style>
+	<script src="../js/common.js?v=1911141802" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sethtml.js?v=1911141802"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<!-- <div class="goBack" onclick="back({action: 'goToList'})">
+			返回
+		</div> -->
+		<div class="signIn">
+			<img src="" alt="" class="titleimg">
+			<div class="info actTime">
+				<div class="title">活动时间</div>
+				<div class="content timeInfo">
+					<!-- 2018-04-27 00:01 至 2031-04-30 23:59 -->
+				</div>
+			</div>
+			<div class="info actCon">
+				<div class="title">活动内容</div>
+				<div class="content conInfo">
+					<!-- 每天登陆平台，投注达到1000元，即可参与消费签到，签到成功可以领取礼金2元，连续签到还有额外奖金哦 -->
+				</div>
+			</div>
+			<div class="info actRule">
+				<div class="title">活动规则</div>
+				<div class="content ruleList">
+					<!-- 每日领取时间为：09:00-24:00，累计签到的积分领取之后，累计签到天数自动清零。 -->
+				</div>
+				<!-- <ul class="list cf">
+					<li class="list-title el-row clearfix">
+						<p class="fl el-col el-col-4">签到类型</p>
+						<p class="fl el-col el-col-4">天数</p>
+						<p class="fl el-col el-col-4">礼金</p>
+					</li>
+					<li class="list-item el-row clearfix">
+						<p class="fl el-col el-col-4">连续签到</p>
+						<p class="fl el-col el-col-4">7天</p>
+						<p class="fl el-col el-col-4 c9">18</p>
+					</li>
+					<li class="list-item el-row clearfix">
+						<p class="fl el-col el-col-4">连续签到</p>
+						<p class="fl el-col el-col-4">15天</p>
+						<p class="fl el-col el-col-4 c9">38</p>
+					</li>
+					<li class="list-item el-row clearfix">
+						<p class="fl el-col el-col-4">连续签到</p>
+						<p class="fl el-col el-col-4">30天</p>
+						<p class="fl el-col el-col-4 c9">88</p>
+					</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+
+	<script>
+		initHtml(function(data, rule) {
+			let start = new Date(data.beginDate.time)
+			let end = new Date(data.endDate.time)
+			let timeRange = getTime(start) + '-' + getTime(end)
+			$('.timeInfo').html(timeRange)
+			$('.ruleList').html(rule.rule)
+			$('.termList').html(rule.example)
+			$('.conInfo').html(rule.content)
+			$('.titleimg').attr('src', data.bgpic)
+			$(document.body).css('background-color', '#' + data.bgcolor)
+		})
+	</script>
+</body>
+</html>
