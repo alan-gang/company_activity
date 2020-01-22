@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="keywords" content="U赢电竞欢迎您">
+	    <meta name="description" content="U赢电竞欢迎您">
+	    <title>U赢电竞测速</title>
+		<link rel="stylesheet" type="text/css" href="css/speedtest.css?v=0.2">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css">
+    </head>
+
+    <body>
+		<div class="wrapper w1">
+			<div class="testTop">
+				<img class="banner2" src="img/logo.png" alt="">
+			</div>
+			<div class="swiper-scrollbar"></div>
+			<div class="pc-slide">
+				<div class="view">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/group_keen-min.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/group_vgj-min.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/group_secret-min.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="preview">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<i>VGJ . THUNDER 战队</i>
+							</div>
+							<div class="swiper-slide">
+								<i>TEAM SECRET (秘密战队)</i>
+							</div>
+							<div class="swiper-slide active-nav">
+								<i>KEEN GAMING战队</i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="group">
+				U赢电竞官方指定赞助商
+			</div>
+			<ul id="urlLists" class="webTest mat clearfix">
+			</ul>
+			<div id="site1_peed"></div>
+		</div>
+		<div id="footer"></div>
+        <script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+	    <script type="text/javascript">
+			// swiper
+			var viewSwiper = new Swiper('.view .swiper-container', {
+				autoplay : 3000,
+				loop : true,
+				autoplayDisableOnInteraction: false,
+				onSlideChangeStart: function() {
+					updateNavPosition();
+				}
+			})
+
+			function updateNavPosition() {
+				$('.preview .active-nav').removeClass('active-nav');
+				var index = viewSwiper.activeIndex-2
+				var activeNav = $('.preview .swiper-slide').eq(index).addClass('active-nav');
+			}
+
+	    	function hover(){
+	    		$(".webTest li").on({
+				    mouseenter: function () {
+				        $( this ).find('.hover').fadeIn();
+				    },
+				    mouseleave: function () {
+				        $( this ).find('.hover').fadeOut();
+				    }
+				});
+	    	}
+			var start, urlsSorted, n;
+		    var canTest = true;
+		    var urls = [
+	            {ping: 0, url: 'https://www.uwinmax.net'},
+	            {ping: 0, url: 'https://www.uwin188.net'},
+	            {ping: 0, url: 'https://www.uwin168.net'},
+	            {ping: 0, url: 'https://www.uwin588.net'},
+	            {ping: 0, url: 'https://www.uwin168.net'},
+	            {ping: 0, url: 'https://www.uwin588.net'},
+	            {ping: 0, url: 'https://www.uwin588.net'}
+		    ];
+
+		    function testSpeed() {
+		        if (canTest) {
+		            canTest = false;
+		            n = 0;
+		            creatElemByUrls(urls)
+		            creatImgs()
+		        }
+		    }
+		    function creatImgs() {
+		        var imgTmps = [];
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		            imgTmps.push("<img src=" + urls[i].url + "/" + Math.random() + " onerror='calcPing(" + i + ")' style='display:none'>")
+		        }
+		        start = +new Date;
+		        document.getElementById('site1_peed').innerHTML = imgTmps.join('')
+		    }
+		    function calcPing(i) {
+		        urls[i].ping = (+new Date - start);
+		        console.log(urls[i].ping)
+		        creatElemByUrls(urls)
+		    }
+		    function getSpeedImg (ping) {
+		    	if (ping < 200) {
+		    		return '<img class="light" src="img/signal_green.png" alt=""><span class="ping clearfix"><span class="speed fl">'+ ping + '</span>'
+		    	} else if (ping < 400) {
+		    		return '<img class="light" src="img/signal_yellow.png" alt=""><span class="ping clearfix"><span class="speed fl">'+ ping + '</span>'
+		    	} else {
+		    		return '<img class="light" src="img/signal_red.png" alt=""><span class="ping clearfix"><span class="speed fl">400+</span>'
+		    	}
+		    }
+		    function creatElemByUrls(urls) {
+		        var tmps = []
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		        	var html = '<li class="fl"><img class="hover" src="img/ahover.png" alt=""><a class="lineWrap" href="'+ urls[i].url + '" title="" target="_blank">'
+
+		        	html += getSpeedImg(urls[i].ping) + '<span class="ms fl">ms</span></span><img class="num" src="img/number_0' + (i+1) + '.png" alt=""><span class="main">官方主线</span></a></li>'
+		            tmps.push(html);
+		        }
+		        document.getElementById('urlLists').innerHTML = tmps.join('')
+		        hover();
+		        canTest = true
+		    }
+		    testSpeed();
+
+	    </script>
+    </body>
+  </html>

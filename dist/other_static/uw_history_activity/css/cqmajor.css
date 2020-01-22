@@ -1,0 +1,157 @@
+.wrapper{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+	font-size: .24rem;
+	background-color: #0b0c0e;
+}
+.banner{
+	min-width: 12rem;
+	height: 4.81rem;
+	position: relative;
+	background: url('../img/cqmajor/bgTop.png') 0 0 no-repeat;
+	background-size: 100% 4.81rem;
+}
+.conWrap{
+	height: 19.46rem;
+	background: url('../img/cqmajor/bgBtm.png') 0 0 no-repeat;
+	background-size: 100% 19.46rem;
+	/* padding-bottom: 2rem; */
+}
+.tabList{
+	width: 10.52rem;
+	height: 1.45rem;
+	background: url('../img/cqmajor/+.png') center .7rem no-repeat;
+	background-size: .61rem .61rem;
+	margin-bottom: .3rem;
+}
+.tab1{
+	background-image: url('../img/cqmajor/tab01_.png');
+}
+.tab2{
+	background-image: url('../img/cqmajor/tab02_.png');
+}
+.tabList li.tabsSeletedLi .tab1{
+	background-image: url('../img/cqmajor/tab01.png');
+}
+.tabList li.tabsSeletedLi .tab2{
+	background-image: url('../img/cqmajor/tab02.png');
+}
+.tabLi{
+	display: inline-block;
+	width: 4.95rem;
+	height: 1.45rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 1.45rem;
+}
+.tabList li:first-child{
+	margin-right: .6rem;
+}
+.conTitle1{
+	width: 10.52rem;
+	height: 1.3rem;
+	background: url('../img/cqmajor/title1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: .25rem;
+}
+.conTitle2{
+	width: 10.52rem;
+	height: 1.36rem;
+	background: url('../img/cqmajor/title2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: .25rem;
+}
+.tabCon{
+	width: 10.52rem;
+	color: #b1b2b4;
+}
+.tabCon th{
+	width: 3.49rem;
+	height: .85rem;
+	font-size: .28rem;
+	font-weight: normal;
+	background: url('../img/cqmajor/tableTop.png') 0 0 no-repeat;
+	background-size: 100% .85rem;
+	border:1px solid #000;
+}
+.tabCon td{
+	text-align: center;
+	padding: .2rem 0;
+	font-size: .28rem;
+	background-color: #343434;
+	border:1px solid #000;
+}
+.termTitle{
+	width: 10.52rem;
+	height: .72rem;
+	background: url('../img/cqmajor/title3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .25rem auto;
+}
+.termList{
+	width: 10rem;
+}
+.termList li{
+	/* height: .6rem; */
+	line-height: .3rem;
+	margin-bottom: .3rem;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	text-align: justify;
+}
+.termList li:last-child{
+	line-height: .8rem;
+	text-indent: .6rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	border-radius: .5rem;
+	text-align: center;
+	background-image: linear-gradient(0deg,
+		#1e2726 0%,
+		#27302c 100%),
+	linear-gradient(
+		#ffce52,
+		#ffce52);
+	font-style: normal;
+	/* font-weight: 600; */
+	font-size: .22rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-right: .2rem;
+	vertical-align: top;
+}
+.termList li p {
+  display: inline-block;
+  width: 90%;
+  text-align: justify;
+}
+.cgoBack{
+	width: 9.57rem;
+	height: .69rem;
+	margin: .8rem auto 0;
+	cursor: pointer;
+	background: url('../img/cqmajor/backBtn.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.conInfo{
+	font-size: .26rem;
+	color: #fff;
+	text-align: center;
+	line-height: .3rem;
+}
+.btnDraw{
+	width:3.77rem;
+	height: .65rem;
+	background: url('../img/cqmajor/btn01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .25rem auto;
+	cursor: pointer;
+}
+#tabs2 .termList li{
+	margin-bottom: .15rem;
+}

@@ -1,0 +1,107 @@
+.wrapper{
+	max-width: 12rem;
+	background-color: #0e1331;
+	padding-bottom: 1rem;
+}
+.banner{
+	height: 5rem;
+	position: relative;
+	background: url('../img/lols8/1@2x.png') 0 0 no-repeat;
+	background-size: 100% 2.01rem;
+	overflow: hidden;
+}
+.banner2{
+	width: 100%;
+	height: 1.8rem;
+	position: absolute;
+	left: 0;
+	top: 2rem;
+}
+.banner3{
+	width: 100%;
+	height: 1.12rem;
+	position: absolute;
+	left: 0;
+	top: 3.79rem;
+}
+.actInfo{
+	width: 100%;
+	padding-top: .6rem;
+}
+.list{
+	width: 95%;
+	/* height: .81rem; */
+	margin: 0 auto;
+}
+.list li{
+	width: 33%;
+	height: .81rem;
+	line-height: .81rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .32rem;
+	letter-spacing: 0px;
+	margin-right: .02rem;
+	margin-bottom: .02rem;
+}
+.list li:nth-child(3n+3){
+	margin-right: 0;
+}
+.toplist li{
+	color: #fff;
+	font-weight: 600;
+	background: url('../img/lols8/4@2x.png') 0 0 no-repeat;
+	background-size: 3.99rem .87rem;
+}
+.botlist li{
+	color: #37a5c2;
+	background-color: rgba(16,52,129,.1);
+}
+.actTerm{
+	width: 95%;
+	margin: .7rem auto 0;
+}
+.termTitle{
+	width: 2.48rem;
+	height: .73rem;
+	line-height: .73rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	font-size: .32rem;
+	color: #07173e;
+	background: url('../img/lols8/5@2x.png') 0 0 no-repeat;
+	background-size: 2.48rem .73rem;
+	margin-bottom: .2rem;
+}
+.termList{
+	padding: .45rem .4rem .4rem;
+	/* height: 8rem; */
+	background-color: rgba(16,52,129,.1);
+	box-sizing: border-box;
+}
+.termList li{
+	/* height: .8rem; */
+	line-height: .4rem;
+	font-size: .3rem;
+	letter-spacing: 0px;
+	color: #3bb0ce;
+	text-align: justify;
+	margin-bottom: 0.3rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .48rem;
+	height: .53rem;
+	line-height: .53rem;
+	text-align: center;
+	background: url('../img/lols8/6@2x.png') 0 0 no-repeat;
+	background-size: .48rem .53rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-weight: 600;
+	font-size: .3rem;
+	letter-spacing: 0px;
+	color: #07173e;
+	margin-right: .2rem;
+}

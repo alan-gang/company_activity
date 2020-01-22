@@ -1,0 +1,215 @@
+body{
+	font-size: .3rem;
+	color: #ffdd7a;
+	background-color: #12171d;
+	padding-bottom: 1rem;
+}
+.wrapper{
+	position: relative;
+}
+.banner{
+	max-width: 12rem;
+	height: 4.47rem;
+	background: url('../img/520activity/top@2x.png') 0 0 no-repeat;
+	background-size: 100% 4.47rem;
+	position: relative;
+	z-index: 98;
+}
+.openMask{
+	width: 1rem;
+	height: 1.17rem;
+	position: absolute;
+	top: 0;
+	right: .4rem;
+	z-index: 99;
+}
+
+.actTerm{
+	height: auto;
+	position: relative;
+	top: -0.8rem;
+	z-index: 100;
+}
+.conTitle{
+	background-image: url('../img/520activity/title01@2x.png');
+}
+.ruleTitle{
+	background-image: url('../img/520activity/title02@2x.png');
+}
+.title{
+	width: 2.8rem;
+	height: .64rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: .4rem auto .3rem;
+}
+.allInfo{
+	/* width: 11rem; */
+}
+.mainCon{
+	width: 6.36rem;
+	height: 8.13rem;
+	padding: .4rem .4rem .65rem;
+	background: url('../img/520activity/bg1@2x.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+	position: relative;
+}
+.prizeList{
+	background: url('../img/520activity/i1.png') 1.82rem 1.75rem no-repeat;
+	background-size: 2.62rem 3.13rem;
+	position: relative;
+	z-index: 99;
+}
+.prizeList td{
+	display: inline-block;
+	width: 1.26rem;
+	height: 1.03rem;
+	padding: .15rem;
+	position: relative;
+	z-index: 100;
+}
+.pao-1,.pao-2,.pao-3,.pao-4,.pao-5,.pao-6,.pao-7,.pao-8,.pao-9,.pao-10,.pao-11,.pao-12,.pao-13,.pao-14,.pao-15,.pao-16{
+	background-image: url('../img/520activity/active@2x.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 0 0;
+}
+.pHover{
+	width: 1.22rem;
+	height: .97rem;
+	position: absolute;
+	left: 0.16rem;
+	top: 0.17rem;
+	z-index: 99;
+}
+.prizeList .on{
+    background-size: 100% 100%;
+}
+.prizeNum{
+	width: .74rem;
+	height: .61rem;
+	line-height: .61rem;
+	color: #fff4d0;
+	text-align: center;
+	background: url('../img/520activity/heart@2x.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 3.3rem;
+	left: 3.1rem;
+	z-index: 100;
+}
+.pBtn{
+	width: 2.24rem;
+	height: 1.21rem;
+	background: url('../img/520activity/btn_01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 2.4rem;
+	bottom: 2.4rem;
+	border: 0;
+	z-index: 99;
+}
+.unable{
+	pointer-events: none;
+}
+.pBtn:hover{
+	cursor: pointer;
+}
+.pBtn:active{
+	height: 1.18rem;
+	background: url('../img/520activity/btn_01_hover.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	border: 0;
+}
+
+/* 活动详情 */
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  overflow-y: auto;
+}
+.closeMask{
+   display: inline-block;
+   width: .5rem;
+   height: .5rem;
+   position: absolute;
+   top: .4rem;
+   right: .5rem;
+}
+.conInfo{
+	width: 80%;
+	padding: .3rem;
+	background-color: #cf2a2a;
+	box-shadow: 0px 3px 0px 0px
+		#ffb542,
+		inset 0px 0px 3px 0px
+		#e18f00;
+	border-radius: 20px;
+	text-align: center;
+}
+.conText{
+	line-height: .4rem;
+	text-align: center;
+	margin-bottom: .2rem;
+}
+.sp{
+	color: #fff;
+}
+.topup{
+	width: 4.5rem;
+}
+.termList{
+	width: 80%;
+	padding: .3rem;
+	margin-bottom: .44rem;
+	background-color: #cf2a2a;
+	box-shadow: 0px 3px 0px 0px
+		#ffb542,
+		inset 0px 0px 3px 0px
+		#e18f00;
+	border-radius: 20px;
+}
+.termList li{
+	line-height: .33rem;
+	font-family: MicrosoftYaHei;
+	font-size: .32rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	color: #cf2a2a;
+	background: #ffdd7a;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	margin-top: .03rem;
+	margin-right: .05rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 90%;
+    text-align: justify;
+}
+.termList li:last-child p{
+	width: 100%;
+}

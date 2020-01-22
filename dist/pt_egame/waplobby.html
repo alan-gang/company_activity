@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+  <meta name="renderer" content="webkit">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>HTML5 wap </title>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="css/css1.css?v=20191106" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/wap.css?v=2019110601" />
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+  <style>
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+
+    -webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
+
+    *:not(:hover)::scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: #303551;
+    }
+
+    ::-webkit-scrollbar-track::hover {
+      box-shadow: inset 0 0 6px transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #505152;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #606267;
+    }
+
+    body {
+      /* 滑动条的颜色 */
+      scrollbar-face-color: #505152;
+      scrollbar-base-color: #cdcdcd;
+      /* 滑动条边框的颜色 */
+      scrollbar-shadow-color: #202123;
+      /* IE11下没效果 */
+      scrollbar-3dlight-color: #080;
+      scrollbar-dark-shadow-color: #f90;
+      /* 槽的颜色 */
+      scrollbar-highlight-color: #f00;
+      scrollbar-track-color: #303551;
+      /* 箭头的颜色 */
+      scrollbar-arrow-color: #eb1c00;
+    }
+  </style>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://login.mp176388.com/jswrapper/integration.js.php?casino=drunkenmonkey88"></script>
+
+
+<script type="text/javascript">
+
+  
+
+</script>
+
+<!-- login section from wapindex.html -->
+<script type="text/javascript">
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+  var urlquery = getUrlVars()
+
+  $(document).ready(function(){
+    iapiSetCallout('Login', calloutLogin);
+    login()
+    function login() {
+      iapiSetClientPlatform("mobile&deliveryPlatform=HTML5");
+      var realMode = 1;
+      iapiLogin( urlquery.un , urlquery.pwd, realMode, "en");
+    }
+    function calloutLogin(response) {
+      if (response.errorCode) {
+        alert("登录失败")
+      } else {
+        setTimeout(function(){
+          iapiSetCallout('GetTemporaryAuthenticationToken', calloutGetTemporaryAuthenticationToken);
+        }, 1000)
+      }
+    }
+
+  })
+
+
+  // <!-- to playing after login -->
+  var mobiledomain = "mp176388.com";
+  var systemidvar = "570";
+  function askTempandLaunchGame(game) {
+    currentgame = game;
+    var realMode = 1;
+
+    iapiRequestTemporaryToken(realMode, systemidvar, 'GamePlay');
+
+  }
+
+  function launchMobileClient(temptoken) {
+    var clientUrl = 'https://hub.' + mobiledomain + '/igaming/' + '?gameId=' + currentgame + '&real=1' + '&username=' + getUrlVars()["un"] + '&lang=zh-cn&tempToken=' + temptoken + '&lobby=' + location.origin + '&support=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'support.html' + '&logout=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'logout.html' + '&deposit=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'deposit.html';
+    document.location = clientUrl;
+  }
+
+  function calloutGetTemporaryAuthenticationToken(response) {
+    if (response.errorCode) {
+      alert("Token failed. " + response.playerMessage + " Error code: " + response.errorCode);
+    } else {
+     launchMobileClient(response.sessionToken.sessionToken);
+    }
+  }
+
+</script>
+
+</head>
+
+<body>
+
+  <center>
+
+<!-- <form id="languageselect">
+<label><input type="radio" name="gamelanguage" value="zh-cn" checked>简体中文</label>
+<label><input type="radio" name="gamelanguage" value="ch">繁體中文</label>
+<label><input type="radio" name="gamelanguage" value="en">English</label>
+<label><input type="radio" name="gamelanguage" value="ja">日本語</label>
+<label><input type="radio" name="gamelanguage" value="ko">한국어</label>
+<label><input type="radio" name="gamelanguage" value="ru">Русский</label>
+<label><input type="radio" name="gamelanguage" value="es">Español</label>
+<label><input type="radio" name="gamelanguage" value="fr">Français</label>
+<label><input type="radio" name="gamelanguage" value="it">Italiano</label>
+</form>
+-->
+</center>
+
+
+<div class="als-container" id="new2">
+  <ul class="tabs container clearfix" id="tabs01">
+    <li class="fl"><a href="javascript:void(0)" class="current">热门游戏</a></li>
+    <li class="fl"><a href="javascript:void(0)">新游戏</a></li>
+    <li class="fl"><a href="javascript:void(0)">全部游戏</a></li>
+    <li class="fl"><a href="javascript:void(0)">真人视讯</a></li>
+    <li class="fl"><a href="javascript:void(0)">捕鱼游戏</a></li>
+  </ul>
+
+  <div class="container" id="container01">
+
+   <!-- tab1 -->
+   <div class="con">
+    <span class="als-prev"></span>
+    <div class="als-viewport">
+      <ul class="als-wrapper clearfix">
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('trpmnk')"><li class="als-item"><img src="images/games/trpmnk.png"><br>Triple Monkey</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bib')"><li class="als-item"><img src="images/games/bib.png"><br>Great Blue</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('longlong')"><li class="als-item"><img src="images/games/longlong.png"><br>龙龙龙</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('zcjb')"><li class="als-item"><img src="images/games/zcjb.png"><br>招财进宝</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bfb')"><li class="als-item"><img src="images/games/bfb.png"><br>Buffalo Blitz</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fm')"><li class="als-item"><img src="images/games/fm.png"><br>Funky Monkey</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hk')"><li class="als-item"><img src="images/games/hk.png"><br>Highway Kings</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('jqw')"><li class="als-item"><img src="images/games/jqw.png"><br>金钱蛙</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('zctz')"><li class="als-item"><img src="images/games/zctz.png"><br>招财童子</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('arc')"><li class="als-item"><img src="images/games/arc.png"><br>Archer</li></a>
+      </ul>
+    </div>
+  </div>
+  <!-- tab2 -->
+  <div class="con">
+    <span class="als-prev"></span>
+    <div class="als-viewport">
+      <ul class="als-wrapper clearfix">
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('3cb')"><li class="als-item"><img src="images/games/3cb.png"><br>三张扑克牌</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('anwild')"><li class="als-item"><img src="images/games/anwild.png"><br>狂野蟒蛇</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_panthpays_pop')"><li class="als-item"><img src="images/games/gpas_panthpays_pop.png"><br>发财黑豹</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('tigc')"><li class="als-item"><img src="images/games/tigc.jpeg"><br>虎爪</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('wotp')"><li class="als-item"><img src="images/games/wotp.jpeg"><br>凤凰之道</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_elady_pop')"><li class="als-item"><img src="images/games/gpas_elady_pop.png"><br>嫦娥奔月</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_xjinfu_pop')"><li class="als-item"><img src="images/games/gpas_xjinfu_pop.png"><br>金福幸运</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_squeen_pop')"><li class="als-item"><img src="images/games/gpas_squeen_pop.png"><br>天之女王</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pop_sw_jqw_ab_jp_skw')"><li class="als-item"><img src="images/games/pop_sw_jqw_ab_jp_skw.png"><br>金钱蛙头奖</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pop_shctz_ab_jp_skw')"><li class="als-item"><img src="images/games/pop_shctz_ab_jp_skw.jpeg"><br>招财童子头奖</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_lotj_pop')"><li class="als-item"><img src="images/games/gpas_lotj_pop.png"><br>捷豹的传说™</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('aeolus')"><li class="als-item"><img src="images/games/aeolus.png"><br>Age of the Gods: God of Storms</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('legwld')"><li class="als-item"><img src="images/games/legwld.png"><br>Legacy of the Wild</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashicv')"><li class="als-item"><img src="images/games/ashicv.png"><br>Ice Cave</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashhof')"><li class="als-item"><img src="images/games/ashhof.png"><br>Heart of the Frontier</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('drgro')"><li class="als-item"><img src="images/games/drgro.png"><br>Dragon Jackpot Roulette</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro')"><li class="als-item"><img src="images/games/ro.png"><br>Classic Roulette</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('photk')"><li class="als-item"><img src="images/games/photk.png"><br>Purple Hot Kiosk</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('asfa')"><li class="als-item"><img src="images/games/asfa.png"><br>Asian Fantasy</li></a>
+
+        <style>.als-item img{border-radius: 15px; height: 1.28rem;}</style>
+
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_fiesta_pop')"><li class="als-item"><img src="images/games/Fiesta.jpeg"><br>Memoria嘉年华</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_rothr_pop')"><li class="als-item"><img src="images/games/Raiders.jpeg"><br>隐藏王国的攻略</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gpas_satsumo_pop')"><li class="als-item"><img src="images/games/Satsumo.jpeg"><br>Satsumo的复仇</li></a>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- tab3 -->
+  <div class="con">
+    <span class="als-prev"></span>
+    <div class="als-viewport">
+      <ul class="als-wrapper" id="als-wrapper" style="display: none;">
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('trpmnk')"><li class="als-item"><img src="images/games/trpmnk.png"><br>Triple Monkey</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bs')"><li class="als-item"><img src="images/games/bs.png"><br>白狮</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('chao')"><li class="als-item"><img src="images/games/chao.png"><br>超级888</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ftg')"><li class="als-item"><img src="images/games/ftg.png"><br>五虎将</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gemq')"><li class="als-item"><img src="images/games/gemq.png"><br>Gem Queen</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('jqw')"><li class="als-item"><img src="images/games/jqw.png"><br>金钱蛙</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('kfp')"><li class="als-item"><img src="images/games/kfp.png"><br>六福兽</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('longlong')"><li class="als-item"><img src="images/games/longlong.png"><br>龙龙龙</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('qnw')"><li class="als-item"><img src="images/games/qnw.png"><br>Queen Of Wands</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ririjc')"><li class="als-item"><img src="images/games/ririjc.png"><br>日日进财</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('sx')"><li class="als-item"><img src="images/games/sx.png"><br>四象</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('wlcsh')"><li class="als-item"><img src="images/games/wlcsh.png"><br>五路财神</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('zctz')"><li class="als-item"><img src="images/games/zctz.png"><br>招财童子</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fkmj')"><li class="als-item"><img src="images/games/fkmj.png"><br>疯狂麻将</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('nian')"><li class="als-item"><img src="images/games/nian.png"><br>年年有余</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsflzt')"><li class="als-item"><img src="images/games/gtsflzt.png"><br>飞龙在天</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsjxb')"><li class="als-item"><img src="images/games/gtsjxb.png"><br>吉祥8</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fcgz')"><li class="als-item"><img src="images/games/fcgz.png"><br>翡翠公主</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('zcjb')"><li class="als-item"><img src="images/games/zcjb.png"><br>招财进宝</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ght_a')"><li class="als-item"><img src="images/games/ght_a.png"><br>烈焰钻石</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('wlg')"><li class="als-item"><img src="images/games/wlg.png"><br>舞龙</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('mgstk')"><li class="als-item"><img src="images/games/mgstk.png"><br>Magical Stacks</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsdgk')"><li class="als-item"><img src="images/games/gtsdgk.png"><br>龙之国度</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('tpd2')"><li class="als-item"><img src="images/games/tpd2.png"><br>Thai Paradise</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('tht')"><li class="als-item"><img src="images/games/tht.png"><br>Thai Temple</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ges')"><li class="als-item"><img src="images/games/ges.png"><br>Geisha Story</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('aogs')"><li class="als-item"><img src="images/games/aogs.png"><br>Age of the Gods</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ftsis')"><li class="als-item"><img src="images/games/ftsis.png"><br>AOG Fate Sisters</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('furf')"><li class="als-item"><img src="images/games/furf.png"><br>AOG Furious 4</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('athn')"><li class="als-item"><img src="images/games/athn.png"><br>AOG Goddess</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('kolymp')"><li class="als-item"><img src="images/games/kolymp.png"><br>AOG King</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hrcls')"><li class="als-item"><img src="images/games/hrcls.png"><br>AOG Prince</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('aogro')"><li class="als-item"><img src="images/games/aogro.png"><br>AOG Roulette</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bib')"><li class="als-item"><img src="images/games/bib.png"><br>Great Blue</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ct')"><li class="als-item"><img src="images/games/ct.png"><br>Captains Treasure</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fm')"><li class="als-item"><img src="images/games/fm.png"><br>Funky Monkey</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hk')"><li class="als-item"><img src="images/games/hk.png"><br>Highway Kings</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gos')"><li class="als-item"><img src="images/games/gos.png"><br>Golden Tour</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('arc')"><li class="als-item"><img src="images/games/arc.png"><br>Archer</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bob')"><li class="als-item"><img src="images/games/bob.png"><br>Bonus Bears</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('dnr')"><li class="als-item"><img src="images/games/dnr.png"><br>Dolphin Reef</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pmn')"><li class="als-item"><img src="images/games/pmn.png"><br>Panther Moon</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('sis')"><li class="als-item"><img src="images/games/sis.png"><br>Silent Samurai</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hlf')"><li class="als-item"><img src="images/games/hlf.png"><br>Halloween F.</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('eas')"><li class="als-item"><img src="images/games/eas.png"><br>Easter Surprise</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('vcstd')"><li class="als-item"><img src="images/games/vcstd.png"><br>Vacation Station D.</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('c7')"><li class="als-item"><img src="images/games/c7.png"><br>Crazy 7</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ssp')"><li class="als-item"><img src="images/games/ssp.png"><br>Santa Surprise</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hb')"><li class="als-item"><img src="images/games/hb.png"><br>A Night Out</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashadv')"><li class="als-item"><img src="images/games/ashadv.png"><br>Adventures</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashamw')"><li class="als-item"><img src="images/games/ashamw.png"><br>Amazon Wild</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('art')"><li class="als-item"><img src="images/games/art.png"><br>Arctic Treasure</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsatq')"><li class="als-item"><img src="images/games/gtsatq.png"><br>Atlantis Queen</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bl')"><li class="als-item"><img src="images/games/bl.png"><br>Beach Life</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bt')"><li class="als-item"><img src="images/games/bt.png"><br>Bermuda Triangle</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashbob')"><li class="als-item"><img src="images/games/ashbob.png"><br>Bounty Beanstalk</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('bfb')"><li class="als-item"><img src="images/games/bfb.png"><br>Buffalo Blitz</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ctiv')"><li class="als-item"><img src="images/games/ctiv.png"><br>Cat In Vegas</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('catqc')"><li class="als-item"><img src="images/games/catqc.png"><br>Cat Queen</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('chl')"><li class="als-item"><img src="images/games/chl.png"><br>Cherry Love</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashcpl')"><li class="als-item"><img src="images/games/ashcpl.png"><br>Chests of Plenty</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('cm')"><li class="als-item"><img src="images/games/cm.png"><br>Chinese Kitchen</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtscnb')"><li class="als-item"><img src="images/games/gtscnb.png"><br>Cops N' Bandits</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtscbl')"><li class="als-item"><img src="images/games/gtscbl.png"><br>Cowboys Aliens</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsdrdv')"><li class="als-item"><img src="images/games/gtsdrdv.png"><br>Daring Dave</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('mobdt')"><li class="als-item"><img src="images/games/mobdt.png"><br>Desert Treasure</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('donq')"><li class="als-item"><img src="images/games/donq.png"><br>Don Quixote</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('dlm')"><li class="als-item"><img src="images/games/dlm.png"><br>Dr Love More</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('esm')"><li class="als-item"><img src="images/games/esm.png"><br>Esmeralda</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('evj')"><li class="als-item"><img src="images/games/evj.png"><br>Everybody's JP</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfta')"><li class="als-item"><img src="images/games/ashfta.png"><br>Fairest</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsfc')"><li class="als-item"><img src="images/games/gtsfc.png"><br>Football Carnival</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fbr')"><li class="als-item"><img src="images/games/fbr.png"><br>Football Rules</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fow')"><li class="als-item"><img src="images/games/fow.png"><br>Forest of Wonders</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('frtf')"><li class="als-item"><img src="images/games/frtf.png"><br>Fortunate Five</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('foy')"><li class="als-item"><img src="images/games/foy.png"><br>Fountain of Youth</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fxf')"><li class="als-item"><img src="images/games/fxf.png"><br>Foxy Fortunes</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fdt')"><li class="als-item"><img src="images/games/fdt.png"><br>Frankie Dettori's</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fdtjg')"><li class="als-item"><img src="images/games/fdtjg.png"><br>Frankie Jackpot</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fmn')"><li class="als-item"><img src="images/games/fmn.png"><br>Fruit Mania</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfmf')"><li class="als-item"><img src="images/games/ashfmf.png"><br>Full Moon</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fnfrj')"><li class="als-item"><img src="images/games/fnfrj.png"><br>Funky Fruits</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('fff')"><li class="als-item"><img src="images/games/fff.png"><br>Funky Fruits Farm</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('glrj')"><li class="als-item"><img src="images/games/glrj.png"><br>Gladiator Jackpot</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashglss')"><li class="als-item"><img src="images/games/ashglss.png"><br>Glass Slipper</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('grel')"><li class="als-item"><img src="images/games/grel.png"><br>Gold Rally</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('glg')"><li class="als-item"><img src="images/games/glg.png"><br>Golden Games</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('gro')"><li class="als-item"><img src="images/games/gro.png"><br>Greatest Odyssey</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hlf2')"><li class="als-item"><img src="images/games/hlf2.png"><br>Halloween F. II</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('hh')"><li class="als-item"><img src="images/games/hh.png"><br>Haunted House</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashhotj')"><li class="als-item"><img src="images/games/ashhotj.png"><br>Heart of Jungle</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gts50')"><li class="als-item"><img src="images/games/gts50.png"><br>Hot Gems</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ir')"><li class="als-item"><img src="images/games/ir.png"><br>Ice Run</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsirl')"><li class="als-item"><img src="images/games/irl.png"><br>Irish Luck</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('jpgt')"><li class="als-item"><img src="images/games/jpgt.png"><br>Jackpot Giant</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsjhw')"><li class="als-item"><img src="images/games/gtsjhw.png"><br>John Wayne</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('kkg')"><li class="als-item"><img src="images/games/kkg.png"><br>Kong</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('lndg')"><li class="als-item"><img src="images/games/lndg.png"><br>Land of Gold</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashlob')"><li class="als-item"><img src="images/games/ashlob.png"><br>Life of Brian</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('lm')"><li class="als-item"><img src="images/games/lm.png"><br>Lotto Madness</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsmrln')"><li class="als-item"><img src="images/games/gtsmrln.png"><br>Marilyn Monroe</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('mfrt')"><li class="als-item"><img src="images/games/mfrt.png"><br>Miss Fortune</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('mrcb')"><li class="als-item"><img src="images/games/mrcb.png"><br>Mr. Cashback</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('nk')"><li class="als-item"><img src="images/games/nk.png"><br>Neptunes</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pgv')"><li class="als-item"><img src="images/games/pgv.png"><br>Penguin Vacation</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pst')"><li class="als-item"><img src="images/games/pst.png"><br>Pharaoh's Secrets</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('paw')"><li class="als-item"><img src="images/games/paw.png"><br>Piggies</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pnp')"><li class="als-item"><img src="images/games/pnp.png"><br>Pink Panther</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtspor')"><li class="als-item"><img src="images/games/gtspor.png"><br>Plenty O'Fortune</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('phot')"><li class="als-item"><img src="images/games/phot.png"><br>Purple Hot</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('rky')"><li class="als-item"><img src="images/games/rky.png"><br>Rocky</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsrng')"><li class="als-item"><img src="images/games/rng2.png"><br>Rome and Glory</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtssmbr')"><li class="als-item"><img src="images/games/gtssmbr.png"><br>Samba Brazil</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('samz')"><li class="als-item"><img src="images/games/samz.png"><br>Secrets of Amazon</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('shmst')"><li class="als-item"><img src="images/games/shmst.png"><br>Sherlock Mystery</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('sib')"><li class="als-item"><img src="images/games/sib.png"><br>Silver Bullet</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashsbd')"><li class="als-item"><img src="images/games/ashsbd.png"><br>Sinbad's</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('srcg')"><li class="als-item"><img src="images/games/srcg.png"><br>Spud OReilly's</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('sol')"><li class="als-item"><img src="images/games/sol.png"><br>Streak of Luck</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('cnpr')"><li class="als-item"><img src="images/games/cnpr.png"><br>Sweet Party</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('dcv')"><li class="als-item"><img src="images/games/dcv.png"><br>The Discovery</li></a> -->
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('lvb')"><li class="als-item"><img src="images/games/lvb.png"><br>The Love Boat</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('tmqd')"><li class="als-item"><img src="images/games/tmqd.png"><br>Three Musketeers</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashtmd')"><li class="als-item"><img src="images/games/ashtmd.png"><br>Time for a Deal</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('topg')"><li class="als-item"><img src="images/games/topg.png"><br>Top Gun</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('er')"><li class="als-item"><img src="images/games/er.png"><br>Vacation Station</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gts52')"><li class="als-item"><img src="images/games/gts52.png"><br>Vikingmania</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('whk')"><li class="als-item"><img src="images/games/whk.png"><br>White King</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtswg')"><li class="als-item"><img src="images/games/gtswg.png"><br>Wild Gambler</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashwgaa')"><li class="als-item"><img src="images/games/ashwgaa.png"><br>Wild Gambler 2</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('wis')"><li class="als-item"><img src="images/games/wis.png"><br>Wild Spirit</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtswng')"><li class="als-item"><img src="images/games/gtswng.png"><br>Wings Of Gold</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ba')"><li class="als-item"><img src="images/games/ba.png"><br>Baccarat</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('mobbj')"><li class="als-item"><img src="images/games/mobbj.png"><br>Blackjack</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('cheaa')"><li class="als-item"><img src="images/games/cheaa.png"><br>Casino Hold 'Em</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro')"><li class="als-item"><img src="images/games/mobro.png"><br>European Roulette</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('rodz_g')"><li class="als-item"><img src="images/games/rodz_g.png"><br>P. American</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro_g')"><li class="als-item"><img src="images/games/ro_g.png"><br>P. European</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('pfbj_mh5')" title="Perfect Blackjack Multihand 5"><li class="als-item"><img src="images/games/bjp.png"><br>Perfect Blackjack Multihand 5</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('ash3brg')"><li class="als-item"><img src="images/games/ash3brg.png"><br>Three Card Brag</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('aeolus')" title="Age of the Gods: God of Storms"><li class="als-item"><img src="images/games/aeolus.png"><br>Age of the Gods: God of Storms</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('legwld')"><li class="als-item"><img src="images/games/legwld.png"><br>Legacy of the Wild</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashicv')"><li class="als-item"><img src="images/games/ashicv.png"><br>Ice Cave</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashhof')"><li class="als-item"><img src="images/games/ashhof.png"><br>Heart of the Frontier</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('drgro')"><li class="als-item"><img src="images/games/drgro.png"><br>Dragon Jackpot Roulette</li></a>
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro')"><li class="als-item"><img src="images/games/ro.png"><br>Classic Roulette</li></a>
+        <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('photk')"><li class="als-item"><img src="images/games/photk.png"><br>Purple Hot Kiosk</li></a> -->
+        <a href="javascript:void(0)" onClick="askTempandLaunchGame('asfa')"><li class="als-item"><img src="images/games/asfa.png"><br>Asian Fantasy</li></a>
+      </ul>
+      <ul class="als-wrapper1"></ul>
+      <p id="p1"></p>
+      <ul class="pagination" id="pagination1"></ul>
+    </div>
+
+    <span class="als-next"></span>
+  </div>
+
+  <!-- tab4 -->
+  <div class="con">
+    <span class="als-prev"></span>
+    <div class="als-viewport">
+      <ul class="als-wrapper clearfix">
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('bjl')"><li class="als-item"><img src="/pt_egame/images/games/mobbj.png"><br>21点</li></a>
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('rol')"><li class="als-item"><img src="/pt_egame/images/games/ro.png"><br>轮盘赌</li></a>
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('rofl')"><li class="als-item"><img src="/pt_egame/images/games/mobro.png"><br>法式轮盘</li></a>
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('bal')"><li class="als-item"><img src="/pt_egame/images/games/ba.png"><br>真人迷你百家乐</li></a>
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('7bal')"><li class="als-item"><img src="/pt_egame/images/games/ba.png"><br>Live VIP 百家乐</li></a>
+       <!-- <a href="javascript:void(0)" onClick="askTempandLaunchGame('hilo')"><li class="als-item"><img src="/pt_egame/images/games/ba.png"><br>Hi-Lo</li></a> -->
+       <a href="javascript:void(0)" onClick="askTempandLaunchGame('3brgl')"><li class="als-item"><img src="/pt_egame/images/games/ash3brg.png"><br>真人炸金花</li></a>
+     </ul>
+   </div>
+ </div>
+
+ <!-- tab5 -->
+ <div class="con">
+  <span class="als-prev"></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper clearfix">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('cashfi')"><li class="als-item"><img src="/pt_egame/images/games/cashfi.png"><br>深海大赢家</li></a>
+    </ul>
+  </div>
+</div>
+
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jqPaginator.js"></script>
+<script type="text/javascript">
+  $(function(){
+    tabs($("#tabs01 a"), $('#container01 .con'));
+  })
+  var tabs = function(tab, con){
+    tab.click(function(){
+      var indx = tab.index(this);
+      tab.removeClass('current');
+      $(this).addClass('current');
+      con.hide();
+      con.eq(indx).show();
+    })
+  }
+  $('#container01 .con').hide();
+  $('#container01 .con').eq(0).show();
+
+  $("#pagination1").jqPaginator({
+    totalPages: 5,
+    visiblePages: 5,
+    currentPage: 1,
+    first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
+    // prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
+    // next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
+    last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
+    page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
+    onPageChange: function (n) {
+      $("#p1").html("当前第" + n + "页");
+      if ( n == 1 ) {
+        var new_content = $("#als-wrapper a:lt("+28+")").clone();
+      }else if ( n == 5 ) {
+        var new_content = $("#als-wrapper a:lt(147):gt("+(28*(n-1)-1)+")").clone();
+      }else{
+        var new_content = $("#als-wrapper a:lt("+(28*n)+"):gt("+(28*(n-1)-1)+")").clone();
+      }
+
+        $(".als-wrapper1").empty().append(new_content); //装载对应分页的内容
+        // return false;
+      }
+    });
+
+  (function (win) {
+    var doc = win.document;
+    var docEl = doc.documentElement;
+    var dpr = 0;
+
+    var tid;
+
+    function refreshRem() {
+      var deviceWidth = document.documentElement.clientWidth
+      //6.4是设计稿640/100 6.4只是举个例子，如果是750的设计稿，应该除以7.5。
+      docEl.style.fontSize = deviceWidth / 7.5 + 'px';
+      //当deviceWidth大于640时，则物理分辨率大于1280（这就看设备的devicePixelRatio这个值了），应该去访问pc网站了
+      if (deviceWidth > 640) {
+        deviceWidth = 640;
+        docEl.style.fontSize = deviceWidth / 7.5 + 'px'
+      }
+
+    }
+
+    refreshRem()
+    if (!dpr) {
+      var isAndroid = win.navigator.appVersion.match(/android/gi);
+      var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+      var devicePixelRatio = win.devicePixelRatio;
+      if (isIPhone) {
+        // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+        if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+          dpr = 3;
+        } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+          dpr = 2;
+        } else {
+          dpr = 1;
+        }
+      } else if (isAndroid) {
+        // Android下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+        if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+          dpr = 3;
+        } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+          dpr = 2;
+        } else {
+          dpr = 1;
+        }
+      }
+
+    }
+    docEl.setAttribute('data-dpr', dpr);
+  }(window))
+</script>
+<p id="logmsg"> </p>
+<script>
+// document.querySelector('#logmsg').innerHTML = JSON.stringify(location.href)
+</script>
+</body>
+</html>

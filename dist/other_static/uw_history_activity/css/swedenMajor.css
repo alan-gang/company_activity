@@ -1,0 +1,163 @@
+.wrapper{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+	font-size: .24rem;
+	background-color: #12171d;
+}
+.banner{
+	min-width: 12rem;
+	height: 10.37rem;
+	position: relative;
+	background: url('../img/swedenMajor/bgTop.jpg') 0 0 no-repeat;
+	background-size: 100% 10.37rem;
+}
+.conWrap{
+	height: 17.46rem;
+	background: url('../img/swedenMajor/bgBtm.png') 0 0 no-repeat;
+	background-size: 100% 17.46rem;
+}
+.tabList{
+	width: 10.52rem;
+	height: 1.45rem;
+	background: url('../img/swedenMajor/+.png') center .7rem no-repeat;
+	background-size: .61rem .61rem;
+	margin-bottom: .3rem;
+}
+.tab1{
+	background-image: url('../img/swedenMajor/tab01_.png');
+}
+.tab2{
+	background-image: url('../img/swedenMajor/tab02_.png');
+}
+.tabList li.tabsSeletedLi .tab1{
+	background-image: url('../img/swedenMajor/tab01.png');
+}
+.tabList li.tabsSeletedLi .tab2{
+	background-image: url('../img/swedenMajor/tab02.png');
+}
+.tabLi{
+	display: inline-block;
+	width: 4.95rem;
+	height: 1.45rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 1.45rem;
+}
+.tabList li:first-child{
+	margin-right: .6rem;
+}
+.conTitle1{
+	width: 4.85rem;
+	height: 0.43rem;
+	background: url('../img/swedenMajor/title1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: .25rem;
+}
+.conTitle2{
+	width: 10.52rem;
+	height: 1.36rem;
+	background: url('../img/swedenMajor/title2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: .25rem;
+}
+.tabCon{
+	width: 10.52rem;
+	color: #b1b2b4;
+}
+.tabCon th{
+	width: 3.49rem;
+	height: .85rem;
+	font-size: .28rem;
+	font-weight: normal;
+	background-image: linear-gradient(0deg, #29303b 0%, #2e3845 100%), linear-gradient(#0c0e0f, #0c0e0f);
+	background-blend-mode: normal, normal;
+	border:1px solid #000;
+	color: #fed756;
+}
+.tabCon td{
+	text-align: center;
+	padding: .2rem 0;
+	font-size: .28rem;
+	background-color: #222628;
+	border:1px solid #000;
+}
+.termTitle{
+	width: 5.32rem;
+	height: .43rem;
+	background: url('../img/swedenMajor/title3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .25rem auto;
+}
+.termTitle.rule {
+	margin-top: .45rem;
+}
+.termList{
+	width: 9.9rem;
+	background-color: #222628;
+	padding: .45rem .35rem;
+}
+.termList li{
+	/* height: .6rem; */
+	line-height: .3rem;
+	margin-bottom: .3rem;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	text-align: justify;
+}
+.termList li:last-child{
+	line-height: .8rem;
+	text-indent: .6rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	background-image: linear-gradient(0deg, 
+		#29303b 0%, 
+		#2e3845 100%), 
+	linear-gradient(
+		#1b1d44, 
+		#1b1d44);
+	background-blend-mode: normal, 
+		normal;
+	font-style: normal;
+	/* font-weight: 600; */
+	font-size: .22rem;
+	letter-spacing: 0px;
+	color: #dbdbdb;
+	margin-right: .2rem;
+	vertical-align: top;
+}
+.termList li p {
+  display: inline-block;
+  width: 90%;
+  text-align: justify;
+}
+.cgoBack{
+	width: 8.34rem;
+	height: .94rem;
+	margin: .8rem auto 0;
+	cursor: pointer;
+	background: url('../img/swedenMajor/backBtn.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.conInfo{
+	font-size: .26rem;
+	color: #fff;
+	text-align: center;
+	line-height: .3rem;
+}
+.btnDraw{
+	width:3.77rem;
+	height: .65rem;
+	background: url('../img/swedenMajor/btn01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .25rem auto;
+	cursor: pointer;
+}
+#tabs2 .termList li{
+	margin-bottom: .15rem;
+}

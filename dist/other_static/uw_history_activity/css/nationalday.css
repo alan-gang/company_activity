@@ -1,0 +1,109 @@
+.wrapper{
+	background-color: #070b15;
+}
+.banner{
+	min-width: 12rem;
+	height: 13.5rem;
+	position: relative;
+	background: url('../img/nationalday/1.jpg') 0 0 no-repeat;
+	background-size: 100% 4.5rem;
+	overflow: hidden;
+}
+.banner2{
+	width: 100%;
+	height: 4.5rem;
+	position: absolute;
+	left: 0;
+	top: 4.49rem;
+}
+.banner3{
+	width: 100%;
+	height: 4.5rem;
+	position: absolute;
+	left: 0;
+	top: 8.98rem;
+}
+.actInfo{
+	width: 12rem;
+	position: relative;
+	top: -3rem;
+}
+.list{
+	width: 12rem;
+	/* height: .81rem; */
+	margin: 0 auto;
+}
+.list li{
+	width: 3.97rem;
+	height: .81rem;
+	line-height: .81rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .28rem;
+	letter-spacing: 0px;
+	margin-right: .02rem;
+	margin-bottom: .02rem;
+}
+.list li:nth-child(3n+3){
+	margin-right: 0;
+}
+.toplist li{
+	color: #712700;
+	font-weight: 600;
+	background: url('../img/nationalday/4.jpg') 0 0 no-repeat;
+	background-size: 3.97rem .81rem;
+}
+.botlist li{
+	color: #ebd080;
+	background: url('../img/nationalday/4_1.png') 0 0 no-repeat;
+	background-size: 3.97rem .81rem;
+}
+.actTerm{
+	width: 12rem;
+	margin: .7rem auto 0;
+	position: relative;
+	top: -3rem;
+}
+.termTitle{
+	width: 3.97rem;
+	height: .81rem;
+	line-height: .81rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	font-size: .3rem;
+	color: #712700;
+	background: url('../img/nationalday/4.jpg') 0 0 no-repeat;
+	background-size: 3.97rem .81rem;
+	margin-bottom: .4rem;
+}
+.termList{
+	padding: .4rem 0 0 .4rem;
+	height: 4.85rem;
+	background: url('../img/nationalday/6.png') 0 0 no-repeat;
+	background-size: 100% 4.85rem;
+	box-sizing: border-box;
+}
+.termList li{
+	height: .7rem;
+	line-height: .8rem;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #ebd080;
+}
+.termIndex{
+	display: inline-block;
+	width: .51rem;
+	height: .57rem;
+	line-height: .57rem;
+	text-align: center;
+	background: url('../img/nationalday/5.png') 0 0 no-repeat;
+	background-size: .51rem .57rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-weight: 600;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #712700;
+	margin-right: .43rem;
+}

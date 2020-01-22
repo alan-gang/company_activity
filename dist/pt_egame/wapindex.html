@@ -1,0 +1,52 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="true" name="HandheldFriendly" />
+<meta content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1" name="viewport" />
+<title>HTML5 Login</title>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+
+<!-- <script type="text/javascript" src="https://login.mightypanda88.com/jswrapper/integration.js.php?casino=drunkenmonkey88"></script> -->
+<script type="text/javascript" src="https://login.mp176388.com/jswrapper/integration.js.php?casino=drunkenmonkey88"></script>
+
+<script type="text/javascript">
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+  vars[key] = value;
+  });
+  return vars;
+}
+let urlquery = getUrlVars()
+
+$(document).ready(function(){
+  iapiSetCallout('Login', calloutLogin);
+  login()
+  function login() {
+    iapiSetClientPlatform("mobile&deliveryPlatform=HTML5");
+    var realMode = 1;
+    iapiLogin( urlquery.un , urlquery.pwd, realMode, "en");
+  }
+  function calloutLogin(response) {
+    if (response.errorCode) {
+      $('body').text('登录失败')
+    }
+    else {
+      window.location = "waplobby.html?username=" + (window.location.href.match(/un=(.{1,})&*/) || ['', ''])[1];
+    }
+  }
+
+})
+
+</script>
+
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+}
+html{font-size: 100px;}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 120px;
+	}
+}
+@media screen and (min-width: 992px){
+	html {
+		font-size: 100px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  /* overflow: hidden; */
+  background-color: #02040a;
+}
+
+.wrapper{
+	min-width: 15rem;
+	overflow: hidden;
+	height: 10.22rem;
+	background: url('../img/bg.jpg') 0 0 no-repeat;
+	background-size: 100% 10.22rem;
+}
+.testTop{
+	width: 4.05rem;
+	height: 3.4rem;
+	margin: 0 auto;
+}
+.banner2{
+	width: 4.05rem;
+	height: 3.4rem;
+}
+
+
+.webTest{
+	width: 11.3rem;
+	height: 1.17rem
+}
+.webTest li{
+	width: 2.66rem;
+	height: 1.05rem;
+	padding: 0.06rem;
+	margin-right: 0.04rem;
+	position: relative;
+	/* background: url('../img/ahover.png'); */
+}
+.webTest li:nth-child(4),.webTest li:nth-child(8),.webTest li:nth-child(12){
+	margin-right: 0;
+}
+.hover{
+	width: 2.78rem;
+	height: 1.17rem;
+	position: absolute;
+	top: -0.03rem;
+	left: -0.03rem;
+	display: none;
+	z-index: 1;
+}
+.lineWrap{
+	display: inline-block;
+	width: 2.66rem;
+	height: 1.05rem;
+	vertical-align: top;
+	background-image: linear-gradient(0deg,
+		#4d4d4d 0%,
+		#2f2f2f 100%);
+	position: relative;
+	top: -0.03rem;
+	left: -0.03rem;
+	z-index: 2;
+}
+.webTest li{
+
+}
+.webTest a.lineWrap:hover{
+	background-image: linear-gradient(
+		#676767,
+		#676767),
+	linear-gradient(0deg,
+		#4d4d4d 0%,
+		#2f2f2f 100%);
+}
+.light{
+	width: .83rem;
+	height: .83rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.ping{
+	display: inline-block;
+	height: .4rem;
+	position: absolute;
+	left: .25rem;
+	bottom: .15rem;
+}
+.speed{
+	display: inline-block;
+	height: .28rem;
+	font-size: .36rem;
+	font-family: Roboto-Light;
+	font-style: italic;
+	line-height: .52rem;
+	margin-right: 0.03rem;
+	color: #fff;
+	vertical-align: top;
+}
+.ms{
+	display: inline-block;
+	height: .1rem;
+	font-family: ArialMT;
+	font-size: .18rem;
+	font-style: italic;
+	line-height: .62rem;
+	color: #fff;
+	vertical-align: top;
+}
+.num{
+	width: .84rem;
+	height: .62rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.main{
+	display: inline-block;
+	height: .18rem;
+	line-height: .18rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	color: #fff;
+	position: absolute;
+	right: .08rem;
+	bottom: .15rem;
+}
+
+/* 轮播 */
+
+.group{
+	width: 9.66rem;
+	height: 1.02rem;
+	line-height: 1.5rem;
+	text-align: center;
+	margin: 0 auto;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: -.63rem;
+	z-index: 1;
+}
+
+/* 效果CSS开始 */
+.mod18{width:866px;position:relative;margin:0 auto;}
+.mod18 li{float:left;}
+.mod18 .cf li{position:relative;color:#fff;}
+.mod18 .cf a{display:block;width:866px;height:360px;position:absolute;}
+.mod18 .picBox{width:874px; height:360px; position:relative;overflow:hidden;  }
+.mod18 .picBox ul{height:377px;position:absolute; left:0;}
+.mod18 .picBox li{width:866px;height:377px;}
+.mod18 .listBox{width:866px;height:63px;margin:0 auto;position:relative; z-index:2;overflow:hidden;}
+.mod18 .listBox ul{height:63px;position:absolute; padding-left:12px;}
+.mod18 .listBox li{width:283px;height:53px;line-height:.53rem;cursor:pointer;position:relative; padding:5px 0 0 0;}
+.mod18 .listBox li i{display:block;font-size: .14rem;font-style: normal;text-align: center;transition: all .2s;}
+.mod18 .listBox .on i{display:block;font-size: .16rem;color: #e9ba55;}
+.mod18 .listBox li:nth-child(3){
+	background: url('../img/t1.png') 0.25rem 0.08rem no-repeat;
+	background-size: .31rem .36rem;
+}
+.mod18 .listBox li:nth-child(2){
+	background: url('../img/t2.png') -0.05rem 0.17rem no-repeat;
+	background-size: .48rem .24rem;
+}
+.mod18 .listBox li:nth-child(1){
+	background: url('../img/t3.png')  0.2rem 0.05rem no-repeat;
+	background-size: .38rem .43rem;
+}

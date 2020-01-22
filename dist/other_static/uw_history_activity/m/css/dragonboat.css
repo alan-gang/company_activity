@@ -1,0 +1,154 @@
+.wrapper{
+	height: 100%;
+	font-size: .32rem;
+	color: #20310b;
+	background-color: #adda70;
+	padding-bottom: 2rem;
+	max-width: 12rem;
+	margin: 0 auto;
+}
+.banner{
+	max-width: 12rem;
+	height: 5.02rem;
+	background: url('../img/dragonboat/bg01@2x.png') 0 0 no-repeat;
+	background-size: 100% 5.02rem;
+	position: relative;
+	z-index: 1;
+}
+
+.actTerm{
+	height: auto;
+	position: relative;
+	top: -0.5rem;
+	z-index: 2;
+}
+.titTitle{
+	width: 2.46rem;
+	height: .53rem;
+	background: url('../img/dragonboat/title01@2x.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .5rem auto .35rem;
+}
+
+.swiper-container {
+   width: 90%;
+   padding: 0 .4rem;
+   height: 100%;
+   margin: .5rem auto .2rem;
+}
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: none;
+}
+.swiper-slide img{
+	width: 3.43rem;
+	height: 3.66rem;
+}
+.swiper-slide .finish{
+	width: 1.63rem;
+	height: 1.49rem;
+	position: absolute;
+	bottom: 0.6rem;
+	left: 1.2rem;
+	z-index: 3;
+	display: none;
+}
+/* .wrapper .swiper-button-prev, .wrapper .swiper-container-rtl .swiper-button-next{
+	left: 0;
+	background-image: url('../img/dragonboat/left.png');
+}
+.wrapper .swiper-button-next,.wrapper .swiper-container-rtl .swiper-button-prev{
+	right: 0;
+	background-image: url('../img/dragonboat/right.png');
+}
+.wrapper .swiper-button-next, .wrapper .swiper-button-prev{
+	width: 34px;
+	height: 34px;
+	background-size: 34px 34px;
+} */
+.btn{
+	width: 7.3rem;
+	height: .87rem;
+	display: none;
+}
+.btn a,.btn a img{
+	display: inline-block;
+	width: 7.3rem;
+	height: .87rem;
+	cursor: pointer;
+}
+#undone,#done{
+	pointer-events: none;
+	cursor: default;
+}
+
+.conTitle{
+	width: 7.3rem;
+	height: 2.43rem;
+	padding-top: 2rem;
+	background: url('../img/dragonboat/tabbg01@2x.png') 0 0 no-repeat;
+	background-size: 7.3rem 4.32rem;
+	margin: .5rem auto 0;
+}
+.termList{
+	width: 6.3rem;
+	/* height: 1.5rem; */
+	padding-left: .1rem;
+	margin-bottom: .44rem;
+}
+.listWrap{
+	width: 7.3rem;
+	height: 7.3rem;
+	padding-top: .76rem;
+	background: url('../img/dragonboat/tabbg02@2x.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .35rem;
+	font-family: MicrosoftYaHei;
+	font-size: .32rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	background-color: #325410;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .26rem;
+	letter-spacing: 0px;
+	color: #fff0a1;
+	margin-top: .03rem;
+	margin-right: .05rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 90%;
+    text-align: justify;
+}
+.unable{
+	pointer-events: none;
+}
+.able{
+	pointer-events: visible;
+}

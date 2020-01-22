@@ -1,0 +1,225 @@
+.wrapper{
+	background-color: #fff;
+}
+#nav{
+	height: .75rem;
+	box-shadow: 0px 2px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	/* opacity: 0.5; */
+	background: #fff url('../img/indexjpg_01.jpg') .26rem 0 no-repeat;
+	background-size: 3.35rem .75rem;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+#nav li{
+	margin: 0 .15rem;
+}
+#nav li:first-child{
+	margin-right: 1.6rem;
+}
+#nav li,#nav li a{
+	display: inline-block;
+	font-size: .18rem;
+	line-height: .75rem;
+	font-family: ArialMT;
+	color: #666666;
+}
+#nav a:hover {
+	color: #007aad;
+}
+#nav li.current a {
+	color: #007aad;
+}
+/* #nav li.current a{
+	color: #007aad;
+} */
+.section{
+	width: 15.2rem;
+	/* height: 9rem; */
+	padding-top: .75rem;
+	margin: 0 auto;
+}
+.section h2{
+	font-family: ArialMT;
+	font-size: .36rem;
+	color: #007aad;
+	margin: .2rem 0 .3rem 0;
+}
+.section h6{
+	font-family: ArialMT;
+	font-size: .18rem;
+	color: #007aad;
+	margin-bottom: .05rem;
+}
+.section h5{
+	font-family: ArialMT;
+	font-size: .18rem;
+	color: #333;
+	margin-bottom: .05rem;
+}
+.section p{
+	line-height: .2rem;
+	font-size: .16rem;
+	font-family: MicrosoftYaHei;
+	color: #666;
+	margin-bottom: .2rem;
+	text-align: justify;
+}
+.section .email{
+	display: block;
+	font-style: normal;
+	font-size: .16rem;
+	font-family: MicrosoftYaHei;
+	color: #007aad;
+	margin-bottom: 0.3rem;
+}
+#corporate p{
+	color: #fff;
+}
+#services .section{
+	width: 8.06rem;
+	margin-right: 1.6rem;
+	margin-top: 1.1rem;
+}
+#team .section{
+	width: 6rem;
+	margin-left: 1.3rem;
+	margin-top: 1.1rem;
+}
+#join .section{
+	width: 6.2rem;
+	margin-right: 1.2rem;
+	margin-top: 0;
+}
+#company,#corporate,#services,#team,#join{
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+#company{
+	margin-top: 0.75rem;
+	height: 8.44rem;
+	background-image: url('../img/indexjpg_03.jpg');
+	background-size: 100% 8.44rem;
+}
+#corporate{
+	height: 8.38rem;
+	background-image: url('../img/indexjpg_04.jpg');
+	background-size: 100% 8.38rem;
+}
+#services{
+	height: 8.74rem;
+	background-image: url('../img/indexjpg_05.jpg');
+	background-size: 100% 8.74rem;
+}
+#team{
+	height: 9.1rem;
+	background-image: url('../img/indexjpg_06.jpg');
+	background-size: 100% 9.1rem;
+}
+#join{
+	height: 9.98rem;
+	background-image: url('../img/indexjpg_07.jpg');
+	background-size: 100% 9.98rem;
+}
+.footTop{
+	height: 4.15rem;
+	background-color: #f3fbff;
+}
+.ftWrap{
+	width: 10rem;
+	margin: 0 auto;
+}
+.ftLeft{
+	width: 4rem;
+	height: 2.7rem;
+	/* margin-right: 0rem; */
+	padding-top: 1.45rem;
+}
+.gmail,.http{
+	font-family: MicrosoftYaHei;
+	font-size: .16rem;
+	color: #333;
+	padding-left: .7rem;
+}
+.gmail{
+	height: .38rem;
+	line-height: .38rem;
+	background: url('../img/icon_02.png') 0 0 no-repeat;
+	background-size: .56rem .38rem;
+	margin-bottom: 0.2rem;
+}
+.http{
+	height: .44rem;
+	line-height: .44rem;
+	background: url('../img/icon_01.png') 0 0 no-repeat;
+	background-size: .45rem .44rem;
+}
+.ftRight{
+	width: 6rem;
+	height: 2.03rem;
+	padding-top: .5rem;
+}
+.ftRight h6{
+	font-family: ArialMT;
+	font-size: .16rem;
+	line-height: .44rem;
+	color: #333;
+}
+form{
+	font-size: .3rem;
+}
+.title{
+	width: 4.98rem;
+	height: .25rem;
+	padding: 0.1rem;
+	background-color: #fff;
+	box-shadow: 2px 3px 3px 0px
+		rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	margin: .25rem 0 .15rem;
+	font-family: ArialMT;
+	font-size: .16rem;
+}
+.content{
+	width: 4.98rem;
+	height: 1.3rem;
+	padding: 0.1rem;
+	background-color: #fff;
+	box-shadow: 2px 3px 3px 0px
+		rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	font-family: ArialMT;
+	font-size: .16rem;
+	resize: none;
+}
+.submit{
+	width: .8rem;
+	height: .4rem;
+	background-color: #15ade9;
+	font-size: .16rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fff;
+	border-radius: .1rem;
+	cursor: pointer;
+}
+.footBot{
+	height: 1rem;
+	background-color: #2b2b2b;
+}
+.copyright{
+	width: 8rem;
+	height: 1rem;
+	text-align: right;
+	line-height: 1.2rem;
+	margin: 0 auto;
+	background: url('../img/indexjpg_10.jpg') 0 0 no-repeat;
+	background-size: 3.17rem 1rem;
+	font-family: MicrosoftYaHei;
+	font-size: .14rem;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #999;
+}

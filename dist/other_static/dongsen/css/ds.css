@@ -1,0 +1,356 @@
+.wrap{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+}
+#logo{
+	width: 1.12rem;
+	height: .38rem;
+	background: url('../img/logo_ds.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	left: .32rem;
+	top: .15rem;
+	z-index: 99;
+}
+#nav {
+	position: fixed;
+	right: 0;
+	top: 0;
+	text-align: center;
+	list-style-type: none;
+	padding-right: 1rem;
+	z-index: 99;
+}
+#nav li {
+	display: inline-block;
+	margin: 0 5px;
+}
+#nav a {
+	display: inline-block;
+	padding: .2rem .3rem;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: .18rem;
+	/* border-top: 4px solid transparent; */
+}
+#nav a:hover{
+	background: url('../img/nav_bg_ahover.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+#nav .current a {
+	color: #ad964e;
+	/* background-image: linear-gradient(0deg,
+		rgba(255, 255, 255, 0.02) 0%,
+		rgba(255, 255, 255, 0.3) 100%);
+	border-top-color: #ad964e; */
+	background: url('../img/nav_bg_select.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+#index{
+	background-image: url('../img/img01.jpg');
+}
+#about{
+	background-image: url('../img/img02.jpg');
+}
+#service{
+	background-image: url('../img/img03.jpg');
+}
+#weyoo{
+	background-image: url('../img/img04.jpg');
+}
+#lottery{
+	background-image: url('../img/img05.jpg');
+}
+#esport{
+	background-image: url('../img/img06.jpg');
+}
+#plat{
+	background-image: url('../img/img07.jpg');
+}
+.content{
+	width: 100%;
+	height: 9.2rem;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.iCon1{
+	padding-top: 2.3rem;
+	margin: 0 auto .27rem;
+	text-align: center;
+}
+.iCon1 img{
+	width: 4.54rem;
+	height: .91rem;
+}
+.iCon2{
+	margin: 0 auto .24rem;
+	text-align: center;
+}
+.iCon2 img{
+	width: 5rem;
+	height: .49rem;
+}
+.iCon3{
+	margin: 0 auto;
+	text-align: center;
+}
+.iCon3 img{
+	width: 1.45rem;
+	height: 1.46rem;
+	margin: 0 .18rem;
+}
+/* 关于我们 */
+.conWrap{
+	width: 10rem;
+	padding-top: 1.38rem;
+	margin: 0 auto;
+}
+#about .conTitle{
+	width: 3.79rem;
+	height: .64rem;
+	background-image: url('../img/img02_title.png');
+}
+#service .conTitle{
+	width: 7.15rem;
+	height: .63rem;
+	background-image: url('../img/img03_title.png');
+}
+#weyoo .conTitle{
+	width: 6.6rem;
+	height: .63rem;
+	background-image: url('../img/img04_title.png');
+}
+#lottery .conTitle{
+	width: 5.12rem;
+	height: .69rem;
+	background-image: url('../img/img05_title.png');
+}
+#esport .conTitle{
+	width: 7.18rem;
+	height: .69rem;
+	background-image: url('../img/img06_title.png');
+}
+.conTitle{
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: .35rem;
+}
+.conInfo{
+	width: 100%;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	font-weight: normal;
+	font-style: italic;
+	font-stretch: normal;
+	line-height: .3rem;
+	letter-spacing: 0px;
+	color: #fff;
+	text-align: justify;
+}
+.ulList{
+	width: 100%;
+	margin-top: .76rem;
+}
+.ulList li{
+	float: left;
+}
+.ulList li img{
+	width: 1.8rem;
+	height: 3.33rem;
+	margin-right: .22rem;
+}
+.ulList li:last-child img{
+	margin-right: 0;
+}
+.conList{
+	width: 10rem;
+	background-color: rgba(82,82,82, 0.5);
+	border-radius: 5px;
+}
+#service .conList{
+	margin-top: .66rem;
+}
+.conList li{
+	width: 2rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	float: left;
+	border-radius: 5px;
+}
+.conList li:nth-child(odd){
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.3)),
+	linear-gradient(
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.3));
+	background-blend-mode: normal,
+		normal;
+	transition: 1s;
+}
+.conList li img{
+	vertical-align: middle;
+}
+.conList li:nth-child(odd):hover{
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.1),
+		rgba(255, 255, 255, 0.1)),
+	linear-gradient(
+		rgba(255, 255, 255, 0.1),
+		rgba(255, 255, 255, 0.1));
+	background-blend-mode: normal,
+		normal;
+}
+.s-l-1{
+	width: 1.64rem;
+	height: .37rem;
+}
+.s-l-2{
+	width: 1.61rem;
+	height: .43rem;
+}
+.s-l-3{
+	width: .79rem;
+	height: .78rem;
+}
+.s-l-4{
+	width: 1.54rem;
+	height: .53rem;
+}
+.s-l-5{
+	width: 1.75rem;
+	height: .52rem;
+}
+.wyImg{
+	width: 10rem;
+	margin: .3rem auto 0;
+	text-align: left;
+}
+.wyImg img{
+	width: 9.31rem;
+	height: 4.65rem;
+}
+
+#lottery .conList{
+	margin-top: .5rem;
+}
+.l-l-1{
+	width: 1.31rem;
+	height: .82rem;
+}
+.l-l-2{
+	width: 1.07rem;
+	height: .92rem;
+}
+.l-l-3{
+	width: 1.16rem;
+	height: 1.03rem;
+}
+.l-l-4{
+	width: 1.34rem;
+	height: .81rem;
+}
+.l-l-5{
+	width: 1rem;
+	height: 1.03rem;
+}
+
+#esport .conList{
+	margin-top: .9rem;
+}
+.e-l-1{
+	width: 1.68rem;
+	height: .64rem;
+}
+.e-l-2{
+	width: 1.26rem;
+	height: 1.03rem;
+}
+.e-l-3{
+	width: 1.61rem;
+	height: .68rem;
+}
+.e-l-4{
+	width: 1.58rem;
+	height: 1.15rem;
+}
+.e-l-5{
+	width: 1.31rem;
+	height: 1.21rem;
+}
+
+#plat{
+	position: relative;
+}
+.pWrap{
+	width: 10rem;
+	padding-top: .7rem;
+	margin: 0 auto;
+}
+.leftP{
+	width: 4.3rem;
+	height: 8.5rem;
+	text-align: center;
+	margin-right: .6rem;
+	position: relative;
+}
+.rightP{
+	width: 5rem;
+	height: 8.5rem;
+	position: relative;
+}
+.lpImg{
+	width: 2.77rem;
+	height: .6rem;
+}
+.rpImg{
+	width: 4.81rem;
+	height: .59rem;
+}
+.ptitle{
+	font-size: .18rem;
+	line-height: .3rem;
+	letter-spacing: 0px;
+	color: #c8ab71;
+	text-align: justify;
+	margin-top: .3rem;
+}
+.spImg1{
+	width: 7.46rem;
+	height: 7.46rem;
+	position: absolute;
+	right: 0;
+	bottom: -0.8rem;
+	z-index: 1;
+}
+.spImg2{
+	width: 4.84rem;
+	height: 4.73rem;
+	position: absolute;
+	left: 0;
+	bottom: 1.67rem;
+	z-index: 1;
+}
+.footer{
+	width: 100%;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	color: #5e606f;
+	font-size: .16rem;
+	text-align: center;
+	background-color: #181a29;
+	position: relative;
+	z-index: 2;
+}
+.footer img{
+	width: 1.12rem;
+	height: .38rem;
+	vertical-align: middle;
+	margin-left: .3rem;
+}

@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>东森集团幸运大抽奖</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/luckydraw.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.vidbacking.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div id="video-back" class="w1">
+		  <video poster="" autoplay muted loop class="vidbacking">
+		    <source src="img/bg.mp4" type="video/mp4">
+		  </video>
+		    <!-- html content of the div -->
+		    <div class="actTerm w1">
+				<div class="allInfo mat">
+					<div class="mainCon clearfix mat">
+						<div class="lCon fl">
+							<table class="prizeList">
+							    <tr>
+							        <td class="pao pao-1">
+										<img class="pHover" src="img/b1.png" alt="">
+							        </td>
+							        <td class="pao pao-2">
+							        	<img class="pHover" src="img/b2.png" alt="">
+							        </td>
+							        <td class="pao pao-3">
+							        	<img class="pHover" src="img/b3.png" alt="">
+							        </td>
+							        <td class="pao pao-4">
+							        	<img class="pHover" src="img/b4.png" alt="">
+							        </td>
+							        <td class="pao pao-5">
+							        	<img class="pHover" src="img/b5.png" alt="">
+							        </td>
+							        <td class="pao pao-6">
+							        	<img class="pHover" src="img/b6.png" alt="">
+							        </td>
+							        <td class="pao pao-7">
+							        	<img class="pHover" src="img/b7.png" alt="">
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="pao pao-20">
+							        	<img class="pHover" src="img/b20.png" alt="">
+							    	</td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao pao-8">
+							        	<img class="pHover" src="img/b8.png" alt="">
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="pao pao-19">
+							        	<img class="pHover" src="img/b19.png" alt="">
+							        </td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao pao-9">
+							        	<img class="pHover" src="img/b9.png" alt="">
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="pao pao-18">
+							        	<img class="pHover" src="img/b18.png" alt="">
+							    	</td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao"></td>
+							        <td class="pao pao-10">
+							        	<img class="pHover" src="img/b10.png" alt="">
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="pao pao-17">
+							        	<img class="pHover" src="img/b17.png" alt="">
+							        </td>
+							        <td class="pao pao-16">
+							        	<img class="pHover" src="img/b16.png" alt="">
+							        </td>
+							        <td class="pao pao-15">
+							        	<img class="pHover" src="img/b15.png" alt="">
+							        </td>
+							        <td class="pao pao-14">
+							        	<img class="pHover" src="img/b14.png" alt="">
+							        </td>
+							        <td class="pao pao-13">
+							        	<img class="pHover" src="img/b13.png" alt="">
+							        </td>
+							        <td class="pao pao-12">
+							        	<img class="pHover" src="img/b12.png" alt="">
+							        </td>
+							        <td class="pao pao-11">
+							        	<img class="pHover" src="img/b11.png" alt="">
+							        </td>
+							    </tr>
+							</table>
+							<!-- <div class="prizeNum times">0</div> -->
+							<div class="pBtn" id="startPao"></div>
+						</div>
+						<!-- <div class="rCon fr"></div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.vidbacking.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			$('#video-back').vidbacking();
+		    var paomadeng = {
+		        currentIndex : 1, //当前索引
+		        indexCount : 20, //个数
+		        timer : 0, //定时器
+		        currentCycle : 0, //当前圈数
+		        cycles : 4, //跑的圈数
+		        speed : 400, //速度，即定时器的时间间隔
+		        key : 0, //钥匙,随机数
+		        btn : 0, //触发按钮
+		        classPrefix : "pao-", //元素类名class前缀
+		        obj : {
+		        	'20': '鼠标垫',
+					'19': '蓝牙耳机',
+					'18': '记事本',
+					'17': '鼠标垫',
+	        		'16': '帽子',
+					'15': '保温杯',
+					'14': '大礼包',
+					'13': '鼠标垫',
+					'12': '蓝牙喇叭',
+					'11': '保温杯',
+					'10': '鼠标垫',
+					'9': '蓝牙耳机',
+					'8': '记事本',
+					'7': '鼠标垫',
+					'6': '帽子',
+					'5': '保温杯',
+					'4': '大礼包',
+					'3': '鼠标垫',
+					'2': '蓝牙喇叭',
+					'1': '保温杯'
+				},//奖品
+		        reset : function(){
+		            //触发对象
+		            paomadeng.btn = this;
+		            $('#startPao').addClass('unable');
+
+		            clearInterval(paomadeng.timer);
+		            paomadeng.currentCycle = 0;
+		            paomadeng.speed = 400;
+					// 用户抽奖操作
+			  //       $.ajax({
+					//     url: "/roulette",
+					//     jsonp: "callback",
+					//     // dataType: "jsonp",
+					//     async: true,
+					//     data: {},    //参数值
+					//     type: "POST",   //请求方式
+					//     beforeSend: function() {
+					//         //请求前的处理
+					//     },
+					//     success: function(req) {
+					//     	// console.log(req)
+					//     	if ( req.state ) {
+					//     		paomadeng.key = req.data;
+					//     		return paomadeng.key;
+					//     	}else{
+				 //    			var popup = new Popup({
+					// 		        'type': 'submit',
+					// 		        'title': '提示信息',
+					// 		        'text': req.data
+					// 		    })
+					//     		return;
+					//     	}
+					//     }
+					// });
+		            paomadeng.key = Math.ceil(Math.random() * paomadeng.indexCount);
+		            paomadeng.run();
+		        },
+		        run : function(){
+		            // console.log("speed:" + paomadeng.speed);
+
+		            var before = paomadeng.currentIndex == 1 ? paomadeng.indexCount : paomadeng.currentIndex - 1;
+
+		            //设置上一索引的类名
+		            var beforeNode = document.getElementsByClassName(paomadeng.classPrefix + before)[0];
+		            var beforeClassNewName = beforeNode.className.replace("on","");
+		            beforeNode.className = beforeClassNewName;
+		            //设置当前索引的类名
+		            var currentNode = document.getElementsByClassName(paomadeng.classPrefix + paomadeng.currentIndex)[0];
+		            currentNode.className += " on"; //注意前面有空格
+
+		            paomadeng.upSpeed();
+		            paomadeng.downSpeed();
+
+		            paomadeng.currentIndex += 1;
+		            paomadeng.currentIndex = paomadeng.currentIndex > paomadeng.indexCount ? 1: paomadeng.currentIndex;
+		        },
+		        //加速
+		        upSpeed : function(){
+		            //前2圈且speed>100时加速
+		            if(paomadeng.currentCycle < 2 && paomadeng.speed > 100){
+		                paomadeng.speed -= 5 * paomadeng.currentIndex ;
+		                paomadeng.stop();
+		                paomadeng.start();
+		            }
+		        },
+		        //增加圈数 并 减速
+		        downSpeed : function(){
+		            //增加圈数
+		            if(paomadeng.currentIndex == paomadeng.indexCount){
+		                paomadeng.currentCycle += 1;
+		            }
+
+		            //如果当前所跑圈数小于总圈数-1 并且 速度小于400，那么减速
+		            if(paomadeng.currentCycle > paomadeng.cycles-1 && paomadeng.speed < 500){
+		                paomadeng.speed += 10;
+		                paomadeng.stop();
+		                paomadeng.start();
+		            }
+
+		            //如果当前所跑圈数大于总圈数 且 索引值等于key，那么停止奔跑
+		            if(paomadeng.currentCycle > paomadeng.cycles && paomadeng.currentIndex == paomadeng.key){
+		                paomadeng.stop();
+		                paomadeng.showPrize();
+		            }
+		        },
+		        stop : function(){
+		            clearInterval(paomadeng.timer);
+		        },
+		        start : function(){
+		            paomadeng.timer = setInterval(paomadeng.run , paomadeng.speed);
+		        },
+		        showPrize : function(){
+		            setTimeout(function(){
+		            	console.log(paomadeng.key)
+		                var popup = new Popup({
+					        'type': 'submit',
+					        'title': '提示信息',
+					        'text': "恭喜您，您抽中的是" + paomadeng.obj[paomadeng.key] + "！",
+					        'submitCallBack': function(){
+					        	$('#startPao').removeClass('unable');
+					        },
+					        'closeCallBack': function(){
+					        	$('#startPao').removeClass('unable');
+					        }
+					    })
+		            },700);
+
+		        }
+		    };
+		    document.getElementById("startPao").onclick= paomadeng.reset;
+		};
+	</script>
+</body>

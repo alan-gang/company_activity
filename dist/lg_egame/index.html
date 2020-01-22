@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LEGEND GAMING</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=0.1">
+</head>
+
+<body>
+	<div class="wrapper">
+		<ul class="gameList clearfix">
+			<li data_id="48">
+				<img src="images/48.jpg" alt="">
+				<p class="gameName">五路财神</p>
+			</li>
+			<li data_id="54">
+				<img src="images/54.jpg" alt="">
+				<p class="gameName">今晚吃鸡</p>
+			</li>
+			<li data_id="1">
+				<img src="images/01.jpg" alt="">
+				<p class="gameName">法老宝藏</p>
+			</li>
+			<li data_id="17">
+				<img src="images/17.jpg" alt="">
+				<p class="gameName">三只松鼠</p>
+			</li>
+			<li data_id="24">
+				<img src="images/24.jpg" alt="">
+				<p class="gameName">招财猫</p>
+			</li>
+			<li data_id="27">
+				<img src="images/27.jpg" alt="">
+				<p class="gameName">黄金招财猫</p>
+			</li>
+			<li data_id="34">
+				<img src="images/34.jpg" alt="">
+				<p class="gameName">超级赢家</p>
+			</li>
+			<li data_id="46">
+				<img src="images/46.jpg" alt="">
+				<p class="gameName">大吉大利</p>
+			</li>
+		</ul>
+    <div id="playNow" onclick="playNow()">前往游戏</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+    var resultUrl = ''
+		$(document).on('click', '.gameList li', function () {
+			var $this = this;
+			var gameid = $($this).attr("data_id");;
+      if (window.sessionStorage.getItem('esb') == 'bw') {
+        gotoPlayWithcredital(gameid)
+      } else {
+			  gotoPlay(gameid);
+      }
+		});
+		var url = "/dscagamesclient/ext/bg.do?method=gameUrl";
+		if (window.sessionStorage.getItem('esb') == 'bw') {//包网
+			url = window.sessionStorage.getItem('api') + "/api-user/ext/gameUrl";
+		}
+		function gotoPlay(gameid) {
+			$.ajax({
+				url: url,
+				jsonp: "callback",
+				// dataType: "jsonp",
+				async: true,
+				data: { "platid": 21, "gameid": gameid },    //参数值
+				type: "GET",   //请求方式
+				beforeSend: function () {
+					//请求前的处理
+				},
+				success: function (req) {
+					console.log('gameid==' + gameid, req);
+					if (req.success == 1) {
+            // console.log('success')
+            resultUrl = req.url;
+            window.open(req.url)
+            // showPlayNow()
+					} else if (req.success == 0) {
+						// console.log('failed')
+					}
+				}
+			});
+		}
+    function gotoPlayWithcredital(gameid) {
+      $.ajax({
+        url: url,
+        xhrFields: { withCredentials: true },
+        async: true,
+        data: { "platid": 21, "gameid": gameid },    //参数值
+        type: "GET",   //请求方式
+        beforeSend: function () {
+          //请求前的处理
+        },
+        success: function (req) {
+          console.log('gameid==' + gameid, req);
+          if (typeof req === 'string') {
+            req = JSON.parse(req)
+          }
+          if (req.success == 1) {
+            resultUrl = req.url;
+            // showPlayNow()
+            window.open(req.url)
+          } else if (req.success == 0) {
+            // console.log('failed')
+          }
+        }
+      });
+    }
+    $('#playNow').hide()
+    function showPlayNow () {
+      $('#playNow').show()
+    }
+    function hidePlayNow () {
+      $('#playNow').hide()
+      resultUrl = ''
+    }
+    function playNow () {
+      if (resultUrl) window.open(resultUrl)
+      hidePlayNow()
+    }
+    // test
+    // resultUrl = 'http://baidu.com'
+    // showPlayNow()
+	</script>
+</body>
+<style>
+#playNow{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #fff;
+  background-color: #ad9000;
+  cursor: pointer;
+}
+</style>
+</html>

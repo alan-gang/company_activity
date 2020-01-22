@@ -1,0 +1,178 @@
+body{
+	font-size: .24rem;
+	color: #ffdd7a;
+	background-color: #12171d;
+}
+.banner{
+	min-width: 12rem;
+	height: 12.42rem;
+	background: url('../img/520activity/top_bg.png') 0 0 no-repeat;
+	background-size: 100% 12.42rem;
+	position: relative;
+}
+
+.actTerm{
+	height: auto;
+	position: relative;
+	margin-top: -3.8rem;
+}
+.ruleTitle{
+	width: 4.22rem;
+	height: .97rem;
+	background: url('../img/520activity/title02.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin: .5rem auto .6rem;
+}
+.allInfo{
+	/* width: 11rem; */
+	margin-bottom: 1rem;
+}
+.mainCon{
+	width: 11.2rem;
+	min-width: 928px;
+	height: 7.8rem;
+	padding: .4rem .4rem .25rem;
+	background: url('../img/520activity/prize_bg.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+}
+.lCon{
+	width: 6rem;
+	min-width: 466px;
+	height: 6.8rem;
+	background: url('../img/520activity/character.png') 1.65rem 1.75rem no-repeat;
+	background-size: 2.48rem 2.83rem;
+	position: relative;
+}
+.rCon{
+	width: 3.56rem;
+	min-width: 285px;
+	height: 5.77rem;
+	background: url('../img/520activity/prizetext.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-top: .8rem;
+	margin-right: .5rem;
+}
+.prizeList{
+	position: relative;
+	z-index: 99;
+}
+.prizeList td{
+	display: inline-block;
+	width: 1.14rem;
+	height: .93rem;
+	padding: .15rem;
+	position: relative;
+	z-index: 100;
+}
+.pao-1,.pao-2,.pao-3,.pao-4,.pao-5,.pao-6,.pao-7,.pao-8,.pao-9,.pao-10,.pao-11,.pao-12,.pao-13,.pao-14,.pao-15,.pao-16{
+	background-image: url('../img/520activity/prize_active.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 0 0;
+}
+.pHover{
+	width: 1.15rem;
+	height: .94rem;
+	position: absolute;
+	left: 0.15rem;
+	top: 0.15rem;
+	z-index: 99;
+}
+.prizeList .on{
+    background-size: 100% 100%;
+}
+.prizeNum{
+	width: .7rem;
+	height: .58rem;
+	line-height: .58rem;
+	color: #fff4d0;
+	text-align: center;
+	background: url('../img/520activity/love.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 1.95rem;
+	left: 2.5rem;
+	z-index: 100;
+}
+.pBtn{
+	width: 2.24rem;
+	height: 1.21rem;
+	background: url('../img/520activity/btn_01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 1.78rem;
+	bottom: 1rem;
+	border: 0;
+	z-index: 99;
+}
+.lCon .unable{
+	pointer-events: none;
+}
+.pBtn:hover{
+	cursor: pointer;
+}
+.pBtn:active{
+	height: 1.18rem;
+	background: url('../img/520activity/btn_01_hover.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	border: 0;
+}
+
+.termList{
+	width: 10.1rem;
+	height: 4rem;
+	padding: .5rem .4rem 0 .5rem;
+	margin-bottom: .44rem;
+	background-color: #cf2a2a;
+	box-shadow: 0px 3px 0px 0px
+		#ffb542,
+		inset 0px 0px 3px 0px
+		#e18f00;
+	border-radius: 20px;
+}
+.termList li{
+	/* height: .5rem; */
+	line-height: .33rem;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	margin-bottom: 0.2rem;
+	text-align: justify;
+}
+.termIndex{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	line-height: .32rem;
+	text-align: center;
+	color: #cf2a2a;
+	background: #ffdd7a;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .2rem;
+	letter-spacing: 0px;
+	margin-top: .03rem;
+	margin-right: .15rem;
+	vertical-align: top;
+}
+.termList li p{
+	display: inline-block;
+    width: 92%;
+    text-align: justify;
+}
+.back{
+	width: 7.34rem;
+	height: .97rem;
+	margin: 1rem auto;
+	cursor: pointer;
+	background: url('../img/520activity/back_btn.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.popup-text{
+	color: #e18f00;
+}

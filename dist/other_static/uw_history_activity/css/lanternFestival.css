@@ -1,0 +1,189 @@
+body {
+  background-color: #12171d;
+}
+.wrapper{
+	padding-bottom: .5rem;	
+}
+.clor_yellow {
+  color: #fed756;
+}
+.banner{
+	min-width: 12rem;
+	height: 9.25rem;
+	position: relative;
+	background: url('../img/lanternFestival/topbanner.png') 0 0 no-repeat;
+	background-size: 100% 8.25rem;
+	overflow: hidden;
+}
+.banner2{
+	min-width: 12rem;
+	height: 3.8rem;
+	position: absolute;
+	left: 0;
+	top: 3.8rem;
+}
+.banner3{
+	min-width: 12rem;
+	height: 3.8rem;
+	position: absolute;
+	left: 0;
+	top: 7.6rem;
+}
+.content{
+	width: 100%;
+	height: 18rem;
+	margin-top: .27rem;
+}
+.tb-title {
+  width: 7.54rem;
+  height: 1.27rem;
+  background: url('../img/lanternFestival/title01.png') 0 0 no-repeat;
+  margin: 0 auto;
+}
+.actInfo{
+  margin-bottom: 1.24rem;
+  margin-top: 0.3rem;
+}
+.listwrap{
+	width: 10.4rem;
+  margin: 0 auto;
+  
+}
+.toplist li{
+	width: 2.6rem;
+	height: .68rem;
+	line-height: .68rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 1px;
+	color: #fed756;
+	background: url('../img/lanternFestival/table_bg.png') 0 0 no-repeat;
+  border-right: solid 0.02rem #12171d;
+  border-bottom: solid 0.02rem #12171d;
+  box-sizing: border-box;
+}
+
+.list{
+	width: 2.6rem;
+  margin: 0 auto;
+  float: left;
+}
+.tb-body {
+  overflow: hidden;
+}
+.list li{
+	width: 2.6rem;
+	height: .7rem;
+	line-height: .7rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	color: #a4a4a4;
+	background-color: #222628;
+	border-right: solid 0.02rem #12171d;
+  border-bottom: solid 0.02rem #12171d;
+  box-sizing: border-box;
+}
+.tb-body .list:nth-child(3) li,
+.tb-body .list:nth-child(4) li {
+  height: 4.90rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tb-footer {
+  font-size: 0.24rem;
+  overflow: hidden;
+  margin-top: 0.3rem;
+}
+.tb-footer-l {
+  
+  float: left;
+}
+.tb-footer-l ,
+.tb-footer-r  {
+  display: flex;
+}
+.tb-footer-r {
+  float: right;
+}
+.tb-footer-l > div {
+  width: 2.6rem;
+  border-right: solid 0.02rem #12171d;
+  border-bottom: solid 0.02rem #12171d;
+  box-sizing: border-box;
+}
+.tb-footer-l > div,
+.tb-footer-r > div {
+  height: 0.68rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tb-footer-l > div:first-child {
+	background-color: #0c0e0f;
+}
+.tb-footer-l > div:last-child {
+	background-color: #222628;
+}
+.tb-footer-r > div:first-child {
+  width: 2.54rem;
+	background-color: #0c0e0f;
+}
+.tb-footer-r > div:last-child {
+  width: 2.50rem;
+	background-color: #222628;
+}
+.toplist li,.list li:nth-child(3),.list li:last-child{
+	margin-right: 0;
+}
+.actTerm .titleWrap{
+	margin-bottom: 0.35rem;
+}
+.termTitle{
+	width: 7.54rem;
+	height: 1.27rem;
+  background: url('../img/lanternFestival/title02.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.termList{
+	width: 12rem;
+	height: 3.5rem;
+}
+.termList li{
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .18rem;
+	font-family: MicrosoftYaHei;
+	letter-spacing: 0px;
+	color: #a4a4a4;
+}
+.termList li:last-child {
+  padding-left: .56rem;
+}
+.termIndex{
+	display: inline-block;
+	width: .36rem;
+	height: .36rem;
+	line-height: .36rem;
+	text-align: center;
+	background-color: #1b1d44;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #ffffff;
+	margin-right: .2rem;
+}
+
+.goBack {
+  width: 7.34rem;
+  height: .94rem;
+  margin: 1.2rem auto .5rem;
+  cursor: pointer;
+  background: url(../img/lanternFestival/back.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}

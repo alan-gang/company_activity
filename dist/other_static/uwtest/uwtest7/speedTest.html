@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	    <meta name="keywords" content="U赢电竞欢迎您">
+	    <meta name="description" content="U赢电竞欢迎您">
+	    <title>U赢电竞测速</title>
+	    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/speedtest.css">
+    </head>
+
+    <body>
+		<div class="wrapper w1">
+			<div class="wrap">
+				<div class="testTop">
+					<img class="banner2" src="img/logo-min.png" alt="">
+				</div>
+				<div class="conImg">
+					<img class="titleImg" src="img/title_main-min.png" alt="">
+				</div>
+
+				<ul id="urlLists" class="webTest mat clearfix">
+					<!-- <li class="fl">
+						<img class="hover" src="img/list_ahover-min.png" alt="">
+						<a class="lineWrap" href="https://www.uwinmax.net" title="" target="_blank">
+							<img class="light" src="img/signal_green-min.png" alt="">
+							<span class="ping clearfix">
+								<span class="speed fl">400+</span>
+								<span class="ms fl">ms</span>
+							</span>
+							<span class="num">01</span>
+							<span class="main">官方主线</span>
+						</a>
+					</li> -->
+				</ul>
+				<div id="site1_peed"></div>
+			</div>
+
+		</div>
+        <script src="js/jquery-1.10.1.min.js"></script>
+	    <script type="text/javascript">
+
+		    var urls = [];
+		    var timeArray = [];
+		    querySites();
+		    function querySites () {
+				$.ajax({
+				    url: "https://www.uwinmax.com/Index/Sites",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: {},    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	// console.log(req.data)
+					  	var allDomains = req.data;
+					  	for (var i = 0; i < allDomains.length; i++) {
+				    		urls.push({domain: allDomains[i], id: i})
+				    	}
+				    	test(urls)
+					}
+				});
+			}
+
+			function test (urls) {
+			    for (var i = 0; i < urls.length; i++) {
+		        	testAline(urls[i].domain, i, urls[i].id);
+		        	console.log(urls[i].id)
+				}
+	        };
+	        var lineNum = 1;
+	        function testAline (url, i, id) {
+	        	var st =  new Date().getTime()
+	        	// setTimeout(function(){
+	        	// 	if (!timeArray[i]) {
+	        	// 		timeArray[i] = 10000;
+	        	// 		$($("#urlLists li").get( i )).find(".speed").html(timeArray[i]);
+	        	// 	}
+	        	// },3000)
+	        	 $.ajax({
+				    url: url+ '/Index/Ping',
+				    jsonp: "callback",
+				    async: true,
+				    data: { "callback" : "A" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    complete: function(rep) {
+				    	var speed = 0;
+				    	var et =  new Date().getTime();
+				    	if ( rep.readyState == 4 && rep.status == 200) {
+				    		timeArray[i] = et - st;
+				    		speed = et - st;
+				    	}
+						var imgSrc = '';
+			    		if (timeArray[i] < 200) {
+			    			imgSrc = 'img/signal_green-min.png';
+			    		}else if (timeArray[i] < 800) {
+			    			imgSrc = 'img/signal_yellow-min.png';
+			    		}else{
+			    			imgSrc = 'img/signal_red-min.png';
+			    		}
+
+			    		var liEl =  $('<li class="fl"><img class="hover" src="img/list_ahover.png" alt=""><a class="lineWrap" href="'+ url + '" title="" target="_blank"><img class="light" src="' + imgSrc + '" alt=""><span class="ping clearfix"><span class="speed fl">'+ speed + '</span><span class="ms fl">ms</span></span><span class="num">0' + lineNum + '</span><span class="main">官方主线</span></a></li>');
+			    		$('#urlLists').append(liEl);
+			    		lineNum++;
+				    }
+	        	});
+	       	}
+
+	    </script>
+    </body>
+  </html>

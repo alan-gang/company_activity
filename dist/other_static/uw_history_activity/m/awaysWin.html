@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css?v=0.22">
+  <link rel="stylesheet" href="css/awaysWin.css?v=0.23">
+  <title>连连赢，连连送</title>
+</head>
+
+<body>
+  <script src="js/common.js"></script>
+  <div style="height: 100%;overflow: scroll;-webkit-overflow-scrolling: touch;">
+    <header>
+      <div class="img1"></div>
+      <div class="img2"></div>
+    </header>
+    <section>
+      <h1></h1>
+      <div class="condition">
+        <p class="txt">
+          <span>连赢局数</span>
+          <span>投注金额/奖金</span>
+          <span>投注金额/奖金</span>
+          <span>投注金额/奖金</span>
+          <span>流水限制</span>
+        </p>
+        <p class="le">
+          <span>5</span>
+          <span>1百/88元</span>
+          <span>5百/388元</span>
+          <span>1千/888元</span>
+          <span>1倍</span>
+        </p>
+        <p class="le">
+          <span>6</span>
+          <span>1百/288元</span>
+          <span>5百/688元</span>
+          <span>1千/1688元</span>
+          <span>1倍</span>
+        </p>
+        <p class="le">
+          <span>8</span>
+          <span>1百/588元</span>
+          <span>5百/1288元</span>
+          <span>1千/2588元</span>
+          <span>1倍</span>
+        </p>
+        <p class="le">
+          <span>10</span>
+          <span>1百/888元</span>
+          <span>5百/1688元</span>
+          <span>1千/5888元</span>
+          <span>1倍</span>
+        </p>
+        <p class="le">
+          <span>15</span>
+          <span>1百/1288元</span>
+          <span>5百/2888元</span>
+          <span>1千/8888元</span>
+          <span>1倍</span>
+        </p>
+      </div>
+      <p class="des">A.TI8赛事期在电竞赛事中每场投注＞100元并连赢5场或以上，即可获得相应的彩金；</p>
+      <p class="des">B.每场赛事第一笔投注盈利为有效注单，每场赛事投注只限一血、十杀、赌赢、让分四个盘口；</p>
+      <p class="des">C.如出现注单作废、赛事取消等退还本金、和局（半赢半输）情况，视为连赢中断，连赢场次按投注时间排序；</p>
+      <div class="btn" onclick="back({action: 'goTi8'})"></div>
+      <h1 class="rns"></h1>
+      <p class="rule">
+        <i>1</i>
+        连赢统计由玩家活动期间首次投注记起一周内的连赢投注；
+      </p>
+      <p class="rule">
+        <i>2</i>
+        投注仅限在电竞赛事中，投注赔率需香港盘0.75以上，欧洲盘1.75以上视为有效投注；
+      </p>
+      <p class="rule">
+        <i>3</i>
+        领取奖金需一倍流水后可进行提款，流水仅限电竞赛事；
+      </p>
+      <p class="rule">
+        <i>4</i>
+        符合连赢条件玩家请在赛事结算后联系在线客服，提供您的首次投注时间和连赢场次；
+      </p>
+      <p class="rule">
+        <i>5</i>
+        凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。
+      </p>
+      <p class="rule">
+        <i>6</i>
+        如发现恶意刷取活动套利者，将扣除红利及所得盈利；
+      </p>
+      <p class="rule">
+        <i>7</i>
+        活动时间：北京时间2018年8月15日00:00分 - 2018年8月25日23:59分
+      </p>
+    </section>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    var hasLogin
+
+    //h5登录
+    if (location.href.indexOf('type=h5') != -1) {
+      if (location.href.indexOf('hasLogin=true') != -1) {
+        hasLogin = true;
+      }else{
+        if ( parent && parent.closeIFrame ) {
+          parent.closeIFrame({action: 'goLogin'})
+        } else {
+          if ( location.search != '?goLogin') {
+            location.search = 'goLogin'
+          }
+        }
+      }
+    }
+    window.onload = function() {
+        if (window.android) {
+            hasLogin = android.isLogin();
+        }
+    }
+    function isLogin(b) {
+        hasLogin = b
+    }
+    function back() {
+        if (!hasLogin) {
+            // 还没登录则先登录
+            if (location.href.indexOf('type=h5') != -1) {
+              if ( parent && parent.closeIFrame ) {
+                parent.closeIFrame({action: 'goLogin'})
+              } else {
+                if ( location.search != '?goLogin') {
+                  location.search = 'goLogin'
+                }
+              }
+            } else {
+              if (isiOS()) {
+                  //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+                  goAppLogin();
+              } else if (window.android) {
+                  android.goAppLogin();
+              }
+            }
+            return;
+        }
+
+        if (location.href.indexOf('type=h5') != -1) {
+            if ( parent && parent.closeIFrame ) {
+              parent.closeIFrame({action: 'goTi8'})
+            }
+        } else {
+          if (isiOS()) {
+              //window.webkit.messageHandlers.goAppLogin.postMessage(null);
+              go('ti8');
+          } else if (window.android) {
+              android.go('ti8');
+          }
+        }
+        return;
+    }
+    function isiOS() {
+        var u = navigator.userAgent;
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+  </script>
+</body>
+
+</html>

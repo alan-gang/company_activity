@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>2019新年大酬宾 5‰充值回馈无上限！</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/newyear.css?v=1.2">
+	<link rel="stylesheet" type="text/css" href="css/popup.css?v=1">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="banner w1"></div>
+		<div class="actTerm w1">
+			<div class="btnBar mat">
+				<div id="draw" class="btn btn1">
+					立即领取<i class="bonus">0</i><i class="yuan">元</i>奖金
+				</div>
+				<div id="topUp" class="btn btn2" onclick="back({action: 'goToLoad'})">
+					立即充值
+				</div>
+			</div>
+			<div id="draw" class="btnBar draw mat"></div>
+			<div class="conTitle mat"></div>
+			<img class="conInfo mat" src="img/newyear/con01.png" alt="">
+			<div class="termTitle mat"></div>
+			<ul class="termList mat">
+				<li>
+					<i class="termIndex">01</i>玩家需在获得奖金的产品中完成一倍流水可提现或转出;
+				</li>
+				<li>
+					<i class="termIndex">02</i>如奖金发放的产品为“体育”并且单次充值金额低于200元，则奖金视为无效；
+				</li>
+				<li>
+					<i class="termIndex">03</i>如未在指定产品中完成流水要求，将奖金转让其它产品盈利将视为无效；
+				</li>
+				<li>
+					<i class="termIndex">04</i>每位玩家、每一组电话号码、每一IP、相同支付方式（含相同借记卡，信用卡，银行帐号）
+只能申请一次；
+				</li>
+				<li>
+					<i class="termIndex">05</i>如发现恶意刷取活动套利者，将扣除红利及所得盈利。
+				</li>
+				<li>
+					<i class="termIndex">06</i>凡参加活动用户，即表示接受且自愿遵守平台规定，平台保留最终解释权。
+				</li>
+				<li>
+					<i class="timeIndex">活动时间：</i>2018年12月30日23:59分-1月19日23:59分
+				</li>
+			</ul>
+			<div class="btnBar goBack" onclick="back({action: 'goToList'})"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript">
+		function back(args) {
+		  if ( parent && parent.closeIFrame ) {
+		    parent.closeIFrame(args)
+		  } else {
+		    location.search = args.action
+		  }
+		}
+		$(function() {
+
+			if (location.href.indexOf('login=true') != -1) {
+				query ();
+			}else{
+				if ( parent && parent.closeIFrame ) {
+		          	parent.closeIFrame({action: 'goLogin'})
+		        } else {
+		          	if ( location.search != '?goLogin') {
+		        		location.search = 'goLogin'
+		        	}
+		        }
+			}
+
+			$(document).on('click', '#draw', function(){
+		        draw ();
+			});
+
+			function query () {
+		    	$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "38","a": "Check" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	var num = Number(req.data);
+				    	if (req.state) {
+				    		if( num <= 0){
+				    			$('#draw').css('display','none');
+				    			$('#topUp').css('display','block');
+				    		}else{
+				    			$('#topUp').css('display','none');
+				    			$('#draw').css('display','block');
+				    			$('#draw .bonus').html(num);
+				    		}
+				    	}else{
+				    		if ( req.message == '暂无奖金可领取' ) {
+				    			$('#draw').css('display','none');
+				    			$('#topUp').css('display','block');
+				    		} else if ( req.message == 'login' ) {
+				    			if ( location.search != '?goLogin') {
+					        		location.search = 'goLogin'
+					        	}
+				    		} else{
+				    			var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': req.message
+							    })
+				    		}
+				    	}
+				    }
+				});
+			}
+
+			function draw () {
+		    	$.ajax({
+				    url: "/Promos/Detail",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: { "id": "38","a": "Claim" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	if (req.state) {
+				    		var popup = new Popup({
+						        'type': 'submit',
+						        'title': '提示信息',
+						        'text': req.data,
+						        'submitCallBack': function(){
+									location.reload()
+						      	},
+						      	'closeCallBack': function(){
+									location.reload()
+						      	}
+						    })
+				    	}else{
+				    		if ( req.message == 'login') {
+				    			var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': '请先登录'
+							    })
+				    		}else {
+				    			var popup = new Popup({
+							        'type': 'submit',
+							        'title': '提示信息',
+							        'text': req.message
+							    })
+				    		}
+
+				    	}
+				    }
+				});
+			}
+
+		})
+	</script>
+</body>

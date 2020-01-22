@@ -1,0 +1,53 @@
+html, body {
+  background-color: #480495;
+}
+.wrapper{
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+}
+.a {
+  width: 90%;
+  vertical-align: top;
+}
+.aaa, .b {
+  position: relative;
+  top: -1.8rem;
+}
+.b {
+  background-image: url(../img/md11/content2bg@2x.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  text-align: left;
+  margin: .5rem .3rem;
+  padding: .65rem .3rem;
+}
+.termList li {
+  line-height: .27rem;
+  margin-bottom: 0.15rem;
+  font-size: .22rem;
+  letter-spacing: 0px;
+  color: #dbdbdb;
+}
+.termList li p {
+  display: inline-block;
+  width: 90%;
+  text-align: justify;
+}
+.termIndex{
+  display: inline-block;
+  width: .3rem;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  background-color: #f6de34;
+  border-radius: 50%;
+  font-family: MicrosoftYaHei;
+  font-style: normal;
+  font-size: .18rem;
+  letter-spacing: 0px;
+  color: #0d0d0d;
+  margin-right: .2rem;
+  vertical-align: top;
+}

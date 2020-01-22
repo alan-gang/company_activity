@@ -1,0 +1,233 @@
+.wrapper{
+	background-color: #000;
+}
+#nav{
+	height: .75rem;
+	box-shadow: 0px 2px 2px 0px
+		rgba(0, 0, 0, 0.2);
+	/* opacity: 0.5; */
+	background: #000 url('../img/index_01.jpg') .26rem 0 no-repeat;
+	background-size: 2.5rem .75rem;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+#nav li{
+	margin: 0 .15rem;
+}
+#nav li:first-child{
+	margin-right: 1.6rem;
+}
+#nav li,#nav li a{
+	display: inline-block;
+	font-size: .18rem;
+	line-height: .75rem;
+	font-family: ArialMT;
+	color: #bbb;
+}
+#nav a:hover {
+	color: #ff6400;
+}
+#nav li.current a {
+	color: #ff6400;
+}
+/* #nav li.current a{
+	color: #007aad;
+} */
+.section{
+	width: 15.2rem;
+	/* height: 9rem; */
+	padding-top: .75rem;
+	margin: 0 auto;
+}
+.section h2{
+	font-family: ArialMT;
+	font-size: .36rem;
+	color: #ff6400;
+	margin: .2rem 0 .3rem 0;
+}
+.section h6{
+	font-family: ArialMT;
+	font-size: .18rem;
+	color: #ff6400;
+	margin-bottom: .05rem;
+}
+.section h5{
+	font-family: ArialMT;
+	font-size: .18rem;
+	color: #333;
+	margin-bottom: .05rem;
+}
+.section p{
+	line-height: .2rem;
+	font-size: .16rem;
+	font-family: MicrosoftYaHei;
+	color: #666;
+	margin-bottom: .2rem;
+	text-align: justify;
+}
+.section .email{
+	display: block;
+	font-style: normal;
+	font-size: .16rem;
+	font-family: MicrosoftYaHei;
+	color: #ff6400;
+	margin-bottom: 0.3rem;
+}
+#company p{
+	color: #9f9f9f;
+}
+#corporate p{
+	color: #fff;
+}
+#corporate .section{
+	width: 8.65rem;
+	margin-left: 1.2rem;
+	padding-top: 2.2rem;
+}
+#services .section{
+	width: 8.06rem;
+	margin-right: 1.4rem;
+	margin-top: 1.2rem;
+}
+#team .section{
+	width: 6rem;
+	margin-left: 1.3rem;
+	margin-top: .3rem;
+}
+#join .section{
+	width: 6.2rem;
+	margin-right: 1.2rem;
+	margin-top: 0;
+}
+#company,#corporate,#services,#team,#join{
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+#company{
+	margin-top: 0.75rem;
+	height: 9.56rem;
+	background-image: url('../img/index_03.jpg');
+	background-size: 100% 9.56rem;
+}
+#corporate{
+	height: 11.22rem;
+	background-image: url('../img/index_04.jpg');
+	background-size: 100% 11.22rem;
+}
+#services{
+	height: 9.58rem;
+	background-image: url('../img/index_05.jpg');
+	background-size: 100% 9.58rem;
+}
+#team{
+	height: 8.1rem;
+	background-image: url('../img/index_06.jpg');
+	background-size: 100% 8.1rem;
+}
+#join{
+	height: 8.58rem;
+	background-image: url('../img/index_07.jpg');
+	background-size: 100% 8.58rem;
+}
+.footTop{
+	height: 4.15rem;
+	background-color: #222;
+}
+.ftWrap{
+	width: 11rem;
+	margin: 0 auto;
+}
+.ftLeft{
+	width: 4rem;
+	height: 2.7rem;
+	margin-right: 0.5rem;
+	padding-top: 1.45rem;
+}
+.gmail,.http{
+	font-family: MicrosoftYaHei;
+	font-size: .16rem;
+	color: #fff;
+	padding-left: .7rem;
+}
+.gmail{
+	height: .6rem;
+	line-height: .6rem;
+	background: url('../img/index_10.jpg') 0 0 no-repeat;
+	background-size: .6rem .6rem;
+	margin-bottom: 0.2rem;
+}
+.http{
+	height: .6rem;
+	line-height: .6rem;
+	background: url('../img/index_13.jpg') 0 0 no-repeat;
+	background-size: .6rem .6rem;
+}
+.ftRight{
+	width: 6rem;
+	height: 2.03rem;
+	padding-top: .5rem;
+}
+.ftRight h6{
+	font-family: ArialMT;
+	font-size: .16rem;
+	line-height: .44rem;
+	color: #fff;
+}
+form{
+	font-size: .3rem;
+}
+.title{
+	width: 4.98rem;
+	height: .25rem;
+	padding: 0.1rem;
+	background-color: #d0d0d0;
+	box-shadow: 2px 3px 3px 0px
+		rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	margin: .25rem 0 .15rem;
+	font-family: ArialMT;
+	font-size: .16rem;
+}
+.content{
+	width: 4.98rem;
+	height: 1.3rem;
+	padding: 0.1rem;
+	background-color: #d0d0d0;
+	box-shadow: 2px 3px 3px 0px
+		rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	font-family: ArialMT;
+	font-size: .16rem;
+	resize: none;
+}
+.submit{
+	width: .8rem;
+	height: .4rem;
+	background-color: #ff6400;
+	font-size: .16rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fff;
+	border-radius: .1rem;
+	cursor: pointer;
+}
+.footBot{
+	height: 1rem;
+	background-color: #2b2b2b;
+}
+.copyright{
+	width: 8rem;
+	height: 1rem;
+	text-align: right;
+	line-height: 1.2rem;
+	margin: 0 auto;
+	background: url('../img/index_16.jpg') 0 0 no-repeat;
+	background-size: 3.17rem 1rem;
+	font-family: MicrosoftYaHei;
+	font-size: .14rem;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #999;
+}

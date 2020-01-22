@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="renderer" content="webkit">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+  <meta name="format-detection" content="telephone=no">
+  <title>注册</title>
+  <script>!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",o=function(){var n=t.clientWidth;n&&(n>=750?t.style.fontSize="50px":t.style.fontSize=100*(n/750)+"px")};n.addEventListener&&(e.addEventListener(i,o,!1),n.addEventListener("DOMContentLoaded",o,!1))}(document,window)</script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/registerInfo.css">
+  <link rel="stylesheet" type="text/css" href="css/iview.css">
+  <script src="js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/iview.min.js"></script>
+</head>
+
+<body>
+    <div id="app" class="flex">
+      <div class="main">
+        <div class="p-t-1">
+          <img src="img/LoginPage_logo.png" alt="" class="login-i">
+        </div>
+        <form class="from-area  m">
+          <div class="f-input">
+            <input style="display:none">
+            <input type="text"  v-model="userName" placeholder="用户名(长度4--15)" class="n-input" autocomplete="off">
+          </div>
+          <div class="f-input">
+            <input type="tel"  v-model="phone" placeholder="手机号" class="n-input" autocomplete="off">
+          </div>
+          <div class="c-input clearfix">
+            <div class="f-input fl input-c-f">
+              <input style="display:none">
+              <input type="text"  v-model="code" placeholder="手机验证码" class="n-input code-input" autocomplete="off">
+            </div>
+            <input type="button" v-model="timeout" curBtn="code" curColor="'#090d16'" class="fr code" v-on:click="sendCode(phone)" :isDisabled="isDisabled"></input>
+
+          </div>
+          <div class="f-input">
+            <input style="display:none">
+            <input type="password"  v-model="passWord" placeholder="登录密码(长度6--20)" class="n-input"  maxlength="20" autocomplete="new-password">
+          </div>
+          <div class="f-input">
+            <input style="display:none">
+            <input type="password"  v-model="passWordC" placeholder="确认登录密码(长度6--20)" class="n-input"  maxlength="20" autocomplete="new-password">
+          </div>
+          <div class="f-input">
+            <input style="display:none">
+            <input type="text"  v-model="n" placeholder="推荐代码" class="n-input" readonly="readonly" autocomplete="off">
+          </div>
+        </form>
+        <btn class="m-r-1" v-on:click="doRegister">注册</btn>
+      </div>
+    </div>
+    <script type="text/javascript">var n = '11111';</script>
+    <script type="text/javascript" src="js/register.js"></script>
+</body>

@@ -1,0 +1,43 @@
+.wrapper{
+	width: 12rem;
+	min-height: 6rem;
+	margin: 0 auto;
+	padding: .5rem;
+	color: #000;
+	font-size: .2rem;
+	font-family: MicrosoftYaHei;
+	background-color: #ececec;
+}
+.gameList{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.gameList li{
+	width: 1.9rem;
+	height: 2rem;
+	background-color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	overflow: hidden;
+	margin-right: .1rem;
+	margin-bottom: .2rem;
+}
+.gameList li img{
+	width: 1.9rem;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+}
+.gameList li:hover img{
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2); /*Safari 和 Chrome*/
+	-moz-transform: scale(1.2); /*Firefox*/
+	-ms-transform: scale(1.2); /*IE9*/
+	-o-transform: scale(1.2); /*Opera*/
+}
+.gameName{
+	line-height: .4rem;
+	text-align: center;
+}

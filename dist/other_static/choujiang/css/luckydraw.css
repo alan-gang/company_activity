@@ -1,0 +1,95 @@
+body{
+	font-size: .24rem;
+	color: #ffdd7a;
+	/* background-color: #12171d; */
+}
+.wrapper{
+	/* margin-top: -8rem; */
+}
+#video-back{
+	height: 10rem;
+}
+.actTerm{
+	height: auto;
+	position: relative;
+	top: 0rem;
+}
+.allInfo{
+	/* width: 11rem; */
+	margin-bottom: 1rem;
+}
+.mainCon{
+	width: 95%;
+	min-width: 11.2rem;
+	height: 9rem;
+	padding: .1rem .4rem .25rem;
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+}
+.lCon{
+	width: 100%;
+	min-width: 466px;
+	height: 100%;
+	position: relative;
+}
+.prizeList{
+	position: relative;
+	z-index: 99;
+	margin: 0 auto;
+}
+.prizeList td{
+	display: inline-block;
+	width: 2.22rem;
+	height: 1.63rem;
+	padding: .15rem;
+	position: relative;
+	z-index: 100;
+}
+.pao-1,.pao-2,.pao-3,.pao-4,.pao-5,.pao-6,.pao-7,.pao-8,.pao-9,.pao-10,.pao-11,.pao-12,.pao-13,.pao-14,.pao-15,.pao-16,.pao-17,.pao-18,.pao-19,.pao-20{
+	background-image: url('../img/prize_active.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 0 0;
+}
+.pHover{
+	width: 2.22rem;
+	height: 1.63rem;
+	position: absolute;
+	left: 0.15rem;
+	top: 0.15rem;
+	z-index: 99;
+}
+.prizeList .on{
+    background-size: 100% 100%;
+}
+.pBtn{
+	width: 3.72rem;
+	height: 3.72rem;
+	background: url('../img/btn_01.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1.86rem;
+	margin-top: -1.6rem;
+	border: 0;
+	z-index: 99;
+}
+.lCon .unable{
+	pointer-events: none;
+}
+.pBtn:hover{
+	cursor: pointer;
+}
+.pBtn:active{
+	height: 3.72rem;
+	background: url('../img/btn_01_hover.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+	border: 0;
+}
+.popup-text{
+	color: #e18f00;
+}

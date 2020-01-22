@@ -1,0 +1,184 @@
+
+body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+i,b,h4,h3,h5{font-weight: normal;}
+a{text-decoration:none;}
+img,input{border: 0;}
+input:focus{outline: none;}
+/* body{font:12px/1.5 arial,tahoma,\5b8b\4f53;background-color: #fff;} */
+/*清浮动*/
+.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom: 1;}
+.fl{float:left;}
+.fr{float:right;}
+.mw12{min-width: 12rem;}
+.mat{margin: 0 auto;}
+
+body{
+	font-family: MicrosoftYaHei, ArialMT, Arial;
+	color: #666;
+}
+html{font-size: 100px;}
+@media screen and (min-width: 1200px){
+	html {
+		font-size: 120px;
+	}
+}
+@media screen and (min-width: 992px){
+	html {
+		font-size: 100px;
+	}
+}
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #02040a;
+}
+
+.wrapper{
+	min-width: 15rem;
+	overflow: hidden;
+	height: 10.22rem;
+	background: url('../img/bg.jpg') 0 0 no-repeat;
+	background-size: 100% 10.22rem;
+}
+.testTop{
+	width: 14.27rem;
+	height: 5.26rem;
+	margin: 0 auto;
+	position: relative;
+}
+.banner2{
+	width: 2.8rem;
+	height: 1.1rem;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -1.4rem;
+	z-index: 2;
+}
+.banner3{
+	width: 4.8rem;
+	height: 3.4rem;
+	position: absolute;
+	left: 50%;
+	top: 1.15rem;
+	margin-left: -2.4rem;
+	z-index: 2;
+}
+.banner4{
+	width: 5.23rem;
+	height: 5.44rem;
+	position: absolute;
+	left: -0.45rem;
+	top: 0;
+	z-index: 2;
+}
+.banner5{
+	width: 5.05rem;
+	height: 5.01rem;
+	position: absolute;
+	/* right: -0.5rem; */
+	right: 0.2rem;
+	top: 0.5rem;
+	z-index: 2;
+}
+.webTest{
+	width: 8.82rem;
+	height: 3.37rem;
+}
+.lineWrap{
+	display: inline-block;
+	width: 2.26rem;
+	height: 1.36rem;
+	padding: .34rem .32rem 0;
+	vertical-align: top;
+	background: url('../img/line_bg.png') 0 0 no-repeat;
+	background-size: 2.9rem 1.7rem;
+}
+.fast{
+	width: .72rem;
+	height: .57rem;
+	position: absolute;
+	right: 0.11rem;
+	top: 0.04rem;
+}
+.webTest li{
+	width: 2.9rem;
+	height: 1.7rem;
+	margin-right: 0.05rem;
+	position: relative;
+}
+.webTest li:nth-child(3),.webTest li:nth-child(6),.webTest li:nth-child(9){
+	margin-right: 0;
+}
+.webTest a.lineWrap:hover{
+	background: url('../img/line_ahover_bg.png') 0 0 no-repeat;
+}
+.lineTop{
+	width: 100%;
+	height: .7rem;
+}
+.lineTop span{
+	display: inline-block;
+	float: left;
+	color: #fff;
+	vertical-align: top;
+	height: .52rem;
+	line-height: 0.95rem;
+}
+.lineTop .line{
+	width: .4rem;
+	height: .52rem;
+	line-height: .52rem;
+	font-family: serif;
+	font-size: .72rem;
+	margin-right: .1rem;
+}
+.lineTop .w1{
+	width: .28rem;
+	/* height: .52rem; */
+	font-family: MicrosoftYaHei;
+	font-size: .14rem;
+}
+.lineTop .speed{
+	width: 1.1rem;
+	height: .52rem;
+	line-height: 0.85rem;
+	text-align: right;
+	font-family: serif;
+	font-size: .3rem;
+	margin-right: .05rem;
+}
+.webStatus{
+	height: .2rem;
+}
+.webStatus i{
+	display: inline-block;
+	width: .2rem;
+	height: .2rem;
+	border-radius: 5px;
+	vertical-align: top;
+	margin-right: 0.025rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 1px 2px 2px 0px
+		rgba(0, 0, 0, 0.2);
+}
+.webStatus .greenSpeed{
+	background-image: linear-gradient(0deg,
+		#0cd63b 0%,
+		#55e80c 100%);
+}

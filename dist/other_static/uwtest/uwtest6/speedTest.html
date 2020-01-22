@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="keywords" content="U赢电竞欢迎您">
+	    <meta name="description" content="U赢电竞欢迎您">
+	    <title>U赢电竞测速</title>
+	    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/speedtest.css">
+    </head>
+
+    <body>
+		<div class="wrapper w1">
+			<div class="wrap">
+				<div class="testTop">
+					<img class="banner2" src="img/logo-min.png" alt="">
+				</div>
+				<div class="conImg">
+					<img class="titleImg" src="img/title_main-min.png" alt="">
+				</div>
+
+				<ul id="urlLists" class="webTest mat clearfix">
+					<!-- <li class="fl">
+						<img class="hover" src="img/list_ahover-min.png" alt="">
+						<a class="lineWrap" href="https://www.uwinmax.net" title="" target="_blank">
+							<img class="light" src="img/signal_green-min.png" alt="">
+							<span class="ping clearfix">
+								<span class="speed fl">400+</span>
+								<span class="ms fl">ms</span>
+							</span>
+							<span class="num">01</span>
+							<span class="main">官方主线</span>
+						</a>
+					</li> -->
+				</ul>
+				<div id="site1_peed"></div>
+			</div>
+
+		</div>
+        <script src="js/jquery-1.10.1.min.js"></script>
+	    <script type="text/javascript">
+
+			var start, urlsSorted, n;
+		    var canTest = true;
+		    var urls = [
+	            // {ping: 0, url: 'https://www.uwinmax.com'},
+	            // {ping: 0, url: 'https://www.uwin188.net'},
+	            // {ping: 0, url: 'https://www.uwin168.net'},
+	            // {ping: 0, url: 'https://www.uwinbet1.com'},
+	            // {ping: 0, url: 'https://www.uwinbet2.com'},
+	            // {ping: 0, url: 'https://www.uwinbet3.com'},
+	            // {ping: 0, url: 'https://www.uwingame.com'}
+		    ];
+		    querySites();
+		    function querySites () {
+				$.ajax({
+				    url: "https://www.uwinmax.com/Index/Sites",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    data: {},    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	var urlsList = req.data;
+				    	$.each(urlsList, function(i,val){
+				    		urls.push(JSON.parse('{"ping": 0, "url":"'+ val+ '"}'));
+					  	});
+				    	testSpeed();
+
+					}
+				});
+			}
+
+		    function testSpeed() {
+		        if (canTest) {
+		            canTest = false;
+		            n = 0;
+		            creatElemByUrls(urls)
+		            creatImgs()
+		        }
+		    }
+		    function creatImgs() {
+		        var imgTmps = [];
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		            imgTmps.push("<img src=" + urls[i].url + "/" + Math.random() + " onerror='calcPing(" + i + ")' style='display:none'>")
+		        }
+		        start = +new Date;
+		        document.getElementById('site1_peed').innerHTML = imgTmps.join('')
+		    }
+		    function calcPing(i) {
+		        urls[i].ping = (+new Date - start);
+		        // console.log(urls[i].ping)
+		        creatElemByUrls(urls)
+		    }
+		    function getSpeedImg (ping) {
+		    	if (ping < 200) {
+		    		return '<img class="light" src="img/signal_green-min.png" alt=""><span class="ping clearfix"><span class="speed fl">'+ ping + '</span>'
+		    	} else if (ping < 800) {
+		    		return '<img class="light" src="img/signal_yellow-min.png" alt=""><span class="ping clearfix"><span class="speed fl">'+ ping + '</span>'
+		    	} else {
+		    		return '<img class="light" src="img/signal_red-min.png" alt=""><span class="ping clearfix"><span class="speed fl">800+</span>'
+		    	}
+		    }
+		    function creatElemByUrls(urls) {
+		        var tmps = []
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		        	var html = '<li class="fl"><img class="hover" src="img/list_ahover.png" alt=""><a class="lineWrap" href="'+ urls[i].url + '" title="" target="_blank">'
+
+		        	html += getSpeedImg(urls[i].ping) + '<span class="ms fl">ms</span></span><span class="num">0' + (i+1) + '</span><span class="main">官方主线</span></a></li>'
+		            tmps.push(html);
+		        }
+		        document.getElementById('urlLists').innerHTML = tmps.join('')
+		        canTest = true
+		    }
+	    </script>
+    </body>
+  </html>

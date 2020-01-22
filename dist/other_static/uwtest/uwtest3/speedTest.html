@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	    <title>U赢电竞测速</title>
+		<link rel="stylesheet" type="text/css" href="css/speedtest.css">
+    </head>
+
+    <body>
+		<div class="wrapper w1">
+			<div class="testTop">
+				<img class="banner2" src="img/logo.png" alt="">
+				<img class="banner3" src="img/logo02.png" alt="">
+				<img class="banner4" src="img/img01.png" alt="">
+				<img class="banner5" src="img/img02.png" alt="">
+			</div>
+			<ul id="urlLists" class="webTest mat clearfix">
+				<!-- <li class="fl">
+					<a class="lineWrap" href="http://www.uwin188.com" title="" target="_blank">
+						<div class="lineTop w1 clearfix">
+							<span class="line">1</span>
+							<span class="w1">线</span>
+							<span class="speed">24</span>
+							<span class="w1">毫秒</span>
+						</div>
+						<div class="webStatus">
+							<i class="greenSpeed"></i><i class="greenSpeed"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+						<img class="fast" src="img/icon_fastest.png" alt="">
+					</a>
+				</li>
+				<li class="fl"></li>
+				<li class="fl"></li>
+				<li class="fl"></li>
+				<li class="fl"></li> -->
+			</ul>
+			<div id="site1_peed"></div>
+		</div>
+		<div id="footer"></div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	    <script type="text/javascript">
+			var start, urlsSorted, n;
+		    var canTest = true;
+		    var urls = [
+		        {ping: 0, url: 'http://www.uwin188.com'},
+		        {ping: 0, url: 'http://www.uwin168.net'},
+		        {ping: 0, url: 'http://www.uwin588.net'}
+		    ];
+
+		    function testSpeed() {
+		        if (canTest) {
+		            canTest = false;
+		            n = 0;
+
+		            creatElemByUrls(urls)
+		            creatImgs()
+		        }
+		    }
+		    function creatImgs() {
+		        var imgTmps = [];
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		            imgTmps.push("<img src=" + urls[i].url + "/" + Math.random() + " onerror='calcPing(" + i + ")' style='display:none'>")
+		        }
+		        start = +new Date;
+		        document.getElementById('site1_peed').innerHTML = imgTmps.join('')
+		    }
+		    function calcPing(i) {
+		        urls[i].ping = (+new Date - start);
+		        creatElemByUrls(urls)
+		        // n++;
+		        // if (n == urls.length) {
+		        //     urlsSorted = urls.sort(by("ping"));
+		        //     creatElemByUrls(urlsSorted)
+		        // }
+		    }
+		    function getSpeedI (ping) {
+		    	if (ping < 100) {
+		    		return '<i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i>'
+		    	} else if (ping < 300) {
+		    		return '<i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i></i><i></i>'
+		    	} else if (ping < 500) {
+		    		return '<i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i></i><i></i><i></i><i></i><i></i>'
+		    	} else if (ping < 700) {
+		    		return '<i class="greenSpeed"></i><i class="greenSpeed"></i><i class="greenSpeed"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>'
+		    	} else {
+		    		return '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>'
+		    	}
+		    }
+		    function creatElemByUrls(urls) {
+		        var tmps = []
+		        var statusHTML = '';
+		        var P = 10000
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		        	if (urls[i].ping < P) {
+		        		P = urls[i].ping
+		        	}
+		        }
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		        	var html = '<li class="fl"><a class="lineWrap" href="'+ urls[i].url + '" title="" target="_blank"><div class="lineTop w1 clearfix"><span class="line">'+ (i+1) +'</span><span class="w1">线</span><span class="speed">'+ urls[i].ping + '</span><span class="w1">毫秒</span></div><div class="webStatus">'
+		        	html += getSpeedI(urls[i].ping) + '</div>'
+		        	if (P == urls[i].ping) {
+			        	html += '<img class="fast" src="img/icon_fastest.png" alt="">'
+		        	}
+		        	html += '</a></li>'
+		            tmps.push(html);
+		        }
+		        document.getElementById('urlLists').innerHTML = tmps.join('')
+		        canTest = true
+		    }
+		    function by(name) {
+		        return function (o, p) {
+		            var a, b;
+		            if (typeof o === "object" && typeof p === "object" && o && p) {
+		                a = o[name];
+		                b = p[name];
+		                if (a === b) {
+		                    return 0;
+		                }
+		                if (typeof a === typeof b) {
+		                    return a < b ? -1 : 1;
+		                }
+		                return typeof a < typeof b ? -1 : 1;
+		            }
+		            else {
+		                throw ("error");
+		            }
+		        }
+		    }
+		    testSpeed();
+
+	    </script>
+    </body>
+  </html>

@@ -1,0 +1,170 @@
+.wrapper{
+	/* padding-bottom: .87rem; */
+	background-color: #030305;
+}
+.banner{
+	min-width: 12rem;
+	height: 11.38rem;
+	position: relative;
+	background: url('../img/awayswin/img01.jpg') 0 0 no-repeat;
+	background-size: 100% 5.67rem;
+	overflow: hidden;
+}
+.banner2{
+	width: 100%;
+	height: 5.71rem;
+	position: absolute;
+	left: 0;
+	bottom: 0.03rem;
+	z-index: 1;
+}
+.banner3{
+	width: 9.08rem;
+	height: 9.37rem;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -4.54rem;
+	z-index: 2;
+}
+.banner4{
+	width: 9.18rem;
+	height: 3.46rem;
+	position: absolute;
+	left: 50%;
+	top: 5.98rem;
+	margin-left: -4.59rem;
+	z-index: 3;
+}
+.banner5{
+	width: 15.94rem;
+	height: 7.5rem;
+	position: absolute;
+	left: 50%;
+	top: 1.94rem;
+	margin-left: -7.92rem;
+	z-index: 4;
+}
+.content{
+	width: 100%;
+	height: 16.87rem;
+	background: url('../img/awayswin/img05.png') 0 0 no-repeat;
+	background-size: 100% 16.87rem;
+}
+.applyInfo{
+	height: .99rem;
+	line-height: .99rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .24rem;
+	letter-spacing: 0px;
+	color: #3f5aa7;
+	background-color: rgba(255,255,255,0.05);
+}
+
+.actInfo{
+
+}
+.actInfo .titleWrap{
+	position: relative;
+	top: -0.37rem;
+	z-index: 4;
+	margin-bottom: 1.09rem;
+}
+.titleWrap{
+	height: .59rem;
+	background: url('../img/awayswin/b1.png') 0 0.34rem no-repeat;
+	background-size: 100% 0.1rem;
+}
+.actTitle{
+	height: .59rem;
+	background: url('../img/awayswin/t1.png') 4.21rem 0 no-repeat;
+	background-size: 3.29rem .59rem;
+}
+.listwrap{
+	width: 12.06rem;
+	margin: 0 auto .67rem;
+}
+.list{
+	width: 100%;
+	height: .71rem;
+}
+.list li{
+	width: 2.38rem;
+	height: .71rem;
+	line-height: .71rem;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #fff;
+	background-color: #060f29;
+	margin-right: 0.04rem;
+	margin-bottom: 0.04rem;
+}
+.listwrap .toplist li{
+	color: #fdf1b9;
+	background-color: #0d2058;
+}
+.list li:last-child{
+	margin-right: 0;
+}
+.aInfo{
+	height: .36rem;
+	font-family: MicrosoftYaHei;
+	font-size: .18rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: .36rem;
+	letter-spacing: 0px;
+	color: #76bfe6;
+}
+.getNow{
+	height: .8rem;
+	margin: .9rem auto .96rem;
+}
+.getNow a,.getNow a img{
+	display: inline-block;
+	width: 3.3rem;
+	height: .8rem;
+}
+.getNow a img{
+	vertical-align: top;
+}
+
+.actTerm .titleWrap{
+	margin-bottom: 1rem;
+}
+.termTitle{
+	width: 4.08rem;
+	height: .59rem;
+	background: url('../img/awayswin/t2.png') 0 0 no-repeat;
+	background-size: 4.08rem .59rem;
+}
+.termList{
+	width: 8.9rem;
+	height: 4.5rem;
+}
+.termList li{
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .18rem;
+	font-family: MicrosoftYaHei;
+	letter-spacing: 0px;
+	color: #fff;
+}
+.termIndex{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	background-color: #79c3eb;
+	border-radius: .5rem;
+	font-family: MicrosoftYaHei;
+	font-style: normal;
+	font-size: .18rem;
+	letter-spacing: 0px;
+	color: #020303;
+	margin-right: .3rem;
+}

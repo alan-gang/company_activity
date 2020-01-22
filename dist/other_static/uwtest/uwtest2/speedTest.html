@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="keywords" content="U赢电竞欢迎您">
+	    <meta name="description" content="U赢电竞世界职业dota2联赛 Team Secret战队、VGJ.Thunder战队、KG战队官方指定赞助商">
+	    <title>U赢电竞测速</title>
+		<link rel="stylesheet" type="text/css" href="css/speedtest.css">
+    </head>
+
+    <body>
+		<div class="wrapper w1">
+			<div class="testTop">
+				<img class="banner2" src="img/logo.png" alt="">
+				<img class="banner3" src="img/logo02.png" alt="">
+				<img class="banner4" src="img/group_keen.png" alt="">
+				<img class="banner5" src="img/group_vgj.png" alt="">
+				<img class="banner6" src="img/group_secret.png" alt="">
+			</div>
+			<ul id="urlLists" class="webTest mat clearfix">
+				<li class="fl">
+					<a class="lineWrap" href="http://www.uwin188.com" title="" target="_blank">
+						<img class="light" src="img/light_green.png" alt="">
+						<span class="speed">400+</span>
+						<img class="num" src="img/number_01.png" alt="">
+						<span class="ms">ms</span>
+						<span class="main">官方主线</span>
+					</a>
+				</li>
+				<li class="fl"><a class="lineWrap"></a></li>
+				<li class="fl"><a class="lineWrap"></a></li>
+				<li class="fl"><a class="lineWrap"></a></li>
+				<li class="fl"><a class="lineWrap"></a></li>
+				<li class="fl"><a class="lineWrap"></a></li>
+			</ul>
+			<div id="site1_peed"></div>
+		</div>
+		<div id="footer"></div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	    <script type="text/javascript">
+			var start, urlsSorted, n;
+		    var canTest = true;
+		    var urls = [
+	            {ping: 0, url: 'https://www.uwinmax.net'},
+	            {ping: 0, url: 'https://www.uwin188.net'},
+	            {ping: 0, url: 'https://www.uwin168.net'},
+	            {ping: 0, url: 'https://www.uwin588.net'}
+		    ];
+
+		    function testSpeed() {
+		        if (canTest) {
+		            canTest = false;
+		            n = 0;
+		            creatElemByUrls(urls)
+		            creatImgs()
+		        }
+		    }
+		    function creatImgs() {
+		        var imgTmps = [];
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		            imgTmps.push("<img src=" + urls[i].url + "/" + Math.random() + " onerror='calcPing(" + i + ")' style='display:none'>")
+		        }
+		        start = +new Date;
+		        document.getElementById('site1_peed').innerHTML = imgTmps.join('')
+		    }
+		    function calcPing(i) {
+		        urls[i].ping = (+new Date - start);
+		        console.log(urls[i].ping)
+		        creatElemByUrls(urls)
+		    }
+		    function getSpeedImg (ping) {
+		    	if (ping < 500) {
+		    		return '<img class="light" src="img/light_green.png" alt=""><span class="status">良好</span>'
+		    	} else if (ping < 2000) {
+		    		return '<img class="light" src="img/light_yellow.png" alt=""><span class="status">延迟</span>'
+		    	} else {
+		    		return '<img class="light" src="img/light_red.png" alt=""><span class="status">差</span>'
+		    	}
+		    }
+		    function creatElemByUrls(urls) {
+		        var tmps = []
+		        var statusHTML = '';
+		        var P = 10000
+		        for (var i = 0, len = urls.length; i < len; i++) {
+		        	if (urls[i].ping < P) {
+		        		P = urls[i].ping
+		        	}
+		        }
+		        for (var i = 0, len = urls.length; i < len; i++) {
+
+		        	var html = '<li class="fl"><a class="lineWrap" href="'+ urls[i].url + '" title="" target="_blank">'
+		        	html += getSpeedImg(urls[i].ping) + '<span class="main">官方主线0' + (i+1) + '</span></a></li>'
+		            tmps.push(html);
+		        }
+		        document.getElementById('urlLists').innerHTML = tmps.join('')
+		        canTest = true
+		    }
+		    testSpeed();
+
+	    </script>
+    </body>
+  </html>

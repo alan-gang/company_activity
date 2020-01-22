@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT= "no-cache, must-revalidate">
+    <title>注册页面</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+
+<body>
+	<div class="wrapper w1">
+		<div class="pc-slide">
+			<div class="view">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/g1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner mat">
+			<img src="img/mainTxt_th.png" alt="">
+		</div>
+		<div class="regist mat">
+			<a class="iosDownL" href="http://a.uwinweb.com" title="ios下载" target="_blank"></a>
+			<img class="iosHover" src="img/qr2.png" alt="">
+			<a class="goRegist" href="https://www.uwinweb.com/Index/Index#/?r=1929559672378359808" title="立即注册" target="_blank"></a>
+			<a class="andDownL" href="http://a.uwinweb.com" title="android下载" target="_blank"></a>
+			<img class="andHover" src="img/qr2.png" alt="">
+		</div>
+		<div class="promo mat clearfix">
+			<div id="qrcode" class="qr fl">
+
+			</div>
+			<img class="qrmid" src="img/qr_mid.png" alt="">
+			<div class="games fl">
+				<img src="img/txt_th.png" alt="">
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/qrcode.min.js"></script>
+	<script type="text/javascript">
+		// $('.iosHover').hide();
+		$('.iosDownL').hover(function() {
+			$('.iosHover').height('1.97rem');
+		}, function() {
+			$('.iosHover').height('0');
+		});
+		$('.andDownL').hover(function() {
+			$('.andHover').height('1.97rem');
+		}, function() {
+			$('.andHover').height('0');
+		});
+		// swiper
+		// var viewSwiper = new Swiper('.view .swiper-container', {
+		// 	autoplay : 3000,
+		// 	loop : true,
+		// 	autoplayDisableOnInteraction: false
+		// })
+
+		//qrcode
+		var qrcode = new QRCode(document.getElementById("qrcode"), {
+			width : 100,
+			height : 100
+		});
+
+		qrcode.makeCode('https://www.uwinweb.com/Index/Index#/?r=1929559672378359808');
+	</script>
+</body>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>E彩娱乐_最受欢迎_自主研发_彩票游戏_真人_棋牌_体育_电竞</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      min-width: 1200px;
+      background: url('./img/BG.png');
+      background-size: cover;
+    }
+
+    .shadow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 950px;
+      height: 630px;
+      border-radius: 10px;
+      background: url('./img/banner.png') no-repeat;
+      background-size: 456px 100%;
+      background-position: left center;
+      padding-left: 456px;
+      box-sizing: border-box;
+      transform: translate(-50%, -50%);
+    }
+
+    .shadow .content {
+      background-color: #fff;
+      height: 100%;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .shadow .content .title {
+      height: 76px;
+      line-height: 76px;
+    }
+
+    .shadow .content .title {
+      background-image: url('./img/logo.png');
+      background-repeat: no-repeat;
+      background-position: 24px center;
+    }
+
+    .title p {
+      padding-right: 25px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .title p a {
+      color: #f08b1a;
+    }
+
+    .fr {
+      float: right;
+    }
+
+    .box {
+      margin-top: 14px;
+      position: relative;
+    }
+
+    .r {
+      width: 375px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #f1f1f1;
+      border-radius: 8px;
+      margin: 0 auto 10px;
+      box-sizing: border-box;
+      padding-left: 74px;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: 24px center;
+    }
+
+    .r:nth-child(2) {
+      background-image: url('./img/user.png');
+    }
+
+    .r:nth-child(3) {
+      background-image: url('./img/pass.png');
+    }
+
+    .r:nth-child(4) {
+      background-image: url('./img/pass.png');
+    }
+
+    .r:nth-child(5) {
+      background-image: url('./img/tgm.png');
+    }
+
+    .r:nth-child(6) {
+      background-image: url('./img/yzm.png');
+    }
+
+    .r:nth-child(6) input {
+      width: 200px;
+    }
+
+    .r:after {
+      content: "";
+      position: absolute;
+      left: 59px;
+      top: 10px;
+      width: 1px;
+      height: 30px;
+      background: #e6e6e6;
+    }
+
+    .r input {
+      border: none;
+      font-size: 14px;
+      outline: none;
+      display: block;
+      line-height: 48px;
+      width: 288px;
+    }
+
+    .btn {
+      width: 375px;
+      height: 56px;
+      line-height: 56px;
+      box-sizing: border-box;
+      text-indent: -99999px;
+      background: url(./img/btn.png) no-repeat 0 0;
+      /* background: linear-gradient(to right, #ed8116, #faad28); */
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .code {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 48px;
+      width: 80px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    .kf {
+      text-align: center;
+      color: #999;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .bottom {
+      width: 330px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .bottom a {
+      display: inline-block;
+      width: 138px;
+      height: 42px;
+      cursor: pointer;
+    }
+
+    .bottom .fl {
+      background-image: url('./img/phone.png');
+      background-size: contain;
+    }
+
+    .bottom .fr {
+      background-image: url('./img/gj.png');
+      background-size: contain;
+    }
+
+    .fl {
+      float: left;
+    }
+
+    .msg {
+      text-align: center;
+      color: #FF3959;
+      position: absolute;
+      top: -25px;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .super {
+      text-align: center
+    }
+
+    .wechat,
+    .qq,
+    .phone {
+      background-repeat: no-repeat;
+      background-position: top center;
+      padding-top: 38px;
+      background-size: 36px;
+      text-align: center;
+      display: inline-block;
+      margin: 15px 30px;
+      min-width: 40px;
+      color: #666;
+      max-width: 100px;
+      word-break: break-all;
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shadow">
+    <div class="content">
+      <div class="title">
+        <div class="logo"></div>
+        <p class="fr">已有账号?<a href="http://www.ec998.net">请登录</a></p>
+      </div>
+      <div class="box">
+        <div class="msg"></div>
+        <div class="r n">
+          <span class="icon"></span>
+          <input type="search" placeholder="输入帐号">
+        </div>
+        <div class="r m">
+          <span class="icon"></span>
+          <input type="password" placeholder="输入密码">
+        </div>
+        <div class="r ma">
+          <span class="icon"></span>
+          <input type="password" placeholder="确认密码">
+        </div>
+        <div class="r i">
+          <span class="icon"></span>
+          <input type="search" placeholder="邀请码">
+        </div>
+        <div class="r c">
+          <span class="icon"></span>
+          <span class="code" onclick=" __getcodeimg() "></span>
+          <input type="search" placeholder="验证码">
+        </div>
+        <div class="btn" onclick="before()">立即注册</div>
+        <p class="kf">24小时客服</p>
+        <div class="bottom">
+          <a href="http://e.ec116.net" class="fl"></a>
+          <a href="http://down.ec118.net:2018/ec_gj_client.zip" download class="fr"></a>
+        </div>
+        <div class="super">
+          <div class="wechat" style="display: none"></div>
+          <div class="qq" style="display: none"></div>
+          <div class="phone" style="display: none"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+<script src="./m/js/axios.min.js"></script>
+<script>
+  axios.defaults.withCredentials = true
+</script>
+<script>
+  // 默认生产
+  let prefix = 'https://ec01.ds-proxy.com:19999/zuul'
+  // 内网
+  if (location.host.match(/^(127\.0\.0|192\.168\.169|localhost)/)) prefix = 'http://192.168.169.75:8081/zuul'
+  // 预发布
+  if (location.host.indexOf('demo') !== -1) prefix = 'https://ds.xinyou99.com:19999/zuul'
+
+  prefix = sessionStorage.getItem('ec_api') || prefix
+
+  var un_ele = document.querySelector('.r.n input')
+  var pwd_ele = document.querySelector('.r.m input')
+  var pwda_ele = document.querySelector('.r.ma input')
+  var promotionCode_ele = document.querySelector('.r.i input')
+  var code_ele = document.querySelector('.r.c input')
+  var code_img = document.querySelector('.code')
+  var msg_ele = document.querySelector('.msg')
+
+  var wechat_ele = document.querySelector('.wechat')
+  var qq_ele = document.querySelector('.qq')
+  var phone_ele = document.querySelector('.phone')
+
+  var query = JSON.parse(decodeURIComponent('{' + (window.location.search + window.location.hash).replace(/(\/\?)|(\/#\/\?)/g, '&').replace(/[?#]*/g, '').replace(/&*(\w+)=?([^&]*)&*/g, '"$1":"$2",') + '}').replace(',}', '}'))
+  if (query.tag) getCodeByTag(query.tag)
+  else promotionCode_ele.placeholder = '获取邀请码失败，请手动输入'
+
+  __getcodeimg()
+  function __getcodeimg() {
+    axios.get(prefix + '/api-user/login/getVerifyImage').then(function (rep) {
+      code_img.style.backgroundImage = 'url(data)'.replace('data', 'data:image/png;base64,' + rep.data.data)
+    })
+  }
+
+  function before() {
+    var un = un_ele.value
+    var pwd = pwd_ele.value
+    var pwda = pwda_ele.value
+    var promotionCode = promotionCode_ele.value
+    var code = code_ele.value
+    if (!un || !pwd || !pwda || !promotionCode || !code) return
+    if (pwd != pwda) {
+      return setmsg('2次密码输入不一致')
+    }
+
+    autoRegist({ userName: un, passwd: pwd, verifyCode: code, promotionCode: promotionCode, tag: query.tag || undefined })
+  }
+  function autoRegist(args) {
+    axios.get(prefix + '/api-user/createAccount/autoRegist', { params: args }).then(function (rep) {
+      var msg = '注册成功'
+      if (rep.data.success === 1) {
+        // 注册成功
+        setTimeout(function () {
+          location.href = 'http://www.ec998.net'
+        }, 2000)
+      } else {
+        msg = rep.data.msg || '注册失败'
+        __getcodeimg()
+      }
+      setmsg(msg)
+    })
+  }
+  function getCodeByTag(tag) {
+    axios.get(prefix + '/api-user/createAccount/getCodeByTag', { params: { tag: tag } }).then(function (rep) {
+      if (rep.data.success === 1) {
+        promotionCode_ele.value = rep.data.code
+        wechat_ele.innerHTML = rep.data.weChant
+        qq_ele.innerHTML = rep.data.qq
+        phone_ele.innerHTML = rep.data.phone
+        rep.data.weChant && (wechat_ele.style.display = '')
+        rep.data.qq && (qq_ele.style.display = '')
+        rep.data.phone && (phone_ele.style.display = '')
+      } else {
+        promotionCode_ele.placeholder = '获取邀请码失败，请手动输入'
+      }
+    })
+  }
+
+  function setmsg(msg) {
+    msg_ele.innerHTML = msg
+    setTimeout(function () { msg_ele.innerHTML = '' }, 3000)
+  }
+</script>
+<style>
+  .wechat {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFEQUE5NEZBRkM4NzExRTlBMTdBQzUwOEFGRkU2RDIxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFEQUE5NEZCRkM4NzExRTlBMTdBQzUwOEFGRkU2RDIxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QURBQTk0RjhGQzg3MTFFOUExN0FDNTA4QUZGRTZEMjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QURBQTk0RjlGQzg3MTFFOUExN0FDNTA4QUZGRTZEMjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5mKJLQAAAEEElEQVR42ryYW0wTWRjH/9MbS6vWlFZ0gSiCl0CWsIEHTBYW79EYA16jkviAMSTrrvFBCYmPkGzSfWAh7mY3MRGMPOqD0Q2R7G6jUdcFohIjl6gVI7pChFpKVSju942npWBnOlOB/+SXzplzZubfnnO+851KSx4sgU6tIkqJPGIlsUBcDxCPifvE30SvnoeaNLbjl1UKvtJ4TzdxlviN8MdrbNBQX0V4iXodJlhrCbe49/t471KrTBM/8a9EChKXg2gQz8rQa4T7/1+iGLOnYvHMr7Ua4Z/fQyzD7CuV+CtWF8804iSuEosxd7KLdyxVM9JEpGPuxe84T0ixjOwntmP+tImoCBckEdA4nvSIAKWovC/ysGPRDuQk5cBisGBwYhC3x27jou8iApOBRMw8I7KJ92EjB4gWxflndKDhywZsXrg5Zv2byTc4M3QG9UP1iZg5TDSHjbQSW2K1cpqc8Kz0yJ/xdMl3CVXPq/Qa4fiynsfIImKjUqsLGRciJrY92YbSR6WROu97Lwr7CuEedMvlcns5TrlO6TVSwgGTjXxDGGO12LBgA/KT8yPlSTom6IiWUTIiw/wxYPa860GxTXcMZA/F3DXVdPJjrBZ1S+twxHFEU5f0j/fDarAi3ZyO4dAwOoOd8Ix65OsadJpnywqlWotkUb2bZ0rdqzq4TC4cdRyFzWCL1B1cfFD+rH1Vi8ahxnhGso2272yHlFZVg2SQ+11J54bPIdOSiUpHpaLpEluJXHc9cF3NyCOD2grc6m/FnbE7sZONd90YDY1ir32vXN7p3Ync3typpfthGmpe1sjnx53HUWQtUh0npnhJS8WzCtzMuvnJ9O0IdiArKStSPpZyTI4nYbmXuZFtyY6Uy+xlcvBTkJ+NPFUz4gv5kN+Xj45VHUg1pU7FF6MTZskcKW9ZOD0MhcdIWFbJqvaafjbyMN5ISjGmyCZaRlrk2FGQXIB7b+9huXm55jnKv6CKHvD0ddHJf9Er4Uyts66TZ0TbaNu064XJhbiSeSWuia63Xdj6eCtCdChlgzxQB4l/1B50a+zWJyZY7cF2VL+oVjVxI3AD5d5yNROdxEB4xpxPdC3nKVzmLcM1/zW8Dr2eNqtYvDL7J1XnQ3N0GmAV2bbrcxIMjhcc7oMfghgYH5C7dE3SGjQNN+EDHTE0QmTypxS1wfqB+Bnzq5PETzMztF+42+fRRFf0F482wssqT37fPJjgdG4fMa6UPPcRuzh1m0MT/OzdYkuquq/5kyOycD3bChJ7REaoaaf3h0iY+mbRxBORjV3Wu/e9SxSIzffEZxjgexvFVrM90X8DOBKdIFaLzbiegcxtfydyRGhQvVfS+UdNssj2vyVyRTCyi3VqRKzk4T9q2sSY0KT/BRgAFTkgMYbRI1EAAAAASUVORK5CYII=);
+
+  }
+
+  .qq {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFBMTRFMjUwRkM4NzExRTlCMDIxRjJDNTc1NjhFMDJCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFBMTRFMjUxRkM4NzExRTlCMDIxRjJDNTc1NjhFMDJCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QUExNEUyNEVGQzg3MTFFOUIwMjFGMkM1NzU2OEUwMkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QUExNEUyNEZGQzg3MTFFOUIwMjFGMkM1NzU2OEUwMkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7lkRDLAAADNUlEQVR42rSYXWxMURDHZ7f0Q5u1tXa7Rat9oLSKotT6rBB9qAgNQYiGF+FFQjw1JbwIkUhEBK1EQxMPSPrQComvimgjQtEEkao08dGQbVR0fdV/7Lks9t4zd+1O8ktuunPO/nvuzJmZddC5QbJpE8BCUAzyQQbgTfrBc9ABrqlnsQ0R+rnAFrAZjBeueQxOgjrwUefs0JwIC90GdoNMis16QY0S9N3MyWmxQS5oBYf/QwSbFxwHV4DfrpBScBeUUfxskdqzSCpkulLvpfjbaBXIE3VCRoFmMJwSZ/wPXgIes6xxgLPAJ9ktHSvXjyUqcWMhVj4IEjV2EwW/iMRw/J0Cy6NlzSZQL9mlagzRiRlEI5L//Hv/V6TYPaKGF+LTqQIXIoWkgC6QrVu5OAsBtECz+23s3iMS8kzFyzcjRjZIRLA1zdX7nA8QJTlEQsaBFZHBWi1ZVYlQTkuSnfm6XPHrqTaEcHAGREKy5amx1C92XcKx71QFTHSQ+elyIXlyXw75AAuZJPKG50yPXMi0zHCKC62YheRJPH3IK/dQuRCOpZw0+QGyELfEs2GW/Su0rlT4zqHBqanAP20PylS5z76QOSOJ9k8WuTpZRNDKIwPvubYo9sKyC/2cJ1nr1sdCLO/A1Tni4zW1jfoofMlCOuN0H5jaVH1b1clCblp58LG2vSM6+MS+gCOoJK1oFL0plm7cPt4yil6H6sr/bR6wSW9Iya5AhXLJRDz9QFTQEn7OSiV6M2Dqyu3ofCNjTpt2vqGIYtYjP43mV7+fLUT8+m5DSL0ue3YUoBUvlAvZjqGjVu//GjRGCmERB6xWdJlMJvsQ6jUP7a2JsL3g098dWorqsk1rz2zUmmVoBfyp4W6s/T3Rme7wZ2tQ9svwuQv3zlu8zha8mhu9liLa+M7jpijagMVXVzsYRom1PlCiusKoXTyPiWsNlQmyz2BlpAizuaYJrAIDCRDBg3oluCqd9C6Ccr564yiCG+V5anizNfveAVPAMavhWWAIazrEvRK4H8sQbqT1VlCo7pp+mwF5VP2MsVO31mHzhxrOpgq+klWG5anxdFB9MQfgI3AdXAYh6cY/BBgATsyqMcKkuLEAAAAASUVORK5CYII=);
+
+  }
+
+  .phone {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkExOTAxNzFCRkM4NzExRTk4REU0RTAxOUY2NzVCNUIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkExOTAxNzFDRkM4NzExRTk4REU0RTAxOUY2NzVCNUIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTE5MDE3MTlGQzg3MTFFOThERTRFMDE5RjY3NUI1QjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTE5MDE3MUFGQzg3MTFFOThERTRFMDE5RjY3NUI1QjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6PLI6SAAADeElEQVR42rSYa0gUURTHz8yu+3DX1eiBmhRqWj62Ugp7kCUiRflBLBQyK4MkihBBIaIHVn6wEMr6YkhRkpgRIT2MqA++orLAorQSFHsomZWPVVdX186drutszu7M6OyBH+yduTv3v2fOveecZbrTTCDTgpEtyEokDDEgamQI6UQ+IHXIO8Qu9aFqifO8kQNIFhIr8TvfkXKkBOkWm8xKuJ+NdCCXZYggthg5hrQj5xHjbIUEIk+RUmQRzN50SD59VXFyhZD3/xpJAOUsmMZOutQYMSO1iB8obxqkgq57y51H/JFHHhLBX/MaEu9KCEPVBoHnjXimElkoJGS/wjEhZgFI0f9CSGQXin3TKzQWfDIKQLc2WSkx5MdH84M1kyp0vQfXpYBf7g3H+Mdef5gcHZmrEIZu7X1THslyO1urdxJBzJh+Uimv7EJMLPXEerfne+JMnYYdR7hXpYCR9LGNpQnMfUIKjRG8bkzNV8orm1l6gLm1iZ4vM6/96gLL3SKlhJiJkBCxWdbGO07jsU8voDc3FmztzYod/0SIaEEy/u0j2DreOsa2tiYldgzfuGBlpcwcflw6HajJR0HlH6KkEBURMShl5kh9FdgtfxzjefkVSgoZZGl5J24TNugr3jO9k4IiwPfQFaWEdBIhLVJnj7U0wNC9YsdYn5AJpuwSgfyqAp/dBSh2hdRHt6jyorT9+CFHspj3taAODAP1ksh/+SdkNWhjksD2uQnsA73ctfnnnoFuQyp4bz0IjMEXbK3P0aPj7h57iaFVPKm8I+X40i/nOrcY3yxVhaAKWAb6Tc5FmL3/JwyU5YL11X3BTUnqW+IRoIVtkhwh1pfVwOiNoAmfLkM1UfHgtTR6Zq7SGTjPWOtvCz3qIVI2tXWvIv2yQ738BBfAk8MD4sLrKl3dusCvR/r4RYosz6C7ew5HwODN4zDe1SY4Z6j6Iow0VAndImVpPec1XqenoZW7eS77ULtmO2iWxwFrWoCx0Qujb2q4lCBgFmQV7XuchBCLQJpoG+lpy6A1smAV34qQrTDmYRGn+CJcNVhPkJ0kvXhIxGnkrNRO7wGyEWlTUADZWmnIGbm9bzNtusmZbpujiGraxt6Z7b8BJLLzkHByDCO/ZSw+Shcm9XCKWHJlZP5RQ47hRFrnmmlj7UvbEnIgfqUB34jUyBH+V4ABALCZ2F0pJFEkAAAAAElFTkSuQmCC);
+
+  }
+</style>
+
+</html>
