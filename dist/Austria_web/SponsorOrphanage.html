@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>HILF DEM WAISENHAUS</title>
+    <link rel="stylesheet" href="./css/SponsorOrphanage.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="SponsorOrphanage">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div class="content">
+            <div class="w_1200">
+                <ul class="tabsub">
+                    <li class="sub1"><a href="./gameinfo.html">EINFÜHRUNG IN DAS SPIEL</a></li>
+                    <li class="sub2 on"><a href="./SponsorBook.html">SPONSORING CENTER</a></li>
+                </ul>
+                <div class="tab">
+                    <ul class="title">
+                        <li><a href="./SponsorBook.html">SPENDENBIBLIOTHEK</a></li>
+                        <li><a class="on" href="./SponsorOrphanage.html">HILF DEM WAISENHAUS</a></li>
+                        <li><a href="./SponsorOldman.html">ALTENPFLEGE</a></li>
+                    </ul>
+                    <div class="tabcon">
+                        <div class="pd_20">
+                            <p><b>WAISEN,</b><br>
+                                DIE SCHUTZBEDÜRFTIGSTE GRUPPE IN DER GESELLSCHAFT, VON DENEN EINIGE SCHON IN JUNGEN
+                                JAHREN
+                                VON
+                                IHREN FAMILIEN VERLASSEN WURDEN, EINIGE IHRE ANGEHÖRIGEN BEI EINEM UNFALL VERLOREN UND
+                                SIE
+                                HATTEN KEIN VOLLSTÄNDIGES ZUHAUSE. WIR SOLLTEN IN SIE HINEINGEHEN, FÜR SIE SORGEN UND
+                                IHRE
+                                HERZEN MIT UNSEREN PRAKTISCHEN HANDLUNGEN WÄRMEN.</p>
+                            <div class="_row piclist pt_20">
+                                <div class="_col-12">
+                                    <img src="./img/34.png?v=20191204">
+                                    <div class="tit">SACHSPENDE</div>
+                                    <div class="time">— 25，265€ —</div>
+                                    <div class="dis">WIR HABEN KLEIDUNG, IMPORTIERTE LEBENSMITTEL UND ANDERE WERTVOLLE
+                                        MATERIALIEN AN FAST 1.000 KINDER IN 8 WAISENHÄUSERN GESCHICKT, DAMIT SIE DIE
+                                        LIEBE
+                                        DER GESELLSCHAFT SPÜREN UND IHNEN GUTE WÜNSCHE SENDEN KÖNNEN.</div>
+                                </div>
+                                <div class="_col-12 pl_10">
+                                    <img src="./img/35.png?v=20191204">
+                                    <div class="tit">LIEBEVOLLES MITTAGESSEN</div>
+                                    <div class="time">— 19，513€ —</div>
+                                    <div class="dis">WIR HABEN EIN FÜNFJÄHRIGES MITTAGESSEN FÜR KINDER IN WAISENHÄUSERN
+                                        ODER
+                                        GEMEINDEZENTREN ORGANISIERT, UM SICHERZUSTELLEN, DASS KINDER GESUND WACHSEN
+                                        KÖNNEN.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad mt_20">
+                            <img src="./img/36.png?v=20191204">
+                            <!-- <a href="javascript:;">MEHR ERFAHREN ></a> -->
+                        </div>
+                        <div class="pd_20">
+                            <p><b>BETREUUNG VON WAISENKINDERN</b><br>
+                                DEN BENACHTEILIGTEN GRUPPEN, INSBESONDERE DER BETREUUNG VON WAISEN, AUFMERKSAMKEIT ZU
+                                SCHENKEN, IST ETWAS, AUF DAS ALLE GESELLSCHAFTSBEREICHE JETZT ACHTEN SOLLTEN. ALS
+                                PIONIER
+                                DER LOTTERIEMARKE HAT DIE ÖSTERREICHISCHE NATIONALLOTTERIE IHRE SOZIALE VERANTWORTUNG
+                                AKTIV
+                                VERBESSERT UND SICH DABEI STETIG WEITERENTWICKELT. IM LAUFE DER JAHRE IST SIE DEM
+                                MARKENGEDANKEN „GERECHTIGKEIT, FREUNDLICHKEIT, ÜBERZEUGUNG UND ERFOLG“ GEFOLGT UND HAT
+                                SICH
+                                DER MISSION „POSITIVE ENERGIE LIEFERN“ VERSCHRIEBEN. ENGAGEMENT FÜR VERSCHIEDENE
+                                KINDERERZIEHUNGS- UND WOHLFAHRTSUNTERNEHMEN. GLEICHZEITIG APPELLIEREN WIR AN DIE
+                                ANGEHÖRIGEN
+                                ALLER GESELLSCHAFTSSCHICHTEN, SICH AN BESONDEREN MENSCHEN ZU BETEILIGEN, DIESE ZU
+                                BETREUEN
+                                UND FÜR DAS WACHSTUM KLEINER KINDER ZU SORGEN. DIE ÖSTERREICHISCHE LANDESLOTTERIE
+                                KÜMMERT
+                                SICH UM WAISENKINDER!</p>
+                        </div>
+                        <img src="./img/37.png?v=20191204">
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/common.js?v=20191204"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+            };
+        },
+        methods: {
+        },
+        mounted() {
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>

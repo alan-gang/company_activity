@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ÜBER UNS</title>
+    <link rel="stylesheet" href="./css/about.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="about">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div class="banner">
+            <div class="w_1200">
+                <div class="con">
+                    <h4>SPRECHEN SIE UNS AN</h4>
+                    <p class="mt_10">Eslarngasse 2-10<br>
+                        1030 Wien<br>
+                        Österreich</p>
+                    <strong class="mt_10 pt_20">ÖSTERREICHISCHE LOTTERIE</strong>
+                </div>
+            </div>
+        </div>
+        <div class="content w_1200 pb_40 mt_20">
+            <h3 class="mt_10">ÜBER UNS</h3>
+            <p class="mt_10">Wir sind von der britischen Glücksspielkommission, der Wiener Glücksspielkommission und dem
+                irischen
+                Steuerkommissar registriert und reguliert. Damit wir diese Lizenzen behalten können, müssen wir
+                nachweisen,
+                dass wir in der Lage sind, die erforderlichen Gebühren zu zahlen, nachdem die Spieler gewonnen haben,
+                und
+                wir haben die richtigen Verfahren, um dies sicherzustellen.<br>
+                Unser Hauptsitz befindet sich in Wien, einer globalen Drehscheibe für die Online-Gaming-Branche.<br>
+                Wir haben mehr als 270 Mitarbeiter aus mehr als 30 Ländern und wir wachsen schnell.<br>
+                Die Kontaktaufnahme mit uns ist einfach, Sie können uns auch per E-Mail kontaktieren
+                (Mail-Nummer-Vorgang).
+            </p>
+            <h4>Möchten Sie genauere Informationen erhalten?</h4>
+            <p>Wir wurden im Mai 2013 gegründet und sind private Unternehmen. Geschäftsführer ist Walter Stiller.<br>
+                Diese Website wird von der Österreichischen Lotterie betrieben.<br>
+                AU Lotto Limited, eine in Wien registrierte Firma mit der Firmennummer 1096951. Nach dem
+                österreichischen
+                Glücksspielgesetz von 2004 ist das EU-Lotto von der österreichischen Regierung lizenziert und wird vom
+                österreichischen Glücksspielkommissar (Lizenz: RGL 089 und 067) reguliert und von der britischen
+                Glücksspielkommission für Kunden in Großbritannien lizenziert und reguliert. (Lizenz:
+                000-038991-R-319408-009). AU Lotto Limited verfügt über eine Fernlotterielizenz (Referenznummer 1011288)
+                des
+                irischen National Consumer Licensing Office für Lotteriewetten in der Republik Irland.</p>
+            <strong class="mt_10">Personen unter 18 Jahren können nicht spielen</strong>
+        </div>
+        <div class="contact">
+
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var Main = {
+        data() {
+            return {
+                TPfooter: ''
+            };
+        },
+        methods: {
+        },
+        mounted() {
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>

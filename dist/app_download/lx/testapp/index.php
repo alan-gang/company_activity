@@ -1,0 +1,365 @@
+<?php
+require_once "global.php";
+
+$iosPackage = trim($_REQUEST["p"]);
+
+if ($iosPackage == ""){
+    $iosPackage = getIOSKey();
+}
+
+$v = file_get_contents('app/ios/version.txt');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>ECapp</title>
+<script>
+                        function checktype(act){
+			    var u = navigator.userAgent;
+			    var act = act || 1;
+			    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+			    if(isAndroid) {
+			      window.location.href='/testapp/android.php';
+			    }
+                        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+			var port = document.location.port == "" ? "" : ":"+document.location.port;
+			var plist = window.location.protocol + "//" + document.domain + port + "/testapp/plist.php?<?php echo $iosPackage.','.time();?>";
+                    if(isiOS) {
+			if (act == 1){
+				setTimeout(function(){
+					window.location.href='itms-services://?action=download-manifest&url='+plist;
+				},1500);
+			}else{
+				window.location.href='itms-services://?action=download-manifest&url='+plist;
+				
+			}
+                    }
+                }
+                        checktype();
+
+</script>
+    <style type="text/css">
+    	body,ul,ol,li,dl,dt,dd,p,input,i,b,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,button{margin: 0;padding: 0;}
+		ul,li{list-style:none;}
+		i,b,h4,h3,h5{font-weight: normal;}
+		a{text-decoration:none;}
+		img,input,button{border: 0;}
+		input:focus{outline: none;}
+		/*清浮动*/
+		.clearfix:after{content: "";clear:both;display:block;height: 0;overflow:hidden;visibility:hidden;}
+		.clearfix{zoom: 1;}
+		.fl{float:left;}
+		.fr{float:right;}
+		body{
+			font-size: 24px;
+			font-family: MicrosoftYaHei, ArialMT, Arial;
+			color: #666;
+			overflow-y: scroll; /* has to be scroll, not auto */
+		  	-webkit-overflow-scrolling: touch;
+		  	-webkit-overflow-scrolling: auto;/* Stops scrolling immediately */
+		}
+		html{font-size: 100px;-webkit-overflow-scrolling : touch;}
+		@media screen and (min-width: 1200px){
+			html {
+				font-size: 120px;
+			}
+		}
+		@media screen and (min-width: 992px){
+			html {
+				font-size: 100px;
+			}
+		}
+		html {
+		  overflow-y: scroll;
+		  user-select:none;
+			background: #694789 url('img/ecai/bg_ios@2x.png') 0 0 no-repeat;
+			background-size: 100%;
+		}
+
+		:root {
+		  overflow-y: auto;
+		  overflow-x: hidden;
+		}
+
+		:root body {
+		  position: absolute;
+		}
+
+		body {
+		  width: 100vw;
+		  overflow: hidden;
+		}
+		.txt-c {
+			text-align: center;
+		}
+		.fz-60 {
+			font-size: 0.8rem;
+		}
+		.c-white {
+			color: #fff;
+		}
+		.wrapper{
+			width: 100%;
+			max-width: 7.5rem;
+			margin: 0 auto;
+		}
+		.top{
+			width: 100%;
+			height: 7rem;
+			/* background: url('img/bg_ios@2x.png') 0 0 no-repeat;
+			background-size: 100% 100%; */
+			text-align: center;
+		}
+		.logo{
+			height: 1.64rem;
+			margin-top: 2rem;
+			margin-bottom: .2rem;
+		}
+		.version{
+			height: .6rem;
+			line-height: .6rem;
+			font-size: .28rem;
+			font-family: MicrosoftYaHei;
+			color: #fff;
+		}
+		.download{
+			width: 6rem;
+			height: .85rem;
+			line-height: .85rem;
+			font-size: .3rem;
+			font-family: MicrosoftYaHei;
+			font-weight: 600;
+			color: #000;
+			background: #ffe300 url('img/icon_ios@2x.png') 1.7rem center no-repeat;
+			background-size: .49rem .57rem;
+			box-shadow: 0px 3px 3px 0px
+				rgba(0, 0, 0, 0.1);
+			border-radius: 15px;
+			margin-top: 1.2rem;
+			text-align: left;
+			/* text-indent: 2.2rem; */
+			text-align: center;
+		}
+		.bottom{
+			font-size: .24rem;
+			text-align: center;
+			color: #d5d5d5;
+			/* background-image: linear-gradient(41deg,
+			#fa7b2a 0%,
+			#ee3233 100%); */
+			padding-bottom: 1rem;
+		}
+		.bottom .label{
+			font-style: normal;
+			/* color: #fdd94d; */
+			color: #fe5727;
+		}
+		.title{
+			height: 0.85rem;
+			line-height: 0.85rem;
+			font-size: .34rem;
+			font-weight: 600;
+			letter-spacing: 2px;
+			color: #333333;
+			margin-bottom: .8rem;
+			margin-top: 2rem;
+			padding: 0 20px;
+			background: #fff;
+		}
+		/* .title > div {
+			background-color: #fe5727;
+		}
+		.title span {
+			display: inline-block;
+			background: #000;
+		} */
+		.step{
+			width: 95%;
+			margin: .2rem auto;
+		}
+		.step div{
+			width: 50%;
+			height: 2.4rem;
+		}
+		.step div:last-child{
+			line-height: 2.4rem;
+		}
+		.bottom .step:nth-child(5) div{
+			height: 2.7rem;
+		}
+		.bottom .step:nth-child(5) div:last-child{
+			line-height: 2.7rem;
+		}
+		.step .index{
+			display: inline-block;
+			width: .58rem;
+			height: .65rem;
+			line-height: .65rem;
+			background: url('img/ecai/icon_num_bg@2x.png') 0 0 no-repeat;
+			background-size: 100% 100%;
+			font-size: .3rem;
+			color: #fff;
+			margin-right: .1rem;
+		}
+		.step .stepInfo{
+			width: 80%;
+			text-align: left;
+			color: #fff;
+			overflow: auto;
+		}
+		.step .index,.step .stepInfo{
+			position: relative;
+		    top: 50%;
+		    transform: translateY(-50%);
+		}
+		.step img{
+			width: 95%;
+			vertical-align: middle;
+		}
+/* 		.img1{
+			height: 3.76rem;
+		}
+		.img2{
+			height: 2.95rem;
+			margin-bottom: .33rem;
+		}
+		.img3{
+			height: 2.89rem;
+		}
+		.img4{
+			height: 4rem;
+		} */
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="top">
+			<div><img class="logo" src="img/ecai/logo@2x.png" alt=""></div>
+			<!-- <div class="txt-c fz-60 c-white">E彩娱乐</div> -->
+			<div><button class="download" onclick="checktype(2)">测试环境苹果下载</button></div>
+			<div class="version"> 版本：<?php echo $v;?> </div>
+		</div>
+		<div class="bottom">
+			<div class="title"><div><span>安装教程</span></div></div>
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">●</span>
+					<span class="stepInfo fl">如打开应用时如右图提示，请按照示例中<i class="label">以下步骤</i>设置</span>
+				</div>
+				<div class="fr">
+					<img class="img1" src="img/ios_img_01@2x.png" alt="">
+				</div>
+			</div>
+
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">1</span>
+					<span class="stepInfo fl">点击<i class="label">设置>通用>设备管理</i></span>
+				</div>
+				<div class="fr">
+					<img class="img2" src="img/ios_img_02@2x.png" alt="">
+				</div>
+			</div>
+
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">2</span>
+					<span class="stepInfo fl">在设备管理界面中点击<i class="label">“示例名称Corporation”</i></span>
+				</div>
+				<div class="fr">
+					<img class="img3" src="img/ios_img_03@2x.png" alt="">
+				</div>
+			</div>
+
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">3</span>
+					<span class="stepInfo fl">点击<i class="label">信任“示例名称Corporation”</i></span>
+				</div>
+				<div class="fr">
+					<img class="img4" src="img/ios_img_04@2x.png" alt="">
+				</div>
+			</div>
+
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">4</span>
+					<span class="stepInfo fl">在弹出框中点击红色文字<i class="label">“信任”</i></span>
+				</div>
+				<div class="fr">
+					<img class="img4" src="img/ios_img_05@2x.png" alt="">
+				</div>
+			</div>
+
+			<div class="step clearfix">
+				<div class="fl clearfix">
+					<span class="index fl">5</span>
+					<span class="stepInfo fl"><i class="label">重新打开</i>应用，即可登陆</span>
+				</div>
+				<div class="fr">
+					<img class="img4" src="img/ecai/ios_img_06@2x.png" alt="">
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function (win) {
+			  var doc = win.document;
+			  var docEl = doc.documentElement;
+			  var dpr = 0;
+
+			  var tid;
+
+			  function refreshRem() {
+			    var deviceWidth = document.documentElement.clientWidth
+			    //6.4是设计稿640/100 6.4只是举个例子，如果是750的设计稿，应该除以7.5。
+			    docEl.style.fontSize = deviceWidth / 7.5 + 'px';
+			    //当deviceWidth大于640时，则物理分辨率大于1280（这就看设备的devicePixelRatio这个值了），应该去访问pc网站了
+			    if (deviceWidth > 640) {
+			      deviceWidth = 640;
+			      docEl.style.fontSize = deviceWidth / 7.5 + 'px'
+			    }
+
+			  }
+
+			  refreshRem()
+			  if (!dpr) {
+			    var isAndroid = win.navigator.appVersion.match(/android/gi);
+			    var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+			    var devicePixelRatio = win.devicePixelRatio;
+			    if (isIPhone) {
+			      // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+			      if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+			        dpr = 3;
+			      } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+			        dpr = 2;
+			      } else {
+			        dpr = 1;
+			      }
+			    } else if (isAndroid) {
+			      // Android下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+			      if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+			        dpr = 3;
+			      } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+			        dpr = 2;
+			      } else {
+			        dpr = 1;
+			      }
+			    }
+
+			  }
+			  docEl.setAttribute('data-dpr', dpr);
+
+			}(window))
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@import 'normalize.css?v=20191204';@import 'common.css?v=20191204';.content{background: url(../img/48.png?v=20191204) no-repeat center 0;}
+.tabsub{margin: 0 auto;width: 840px;padding-top: 60px;}
+.tabsub li{ display: inline-block;width: 352px;height: 70px;line-height: 70px;background-color: #ffffff;border-radius: 6px; text-indent: 74px;background-position: 13px 10px;background-repeat: no-repeat;color: #9b9b9b;font-size: 18px;font-weight: normal;font-stretch: normal;letter-spacing: 0px;}
+.tabsub .sub1{ background-image: url(../img/icon_pb5.png?v=20191204);}
+.tabsub .sub2{ margin-left: 130px;background-image: url(../img/icon_pb4.png?v=20191204);}
+.tabsub .sub1.on,
+.tabsub .sub1:hover{background-image: url(../img/icon_pb3.png?v=20191204);color: #84611d;}
+.tabsub .sub2.on,
+.tabsub .sub2:hover{background-image: url(../img/icon_pb2.png?v=20191204);color: #84611d;}
+
+.tab{margin-top: 99px;}
+.tab .title li{display: inline-block;width: 295px;height: 80px;line-height: 80px;text-align: center;margin-left: 1px;}
+.tab .title li:first-child{margin-left: 0;}
+.tab .title li a{font-size: 14px;font-weight: bold;font-stretch: normal;background-color: #ffffff;border-radius: 7px 7px 0 0;letter-spacing: 0px;color: #2f2004;display: block;cursor: pointer;}
+.tab .title li a.on,
+.tab .title li a:hover{background-color: #febe42;}
+.tab .tabcon{background: #fff;box-shadow: 1px 6px 14px 0px 
+	rgba(220, 220, 220, 0.54);}
+
+.pictextlist{border-bottom: 1px solid #e7e7e7;padding: 40px 30px 40px 0;}
+.pictextlist .pic{width: 240px;text-align: center;}
+.pictextlist .text{width: calc(100% - 240px);}
+.pictextlist .text h5{font-size: 18px;font-weight: bold;font-stretch: normal;line-height: 22px;letter-spacing: 0px;color: #33373a;}
+.pictextlist .text p{font-size: 14px;font-weight: normal;font-stretch: normal;line-height: 20px;letter-spacing: 0px;color: #898989;}

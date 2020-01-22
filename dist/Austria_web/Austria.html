@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ÖSTERREICHISCHES LOTTO</title>
+    <link rel="stylesheet" href="./css/Austria.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="Austria">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div class="content">
+            <div class="w_1200">
+                <h2 class="pt_60 pb_20">ÖSTERREICHISCHE LOTTERIE</h2>
+                <div class="lottery">
+                    <div class="_row">
+                        <div class="_col-12 left">
+                            <div class="fast">
+                                <div class="_col- lotitle">
+                                    <img src="./img/14.png?v=20191204">
+                                </div>
+                                <div class="_col- locon">
+                                    <h4>
+                                        {{lotto.lotteryTime ? window.COMMOM.Time2Str(lotto.lotteryTime) : ''}}
+                                    </h4>
+                                    <ul class="clearboth mt_20">
+                                        <li class="mr_10" v-for="v in lotto.numbers">{{v.num}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <table class="lotable">
+                                <thead>
+                                    <tr>
+                                        <td>Gewinnerinhalt</td>
+                                        <td>Gewinner</td>
+                                        <td>Lottobonus</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(v,i) in lotto.bonusList">
+                                        <td>{{i+1}}. Preis</td>
+                                        <td>{{v.winnerNum}}</td>
+                                        <td>{{v.amount}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="_col-12 rigth">
+                            <img src="./img/23.png?v=20191204">
+                            <div class="_row mt_20">
+                                <div class="_col- tititle">
+                                    <span>Preispool</span>
+                                </div>
+                                <div class="_col- tidis">
+                                    <span>
+                                        <template v-if="lotto.bonusList && lotto.bonusList.length">
+                                            {{lotto.bonusList[0].amount}}
+                                        </template>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="_row mt_50">
+                                <div class="_col- tititle">
+                                    <span class="mt_10">Nächste Ziehung</span>
+                                </div>
+                                <div class="_col- tidis">
+                                    <div class="times">
+                                        <span>{{lastTimearr[0]}}</span><span>{{lastTimearr[1]}}</span><span>{{lastTimearr[2]}}</span><span>{{lastTimearr[3]}}</span>
+                                    </div>
+                                    <div class="timetip">
+                                        <span>Tag</span><span>Stunde</span><span>Minute</span><span>Zweitens</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_row mt_40">
+                                <div class="_col- tititle">
+                                    <span style="letter-spacing: 0px;">Spielbeschreibung</span>
+                                </div>
+                                <div class="_col- tidis">
+                                    <p>Die österreichische Lotterie gewinnt jeden Sonntag und Mittwoch ihren
+                                        Duty-Free-Jackpot und neun weitere Preise! Selbst wenn Sie nur die Bonusnummer
+                                        abgleichen, können Sie den Preis gewinnen!
+                                        <br><br>
+                                        Bei der Lotterie werden die sechs Gewinnzahlen und ein zusätzlicher Ball
+                                        zufällig
+                                        aus den beiden getrennten Behältern gezogen. Der zusätzliche Ball ermöglicht es
+                                        der
+                                        Person, die die fünf Zahlen erraten hat, den zweiten Preis zu gewinnen. Wenn Sie
+                                        die
+                                        falsche sechste Zahl erraten, wenn Sie Glück haben, ist der zusätzliche Ball ein
+                                        guter geistiger Trost und erhöht das Siegergesicht des Fünf-Ballers um das
+                                        Dreifache
+                                        (Durchschnitt).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="h2title">GESCHICHTE ZEICHNEN</h2>
+                <div class="filter">
+                    <span class="title">GESCHICHTE ZEICHNEN</span>
+                    <el-select class="select" v-model="drawDate" @change="SelectDrawDate" no-data-text="Keine Daten"
+                        clearable filterable placeholder="Bitte auswählen">
+                        <el-option v-for="v in drawDatearr" :key="v" :label="window.COMMOM.Time2Str(v)" :value="v">
+                        </el-option>
+                    </el-select>
+                </div>
+                <table class="listtable">
+                    <thead>
+                        <tr>
+                            <td>Datum</td>
+                            <td>Erster Preis</td>
+                            <td>Lotterieergebnis</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="v in lottoList">
+                            <td>{{window.COMMOM.Time2Str(v.lotteryTime)}}</td>
+                            <td>
+                                <template v-if="v.bonusList && v.bonusList.length">
+                                    {{v.bonusList[0].amount}}
+                                </template>
+                            </td>
+                            <td>
+                                <ul class="clearboth">
+                                    <li class="mr_10" v-for="r in v.numbers">{{r.num}}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tablemore">
+                    <el-button @click="getMove">LADEN SIE MEHR ></el-button>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/common.js?v=20191204"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+                window: window,
+                lastTime: 0,//剩余时间/秒
+                lastTimearr: ['00', '00', '00', '00'],
+                lotto: {},//奖期数据
+                lottoList: [],
+                drawDate: '',//当前选择的筛选时间  /从什么开奖日期开始查询
+                drawDatearr: [],//可选择日期
+                pageSize: 5,
+            };
+        },
+        methods: {
+            //
+            getMove() {
+                this.pageSize += 5;
+                this.getList();
+            },
+            //选择 时间筛选
+            SelectDrawDate() {
+                this.pageSize = 5;
+                this.getList();
+            },
+            //
+            getdrawDate() {
+                $.ajax({
+                    type: "POST",
+                    url: "./api/austrian/drawDate",
+                    data: JSON.stringify({
+                        type: 0//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                    }),
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    success: ({ data }) => {
+                        this.drawDatearr = data;
+                    }
+                });
+            },
+            //
+            getList() {
+                let param = {
+                    pageNo: 1,
+                    pageSize: this.pageSize,
+                    type: 0//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                };
+                this.drawDate && (param['startTime'] = this.drawDate);//从什么开奖日期开始查询
+                $.ajax({
+                    type: "POST",
+                    url: "./api/austrian/list",
+                    data: JSON.stringify(param),
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    success: ({ data }) => {
+                        this.lottoList = data.lottoList;
+                    }
+                });
+            },
+            //获取1条
+            getone() {
+                $.ajax({
+                    type: "POST",
+                    url: "./api/austrian/list",
+                    data: JSON.stringify({
+                        pageNo: 1,
+                        pageSize: 1,
+                        type: 0//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                    }),
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    success: ({ data }) => {
+                        if (data.lottoList.length) {
+                            this.lotto = data.lottoList[0];
+                            // console.log(this.lotto)
+                            //剩余开奖时间
+                            lastTime = data.nextTime
+                        }
+                    }
+                });
+            }
+        },
+        mounted() {
+            //
+            this.getdrawDate()
+            //
+            this.getone();
+            //
+            this.getList();
+            //开奖倒计时
+            setInterval(() => {
+                if (lastTime >= 1) {
+                    this.lastTimearr = window.COMMOM.timeFormat(--lastTime);
+                } else {
+                    this.getone();
+                }
+            }, 1000);
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>

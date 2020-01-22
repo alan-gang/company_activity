@@ -1,0 +1,14 @@
+@import 'normalize.css?v=20191204';@import 'common.css?v=20191204';.banner{height: 570px;background: url(../img/19.png?v=20191204) no-repeat center 0;}
+.banner .con{padding: 150px 0 0 90px;}
+.banner h4{font-size: 18px;font-weight: normal;font-stretch: normal;line-height: 24px;letter-spacing: 0px;color: #484848;}
+.banner p{font-size: 30px;	font-weight: bold;font-stretch: normal;line-height: 19px;letter-spacing: 2px;color: #484848;line-height: 1.6em;}
+.banner strong{font-size: 16px;font-weight: normal;font-stretch: normal;letter-spacing: 1px;color: #484848;display: block;position: relative;padding-left: 54px;}
+.banner strong::before{content: '';display: block; width: 344px;height: 1px;background:#eaeaea; position: absolute;top: 0;left: 0;}
+.banner strong::after{content: '';display: block; width: 46px;height: 31px;background: url(../img/1.png?v=20191204) no-repeat 0 0;position: absolute;top: 14px;left: 0;}
+
+.content h3{font-size: 22px;font-weight: bold;font-stretch: normal;line-height: 19px;letter-spacing: 1px;color: #484848;line-height: 2.3em;}
+.content h4{font-size: 14px;font-weight: bold;font-stretch: normal;line-height: 19px;letter-spacing: 1px;color: #181818;line-height: 3em;}
+.content p{font-size: 14px;font-weight: normal;font-stretch: normal;line-height: 19px;letter-spacing: 1px;color: #808080;}
+.content strong{display: block;font-size: 14px;font-weight: bold;font-stretch: normal;line-height: 19px;letter-spacing: 1px;color: #febe42;}
+
+.contact{height: 467px;background: url(../img/20.png?v=20191204) no-repeat center 0;}

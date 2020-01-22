@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ZUHAUSE</title>
+    <link rel="stylesheet" href="./css/index.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="index">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div id="banner" class="banner">
+            <div class="bd">
+                <ul>
+                    <li><a href="./SponsorOldman.html" style="background-image: url(./img/3.png?v=20191204);"></a></li>
+                    <li><a href="./Austria.html" style="background-image: url(./img/4.png?v=20191204);"></a></li>
+                    <li><a href="./SponsorBook.html" style="background-image: url(./img/51.png?v=20191204);"></a></li>
+                </ul>
+            </div>
+            <div class="hd w_1200">
+                <ul>
+                    <li><img src="./img/5.png?v=20191204"></li>
+                    <li><img src="./img/6.png?v=20191204"></li>
+                    <li><img src="./img/52.png?v=20191204"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ImgText mt_10">
+            <div class="w_1200">
+                <h3>ÖSTERREICHISCHE LOTTO, SCHNAPPEN SIE
+                    SICH DAS MONOPOL
+                </h3>
+                <p>EIN PREIS VON 710.000 EURO, MIT DEM DER ÖSTERREICHISCHE<br>
+                    LANDESMEISTER AUSGEZEICHNET WURDE! JEDE WOCHE<br>
+                    ERSCHEINEN NEUE MILLIONÄRE. SIE KÖNNEN DER NÄCHSTE SEIN.</p>
+            </div>
+        </div>
+        <div class="partTitle">
+            <h2>EINMAL GEWINNEN</h2>
+            <p class="mt_10">DIES SIND DIE SCHNELLSTEN LOTTOSCHEINE, SIE HABEN DIE WAHL!</p>
+        </div>
+        <div class="lottery">
+            <div class="_row w_1200">
+                <div class="_col-12 left">
+                    <div class="_col- lotitle">
+                        <img src="./img/14.png?v=20191204">
+                        <a class="_T3" href="./Austria.html">MEHR ZIEHT ></a>
+                    </div>
+                    <div class="_col- locon">
+                        <h4>
+                            {{lotto0.lotteryTime ? window.COMMOM.Time2Str(lotto0.lotteryTime) : ''}}
+                        </h4>
+                        <ul class="clearboth mt_20">
+                            <li class="mr_10" v-for="v in lotto0.numbers">{{v.num}}</li>
+                        </ul>
+                        <p class="mt_30">
+                            <template v-if="lotto0.bonusList && lotto0.bonusList.length">
+                                {{lotto0.bonusList[0].amount}}
+                            </template>
+                        </p>
+                    </div>
+                </div>
+                <div class="_col-12 rigth">
+                    <div class="_col- lotitle">
+                        <img src="./img/15.png?v=20191204">
+                        <a class="_T3" href="./Europe.html">MEHR ZIEHT ></a>
+                    </div>
+                    <div class="_col- locon">
+                        <h4>
+                            {{lotto1.lotteryTime ? window.COMMOM.Time2Str(lotto1.lotteryTime) : ''}}
+                        </h4>
+                        <ul class="clearboth mt_20">
+                            <li class="mr_10" v-for="v in lotto1.numbers">{{v.num}}</li>
+                        </ul>
+                        <p class="mt_30">
+                            <template v-if="lotto1.bonusList && lotto1.bonusList.length">
+                                {{lotto1.bonusList[0].amount}}
+                            </template>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partTitle">
+            <h2>UNSERE INITIATIVEN</h2>
+        </div>
+        <div class="mt_10 mb_60">
+            <div class="scrollBox w_1200">
+                <div class="ohbox">
+                    <ul class="piclist">
+                        <li><img src="./img/10.png?v=20191204" /></li>
+                        <li><img src="./img/8.png?v=20191204" /></li>
+                        <li><img src="./img/9.png?v=20191204" /></li>
+                    </ul>
+                </div>
+                <div class="pageBtn">
+                    <span class="prev"><img src="./img/12.png?v=20191204"></span>
+                    <span class="next"><img src="./img/11.png?v=20191204"></span>
+                    <ul class="list"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/common.js?v=20191204"></script>
+<script src="./js/jquery.SuperSlide.2.1.3.js"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+                window: window,
+                lotto0: {},//奖期数据
+                lotto1: {},//奖期数据
+            };
+        },
+        methods: {
+        },
+        mounted() {
+            //首页banner
+            jQuery(".banner").slide({
+                mainCell: ".bd ul",
+                effect: "fold",
+                autoPlay: true,
+                interTime: 3000,//毫秒；自动运行间隔。
+                delayTime: 1000//毫秒；切换效果持续时间（一次切换效果执行所用的时间长度）。	
+            });
+            //首页底部图片滚动
+            let titli = '';
+            for (let i = 0, j = $('.scrollBox .piclist li').length / 3; i < j; i++) titli += '<li>';
+            $('.scrollBox .list').append(titli);
+            jQuery(".scrollBox").slide({
+                titCell: ".list li",
+                mainCell: ".piclist",
+                effect: "left",
+                vis: 3,//visible缩写，mainCell的可视范围个数，当实际内容个数少于可视个数的时候，不执行SuperSlide效果。
+                scroll: 1,//每次滚动个数。
+                delayTime: 800,
+                trigger: "click",
+                easing: "easeOutCirc"
+            });
+            //-
+            $.ajax({
+                type: "POST",
+                url: "./api/austrian/list",
+                data: JSON.stringify({
+                    pageNo: 1,
+                    pageSize: 1,
+                    type: 1//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                }),
+                dataType: 'JSON',
+                contentType: "application/json;charset=utf-8",
+                success: ({ data }) => {
+                    if (data.lottoList.length) {
+                        this.lotto1 = data.lottoList[0];
+                    }
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "./api/austrian/list",
+                data: JSON.stringify({
+                    pageNo: 1,
+                    pageSize: 1,
+                    type: 0//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                }),
+                dataType: 'JSON',
+                contentType: "application/json;charset=utf-8",
+                success: ({ data }) => {
+                    if (data.lottoList.length) {
+                        this.lotto0 = data.lottoList[0];
+                    }
+                }
+            });
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>

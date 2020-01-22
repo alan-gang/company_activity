@@ -1,0 +1,46 @@
+@import 'normalize.css?v=20191204';@import 'common.css?v=20191204';.content{background: url(../img/21.png?v=20191204) no-repeat center 0;}
+.content h2{font-size: 18px;font-weight: bold;font-stretch: normal;letter-spacing: 1px;color: #ffffff;text-align: center;}
+.lottery{padding: 10px 5px;background: #fff;box-shadow: 0px 0px 18px 0px rgba(169, 169, 169, 0.46);}
+.lottery .left{background:url(../img/24.png?v=20191204) no-repeat 0 0;width: 561px;}
+.lottery .left .fast{height: 131px;}
+.lottery .rigth{margin-left: 16px;}
+.lottery .lotitle{width: 170px;text-align: center;position: relative;}
+.lottery .lotitle img{display: inline-block;margin-top: 30px;}
+.lottery .lotitle::after{content: '';display: block;width: 1px;height: 107px;background-color: #ffffff; position: absolute;top: 10px;right:0;}
+.lottery .locon{padding-left: 20px;}
+.lottery .locon h4{font-size: 14px;font-weight: bold;font-stretch: normal;line-height: 17px;letter-spacing: 1px;color: #ffffff;margin-top: 28px;}
+.lottery .locon li{float: left;width: 40px;height: 40px;line-height: 40px;text-align: center; background-color: #ffffff;border-radius: 50%;font-size: 20px;font-weight: normal;font-stretch: normal;letter-spacing: 1px;color: #262626;position: relative;}
+.lottery .left .locon li:nth-last-child(1),
+.lottery .left .locon li:nth-last-child(2){background: #ffd71f;}
+.lottery .left .locon li:nth-last-child(1)::before,
+.lottery .left .locon li:nth-last-child(2)::before{content: '';display: block;position: absolute;top: 0;right: 0;width: 16px;height: 16px;background: url(../img/18.png?v=20191204) no-repeat 0 0;}
+
+.lottery .lotable{width: 100%;}
+.lottery .lotable{border-spacing: 0; border-left: 1px solid #e5e5e5;border-right: 1px solid #e5e5e5;}
+.lottery .lotable thead td{text-align: center; line-height: 44px; background: #e8e8e8;}
+.lottery .lotable tbody td{text-align: center; line-height: 54px; border-bottom: 1px solid #e5e5e5;}
+.lottery .rigth img{display: block;}
+.lottery .tititle{width: 174px;}
+.lottery .tititle span{	font-size: 14px;font-weight: normal;font-stretch: normal;letter-spacing: 1px;color: #2f2004;width: 146px;height: 32px;line-height: 32px;background-color: #febe42; display: block;text-indent: 0.6em;margin-left: 15px;}
+.lottery .tidis span{font-size: 25px;font-weight: normal;font-stretch: normal;line-height: 32px;letter-spacing: 1px;color: #33373a;}
+.lottery .tidis p{width: 413px;font-size: 14px;font-weight: normal;font-stretch: normal;line-height: 18px;letter-spacing: 1px;color: #a1a1a1;}
+.lottery .tidis .times span{display: inline-block;width: 72px;height: 60px;line-height: 60px;font-size: 30px;font-weight: normal;font-stretch: normal;letter-spacing: 26px;color: #ffffff;background-color: #3f3f3f;border-radius: 1px; margin-right: 14px; position: relative;padding-left:12px;}
+.lottery .tidis .times span:nth-last-child(1){background-color: #e7090a;}
+.lottery .tidis .times span::before{content: '';display: block;position: absolute;top: 0;left: 40px;width: 4px;height: 100%;background: #fff;}
+.lottery .tidis .timetip span{display: inline-block;width: 84px;  margin-right: 14px;font-size: 14px;font-weight: normal;font-stretch: normal;line-height: 24px;letter-spacing: 1px;color: #a1a1a1;text-align: center;margin-top: 10px;}
+.content .h2title{padding: 30px 0 20px 0;font-size: 20px;font-weight: bold;font-stretch: normal;line-height: 17px;letter-spacing: 0px;color: #33373a;}
+.filter{height: 82px;background: #4d6fc8;}
+.filter .title{font-size: 16px;font-weight: normal;font-stretch: normal;line-height: 17px;letter-spacing: 0px;margin-top: 20px;margin-left: 60px;margin-right: 30px;color: #ffffff;}
+.filter .select{margin-top: 20px;width: 300px;}
+.listtable{width: 100%;background: #fff;border-spacing: 0;}
+.listtable td{padding-left:60px}
+.listtable thead td{line-height: 38px;font-size: 14px;font-weight: bold;font-stretch: normal;letter-spacing: 0px;color: #414141;}
+.listtable tbody td{font-size: 14px;font-weight: normal;font-stretch: normal;line-height: 74px;letter-spacing: 0px;color: #828282;}
+.listtable tbody tr:nth-of-type(odd) td{background: #f7f7f7;}
+.listtable li{float: left;width: 40px;height: 40px;line-height: 40px;text-align: center; background-color: #ffffff;border-radius: 50%;font-size: 20px;font-weight: normal;font-stretch: normal;letter-spacing: 1px;color: #262626;position: relative;border: solid 1px #dedede;}
+.listtable .particular li:nth-last-child(1),
+.listtable .particular li:nth-last-child(2){background: #ffd71f;}
+.listtable .particular li:nth-last-child(1)::before,
+.listtable .particular li:nth-last-child(2)::before{content: '';display: block;position: absolute;top: 0;right: 0;width: 16px;height: 16px;background: url(../img/18.png?v=20191204) no-repeat 0 0;}
+.tablemore{text-align: center;padding: 30px 0;background: #fff;}
+.tablemore .el-button{width: 207px;height: 55px;background-color: #febe42;border-radius: 10px;display: inline-block;font-size: 14px;font-weight: bold;font-stretch: normal;line-height: 55px;letter-spacing: 0px;    color: #2f2004;text-align: center; padding: 0;}

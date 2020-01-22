@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ÖSTERREICHISCHES LOTTO</title>
+    <link rel="stylesheet" href="./css/Vienna.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="Vienna">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div class="content">
+            <div class="w_1200">
+                <h2 class="pt_60 pb_20">WIEN FRÖHLICHE FARBEN</h2>
+                <div class="lottery">
+                    <div class="filter">
+                        <el-select class="select" v-model="drawDate" @change="SelectDrawDate" no-data-text="Keine Daten"
+                            clearable filterable placeholder="Bitte auswählen">
+                            <el-option v-for="v in drawDatearr" :key="v" :label="window.COMMOM.Time2Str(v)" :value="v">
+                            </el-option>
+                        </el-select>
+                    </div>
+                    <div class="_row list" v-for="v in lottoList">
+                        <div class="_col- left">
+                            <span class="mt_40">{{window.COMMOM.Time2Str(new Date(v.lotteryDate).getTime())}}</span>
+                            <span class="mt_20">{{v.issue}}</span>
+                        </div>
+                        <div class="_col- rigth">
+                            <ul class="clearboth">
+                                <li class="mr_40" v-for="r in v.numbers">{{r.num}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablemore">
+                    <el-button @click="getMove">LADEN SIE MEHR ></el-button>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/common.js?v=20191204"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+                window: window,
+                lottoList: [],
+                drawDate: '',//当前选择的筛选时间  /从什么开奖日期开始查询
+                drawDatearr: [],//可选择日期
+                pageSize: 5,
+            };
+        },
+        methods: {
+            //
+            getMove() {
+                this.pageSize += 10;
+                this.getList();
+            },
+            //选择 时间筛选
+            SelectDrawDate() {
+                this.pageSize = 5;
+                this.getList();
+            },
+            //
+            getdrawDate() {
+                $.ajax({
+                    type: "POST",
+                    url: "./api/austrian/drawDate",
+                    data: JSON.stringify({
+                        type: 2//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                    }),
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    success: ({ data }) => {
+                        this.drawDatearr = data;
+                    }
+                });
+            },
+            //
+            getList() {
+                let param = {
+                    pageNo: 1,
+                    pageSize: this.pageSize,
+                    type: 2//0:奥地利大乐透 1：欧洲百万 2: 维也纳快乐彩 3:萨维兹堡幸运彩
+                };
+                this.drawDate && (param['startTime'] = this.drawDate);//从什么开奖日期开始查询
+                $.ajax({
+                    type: "POST",
+                    url: "./api/austrian/list",
+                    data: JSON.stringify(param),
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    success: ({ data }) => {
+                        this.lottoList = data.lottoList;
+                    }
+                });
+            }
+        },
+        mounted() {
+            //
+            this.getdrawDate()
+            //
+            this.getList();
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>

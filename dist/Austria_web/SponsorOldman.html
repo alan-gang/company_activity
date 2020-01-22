@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ALTENPFLEGE</title>
+    <link rel="stylesheet" href="./css/SponsorOldman.css?v=20191204">
+    <link rel="stylesheet" href="./modules/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./modules/element-ui/lib/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="SponsorOldman">
+    <div id="app" v-cloak>
+        <div id="header"></div>
+        <div class="content">
+            <div class="w_1200">
+                <ul class="tabsub">
+                    <li class="sub1"><a href="./gameinfo.html">EINFÜHRUNG IN DAS SPIEL</a></li>
+                    <li class="sub2 on"><a href="./SponsorBook.html">SPONSORING CENTER</a></li>
+                </ul>
+                <div class="tab">
+                    <ul class="title">
+                        <li><a href="./SponsorBook.html">SPENDENBIBLIOTHEK</a></li>
+                        <li><a href="./SponsorOrphanage.html">HILF DEM WAISENHAUS</a></li>
+                        <li><a class="on" href="./SponsorOldman.html">ALTENPFLEGE</a></li>
+                    </ul>
+                    <div class="tabcon">
+                        <div class="pd_20">
+                            <p><b>ALTENPFLEGE</b><br>
+                                AB DIESEM JAHR INVESTIERT DIE ÖSTERREICHISCHE NATIONALLOTTERIE 100.000 € PRO JAHR IN DIE
+                                100-JÄHRIGE GESUNDHEITSKAMPAGNE FÜR ÄLTERE MENSCHEN. PRO PERSON WERDEN 5.000 € FÜR
+                                VORSORGEUNTERSUCHUNGEN, REHABILITATION, MUNDPFLEGE UND GESUNDHEITSMANAGEMENT SOWIE
+                                GESUNDHEITSMANAGEMENT AUFGEWENDET. DIE ÖSTERREICHISCHE LOTTERIE WIRD MIT INTERNATIONAL
+                                ERSTKLASSIGEN MEDIZINISCHEN UNTERSUCHUNGSGERÄTEN, NAMHAFTEN INLÄNDISCHEN MEDIZINISCHEN
+                                EXPERTEN UND PROFESSIONELLEN MEDIZINISCHEN TEAMS AUSGESTATTET, SO DASS HUNDERTE ÄLTERER
+                                MENSCHEN JEDES JAHR EINE UMFASSENDE MEDIZINISCHE UNTERSUCHUNG ERHALTEN UND MEDIZINISCHE
+                                VERSORGUNGSGARANTIEN KOSTENLOS ZUR VERFÜGUNG STEHEN, AN DENEN JEDER TEILNEHMEN KANN DIE
+                                ALTEN MENSCHEN DES 100-JÄHRIGEN GESUNDHEITSEREIGNISSES KÖNNEN EIN GESUNDES UND
+                                GLÜCKLICHES
+                                ALTER HABEN.</p>
+                            <div class="_row piclist pt_20">
+                                <div class="_col-12">
+                                    <img src="./img/38.png?v=20191204">
+                                    <div class="tit">GESUNDHEITS-CHECK</div>
+                                    <div class="time">— 49，265€—</div>
+                                    <div class="dis">WIR HABEN GESUNDHEITSUNTERSUCHUNGEN, REHABILITATIONSBEHANDLUNGEN,
+                                        MUND-
+                                        UND GESUNDHEITSFÜRSORGE SOWIE GESUNDHEITSMANAGEMENTPROGRAMME AN 12 PFLEGEHEIME
+                                        VERSCHICKT.</div>
+                                </div>
+                                <div class="_col-12 pl_10">
+                                    <img src="./img/39.png?v=20191204">
+                                    <div class="tit">PFLEGE DES MEDIZINISCHEN PERSONALS</div>
+                                    <div class="time">— 50，265€ —</div>
+                                    <div class="dis">FÜR 12 PFLEGEHEIME HABEN WIR PROFESSIONELLES MEDIZINISCHES PERSONAL
+                                        EINGESTELLT, DAS SICH UM ÄLTERE MENSCHEN OHNE KINDER KÜMMERT.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad mt_20">
+                            <img src="./img/40.png?v=20191204">
+                            <!-- <a href="javascript:;">MEHR ERFAHREN ></a> -->
+                        </div>
+                        <div class="pd_20">
+                            <p><b>ALTENPFLEGE</b><br>
+                                DEN BENACHTEILIGTEN GRUPPEN, INSBESONDERE DEN ÄLTEREN MENSCHEN, AUFMERKSAMKEIT ZU
+                                SCHENKEN,
+                                IST ETWAS, AUF DAS ALLE GESELLSCHAFTSBEREICHE ACHTEN SOLLTEN. ALS PIONIER DER
+                                LOTTERIEMARKE
+                                HAT DIE ÖSTERREICHISCHE NATIONALLOTTERIE IHRE SOZIALE VERANTWORTUNG AKTIV VERBESSERT UND
+                                SICH DABEI STETIG WEITERENTWICKELT. IM LAUFE DER JAHRE IST SIE DEM MARKENGEDANKEN
+                                „GERECHTIGKEIT, FREUNDLICHKEIT, ÜBERZEUGUNG UND ERFOLG“ GEFOLGT UND HAT SICH DAZU
+                                VERPFLICHTET, „POSITIVE ENERGIE WEITERZUGEBEN“. IN VERSCHIEDENEN ALTENBILDUNGS- UND
+                                WOHLFAHRTSUNTERNEHMEN. GLEICHZEITIG APPELLIEREN WIR AN DIE ANGEHÖRIGEN ALLER
+                                BEVÖLKERUNGSSCHICHTEN, SICH AN BESONDEREN MENSCHEN ZU BETEILIGEN, DIESE ZU BETREUEN UND
+                                DAFÜR ZU SORGEN, DASS ÄLTERE MENSCHEN IHR ALTER GENIEßEN. DIE ÖSTERREICHISCHE
+                                LANDESLOTTERIE
+                                KÜMMERT SICH UM ÄLTERE MENSCHEN!</p>
+                        </div>
+                        <img src="./img/41.png?v=20191204">
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/common.js?v=20191204"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+            };
+        },
+        methods: {
+        },
+        mounted() {
+        }
+    };
+    //-
+    $.get("./components/footer.html?v=20191204", (data) => { footer.innerHTML = data; });
+    //-
+    $.get("./components/header.html?v=20191204", (data) => {
+        // this.TPheader = data;
+        header.innerHTML = data;
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    });
+</script>
