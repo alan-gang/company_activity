@@ -1,0 +1,30 @@
+/*
+* @Author: Wilon
+* @Date:   2018-07-06 13:30:21
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-07-11 13:52:49
+*/
+.footer{
+	height: 2.35rem;
+	background-color: #1a1a1a;
+}
+.foot-wrapper{
+	height: 2.23rem;
+	padding: 0.6rem 0;
+}
+.foot-wrapper p{
+	line-height: 0.3rem;
+}
+.copyright{
+	color: rgba(153, 153, 153, 0.5);
+}
+.pagcor{
+	color: rgba(251, 189, 76, 0.5);
+}
+.footer-gamble{
+	height: .32rem;
+	margin-top: .2rem;
+}
+.footer-gamble img{
+	vertical-align: top;
+}

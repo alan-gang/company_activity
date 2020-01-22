@@ -1,0 +1,158 @@
+/*
+* @Author: Wilon
+* @Date:   2018-07-06 14:12:42
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-12-05 17:37:44
+*/
+.activity{
+	width: 100%;
+	min-width: 12.8rem;
+	height: auto;
+	padding-top: .45rem;
+	padding-bottom: .01rem;
+	background-color: #efefef;
+	font-family: MicrosoftYaHei;
+}
+.actWrapper{
+	width: 10.68rem;
+	min-height: 72.8vh;
+	margin: 0 auto;
+	background-color: #efefef;
+}
+.actWrapper .tabs{
+	height: 0.4rem;
+	background-color: transparent;
+}
+.actWrapper .tabs .tab{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	margin-right: 0.2rem;
+}
+.actWrapper .tabs .tab a{
+	width: 1.05rem;
+	height: 0.4rem;
+	color: #fff;
+	padding: 0;
+	background-color: #c7c7c7;
+	line-height: 0.4rem;
+	border-radius: 5px;
+	box-shadow: none;
+}
+.actWrapper .tabs .tab a:hover,.actWrapper .tabs .tab a.active{
+	color: #333;
+	background-color: #ffad2c;
+}
+.actWrapper .col{
+	padding: 0;
+}
+.actWrapper .row .col.s3{
+	width: auto;
+}
+.actWrapper .indicator{
+	display: none;
+}
+.actWrapper .collapsible{
+	box-shadow: none;
+	border: 0;
+}
+#nowAct,#pastAct{
+	margin-top: 0.42rem;
+	min-height: 6.36rem;
+}
+#nowAct ul li,#pastAct ul li{
+	margin-bottom: 0.18rem;
+}
+#nowAct ul li,#nowAct ul .collapsible-header,#pastAct ul li,#pastAct ul .collapsible-header{
+	border-radius: 5px;
+	border: 0;
+}
+#nowAct li img,#pastAct li img{
+	width: 10.68rem;
+	height: 3rem;
+	border-radius: 5px;
+}
+#nowAct li.active img,#pastAct li.active img{
+	border-radius: 5px 5px 0px 0px;
+}
+.actWrapper .collapsible-header,.collapsible{
+	padding: 0;
+	margin: 0;
+}
+.actWrapper .collapsible-body{
+	width: 10.68rem;
+	/* height: 5.76rem; */
+	padding: 0.6rem 1.1rem 0;
+	font-size: 0.14rem;
+	font-family: MicrosoftYaHei;
+	color: #333;
+	background-color: #fff;
+	border-radius: 0px 0px 5px 5px;
+}
+.actWrapper .collapsible-body .actTitle{
+	font-size: 0.22rem;
+	font-family: MicrosoftYaHei;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #090b0f;
+	text-align: center;
+}
+.actWrapper .actCon{
+	/* height: 0.4rem; */
+	margin: 0.2rem 0;
+}
+.actWrapper .actCon i,.actWrapper .actCon span{
+	display: inline-block;
+	/* height: 0.4rem; */
+	line-height: 0.4rem;
+	font-style: normal;
+}
+.actCon span{
+	text-align: left;
+}
+.actWrapper .actConBold{
+	font-size: 0.18rem;
+	font-weight: 600;
+}
+.actWrapper .actRule{
+	height: auto;
+	margin-bottom: 0.7rem;
+}
+.actWrapper .actRule span{
+	/* height: 0.3rem; */
+	line-height: 0.3rem;
+	/* text-indent: 0.94rem; */
+}
+.actWrapper .actRule span:nth-child(2){
+	vertical-align: middle;
+	text-indent: 0;
+}
+.actWrapper .actBtn{
+	text-align: center;
+}
+.actWrapper .actBtn .btn{
+	width: 2.4rem;
+	height: .45rem;
+	font-size: .18rem;
+	line-height: .45rem;
+	background-image: linear-gradient(90deg,
+		#ff8265 0%,
+		#fb573a 100%),
+	linear-gradient(
+		#666666,
+		#666666);
+	background-blend-mode: normal,
+		normal;
+	border-radius: 22px;
+}
+.actWrapper .actCompany{
+	text-align: center;
+	font-size: .14rem;
+	line-height: 1.3rem;
+	color: rgba(51, 51, 51, 0.5);
+}
+.activity table{
+	margin-top: 0.2rem;
+}
+.activity table,.activity th,.activity td{
+	border: 1px solid;
+}

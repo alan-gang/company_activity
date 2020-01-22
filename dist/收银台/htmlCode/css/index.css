@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#app .el-radio-button__inner:hover {
+    color: #21b193;
+}
+
+#app .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    color: #fff;
+    background-color: #21b193;
+    border-color: #21b193;
+    -webkit-box-shadow: -1px 0 0 0 #21b193;
+    box-shadow: -1px 0 0 0 #21b193;
+}
+
+#app .el-radio-button__inner {
+    background: #fafafa;
+    padding: 1em 2em;
+}
+
+@media screen and (max-width: 600px) {
+    #app .el-radio-button__inner {
+        background: #fafafa;
+        padding: 1em .6em;
+    }
+}
+
+/* tab */
+
+#app {
+    max-width: 640px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#app .payment {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+#app .paymentcon {
+    max-width: 536px;
+    margin: 0 auto;
+}
+
+/* ebank */
+
+.ebank .rows {
+    width: 100%;
+    position: relative;
+}
+
+.ebank .rows .copy {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -14px;
+}
+
+.ebank .el-form-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dcdfe6;
+}
+
+.ebank .counttime {
+    font-size: 38px;
+    font-weight: bold;
+    color: #f66055;
+    text-align: center;
+    margin: 40px 0 0 -90px;
+    /* 负数 label-width */
+}
+
+.ebank .QRcode {
+    text-align: center;
+    position: relative;
+}
+
+.ebank .hint p {
+    color: #d5d5d5;
+    font-size: 12px;
+    line-height: 2em;
+}
+
+.ebank .sub {
+    padding-bottom: 1em;
+}
+
+.ebank .sub .el-button--primary {
+    width: 100%;
+    background-color: #21b193;
+    border-color: #21b193;
+}
+
+/* alipay */
+
+.alipay {
+    text-align: center;
+}
+
+.alipay .QRcode {
+    margin-top: 10px;
+}
+
+.alipay .hint {
+    color: #e6a23c;
+    font-size: 12px;
+    line-height: 2em;
+}
+
+/* wechat */
+
+.wechat {
+    text-align: center;
+}
+
+.wechat .QRcode {
+    margin-top: 10px;
+}
+
+.wechat .hint {
+    color: #e6a23c;
+    font-size: 12px;
+    line-height: 2em;
+}
+
+/* online */
+
+.online {
+    text-align: center;
+}
+
+.online .QRcode {
+    margin-top: 10px;
+}
+
+.online .hint {
+    color: #e6a23c;
+    font-size: 12px;
+    line-height: 2em;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "xy_h5_allfront_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@xygit.bazinga.com:XY/xy_h5_allfront_static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.16",
+    "ejs": "^2.7.1",
+    "http-proxy-middleware": "^0.20.0"
+  }
+}

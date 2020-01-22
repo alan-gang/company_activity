@@ -1,0 +1,305 @@
+/*
+* @Author: Wilon
+* @Date:   2018-07-10 14:51:40
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-07-13 17:53:18
+*/
+.vipPrivilege{
+	height: auto;
+}
+.vipTop{
+	height: 9.1rem;
+	background-color: #1a1a1a;
+	-webkit-perspective:150;
+}
+.vipbg1{
+	bottom: 0;
+	z-index: 1;
+	/* -webkit-perspective: 500; */
+	/* animation: rotation 4s linear infinite; */
+}
+@-webkit-keyframes rotation {
+	0%{-webkit-transform: rotate(0deg)}
+	/* 50%{-webkit-transform:rotateX(180deg)} */
+	100%{-webkit-transform: rotate(360deg)}
+}
+.vipbg2{
+	z-index: 1;
+}
+.vipbg3{
+	width: 8.31rem;
+	height: 2.85rem;
+	top: 1.9rem;
+	left: 50%;
+	margin-left: -4.15rem;
+
+}
+.vipbg3{
+	z-index: 5;
+	/* animation: shake 2s linear infinite; */
+}
+.vipbg4{
+	width: 4.61rem;
+	height: 6.1rem;
+	top: 0;
+	left: 50%;
+	margin-left: -2.3rem;
+	z-index: 3;
+	/* animation: shake 2s linear infinite; */
+}
+.vipbg5{
+	width: 6.43rem;
+	height: 2.22rem;
+	top: 2.8rem;
+	left: 50%;
+	margin-left: -3.8rem;
+	z-index: 4;
+}
+@keyframes shake{
+    0% {
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
+    }
+    50% {
+        -webkit-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);
+        -moz-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);
+        transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);
+    }
+    100% {
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
+    }
+}
+
+/* VIP特权 */
+.privilege{
+	height: 10rem;
+	padding-top: .5rem;
+	background: url('../images/vip/bg_p2.png') 0 0 no-repeat;
+	background-size: 100% 10rem;
+}
+#carousel {
+    height: 3.2rem;
+    display: relative;
+  }
+#carousel img {
+	display: hidden; /* hide images until carousel prepares them */
+	cursor: pointer; /* not needed if you wrap carousel items in links */
+}
+.releBot{
+	margin-top: .4rem;
+}
+.vipService{
+	width: 2.25rem;
+	height: .53rem;
+	line-height: .53rem;
+	font-size: 0.2rem;
+	letter-spacing: 2px;
+	color: #e6c169;
+	background-color: #161008;
+	border-radius: 5px;
+}
+.vipSerCon{
+	line-height: 1.28rem;
+}
+
+/* 晋升 */
+.promotion{
+	height: 10rem;
+	padding-top: 0.25rem;
+	background: #000 url('../images/vip/bg_p3.png') 0 0 no-repeat;
+	background-size: 100% 10rem;
+}
+.promTitle{
+	height: 1.26rem;
+	font-size: 0.36rem;
+	font-weight: 600;
+	line-height: 1.26rem;
+	letter-spacing: 4px;
+}
+.promInfo{
+	width: 8.5rem;
+	height: 0.5rem;
+	line-height: 0.26rem;
+	color: #9397a3;
+}
+.vipLevelList{
+	height: 4.85rem;
+	margin: 0.75rem auto 0;
+}
+.vipLevelList li.vipLevel{
+	width: 2.2rem;
+	height: 4.85rem;
+	margin-right: 0.25rem;
+	background-color: #2a2a2a;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.vipLevelList li.vipLevel:last-child{
+	margin: 0;
+}
+.vipLevelList li.vipLevel:hover{
+	-webkit-transform: scale(1.1,1.1);
+	-moz-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
+}
+.vipLevel .listTop{
+	width: 2.2rem;
+	height: 0.86rem;
+	font-family: PingFang-SC-Bold;
+	font-size: 0.4rem;
+	line-height: 0.86rem;
+	text-align: center;
+	color: #fff;
+	background-image: linear-gradient(0deg,
+		#6b542c 0%,
+		#e9d29c 100%),
+	linear-gradient(
+		#c19c5c,
+		#c19c5c);
+}
+.vipLevel .promList{
+	width: 2.2rem;
+	height: auto;
+}
+.promList li{
+	width: 2.2rem;
+	height: 0.54rem;
+	font-family: MicrosoftYaHei;
+	font-size: 0.14rem;
+	line-height: 0.54rem;
+	text-align: center;
+	color: #9397a3;
+	background-color: #2a2a2a;
+}
+.promList li:nth-child(even){
+	background-color: #333;
+}
+.promList li i{
+	color: #c19c5c;
+	font-style: normal;
+}
+
+/* 保级 */
+.relegation{
+	height: 10rem;
+	padding-top: .5rem;
+	background: url('../images/vip/bg_p4.png') 0 0 no-repeat;
+	background-size: 100% 10rem;
+}
+.releTop{
+	padding: 0 3rem;
+	margin-bottom: .5rem;
+}
+.releTop img{
+	width: 1.72rem;
+	height: .23rem;
+	vertical-align: middle;
+}
+/*水平翻转*/
+.flipx {
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    /*IE*/
+    filter:FlipH;
+}
+.releTop p{
+	line-height: .73rem;
+	letter-spacing: 2px;
+	margin-top: -0.7rem;
+}
+.releTitle{
+	font-size: .4rem;
+	font-weight: 600;
+	letter-spacing: 4px;
+	color: #181818;
+	vertical-align: top;
+	line-height: 1.7rem;
+}
+.releCon{
+	height: 5.2rem;
+	padding-top: 1.18rem;
+	border-radius: 15px;
+	background: #181818 url('../images/vip/vv.png') .3rem 1.95rem no-repeat;
+	background-size: 11.35rem 1.3rem;
+}
+.releCon span{
+	height: .18rem;
+	line-height: .18rem;
+	vertical-align: top;
+	color: #9397a3;
+}
+/* FAQ */
+.faq{
+	height: 11rem;
+	padding-top: 0.37rem;
+	background-color: #181818;
+}
+.faqList{
+	height: auto;
+	margin: .1rem auto 0;
+}
+.faqList li{
+	width: 12rem;
+	height: 1.59rem;
+	border-bottom: 1px solid #272727;
+}
+.faqList li .faqIndex{
+	width: 1.7rem;
+	height: 1.59rem;
+	line-height: 1.59rem;
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 7px;
+	color: #414146;
+}
+.faqList li .faqQuestion{
+	width: 10.13rem;
+	height: 0.6rem;
+	line-height: 0.8rem;
+	font-family: MicrosoftYaHei;
+	font-size: 0.2rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #6b542c;
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#6b542c), to(#e9d29c)) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.faqList li .faqAnswer{
+	margin-top: .14rem;
+	width: 10.13rem;
+	height: 0.44rem;
+	font-family: MicrosoftYaHei;
+	font-size: 0.16rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 0.24rem;
+	letter-spacing: 1px;
+	color: #6d6d6d;
+}
+.faq .moreFaq{
+	margin: .65rem auto 0;
+	width: 2.4rem;
+	height: .5rem;
+	background-image: linear-gradient(0deg,
+		#6b542c 0%,
+		#e9d29c 100%),
+	linear-gradient(
+		#c19c5c,
+		#c19c5c);
+	border-radius: 2px;
+}
+.moreFaq a{
+	display: inline-block;
+	vertical-align: top;
+	width: 2.4rem;
+	height: .5rem;
+	line-height: .5rem;
+}

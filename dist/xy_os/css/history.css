@@ -1,0 +1,48 @@
+.history{
+
+}
+.hisTop{
+	height: 15.21rem;
+	background: url('../images/history/bg_01.jpg') center 0 no-repeat;
+}
+.hisBottom{
+	/* height: 17.64rem; */
+	background: url('../images/history/bg_02.png') center 0 no-repeat;
+	background-size: 100% 100%;
+}
+.history img{
+	vertical-align: top;
+}
+.a3{
+	height: 5rem;
+}
+.a5{
+	height: 3.8rem;
+}
+.a6{
+	height: 3.06rem;
+}
+.a7{
+	height: 3.35rem;
+}
+.a8{
+	height: 3.35rem;
+}
+.a9{
+	height: 3.62rem;
+}
+.a10{
+	height: 3.03rem;
+}
+.a11{
+	height: 3.61rem;
+}
+.a12{
+	height: 4.62rem;
+}
+.a13{
+	height: 4.3rem;
+}
+.a14{
+	height: 3.75rem;
+}

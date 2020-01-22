@@ -1,0 +1,263 @@
+.vipPrivilege{
+	height: auto;
+}
+.vipTop{
+	/* height: 6.67rem; */
+	background-color: #1a1a1a;
+	-webkit-perspective:150;
+}
+.vipbg1{
+	width: 100%;
+	/* height: 6.67rem; */
+	vertical-align: top;
+}
+
+/* VIP特权 */
+.privilege{
+	height: 7.31rem;
+	padding-top: .5rem;
+	background: url('../images/vip/vip_bg_02@2x.png') 0 0 no-repeat;
+	background-size: 100% 7.31rem;
+}
+#carousel {
+    height: 3.2rem;
+    display: relative;
+  }
+#carousel img {
+	display: hidden; /* hide images until carousel prepares them */
+	cursor: pointer; /* not needed if you wrap carousel items in links */
+}
+.releBot{
+	margin-top: .4rem;
+}
+.vipService{
+	width: 2.25rem;
+	height: .53rem;
+	line-height: .53rem;
+	font-size: 0.2rem;
+	letter-spacing: 2px;
+	color: #e6c169;
+	background-color: #161008;
+	border-radius: 5px;
+}
+.vipSerCon{
+	line-height: 1.28rem;
+}
+
+/* 晋升 */
+.promotion{
+	height: 9rem;
+	padding-top: 0.25rem;
+	background: #000 url('../images/vip/vip_bg_03@2x.png') 0 0 no-repeat;
+	background-size: 100% 9rem;
+}
+.promTitle{
+	height: 1.26rem;
+	font-size: 0.3rem;
+	font-weight: 600;
+	line-height: 1.26rem;
+	letter-spacing: 4px;
+}
+.promInfo{
+	width: 90%;
+	height: 0.5rem;
+	line-height: 0.32rem;
+	color: #9397a3;
+}
+.vipList{
+	overflow-y: scroll;
+}
+.vipLevelList{
+	width: 22rem;
+	height: 4.85rem;
+	margin: 0.75rem auto 0;
+}
+.vipLevelList li.vipLevel{
+	width: 4rem;
+	height: 4.85rem;
+	margin-right: 0.3rem;
+	background-color: #2a2a2a;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.vipLevelList li.vipLevel:first-child{
+	margin-left: 0.4rem;
+}
+.vipLevelList li.vipLevel:last-child{
+	margin: 0;
+}
+/* .vipLevelList li.vipLevel:hover{
+	-webkit-transform: scale(1.1,1.1);
+	-moz-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
+} */
+.vipLevel .listTop{
+	width: 100%;
+	height: 0.86rem;
+	font-family: PingFang-SC-Bold;
+	font-size: 0.4rem;
+	line-height: 0.86rem;
+	text-align: center;
+	color: #fff;
+	background-image: linear-gradient(0deg,
+		#6b542c 0%,
+		#e9d29c 100%),
+	linear-gradient(
+		#c19c5c,
+		#c19c5c);
+}
+.vipLevel .promList{
+	width: 100%;
+	height: auto;
+}
+.promList li{
+	width: 100%;
+	height: 0.54rem;
+	font-family: MicrosoftYaHei;
+	font-size: 0.14rem;
+	line-height: 0.54rem;
+	text-align: center;
+	color: #9397a3;
+	background-color: #2a2a2a;
+}
+.promList li:nth-child(even){
+	background-color: #333;
+}
+.promList li i{
+	color: #c19c5c;
+	font-style: normal;
+}
+
+/* 保级 */
+.relegation{
+	height: 8rem;
+	padding-top: .5rem;
+	background: url('../images/vip/vip_bg_04@2x.png') 0 0 no-repeat;
+	background-size: 100% 8rem;
+}
+.releTop{
+	height: .4rem;
+	margin-bottom: .5rem;
+	position: relative;
+}
+.titImg{
+	width: 3.82rem;
+	height: .15rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.91rem;
+}
+.releTitle{
+	display: inline-block;
+	width: 100%;
+	font-size: .3rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #181818;
+	vertical-align: top;
+	line-height: .12rem;
+}
+.releInfo{
+	display: inline-block;
+	width: 100%;
+	height: .18rem;
+	line-height: .18rem;
+	vertical-align: top;
+	color: #9397a3;
+	margin-top: -1rem;
+}
+.releCon{
+	width: 95%;
+	height: 5.2rem;
+	padding-top: 1.2rem;
+	border-radius: 15px;
+	background: #181818 url('../images/vip/vv.png') 0rem 2.8rem no-repeat;
+	background-size: 100% 0.8rem;
+}
+.releCon span{
+	display: inline-block;
+	width: 20%;
+	line-height: .5rem;
+	vertical-align: top;
+	color: #9397a3;
+}
+/* FAQ */
+.faq{
+	/* height: 11rem; */
+	padding-top: 0.37rem;
+	background-color: #181818;
+}
+.faqList{
+	height: auto;
+	margin: .1rem auto 0;
+}
+.faqList li{
+	width: 98%;
+	height: 2.8rem;
+	padding-left: 2%;
+	border-bottom: 1px solid #272727;
+}
+.faqList li:first-child{
+	height: 1.8rem;
+}
+.faqList li:nth-child(2){
+	height: 3.6rem;
+}
+.faqList li .faqIndex{
+	width: 18%;
+	height: 100%;
+	line-height: 1.59rem;
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 7px;
+	color: #414146;
+}
+.faqList li .faqQuestion{
+	width: 75%;
+	/* height: 0.6rem; */
+	/* line-height: 0.8rem; */
+	font-family: MicrosoftYaHei;
+	font-size: 0.26rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #6b542c;
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#6b542c), to(#e9d29c)) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: justify;
+    margin-top: .4rem;
+}
+.faqList li .faqAnswer{
+	margin-top: .14rem;
+	width: 75%;
+	/* height: 0.44rem; */
+	font-family: MicrosoftYaHei;
+	font-size: 0.26rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 0.3rem;
+	letter-spacing: 1px;
+	color: #6d6d6d;
+	text-align: justify;
+}
+.faq .moreFaq{
+	margin: .65rem auto 0;
+	width: 2.4rem;
+	height: .5rem;
+	background-image: linear-gradient(0deg,
+		#6b542c 0%,
+		#e9d29c 100%),
+	linear-gradient(
+		#c19c5c,
+		#c19c5c);
+	border-radius: 2px;
+}
+.moreFaq a{
+	display: inline-block;
+	vertical-align: top;
+	width: 2.4rem;
+	height: .5rem;
+	line-height: .5rem;
+}

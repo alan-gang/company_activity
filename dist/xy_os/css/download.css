@@ -1,0 +1,211 @@
+/*
+* @Author: Wilon
+* @Date:   2018-07-09 15:01:50
+* @Last Modified by:   Wilon
+* @Last Modified time: 2019-03-08 17:26:48
+*/
+.preloader-wrapper{
+	left: 48%;
+}
+.download{
+	width: 100%;
+	height: 77.4vh;
+	min-height: 8.57rem;
+	/* padding-top: 0.46rem; */
+	background-color: #fbfbfd;
+	visibility: hidden;
+}
+.download .row{
+	width: 11.36rem;
+	height: 7.72rem;
+	margin: 0 auto;
+	background: #fff url('../images/download/img1.png') 0 0 no-repeat;
+	border-radius: 10px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.download .sp-arrow{
+	width: .4rem;
+	height: .4rem;
+	background-image: url('../images/download/icon1.png');
+	background-size: .4rem .4rem;
+}
+.download .sp-horizontal .sp-previous-arrow{
+	left: -0.35rem;
+}
+.download .sp-horizontal .sp-next-arrow{
+	right: 0;
+}
+.download .sp-ename{
+	width: 3.5rem;
+}
+.download .slider-pro p.sp-ename{
+	line-height: .25rem;
+}
+.andriodImg{
+	position: absolute;
+	left: 1rem;
+	top: .7rem;
+}
+.andriodQrcode{
+	width: 1.8rem;
+	height: 1.8rem;
+	position: absolute;
+	left: 5rem;
+	bottom: .6rem;
+	border-radius: 5px;
+}
+.windowImg{
+	position: absolute;
+	left: .5rem;
+	top: 1.7rem;
+}
+.download .sp-bottom-thumbnails.sp-has-pointer{
+	margin-top: .4rem;
+}
+.download .sp-thumbnails .sp-thumbnail-container{
+	width: 8px;
+	height: 8px;
+	margin-right: 5px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+/* .download .sp-thumbnails .sp-selected-thumbnail{
+	width: 16px;
+	background-color: #fff;
+} */
+.download .sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	/* height: 7px; */
+	/* background-color: #0b0b0b; */
+	/* border-radius: 5px; */
+	border-bottom: 8px solid #fff;
+	left: 0;
+	bottom: 0;
+	margin-top: 13px;
+	opacity: 1;
+}
+
+.download .tabs{
+	margin-top: .6rem;
+}
+.download .tabs,.download .tabs li.tab{
+	height: .69rem;
+}
+.download .tabs li.tab img{
+	vertical-align: top;
+}
+.download .tabs li.tab a{
+	line-height: 1.2rem;
+	vertical-align: top;
+	display: inline-block;
+	font-size: .16rem;
+	color: #ccc;
+	text-align: center;
+	padding: 0;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+.download .tabs li:nth-child(1) a{
+	background-image: url('../images/download/icon_xys.png');
+}
+.download .tabs li:nth-child(2) a{
+	background-image: url('../images/download/icon_yxts.png');
+}
+.download .tabs li:nth-child(3) a{
+	background-image: url('../images/download/icon_bds.png');
+}
+.download .tabs li:nth-child(4) a{
+	background-image: url('../images/download/icon_gjrj.png');
+}
+.download .tabs li.tab a.active{
+	color: #333;
+	background-color: transparent;
+	border: 0;
+	webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: gray;
+}
+.download .tabs li.tab a:hover{
+	color: #333;
+	background-color: transparent;
+	border: 0;
+	webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: gray;
+}
+.download .tabs .indicator{
+	display: none;
+}
+
+/* #yxt .sp-horizontal .sp-arrows{
+	display: none;
+} */
+#xy,#yxt,#bd,#gjrj,.slider-pro{
+	height: 6.06rem;
+	position: relative;
+}
+.sp-slides-container,.sp-mask{
+	height: 5.58rem;
+}
+.yxtImg{
+	width: 2.17rem;
+	height: 4.37rem;
+	position: absolute;
+	left: 1.6rem;
+	top: .7rem;
+}
+.yxtIp{
+	position: absolute;
+	left: 5.78rem;
+	top: 1.6rem;
+}
+.yxtInfo{
+	line-height: 0.25rem;
+	position: absolute;
+	left: 5.78rem;
+	top: 2.2rem;
+}
+.yxtQrcode{
+	position: absolute;
+	left: 5.75rem;
+	bottom: 1.4rem;
+}
+.gjrjImg{
+	position: absolute;
+	left: .4rem;
+	top: 1.5rem;
+}
+.download .gjrjDown{
+	position: absolute;
+	left: 5rem;
+	bottom: 1.8rem;
+}
+.download .slider-pro  p.w-100 {
+	width: 100%;
+	line-height: 1.8;
+	height: auto;
+	padding-top: .1rem;
+}
+
+#gjrj .andriodQrcode {
+	bottom: .4rem;
+}

@@ -1,0 +1,280 @@
+/*
+* @Author: Wilon
+* @Date:   2018-07-09 17:57:59
+* @Last Modified by:   Wilon
+* @Last Modified time: 2018-09-17 16:35:54
+*/
+#video-back{
+	width: 100%;
+	height: 4rem;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+#video-back .vidbacking-active-block-back{
+	width: 100%;
+}
+.logo{
+	width: 5.2rem;
+	height: 1.27rem;
+	top: 2.2rem;
+	left: 50%;
+	margin-left: -2.6rem;
+	z-index: 5;
+}
+/* 游戏类型 */
+.gameType{
+	height: 8.65rem;
+	padding-top: 1rem;
+	background: url('../images/home/home_bg_01@2x.png') 0 0 no-repeat;
+	background-size: 100% 8.65rem;
+}
+.gameTitle{
+	height: .48rem;
+	line-height: .48rem;
+}
+.gameTitle img{
+	width: 3.84rem;
+	height: .48rem;
+	vertical-align: top;
+}
+.gameSlogan{
+	height: 0.2rem;
+	margin-top: .36rem;
+	margin-bottom: .5rem;
+	line-height: 0.2rem;
+	color: #8c8c8c;
+}
+/* tab轮播 */
+.sp-slides .sp-slide:nth-child(1){
+	background: url('../images/home/home_img_01@2x.png') 0 .85rem no-repeat;
+	background-size: 100% 3.36rem;
+}
+.sp-slides .sp-slide:nth-child(2){
+	background: url('../images/home/home_img_02@2x.png') 0 .52rem no-repeat;
+	background-size: 100% 3.6rem;
+}
+.sp-slides .sp-slide:nth-child(3){
+	background: url('../images/home/home_img_05@2x.png') 0 .77rem no-repeat;
+	background-size: 100% 3.03rem;
+}
+.sp-slides .sp-slide:nth-child(4){
+	background: url('../images/home/home_img_03@2x.png') 0 bottom no-repeat;
+	background-size: 100% 3.75rem;
+}
+.sp-slides .sp-slide:nth-child(5){
+	background: url('../images/home/home_img_04@2x.png') 0 bottom no-repeat;
+	background-size: 100% 3.42rem;
+}
+.sp-slides .sp-slide:nth-child(6){
+	background: url('../images/home/home_img_06@2x.png') 0 bottom no-repeat;
+	background-size: 100% 3.85rem;
+}
+.sp-thumbnail-title{
+	width: 1.5rem;
+	text-align: center;
+	font-size: .18rem;
+	line-height: .45rem;
+	color: #1f1f1f;
+	cursor: pointer;
+}
+#my-slider .sp-thumbnail-container{
+	margin-right: 0;
+}
+.sp-play a{
+	padding: 0;
+}
+
+/* 数据 */
+.gameData{
+	height: 2.02rem;
+	padding-top: 0.5rem;
+	background: url('../images/home/home_bg_02@2x.png') 0 0 no-repeat;
+	background-size: 100% 2.02rem;
+}
+.gameData ul{
+	width: 100%;
+	height: 0.85rem;
+}
+.gameData ul li{
+	width: 25%;
+	height: 0.85rem;
+	border-right: 1px solid #2b2b2b;
+}
+.gameData ul li:last-child{
+	border: 0;
+}
+.gameData li span{
+	vertical-align: top;
+}
+.gameData li span:nth-child(2){
+	line-height: 0.58rem;
+	vertical-align: bottom;
+	margin-left: 0.05rem;
+}
+.gameData li span:last-child{
+	display: block;
+}
+.gameData li .animateNum{
+	font-family: Arial;
+	font-size: 0.44rem;
+	line-height: 0.68rem;
+}
+.gameData li .dataTime{
+	font-family: PingFang-SC-Regular;
+	font-size: 0.16rem;
+	line-height: 16px;
+}
+/* 服务体验 */
+.service{
+	height: 8rem;
+	padding-top: 0.8rem;
+	background: url('../images/home/home_bg_03@2x.png') 0 0 no-repeat;
+	background-size: 100% 8rem;
+}
+.serTitle{
+	height: 0.48rem;
+	line-height: 0.48rem;
+}
+.serTitle img{
+	width: 4.48rem;
+	height: .48rem;
+	vertical-align: top;
+}
+.serSlogan{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	color: #8c8c8c;
+}
+.service ul{
+	margin-top: .5rem;
+	overflow-y: auto;
+}
+.service .carousel-slider .carousel-item p{
+	font-size: .24rem;
+}
+.service ul li{
+	width: 50%;
+	height: 4.66rem;
+	/* margin-left: .88rem; */
+	padding-top: 0.66rem;
+}
+.service .carousel li img{
+	width: 1.72rem;
+	height: 1.72rem;
+	cursor: pointer;
+	transition: all .5s;
+}
+.service li:hover img{
+	transform: rotate(360deg);
+}
+.service li .advantage{
+	/* width: 2.16rem; */
+	height: .36rem;
+	font-size: .32rem;
+	line-height: .36rem;
+	margin-bottom: .28rem;
+}
+.service li .serInfo{
+	/* width: 2.16rem; */
+	height: .3rem;
+	line-height: .3rem;
+}
+/* 关于 */
+.about{
+	height: 12rem;
+	padding-top: .5rem;
+	background: url('../images/home/home_bg_04@2x.png') 0 0 no-repeat;
+	background-size: 100% 12rem;
+}
+.abtTitle{
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+.abtTitle img{
+	width: 3.84rem;
+	height: .48rem;
+	vertical-align: middle;
+}
+.abtInfo{
+	width: 85%;
+	/* height: 0.81rem; */
+	text-align: justify;
+	font-family: MicrosoftYaHei;
+	font-size: 0.18rem;
+	line-height: 0.28rem;
+	color: #9a9b9d;
+}
+.abtList{
+	width: 85%;
+	/* height: 4.25rem; */
+	margin: 0.8rem auto;
+}
+.abtList li{
+	width: 100%;
+	height: 2.2rem;
+	/* padding-bottom: 1.5rem; */
+	text-align: center;
+	background-color: #191817;
+	margin-bottom: 0.3rem;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+/* .abtList li:hover{
+	background-color: #262423;
+}
+.abtList li:hover .listImg,.abtList li:hover .caption,.abtList li:hover .describe{
+	-webkit-transform: translateY(-0.7rem);
+	-moz-transform: translateY(-0.7rem);
+	transform: translateY(-0.7rem);
+	opacity: 1;
+} */
+.listImg{
+	position: absolute;
+	left: 0.4rem;
+	top: .63rem;
+}
+.listImg,.listImg img{
+	width: .94rem;
+	height: .94rem;
+	vertical-align: top;
+}
+.abtList .caption{
+	width: 4.3rem;
+	position: absolute;
+	left: 1.8rem;
+	top: .05rem;
+	font-size: 0.26rem;
+	line-height: 0.78rem;
+	text-align: left;
+}
+.abtList .describe{
+	width: 4.3rem;
+	height: 0.87rem;
+	position: absolute;
+	left: 1.8rem;
+	top: .7rem;
+	line-height: 0.28rem;
+	color: #9a9b9d;
+	text-align: justify;
+}
+.pay{
+	height: 1.6rem;
+	background-image: linear-gradient(
+		#fbbd4c,
+		#fbbd4c),
+	linear-gradient(
+		#fbbd4c,
+		#fbbd4c);
+	overflow-y: scroll;
+}
+.payWrapper{
+	width: 14rem;
+	padding: 0 .3rem;
+	line-height: 1.6rem;
+}
+.payWrapper img{
+	margin: 0 .2rem;
+	vertical-align:middle;
+}

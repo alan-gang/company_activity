@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>信游官网</title>
+	    <link rel="shortcut icon" type="image/png" href="../images/ico.v2.png" />
+	    <!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<!--Import Google Icon Font-->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+		<!--Import materialize.css-->
+		<!-- <link href="https://cdn.bootcss.com/materialize/0.98.0/css/materialize.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" type="text/css" href="../css/materialize.0.98.0.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../css/webtest.css?v=0.2">
+		<script>!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",o=function(){var n=t.clientWidth;n&&(n>=750?t.style.fontSize="50px":t.style.fontSize=100*(n/750)+"px")};n.addEventListener&&(e.addEventListener(i,o,!1),n.addEventListener("DOMContentLoaded",o,!1))}(document,window)</script>
+    </head>
+
+    <body>
+		<div id="header"></div>
+		<div class="webTest">
+			<div class="testWrapper">
+				<ul class="webTestWrapper w1 mat">
+					<!-- <li class="clearfix">
+						<img class="recImg" src="../images/rec.png" alt="">
+						<span class="line fz20">线路1</span>
+						<div class="webStatus">
+							<i class="greenSpeed"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+						<span class="speed recSpeed">100</span>
+						<span class="seconds fz16">毫秒</span>
+						<div class="goTo recGo fz16 cf txc right">
+							<a class="waves-effect waves-light recGo btn fz16 cf">推荐进入</a>
+						</div>
+					</li> -->
+				</ul>
+				<div class="testBtn mat">
+					<a class="waves-effect waves-light btn refresh fz28 cf" onclick="refresh()">重新测速</a>
+					<a class="waves-effect waves-light btn gologin fz28" href="https://www.ds95.net">快速登录</a>
+				</div>
+			</div>
+
+		</div>
+		<div id="footer"></div>
+        <!--JavaScript at end of body for optimized loading-->
+        <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
+        <!-- <script src="https://cdn.bootcss.com/materialize/0.98.0/js/materialize.js"></script> -->
+        <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="../js/materialize.0.98.0.min.js"></script>
+        <script type="text/javascript" src="../js/fastclick.js"></script>
+	    <script type="text/javascript">
+	    	FastClick.attach(document.body);
+	    	$(function() {
+	            $('#header').load('header.html', function() {
+				   $('.webTestL').addClass('cf b0');
+				   $(".button-collapse").sideNav();
+				});
+	            $('#footer').load('footer.html');
+
+  // 获取所有线路域名
+  // http://192.168.169.41:9901/cagamesclient/login/lineTest.do?method=getEnableLines
+  //  // 测试线路
+  // http://192.168.169.41:9901/cagamesclient/login/lineTest.do?method=lineTest
+  				var urls = [];
+  				var timeArray = [];
+	          	$.ajax({
+				    url: "/dongsen/domains.do?method=getAllDomains",
+				    jsonp: "callback",
+				    // dataType: "jsonp",
+				    async: true,
+				    // data: { "id": "value" },    //参数值
+				    type: "GET",   //请求方式
+				    beforeSend: function() {
+				        //请求前的处理
+				    },
+				    success: function(req) {
+				    	var allDomains = (JSON.parse(req)).allDomains;
+
+				    	for (var i = 0; i < allDomains.length; i++) {
+				    		urls.push({domain: allDomains[i].domain, id: allDomains[i].id})
+				    	}
+
+				    	test(urls)
+				    }
+				});
+            var global_index = 0
+		        function test (urls) {
+				    	for (var i = 0; i < urls.length; i++) {
+			        		testAline(urls[i].domain, i, urls[i].id)
+						}
+		        };
+		        var lineNum = 1;
+		        function testAline (url, i, id) {
+		        	var st =  new Date().getTime()
+		        	setTimeout(function(){
+		        		if (!timeArray[i]) {
+		        			timeArray[i] = 10000;
+		        			$($(".webTestWrapper li").get( i )).find(".speed").html(timeArray[i]);
+		        		}
+		        	},3000)
+		        	// var et = 0;
+		        	 $.ajax({
+					    url: url+ '/static/cb.js',
+					    jsonp: "callback",
+					    dataType: "jsonp",
+					    async: true,
+					    // data: { "id": "value" },    //参数值
+					    type: "GET",   //请求方式
+					    beforeSend: function() {
+					        //请求前的处理
+					    },
+					    complete: function(rep) {
+					    	var speed = 0;
+					    	var et =  new Date().getTime();
+					    	var is = $(".webTestWrapper").find('#'+id);
+					    	if ( rep.readyState == 4 && rep.status == 200) {
+					    		timeArray[i] = et - st;
+					    		speed = et - st;
+					    	}
+
+					    	var greenSpeedCls = '';
+					    	var recImgCss = '';
+					    	var gotoTipTxt = '进入';
+							var greenIconCount = 10;
+							var recCls = '';
+				    		if (timeArray[i] < 100) {
+				    			greenSpeedCls = 'greenSpeed';
+				    			recImgCss = 'visibility: visible;';
+				    			gotoTipTxt = '推荐';
+				    			greenIconCount = 11;
+				    			recCls = 'recGo';
+				    		}else if (timeArray[i] < 200) {
+				    			greenSpeedCls = 'greenSpeed';
+				    			recImgCss = 'visibility: visible;';
+				    			gotoTipTxt = '推荐';
+				    			greenIconCount = 9;
+				    			recCls = 'recGo';
+				    		}else if (timeArray[i] < 300) {
+				    			greenSpeedCls = 'greenSpeed';
+				    			greenIconCount = 7;
+				    		}else if (timeArray[i] < 700) {
+				    			greenSpeedCls = 'redSpeed';
+				    			greenIconCount = 5;
+				    		}else if (timeArray[i] <1200) {
+				    			greenSpeedCls = 'redSpeed';
+				    			greenIconCount = 3;
+				    		}else{
+				    			greenSpeedCls = 'redSpeed';
+				    			greenIconCount = 2;
+				    		}
+
+				    		var liEl =  $("<li id='"+id+"' class='clearfix'><img class='recImg' style='"+recImgCss+"' src='../images/rec1.png' alt=''><span class='line fz20'>线路"+lineNum+"</span><div class='webStatus'></div><span class='speed'>"+speed+"</span><span class='seconds fz16'>毫秒</span><div class='goTo recGo fz16 cf txc right'><a class='"+ recCls +" waves-effect waves-light btn fz16 cf' href='"+ url +"'>"+gotoTipTxt+"</a></div></li>");
+
+                if (!global_index) {
+                  global_index++
+                  $('.gologin').attr('href', url)
+                }
+
+				    		var statusHTML = '';
+				    		for (var j = 0; j <= 10; j++) {
+					    		statusHTML += "<i class=''></i>";
+					    	}
+					    	liEl.find('.webStatus').html(statusHTML);
+					    	liEl.find(".webStatus i:lt("+greenIconCount+")").addClass(greenSpeedCls);
+					    	$('.webTestWrapper').append(liEl);
+					    	lineNum++;
+					    }
+
+		        	});
+
+		        };
+
+		    //     function getMaxSpeed () {
+			   //    	setTimeout(function() {
+					 //    var k = 0;
+						// for(var i = 1; i < timeArray.length; i++) {
+						//   if(timeArray[i] < timeArray[k]) k = i;
+						// }
+						// $('.gologin').attr('href',urls[k]);
+			   //    	}, 2000)
+			   //  }
+		    })
+			function refresh() {
+	        	window.location.reload();
+	        	$("html, body").scrollTop(0).animate({scrollTop: $("#scroll").offset().top});
+	        }
+
+	    </script>
+    </body>
+  </html>

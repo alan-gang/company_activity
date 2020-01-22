@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>信游官网</title>
+	    <link rel="shortcut icon" type="image/png" href="../images/ico.v2.png" />
+	    <!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!--Import Google Icon Font-->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="../css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../css/history.css?v=0.1">
+		<link rel="stylesheet" type="text/css" href="../css/slider-pro.css">
+    </head>
+
+    <body>
+		<div id="header"></div>
+		<div class="history">
+			<div class="hisTop w1">
+				<div class="w12 mat">
+					<img class="a3 w1" src="../images/history/img_03.jpg" alt="">
+					<img class="a5 w1" src="../images/history/img_05.jpg" alt="">
+					<img class="a6 w1" src="../images/history/img_06.jpg" alt="">
+					<img class="a7 w1" src="../images/history/img_07.jpg" alt="">
+				</div>
+
+			</div>
+			<div class="hisBottom w1">
+				<div class="w12 mat">
+					<img class="a8 w1" src="../images/history/img_08.jpg" alt="">
+					<img class="a9 w1" src="../images/history/img_09.jpg" alt="">
+					<img class="a10 w1" src="../images/history/img_10.jpg" alt="">
+					<img class="a11 w1" src="../images/history/img_11.jpg" alt="">
+					<img class="a12 w1" src="../images/history/img_12.jpg" alt="">
+					<img class="a13 w1" src="../images/history/img_13.jpg" alt="">
+					<img class="a14 w1" src="../images/history/img_14.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+        <!--JavaScript at end of body for optimized loading-->
+        <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
+        <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.sliderPro.min.js"></script>
+	    <script type="text/javascript">
+	    	$(function() {
+
+	            $('#header').load('header.html', function() {
+				   $('.historyL').addClass('cf b0');
+				});
+	            $('#footer').load('footer.html');
+	      //       $(window).load(function(){  //load函数
+			    //     $(".preloader-wrapper").hide();
+			    //     $(".download").css('visibility','visible');
+			    //     $('ul.tabs').tabs();
+			    // });
+
+	        })
+
+	    </script>
+    </body>
+  </html>

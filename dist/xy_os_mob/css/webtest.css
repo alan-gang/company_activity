@@ -1,0 +1,146 @@
+.webTest{
+	width: 100%;
+	/* height: 77.4vh; */
+	min-height: 7.55rem;
+	background-color: #fbfbfd;
+	padding-bottom: 1rem;
+}
+.testWrapper{
+	position: relative;
+	/* top: 50%; */
+	-webkit-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    transform: translateY(5%);
+}
+.webTest .webTestWrapper{
+	min-height: 6.05rem;
+}
+.webTestWrapper li{
+	width: 90%;
+	height: .7rem;
+	/* padding: .12rem 0; */
+	font-size: 0;
+	margin: 0 auto .2rem;
+	background-color: #fff;
+	position: relative;
+}
+.recImg{
+	width: .55rem;
+	height: .55rem;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.line{
+	display: inline-block;
+	width: .75rem;
+	margin-left: .3rem;
+	margin-right: .1rem;
+	line-height: .7rem;
+	color: #443b36;
+	vertical-align: top;
+}
+.webStatus{
+	display: inline-block;
+	width: 3rem;
+	height: .7rem;
+	vertical-align: top;
+}
+.webStatus i{
+	display: inline-block;
+	width: .15rem;
+	height: .25rem;
+	margin-top: .22rem;
+	margin-right: .12rem;
+	background-color: #e2e2e2;
+	vertical-align: top;
+}
+.webStatus i.greenSpeed{
+	background-image: linear-gradient(
+		#e4f655,
+		#e4f655),
+	linear-gradient(
+		#e4f655,
+		#e4f655);
+	-moz-box-shadow:0px 0px 11px #5cdb00 inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 11px #5cdb00 inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 11px #5cdb00 inset;
+}
+.webStatus i.redSpeed{
+	background-image: linear-gradient(
+		#fd8f36,
+		#fd8f36),
+	linear-gradient(
+		#fd8f36,
+		#fd8f36);
+	-moz-box-shadow:0px 0px 11px #ff5a3a inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 11px #ff5a3a inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 11px #ff5a3a inset;
+}
+.speed{
+	display: inline-block;
+	width: .6rem;
+	margin-right: 3px;
+	text-align: right;
+	font-family: sans-serif;
+	line-height: .7rem;
+	font-size: .28rem;
+	color: #fc6d36;
+	vertical-align: top;
+}
+.recSpeed{
+	color: #5cdb00;
+}
+.seconds{
+	display: inline-block;
+	height: .7rem;
+	line-height: .74rem;
+	color: #999;
+}
+.goTo{
+}
+.goTo a.btn{
+	display: inline-block;
+	width: 1.2rem;
+	height: .36rem;
+	line-height: .38rem;
+	background-color: #b7b7b7;
+	border-radius: 2px;
+	vertical-align: top;
+	margin-top: .16rem;
+	cursor: pointer;
+	padding: 0;
+}
+.goTo a.btn:hover{
+	background-color: #6dd00b;
+}
+.goTo a.recGo{
+	background-color: #6dd00b;
+}
+.testBtn{
+	width: 3.7rem;
+	height: .5rem;
+	margin-top: .53rem;
+	font-size: 0;
+}
+.testBtn a.btn{
+	display: inline-block;
+	width: 1.8rem;
+	height: .5rem;
+	line-height: .5rem;
+	border-radius: 2px;
+	vertical-align: top;
+	padding: 0;
+}
+.testBtn a.btn:hover{
+	background-color: #6dd00b;
+}
+.refresh{
+	background-color: #b6b6b6;
+	margin-right: .1rem;
+}
+.gologin{
+	background-color: #ffad2c;
+	color: #443b36;
+}

@@ -1,0 +1,50 @@
+.header{
+	width: 100%;
+	height: 1.2rem;
+	background-color: #1a1a1a;
+}
+.nav{
+	width: 100%;
+	height: 1.2rem;
+	margin: 0 auto;
+	background-color: transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.nav-wrapper{
+	line-height: 1.2rem;
+	margin-left: .3rem;
+}
+nav .brand-logo{
+	width: 2.56rem;
+	font-size: 0.16rem;
+	height: 0.9rem;
+	line-height: 1.2rem;
+	background: url('../images/logo.png') 0 center no-repeat;
+	background-size: 2.56rem .58rem;
+	top: 0.15rem;
+}
+#nav-mobile{
+	height: 0.9rem;
+	line-height: 0.9rem;
+}
+nav ul a{
+	font-size: 0.16rem;
+	color: #818181;
+	padding: 0 0.5rem;
+	transition: all .3s;
+}
+nav ul a:hover{
+	color: #fff;
+}
+nav i.material-icons{
+	height: 1.2rem;
+}
+
+.side-nav{
+	background-color: #181818;
+}
+.side-nav a{
+	color: #616161;
+}

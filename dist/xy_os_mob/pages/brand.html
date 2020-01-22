@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    	<meta name="renderer" content="webkit">
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>信游官网</title>
+	    <link rel="shortcut icon" type="image/png" href="../images/ico.v2.png" />
+	    <!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<!--Import Google Icon Font-->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+		<!--Import materialize.css-->
+		<!-- <link href="https://cdn.bootcss.com/materialize/0.98.0/css/materialize.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" type="text/css" href="../css/materialize.0.98.0.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../css/jquery.popdown.css">
+		<link rel="stylesheet" type="text/css" href="../css/brand.css">
+		<script>!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",o=function(){var n=t.clientWidth;n&&(n>=750?t.style.fontSize="50px":t.style.fontSize=100*(n/750)+"px")};n.addEventListener&&(e.addEventListener(i,o,!1),n.addEventListener("DOMContentLoaded",o,!1))}(document,window)</script>
+    </head>
+
+    <body>
+		<div id="header"></div>
+	 	<div id="video-back" class="w1">
+			<img class="indexbg1 w1 pb l0" src="../images/index/bg_1.png" alt="">
+			<!-- <img class="indexbg2 w1 pb" src="../images/index/chips.png" alt=""> -->
+			<!-- <img class="indexbg3 pb" src="../images/index/coin.png" alt=""> -->
+			<!-- <img class="indexbg4 pb" src="../images/index/textbg.png" alt="">
+			<img class="indexbg5 pb" src="../images/index/text_xyyl.png" alt="">
+			<a href="/pages/youku.html" class="popdown" title="xinyou">
+				<img class="indexbg6 pb" src="../images/index/video.png" alt="">
+			</a>-->
+			<div class="row mat">
+			    <div class="col s12 clearfix">
+			    	<!-- <a class="leftBar fl waves-effect waves-light btn"></a> -->
+			      	<ul class="tabs fl">
+				        <li class="tab col s3">
+				        	<a class="active" href="#video1">
+								<img src="../images/brand/pic_01.png" alt="">
+				        	</a>
+				        	<p class="tabInfo">信游娱乐宣传片</p>
+				        </li>
+				        <li class="tab col s3">
+				        	<a href="#video2">
+				        		<img src="../images/brand/pic_02.png" alt="">
+				        	</a>
+				        	<p class="tabInfo">信游产品介绍</p>
+				        </li>
+			      	</ul>
+			      	<!-- <a class="rightBar fl waves-effect waves-light btn"></a> -->
+			    </div>
+			    <div id="video1" class="video col s12">
+			    	<iframe height=100% width=100% src='https://player.youku.com/embed/XMzczMjA4Nzg0NA==' frameborder=0 'allowfullscreen'></iframe>
+			    </div>
+			    <div id="video2" class="video col s12">
+			    	<iframe height=100% width=100% src='https://player.youku.com/embed/XMzgxMzQ2OTk5Mg==' frameborder=0 'allowfullscreen'></iframe>
+			    </div>
+			</div>
+		</div>
+
+		<div id="footer"></div>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <!-- <script src="https://cdn.bootcss.com/materialize/0.98.0/js/materialize.js"></script> -->
+        <script type="text/javascript" src="../js/materialize.0.98.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.popdown.js"></script>
+	    <script type="text/javascript">
+	    	$(function() {
+	            $('#header').load('header.html', function() {
+				   $('.brandL').addClass('cf b0');
+				   $(".button-collapse").sideNav();
+				});
+	            $('#footer').load('footer.html');
+	            $('.popdown').popdown();
+
+	            $(document).ready(function(){
+				    $('ul.tabs').tabs();
+				});
+
+	        })
+	    </script>
+    </body>
+  </html>

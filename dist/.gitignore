@@ -1,0 +1,12 @@
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+/node_modules/
+gulpfile.js
+_gulp/
+bw_activity/.project
+Austria_web/node_modules/
+Austria_web/package-lock.json
